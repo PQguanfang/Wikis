@@ -20,25 +20,6 @@
 * [1.7 - 插件的选择：保护插件与创世神](yi-qie-de-qi-dian/1.7-cha-jian-de-xuan-ze-bao-hu-cha-jian-yu-chuang-shi-shen.md)
 * [1.8 - 本章作业：权限组和多世界插件](yi-qie-de-qi-dian/1.8-ben-zhang-zuo-ye-quan-xian-zu-he-duo-shi-jie-cha-jian.md)
 
-## 配置的学习
+***
 
-* [2.1 - 打好基础：YAML格式的学习](pei-zhi-de-xue-xi/2.1-da-hao-ji-chu-yaml-ge-shi-de-xue-xi.md)
-* [2.2 - 自学才是王道：读插件文档](pei-zhi-de-xue-xi/2.2-zi-xue-cai-shi-wang-dao-du-cha-jian-wen-dang.md)
-* [2.3 - 高效率：制作配置模板](pei-zhi-de-xue-xi/2.3-gao-xiao-shuai-zhi-zuo-pei-zhi-mo-ban.md)
-* [2.4 - 想不到：核心也能配置](pei-zhi-de-xue-xi/2.4-xiang-bu-dao-he-xin-ye-neng-pei-zhi.md)
-* [2.5 - 本章作业：综合基础插件](pei-zhi-de-xue-xi/2.5-ben-zhang-zuo-ye-zong-he-ji-chu-cha-jian.md)
-
-## 渐入佳境
-
-* [3.1 - 实战：权限组的安排](jian-ru-jia-jing/3.1-shi-zhan-quan-xian-zu-de-an-pai.md)
-* [3.2 - 实战：世界的安排](jian-ru-jia-jing/3.2-shi-zhan-shi-jie-de-an-pai.md)
-* [3.3 - 实战：NPC](jian-ru-jia-jing/3.3-shi-zhan-npc.md)
-* [3.4 - 实战：浮空字](jian-ru-jia-jing/3.4-shi-zhan-fu-kong-zi.md)
-* [3.5 - 实战：传送](jian-ru-jia-jing/3.5-shi-zhan-chuan-song.md)
-* [3.6 - 最后：拓展玩法的插件](jian-ru-jia-jing/3.6-zui-hou-tuo-zhan-wan-fa-de-cha-jian.md)
-* [3.7 - 最后：运营需求的插件](jian-ru-jia-jing/3.7-zui-hou-yun-ying-xu-qiu-de-cha-jian.md)
-
-## 服主也要会一点这些
-
-* [4.1 - 开源插件的构建](fu-zhu-ye-yao-hui-yi-dian-zhe-xie/4.1-kai-yuan-cha-jian-de-gou-jian.md)
-* [4.2 - 看报错](fu-zhu-ye-yao-hui-yi-dian-zhe-xie/4.2-kan-bao-cuo.md)
+* [下一章地址](xia-yi-zhang-di-zhi.md)
