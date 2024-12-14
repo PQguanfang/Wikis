@@ -1,25 +1,72 @@
 # Table of contents
 
-* [欢迎](README.md)
+* [Welcome](README.md)
+* [Compare](compare.md)
+* [中文 Wiki (过时)](zhong-wen-wiki-guo-shi.md)
 
-## 前言
+## Base
 
-* [0.0 - 总前言](qian-yan/0.0-zong-qian-yan.md)
-* [0.1 - 服务端的选择](qian-yan/0.1-fu-wu-duan-de-xuan-ze.md)
-* [0.2 - 服务端目录下的文件](qian-yan/0.2-fu-wu-duan-mu-lu-xia-de-wen-jian.md)
+* [Directly Supported Plugins](base/directly-supported-plugins.md)
+* [Item Format](base/item-format.md)
+* [Item Format Arg List](base/item-format-arg-list.md)
+* [Full config.yml file](base/full-config.yml-file.md)
+* [Display Item Format](base/display-item-format.md)
+* [Economy Format](base/economy-format.md)
+* [Menus](base/menus.md)
+* [Buy More Menus](base/buy-more-menus.md)
+* [Actions](base/actions.md)
+* [Conditions](base/conditions.md)
+* [Shops](base/shops.md)
+* [Buy/Sell Times Reset](base/buy-sell-times-reset.md)
+* [Single Things](base/single-things.md)
+* [Stock (like in life)](base/stock-like-in-life.md)
+* [Daily Shops](base/daily-shops.md)
+* [Rewards](base/rewards.md)
+* [Commands](base/commands.md)
+* [Data](base/data.md)
+* [FAQ](base/faq.md)
+* [Performance](base/performance.md)
 
-## 一切的起点
+## Advanced
 
-* [1.0 - 序](yi-qie-de-qi-dian/1.0-xu.md)
-* [1.1 - 插件的选择：从经济插件开始](yi-qie-de-qi-dian/1.1-cha-jian-de-xuan-ze-cong-jing-ji-cha-jian-kai-shi.md)
-* [1.2 - 运营的思路：从经济方面开始](yi-qie-de-qi-dian/1.2-yun-ying-de-si-lu-cong-jing-ji-fang-mian-kai-shi.md)
-* [1.3 - 插件的选择：常见 API 插件](yi-qie-de-qi-dian/1.3-cha-jian-de-xuan-ze-chang-jian-api-cha-jian.md)
-* [1.4 - 软件的选择：常用软件](yi-qie-de-qi-dian/1.4-ruan-jian-de-xuan-ze-chang-yong-ruan-jian.md)
-* [1.5 - 综合起来看：从服务器的菜单开始](yi-qie-de-qi-dian/1.5-zong-he-qi-lai-kan-cong-fu-wu-qi-de-cai-dan-kai-shi.md)
-* [1.6 - 寻找资源：从主城地图开始](yi-qie-de-qi-dian/1.6-xun-zhao-zi-yuan-cong-zhu-cheng-di-tu-kai-shi.md)
-* [1.7 - 插件的选择：保护插件与创世神](yi-qie-de-qi-dian/1.7-cha-jian-de-xuan-ze-bao-hu-cha-jian-yu-chuang-shi-shen.md)
-* [1.8 - 本章作业：权限组和多世界插件](yi-qie-de-qi-dian/1.8-ben-zhang-zuo-ye-quan-xian-zu-he-duo-shi-jie-cha-jian.md)
+* [Color Code](advanced/color-code.md)
+* [Easy Prices](advanced/easy-prices.md)
+* [Placeholders](advanced/placeholders.md)
+* [Dynamic Price](advanced/dynamic-price.md)
+* [Dynamic Price Status - Premium](advanced/dynamic-price-status-premium.md)
+* [Display Item Add Lore](advanced/display-item-add-lore.md)
+* [Discount - Premium](advanced/discount-premium.md)
+* [Random - Premium](advanced/random-premium.md)
+* [Crunch - Math Calculate](advanced/crunch-math-calculate.md)
+* [Sell Stick - Premium](advanced/sell-stick-premium.md)
+* [Bedrock UI - Premium](advanced/bedrock-ui-premium.md)
+* [Localized Item Name](advanced/localized-item-name.md)
+* [Multi Server Sync](advanced/multi-server-sync.md)
+* [Number Format](advanced/number-format.md)
+* [In-game Editor - Premium](advanced/in-game-editor-premium.md)
+* [Custom Click Event - Premium](advanced/custom-click-event-premium.md)
+* [Custom Item Match Method](advanced/custom-item-match-method.md)
+* [Give Item Method](advanced/give-item-method.md)
+* [Log Transaction - Premium](advanced/log-transaction-premium.md)
 
-***
+## Example
 
-* [下一章地址](xia-yi-zhang-di-zhi.md)
+* [Sell other plugins item](example/sell-other-plugins-item.md)
+* [Common Shop](example/common-shop.md)
+* [Economy Exchange](example/economy-exchange.md)
+
+## Develop
+
+* [Develop Guide](develop/develop-guide.md)
+* [Can't do things](develop/cant-do-things.md)
+
+## Legacy
+
+* [Must Read (Legacy)](legacy/must-read-legacy.md)
+* [Item format (Legacy)](legacy/item-format-legacy.md)
+* [Discount (In free version)](legacy/discount-in-free-version.md)
+* [Better buy-more menu](legacy/better-buy-more-menu.md)
+* [Random Price](legacy/random-price.md)
+* [Rotate Product](legacy/rotate-product.md)
+* [Actions (Legacy)](legacy/actions-legacy.md)
+* [Conditions (Legacy)](legacy/conditions-legacy.md)

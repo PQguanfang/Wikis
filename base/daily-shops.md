@@ -1,0 +1,579 @@
+# Daily Shops
+
+This page don't have any description of it because all things I can tell you have been claimed in [Shops](shops.md) page.&#x20;
+
+## Create random placeholder
+
+We need to create a random placeholders. This placeholder can be used in conjunction with the [condition](conditions.md) system to achieve different products appearing at this shop every day, thereby achieving the same effect as the daily shop plugin.
+
+In this example, we created a new random placeholder called `daily`.  And it's options represents:
+
+* `reset-mode` and `reset-time`: This placeholder refreshed every day.
+* `element-amount`: This placeholder will randomly pick 5 elements when it refresh, this is same as the amount of slots in this daily shop.
+* `elements`: The result determines what product will appear in this slot by the condition system. So the quantity of elements should be equal to the quantity of all possible products in the daily shop.
+* In this example, this daily shop will has 5 slots and 7 possible products, so each day, it will has 2 products be hidden, and 5 products randomly picked to display in shop.
+* Please view [Random Placeholder](../advanced/random-premium.md) page for more info about random placeholder.
+
+```yaml
+  random:
+    daily:
+      reset-mode: TIMED
+      reset-time: '00:00:00'
+      element-amount: 5
+      elements:
+        - 'A'
+        - 'B'
+        - 'C'
+        - 'D'
+        - 'E'
+        - 'F'
+        - 'G'
+```
+
+## Configure Shop
+
+The various options used in this example are detailed on the [Shops](shops.md) page. If you are unsure of the purpose of each option, please refer to that article.
+
+<figure><img src="../.gitbook/assets/image (11).png" alt=""><figcaption></figcaption></figure>
+
+```yaml
+settings:
+  menu: 'example-shop-menu'
+  buy-more: true
+  shop-name: 'Daily Shop'
+  hide-message: false
+
+general-configs:
+  price-mode: CLASSIC_ANY
+  product-mode: CLASSIC_ANY
+  display-item:
+    1:
+      material: REDSTONE
+      amount: 1
+      name: '&eRedstone'
+      lore:
+        - '&fToday Product:'
+        - '&7  - Redstone'
+    2:
+      material: IRON_INGOT
+      amount: 1
+      name: '&eIron Ingot'
+      lore:
+        - '&fToday Product:'
+        - '&7  - Iron Ingot'
+    3:
+      material: GOLD_INGOT
+      amount: 1
+      name: '&eGold Ingot'
+      lore:
+        - '&fToday Product:'
+        - '&7  - Gold Ingot'
+    4:
+      material: COPPER_INGOT
+      amount: 1
+      name: '&eCopper Ingot'
+      lore:
+        - '&fToday Product:'
+        - '&7  - Copper Ingot'
+    5:
+      material: DIAMOND
+      amount: 1
+      name: '&eDiamond'
+      lore:
+        - '&fToday Product:'
+        - '&7  - Diamond'
+    6:
+      material: LAPIS_LAZULI
+      amount: 1
+      name: '&eLapis lazuli'
+      lore:
+        - '&fToday Product:'
+        - '&7  - Diamond'
+    7:
+      material: EMERALD
+      amount: 1
+      name: '&eEmerald'
+      lore:
+        - '&fToday Product:'
+        - '&7  - Emerald'
+  products:
+    1:
+      material: REDSTONE
+      amount: 1
+    2:
+      material: IRON_INGOT
+      amount: 1
+    3:
+      material: GOLD_INGOT
+      amount: 1
+    4:
+      material: COPPER_INGOT
+      amount: 1
+    5:
+      material: DIAMOND
+      amount: 1
+    6:
+      material: LAPIS_LAZULI
+      amount: 1
+    7:
+      material: EMERALD
+      amount: 1
+  sell-prices:
+    1:
+      economy-plugin: Vault
+      amount: 1
+      placeholder: '&6{amount} Coins'
+      start-apply: 0
+  sell-limits:
+    global: 640
+    default: 18
+    vip: 256
+  sell-limits-conditions:
+    vip:
+      - 'permission: group.vip'
+  sell-limits-reset-mode: 'TIMED'
+  sell-limits-reset-time: '00:00:00'
+
+items:
+  A:
+    sell-prices:
+      1:
+        economy-plugin: Vault
+        amount: 1
+        placeholder: '&6{amount} Coins'
+        start-apply: 0
+    display-item-conditions:
+      1: 
+        1: 
+          type: placeholder
+          placeholder: '{random_daily;;1}'
+          rule: '=='
+          value: 'A'
+      2: 
+        1:
+          type: placeholder
+          placeholder: '{random_daily;;1}'
+          rule: '=='
+          value: 'B'
+      3:
+        1:
+          type: placeholder
+          placeholder: '{random_daily;;1}'
+          rule: '=='
+          value: 'C'
+      4:
+        1:
+          type: placeholder
+          placeholder: '{random_daily;;1}'
+          rule: '=='
+          value: 'D'
+      5:
+        1:
+          type: placeholder
+          placeholder: '{random_daily;;1}'
+          rule: '=='
+          value: 'E'
+      6:
+        1:
+          type: placeholder
+          placeholder: '{random_daily;;1}'
+          rule: '=='
+          value: 'F'
+      7:
+        1:
+          type: placeholder
+          placeholder: '{random_daily;;1}'
+          rule: '=='
+          value: 'G'
+    products-conditions:
+      1: 
+        1: 
+          type: placeholder
+          placeholder: '{random_daily;;1}'
+          rule: '=='
+          value: 'A'
+      2: 
+        1:
+          type: placeholder
+          placeholder: '{random_daily;;1}'
+          rule: '=='
+          value: 'B'
+      3:
+        1:
+          type: placeholder
+          placeholder: '{random_daily;;1}'
+          rule: '=='
+          value: 'C'
+      4:
+        1:
+          type: placeholder
+          placeholder: '{random_daily;;1}'
+          rule: '=='
+          value: 'D'
+      5:
+        1:
+          type: placeholder
+          placeholder: '{random_daily;;1}'
+          rule: '=='
+          value: 'E'
+      6:
+        1:
+          type: placeholder
+          placeholder: '{random_daily;;1}'
+          rule: '=='
+          value: 'F'
+      7:
+        1:
+          type: placeholder
+          placeholder: '{random_daily;;1}'
+          rule: '=='
+          value: 'G'
+  B:
+    display-item-conditions:
+      1: 
+        1: 
+          type: placeholder
+          placeholder: '{random_daily;;2}'
+          rule: '=='
+          value: 'A'
+      2: 
+        1:
+          type: placeholder
+          placeholder: '{random_daily;;2}'
+          rule: '=='
+          value: 'B'
+      3:
+        1:
+          type: placeholder
+          placeholder: '{random_daily;;2}'
+          rule: '=='
+          value: 'C'
+      4:
+        1:
+          type: placeholder
+          placeholder: '{random_daily;;2}'
+          rule: '=='
+          value: 'D'
+      5:
+        1:
+          type: placeholder
+          placeholder: '{random_daily;;2}'
+          rule: '=='
+          value: 'E'
+      6:
+        1:
+          type: placeholder
+          placeholder: '{random_daily;;2}'
+          rule: '=='
+          value: 'F'
+      7:
+        1:
+          type: placeholder
+          placeholder: '{random_daily;;2}'
+          rule: '=='
+          value: 'G'
+    products-conditions:
+      1: 
+        1: 
+          type: placeholder
+          placeholder: '{random_daily;;2}'
+          rule: '=='
+          value: 'A'
+      2: 
+        1:
+          type: placeholder
+          placeholder: '{random_daily;;2}'
+          rule: '=='
+          value: 'B'
+      3:
+        1:
+          type: placeholder
+          placeholder: '{random_daily;;2}'
+          rule: '=='
+          value: 'C'
+      4:
+        1:
+          type: placeholder
+          placeholder: '{random_daily;;2}'
+          rule: '=='
+          value: 'D'
+      5:
+        1:
+          type: placeholder
+          placeholder: '{random_daily;;2}'
+          rule: '=='
+          value: 'E'
+      6:
+        1:
+          type: placeholder
+          placeholder: '{random_daily;;2}'
+          rule: '=='
+          value: 'F'
+      7:
+        1:
+          type: placeholder
+          placeholder: '{random_daily;;2}'
+          rule: '=='
+          value: 'G'
+  C:
+    display-item-conditions:
+      1: 
+        1: 
+          type: placeholder
+          placeholder: '{random_daily;;3}'
+          rule: '=='
+          value: 'A'
+      2: 
+        1:
+          type: placeholder
+          placeholder: '{random_daily;;3}'
+          rule: '=='
+          value: 'B'
+      3:
+        1:
+          type: placeholder
+          placeholder: '{random_daily;;3}'
+          rule: '=='
+          value: 'C'
+      4:
+        1:
+          type: placeholder
+          placeholder: '{random_daily;;3}'
+          rule: '=='
+          value: 'D'
+      5:
+        1:
+          type: placeholder
+          placeholder: '{random_daily;;3}'
+          rule: '=='
+          value: 'E'
+      6:
+        1:
+          type: placeholder
+          placeholder: '{random_daily;;3}'
+          rule: '=='
+          value: 'F'
+      7:
+        1:
+          type: placeholder
+          placeholder: '{random_daily;;3}'
+          rule: '=='
+          value: 'G'
+    products-conditions:
+      1: 
+        1: 
+          type: placeholder
+          placeholder: '{random_daily;;3}'
+          rule: '=='
+          value: 'A'
+      2: 
+        1:
+          type: placeholder
+          placeholder: '{random_daily;;3}'
+          rule: '=='
+          value: 'B'
+      3:
+        1:
+          type: placeholder
+          placeholder: '{random_daily;;3}'
+          rule: '=='
+          value: 'C'
+      4:
+        1:
+          type: placeholder
+          placeholder: '{random_daily;;3}'
+          rule: '=='
+          value: 'D'
+      5:
+        1:
+          type: placeholder
+          placeholder: '{random_daily;;3}'
+          rule: '=='
+          value: 'E'
+      6:
+        1:
+          type: placeholder
+          placeholder: '{random_daily;;3}'
+          rule: '=='
+          value: 'F'
+      7:
+        1:
+          type: placeholder
+          placeholder: '{random_daily;;3}'
+          rule: '=='
+          value: 'G'
+  D:
+    display-item-conditions:
+      1: 
+        1: 
+          type: placeholder
+          placeholder: '{random_daily;;4}'
+          rule: '=='
+          value: 'A'
+      2: 
+        1:
+          type: placeholder
+          placeholder: '{random_daily;;4}'
+          rule: '=='
+          value: 'B'
+      3:
+        1:
+          type: placeholder
+          placeholder: '{random_daily;;4}'
+          rule: '=='
+          value: 'C'
+      4:
+        1:
+          type: placeholder
+          placeholder: '{random_daily;;4}'
+          rule: '=='
+          value: 'D'
+      5:
+        1:
+          type: placeholder
+          placeholder: '{random_daily;;4}'
+          rule: '=='
+          value: 'E'
+      6:
+        1:
+          type: placeholder
+          placeholder: '{random_daily;;4}'
+          rule: '=='
+          value: 'F'
+      7:
+        1:
+          type: placeholder
+          placeholder: '{random_daily;;4}'
+          rule: '=='
+          value: 'G'
+    products-conditions:
+      1: 
+        1: 
+          type: placeholder
+          placeholder: '{random_daily;;4}'
+          rule: '=='
+          value: 'A'
+      2: 
+        1:
+          type: placeholder
+          placeholder: '{random_daily;;4}'
+          rule: '=='
+          value: 'B'
+      3:
+        1:
+          type: placeholder
+          placeholder: '{random_daily;;4}'
+          rule: '=='
+          value: 'C'
+      4:
+        1:
+          type: placeholder
+          placeholder: '{random_daily;;4}'
+          rule: '=='
+          value: 'D'
+      5:
+        1:
+          type: placeholder
+          placeholder: '{random_daily;;4}'
+          rule: '=='
+          value: 'E'
+      6:
+        1:
+          type: placeholder
+          placeholder: '{random_daily;;4}'
+          rule: '=='
+          value: 'F'
+      7:
+        1:
+          type: placeholder
+          placeholder: '{random_daily;;4}'
+          rule: '=='
+          value: 'G'
+  E:
+    display-item-conditions:
+      1: 
+        1: 
+          type: placeholder
+          placeholder: '{random_daily;;5}'
+          rule: '=='
+          value: 'A'
+      2: 
+        1:
+          type: placeholder
+          placeholder: '{random_daily;;5}'
+          rule: '=='
+          value: 'B'
+      3:
+        1:
+          type: placeholder
+          placeholder: '{random_daily;;5}'
+          rule: '=='
+          value: 'C'
+      4:
+        1:
+          type: placeholder
+          placeholder: '{random_daily;;5}'
+          rule: '=='
+          value: 'D'
+      5:
+        1:
+          type: placeholder
+          placeholder: '{random_daily;;5}'
+          rule: '=='
+          value: 'E'
+      6:
+        1:
+          type: placeholder
+          placeholder: '{random_daily;;5}'
+          rule: '=='
+          value: 'F'
+      7:
+        1:
+          type: placeholder
+          placeholder: '{random_daily;;5}'
+          rule: '=='
+          value: 'G'
+    products-conditions:
+      1: 
+        1: 
+          type: placeholder
+          placeholder: '{random_daily;;5}'
+          rule: '=='
+          value: 'A'
+      2: 
+        1:
+          type: placeholder
+          placeholder: '{random_daily;;5}'
+          rule: '=='
+          value: 'B'
+      3:
+        1:
+          type: placeholder
+          placeholder: '{random_daily;;5}'
+          rule: '=='
+          value: 'C'
+      4:
+        1:
+          type: placeholder
+          placeholder: '{random_daily;;5}'
+          rule: '=='
+          value: 'D'
+      5:
+        1:
+          type: placeholder
+          placeholder: '{random_daily;;5}'
+          rule: '=='
+          value: 'E'
+      6:
+        1:
+          type: placeholder
+          placeholder: '{random_daily;;5}'
+          rule: '=='
+          value: 'F'
+      7:
+        1:
+          type: placeholder
+          placeholder: '{random_daily;;5}'
+          rule: '=='
+          value: 'G'
+```

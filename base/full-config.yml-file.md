@@ -1,0 +1,346 @@
+# Full config.yml file
+
+It is recommend that you view this file at GitHub, becuase Wiki's `config.yml` maybe not **latest**. Click [here](https://github.com/PQguanfang/UltimateShop/blob/master/src/main/resources/config.yml) to view this file on **Github.**
+
+```yaml
+# UltimateShop by @PQguanfang
+#
+# Read the Wiki: ultimateshop.superiormc.cn
+
+debug: false
+
+config-files:
+  language: en_US
+  # Premium version only.
+  minecraft-locate-file:
+    # After enable, we will autoload Minecraft locate file when we need know an item's locate name.
+    # It will make server little lag when loading this file because this file is very large.
+    enabled: true
+    generate-new-one: false
+    file: 'zh_cn.json'
+
+# Paper only feature.
+paper-api:
+  save-item: true
+  # For paper users, enable this option can use their API to directly get the skull, have the performance improve.
+  skull: true
+  use-component:
+    menu-title: false
+    message: false
+    item: false
+
+sell:
+  # Support Value: Bukkit or ItemFormat.
+  # For each product, you can add match-item section to make custom sell match method, for more info, please view Wiki.
+  sell-method: Bukkit
+  # Only support ItemFormat sell method.
+  ignore-item-format-key:
+    - 'lore'
+    - 'damage'
+    - 'tool.damage-per-block'
+  sell-all:
+    ignore-items:
+      # Format: Shop ID;;Item ID
+      - 'hideshop;;A'
+    hide-message: true
+  sell-stick:
+    # The min value here is 5, if you set value less than 5, we will auto set the cooldown to 5 tick.
+    # In ticks.
+    cooldown: 5
+    hide-message: true
+    # Support value: LEFT, RIGHT and LEFT;;RIGHT
+    # Do not change this value unless you are know what you are doing!
+    click-type: RIGHT
+  max-amount: 128
+
+give-item:
+  # Support value: BUKKIT, SMART
+  # SMART will cost more server performance but will follow the vanilla max stack to give player item, also support check full.
+  give-method: BUKKIT
+  # Only support SMART give method.
+  check-full: false
+
+menu:
+  # Recommend use when you are running big server, it will make player no longer quickly click
+  # and reopen shop menu to make sure UltimateShop not lag your server.
+  # In ticks.
+  cooldown:
+    click: -1
+    reopen: -1
+  ignore-click-outside: false
+  shop:
+    # Whether shop menu will refresh every 1 second.
+    # This will refresh placeholder that displayed in display item lore.
+    # But maybe lead to server lag if you have much online players, and they are all opening shop GUI.
+    update: false
+    # Whether shop menu will refresh every click in it.
+    # This will refresh placeholder that displayed in display item lore.
+    # But maybe lead to server lag if you have much online players, and they are all opening shop GUI.
+    click-update: false
+  sell-all:
+    size: 54
+    title: '&fSell All &7- Esc to confirm sell!'
+    black-slots: []
+  # Premium version only
+  bedrock:
+    enabled: true
+    # Support value: FLOODGATE, UUID
+    check-method: FLOODGATE
+    # If enabled, we will try to reopen shop menu after player successfully buy or sell products.
+    not-auto-close: true
+    buy-or-sell:
+      title: 'Select Amount: {item-name}'
+      buttons:
+        amount:
+          name: 'Amount'
+          tip: 'Type amount here! Type all to sell all!'
+    info:
+      title: 'Product Info: {item-name} x{amount}'
+      buttons:
+        buy: 'Buy'
+        sell: 'Sell'
+        buy-more: 'Select Amount'
+        back: '&cBack'
+  buy-more:
+    menu: buy-more
+    max-amount: 64
+  auto-open:
+    enabled: true
+    menu: main
+  # Support value: https://hub.spigotmc.org/javadocs/spigot/org/bukkit/event/inventory/ClickType.html
+  # Support use ;; symbol to make multi click type.
+  click-event:
+    buy: 'SHIFT_LEFT'
+    sell: 'RIGHT'
+    buy-or-sell: 'LEFT'
+    # If you want to disable select-amount feature, set this to NEVER.
+    select-amount: 'SHIFT_RIGHT;;SWAP_OFFHAND'
+    sell-all: 'DROP'
+    # buy-one-stack: 'SWAP_OFFHAND'
+  # Custom click actions for shop menu.
+  # Premium version only.
+  click-event-actions:
+    buy-one-stack:
+      1:
+        type: buy
+        shop: {shop}
+        item: {item}
+        amount: 64
+
+use-times:
+  default-reset-mode: 'NEVER'
+  default-reset-time: '00:00:00'
+
+math:
+  enabled: true
+  scale: 2
+
+# Premium version only.
+log-transaction:
+  # It will cost extra performance cost.
+  enabled: false
+  # If set to empty value, we will just print the log into console.
+  file: 'log.txt'
+  format: '{player} | {shop} | {buy-or-sell} | {item-name}x{amount} | {price}'
+
+display-item:
+  auto-set-first-product: true
+  # @+lower case means conditional lore, do not remove them here.
+  # Otherwise, the line without this will always display it.
+  add-lore:
+    - '@n '
+    - '@a&ePurchase: {buy-price}'
+    - '@b&eSell: {sell-price}'
+    - '@c&#FF7777Player Buy Stock: {buy-times-player}/{buy-limit-player}'
+    - '@d&#FF7777Server Buy Stock: {buy-times-server}/{buy-limit-server}'
+    - '@e&#FF7777Player Sell Limit: {sell-times-player}/{sell-limit-player}'
+    - '@f&#FF7777Server Sell Limit: {sell-times-server}/{sell-limit-server}'
+    - '@g '
+    - '@g&#ff3300cCan not buy more!'
+    - '@g&8Refresh Time: {buy-refresh-player}'
+    - '@i '
+    - '@i&#ff3300Sold Out!'
+    - '@i&8Refresh Time: {buy-refresh-server}'
+    - '@h '
+    - '@h&#ff3300Can not sell more!'
+    - '@h&8Refresh Time: {sell-refresh-player}'
+    - '@j'
+    - '@j&#ff3300Can not sell more for server!'
+    - '@j&8Refresh Time: {sell-refresh-server}'
+    - '@n '
+    - '@a{buy-click}-b'
+    - '@b{sell-click}-b'
+    - '@k&#FFFACDRight-Shift click to pick amount!-b'
+    - '@b&#FFFACDDrop (Q key) to sell all!-b'
+    - '@n&c&l:( Can not do this-i'
+    - '@a&cThis item can not be sold-i-m'
+    - '@b&cThis item can not be purchased-i-m'
+
+placeholder:
+  auto-settings:
+    # If enabled, we will auto add discount placeholder at all price amount.
+    # This can avoid the need to add the discount option in the amount options for each price.
+    add-discount-in-all-price-amount:
+      enabled: false
+      buy-placeholder: buy
+      sell-placeholder: sell
+      black-dynamic-price: true
+      black-shops:
+        - 'example'
+    # We will try adds dynamic up or down symbol for all dynamic price placeholder.
+    # Please note that in your dynamic price amount option, first number must be the base price.
+    # If you made the dynamic price according to the Wiki's instructions, then there is no problem at all.
+    add-status-in-dynamic-price-placeholder:
+      enabled: true
+    # If enabled, we will try change {amount} in price placeholder option to the value you set here.
+    change-amount-in-all-price-placeholder:
+      enabled: false
+      replace-value: '%formatter_number_format_{amount}%'
+  # Premium version only.
+  discount:
+    buy:
+      mode: MIN
+      default: 1
+      vip: 0.5
+      mvp: 0.3
+    sell:
+      mode: MAX
+      default: 1
+      vip: 1.5
+      mvp: 2
+  discount-conditions:
+    vip:
+      type: permission
+      permission: 'group.vip'
+    mvp:
+      type: permission
+      permission: 'group.mvp'
+  # Premium version only.
+  random:
+    rotate:
+      reset-mode: TIMED
+      reset-time: '00:00:00'
+      elements:
+        - 'A'
+        - 'B'
+        - 'C'
+    daily:
+      reset-mode: TIMED
+      reset-time: '00:00:00'
+      element-amount: 2
+      elements:
+        - 'A'
+        - 'B'
+        - 'C'
+  # Premium version only
+  compare:
+    up: '↑'
+    down: '↓'
+    same: '-'
+  # Premium version only
+  status:
+    # If disabled, status placeholder will only display in shop GUI.
+    # For sell all, sell stick etc. still can not use status placeholder because it will sell not only 1 type product
+    # and we can not know whether total price is cheaper or higher.
+    can-used-everywhere: false
+  math:
+    scale: 0
+  data:
+    # If your server never use dynamic value in prices or similar things, you can set this option to false.
+    # This will improve little plugin performance.
+    can-used-in-amount: true
+  refresh:
+    format: "yyyy-MM-dd HH:mm:ss"
+    never: "Never"
+  cooldown:
+    format: "yyyy-MM-dd HH:mm:ss"
+    now: "Now"
+  price:
+    split-symbol-any: ', '
+    split-symbol-all: ', '
+    replace-new-line-symbol: ', '
+    unknown: "Unknown"
+    unknown-price-type: "Unknown Price Type"
+    empty: "Price is empty!"
+  click:
+    # If enabled, {buy-click} and {sell-stick} will display different value according to product status.
+    # But, it will maybe make server lag if you are running big server and have many products in your shop.
+    enabled: false
+    buy: '&#FFFACDLeft-click to buy!'
+    sell: '&#FFFACDRight-click to sell!'
+    buy-with-no-sell: '&#FFFACDClick to buy!'
+    sell-with-no-buy: '&#FFFACDClick to sell!'
+    buy-max-limit-player: '&#ff3300You can not buy more!'
+    buy-max-limit-server: '&#ff3300SOLD OUT!'
+    sell-max-limit-player: '&#ff3300Can not sell more!'
+    sell-max-limit-server: '&#ff3300THIS ITEM CAN NOT BE SOLD!'
+    buy-price-not-enough: '&#ff3300Do not have enough money to buy!'
+    sell-price-not-enough: '&#ff3300Do not have enough item to sell!'
+    error: '&#ff3300Error!'
+    buy-condition-not-meet: '&#ff3300Not meet the buy condition!'
+    sell-condition-not-meet: '&#ff3300Not meet the sell condition!'
+    buy-in-cooldown: '&#ff3300In cooldown!'
+    sell-in-cooldown: '&#ff3300In cooldown!'
+  # Premium version only.
+  sell-stick:
+    infinite: "&cInfinite"
+
+database:
+  enabled: false
+  jdbc-url: "jdbc:mysql://localhost:3306/ultimateshop?useSSL=false&autoReconnect=true"
+  jdbc-class: "com.mysql.cj.jdbc.Driver"
+  properties:
+    user: root
+    password: 123456
+
+# Premium version only.
+bungeecord-sync:
+  enabled: false
+
+prices:
+  example:
+    economy-plugin: Vault
+    amount: 200
+    placeholder: '{amount} Coins'
+  mmoitems-example:
+    hook-plugin: MMOItems
+    hook-item: AXE;;TEST_AXE
+    amount: 1
+    placeholder: '{amount} Mythic Axe'
+
+# Premium version only
+sell-stick-items:
+  A:
+    material: STICK
+    name: '&dSell Stick &7(5 times)'
+    lore:
+      - '&fRight click a chest to use this item!'
+      - ''
+      - '&cLeft usages: {times}'
+    usage-times: 5
+  B:
+    material: STICK
+    name: '&dAdvanced Sell Stick &7(50 times)'
+    lore:
+      - '&fRight click a chest to use this item!'
+      - ''
+      - '&cLeft usages: {times}'
+    usage-times: 50
+  C:
+    material: STICK
+    name: '&5Epic Sell Stick'
+    lore:
+      - '&fRight click a chest to use this item!'
+      - ''
+      - '&cLeft usages: {times}'
+    usage-times: -1
+
+auto-save:
+  enabled: true
+  hide-message: false
+  period-tick: 6000
+
+check-class:
+  enabled: true
+  classes: []
+```
