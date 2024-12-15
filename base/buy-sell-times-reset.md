@@ -46,7 +46,7 @@ Support those modes:
 
 ## Difference between COOLDOWN\_TIMED (or COOLDOWN\_TIMER) and TIMED (or TIMER)
 
-`TIMED` and `TIMER` will only start generating reset time after reaching buy limits or sell limits and can auto fixing the value, while `COOLDOWN_TIMED` and `COOLDOWN_TIMER` will start generating reset time after the first buy or sell.
+`TIMED` and `TIMER` will start generating reset time after each buy or sell until the player reaches the limit, while `COOLDOWN_TIMED` and `COOLDOWN_TIMER` will start generating reset time after the first buy or sell and will never update the reset time until the reset time reached.
 
 For this reason, when using `COOLDOWN_TIMED` or `COOLDOWN_TIMER` mode, the reset time will not automatically adjust due to server restarts, configuration modifications, or other reasons. This means that if you mistakenly set the product to refresh after 1 year, the reset time will not automatically change due to your correction, but `TIMED` or `TIMER` rules can do this.
 
@@ -126,3 +126,7 @@ Use this placeholder at `buy-times-reset-time` option.
     buy-times-reset-mode: 'TIMED'
     buy-times-reset-time: '{random_reset}' # <--- Used here, sell-times also works!
 ```
+
+## Reset Time do not correct?
+
+* The product must have been purchased or selled once before the next reset time can be stored. Otherwise, we can only display the possible reset time calculated based on the current time after the transaction is completed.
