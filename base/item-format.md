@@ -16,7 +16,7 @@ Please view Item Format Arg List page to know some of those args possible value.
 
 ### Hook Plugin
 
-Possible Value: `EcoItems, EcoArmor, MMOItems, ItemsAdder, Oraxen, MythicMobs, eco, NeigeItems, ExecutableItems`.&#x20;
+Possible Value: `EcoItems, EcoArmor, MMOItems, ItemsAdder, Oraxen, MythicMobs, eco, NeigeItems, ExecutableItems, Nova`.&#x20;
 
 ```yaml
 hook-plugin: MMOItems
@@ -143,6 +143,7 @@ tool:
   rules:
     # Blocks, Speed, Drop after mine
     - 'stone, coal_ore, 1, true'
+    # Support replace Blocks to Tag.
 ```
 
 ## Jukebox Playable (1.21+)
