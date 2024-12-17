@@ -88,6 +88,11 @@ menu:
     check-method: FLOODGATE
     # If enabled, we will try to reopen shop menu after player successfully buy or sell products.
     not-auto-close: true
+    # Make this option be empty to disable.
+    price-extra-line:
+      default: '&6Buy: {buy-price} &6| Sell: {sell-price}'
+      only-buy: '&6Buy: {buy-price}'
+      only-sell: '&6Sell: {sell-price}'
     buy-or-sell:
       title: 'Select Amount: {item-name}'
       buttons:

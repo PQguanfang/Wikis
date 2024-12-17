@@ -66,7 +66,7 @@
 * [Item format (Legacy)](legacy/item-format-legacy.md)
 * [Discount (In free version)](legacy/discount-in-free-version.md)
 * [Better buy-more menu](legacy/better-buy-more-menu.md)
-* [Random Price](legacy/random-price.md)
+* [Welcome](legacy/welcome.md)
 * [Rotate Product](legacy/rotate-product.md)
 * [Actions (Legacy)](legacy/actions-legacy.md)
 * [Conditions (Legacy)](legacy/conditions-legacy.md)

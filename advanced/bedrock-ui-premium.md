@@ -59,9 +59,9 @@ If your product configs do not has `display-item` section, you can simply add be
         material: melon_slice
         amount: 1
         # Plan B
-          bedrock:
-            hide: false
-            icon: 'url;;https://raw.githubusercontent.com/Jens-Co/MinecraftItemImages/main/1.20/melon_slice.png'
+        bedrock:
+          hide: false
+          icon: 'url;;https://raw.githubusercontent.com/Jens-Co/MinecraftItemImages/main/1.20/melon_slice.png'
     buy-prices:
       5:
         economy-type: exp
@@ -101,6 +101,7 @@ For example:
 with the product config (menu buttons are similar):
 
 * hide: Hide button for bedrock players.
+* extra-line: Display second line at bedrock button, supports `{buy-price}` and `{sell-price}` placeholder for products.
 
 ## Extra options for bedrock menu
 
@@ -121,3 +122,19 @@ open-actions:
 
 * enabled: Whether we will auto open bedrock form UI to player. Only work for common type menu. Other menu types like shop menu, buy more menu and sell all menu are not work by this option. If you want to disable for all menus, there is a option called `menu.bedrock.enabled` at `config.yml` file.
 * content: The head content of the bedrock menu. Only work for common type menu, shop menu. Other menu types like buy more menu and sell all menu are not work by this option.
+
+## Price Extra Line
+
+You can enable price extra line feature in `config.yml` file, after enable, all products button will display it's price at second line. Make the option value to empty to disable this feature.
+
+```yaml
+  # Premium version only
+  bedrock:
+    # Make this option be empty to disable.
+    price-extra-line:
+      default: '&6Buy: {buy-price} &6| Sell: {sell-price}'
+      only-buy: '&6Buy: {buy-price}'
+      only-sell: '&6Sell: {sell-price}'
+```
+
+<figure><img src="../.gitbook/assets/4053fcba88fc7bcf382832d8f7958067.png" alt=""><figcaption></figcaption></figure>
