@@ -577,3 +577,26 @@ items:
           rule: '=='
           value: 'G'
 ```
+
+## Price are same for all products?
+
+This is because you only created one unconditional price here, which results in all products using this price. If you don't want this, you can learn to do it like `display-item` and `products`.
+
+For example:
+
+```yaml
+general-configs:
+  sell-prices:
+    1:
+      economy-plugin: Vault
+      amount: 1
+      placeholder: '&6{amount} Coins'
+      start-apply: 0
+
+items:
+  sell-prices-conditions:
+    1:
+      # Conditions...
+```
+
+The reason why options like `products` are separated from their corresponding conditional options is that the products in your shop are fixed, so each slot has the same `products` option. However, the randomly selected product in each slot are not consistent, so the `conditions` option needs to be separated separately.
