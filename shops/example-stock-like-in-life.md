@@ -2,7 +2,7 @@
 
 ## Set dynamic value for your product configs
 
-Read [dynamic prices](../advanced/dynamic-price.md) before read this page. Similar to Dynamic Prices, if you want to make stock system, do it in `buy-limits` option, for example:
+Read [dynamic prices](../dynamic-prices/dynamic-price.md) before read this page. Similar to Dynamic Prices, if you want to make stock system, do it in `buy-limits` option, for example:
 
 ```yaml
   A:

@@ -40,7 +40,7 @@ A: Make sure your `config.yml` is latest format, if not, update it. Or, you are 
 
 ## Q: How can I translate item name in buy more menu and plugin message?
 
-A: View [Localized Item Name](../advanced/localized-item-name-premium.md) page.&#x20;
+A: View [Localized Item Name](../features/localized-item-name-premium.md) page.&#x20;
 
 ## Q: UltimateShop print Error:XXX message in console.
 
@@ -52,4 +52,4 @@ If there are no issues with the shop, there is no need to pay attention to it. T
 
 ## Q: How to reset dynamic price?
 
-A: View [Dynamic Price](../advanced/dynamic-price.md) page.
+A: View [Dynamic Price](../dynamic-prices/dynamic-price.md) page.

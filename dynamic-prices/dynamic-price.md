@@ -1,4 +1,4 @@
-# Dynamic Price
+# 🔄Dynamic Price
 
 ## Enable Math Feature
 
@@ -105,7 +105,7 @@ Another common dynamic price formula is price changed based on the percentage, l
 
 ## Dynamic Price per player
 
-As long as you can ensure that the placeholder used in the formula is per player, the calculated price result will naturally be per player. In the above example, we used global placeholders such as `{buy times server}`, and you only need to replace the `server` with the `player` to display the player's own buy times value. The relevant content is explained in detail in the [Placeholders](placeholders.md) page.
+As long as you can ensure that the placeholder used in the formula is per player, the calculated price result will naturally be per player. In the above example, we used global placeholders such as `{buy times server}`, and you only need to replace the `server` with the `player` to display the player's own buy times value. The relevant content is explained in detail in the [Placeholders](../placeholders/built-in-placeholder.md) page.
 
 ## Set buy / sell limits for your products
 

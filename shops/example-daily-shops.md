@@ -12,7 +12,7 @@ In this example, we created a new random placeholder called `daily`.  And it's o
 * `element-amount`: This placeholder will randomly pick 5 elements when it refresh, this is same as the amount of slots in this daily shop.
 * `elements`: The result determines what product will appear in this slot by the condition system. So the quantity of elements should be equal to the quantity of all possible products in the daily shop.
 * In this example, this daily shop will has 5 slots and 7 possible products, so each day, it will has 2 products be hidden, and 5 products randomly picked to display in shop.
-* Please view [Random Placeholder](../advanced/random-premium.md) page for more info about random placeholder.
+* Please view [Random Placeholder](../placeholders/random-placeholder-premium.md) page for more info about random placeholder.
 
 ```yaml
   random:

@@ -57,7 +57,7 @@ Indirect compatibility refers to the flexible use of various features of plugins
 
 In this example, we first fill in the **ItemFormat** through the display item option to describe the item from an incompatible plugin, so that players can see what the item looks like in the menu.
 
-In the `products` option, we use the [Custom Sell Match](../advanced/custom-item-match-method.md) feature, which allows us to flexibly set the rules for selling matches for this item, such as contains lore, etc. Then, we use `give-actions` format to execute the item give command, so that player can obtain this item after buy.
+In the `products` option, we use the [Custom Sell Match](../features/custom-item-match-method.md) feature, which allows us to flexibly set the rules for selling matches for this item, such as contains lore, etc. Then, we use `give-actions` format to execute the item give command, so that player can obtain this item after buy.
 
 ```yaml
     display-item:
@@ -111,3 +111,11 @@ In this example, we mainly flexibly implemented different types of single thing 
             command: 'eco give {player} {amount}'
         amount: 500
 ```
+
+## NeigeItems Item Name Translation Hook
+
+* Download NeigeItems here: [https://github.com/ankhorg/NeigeItems-Kotlin/releases](https://github.com/ankhorg/NeigeItems-Kotlin/releases)
+* You should download NeigeItems-xxx.jar (not NeigeItems-api), the file lager than 10MB.
+* Install it in your server.
+* All is done! Now plugin will auto display localized item name for now.
+* Be careful: NeigeItems for now does not support 1.20.5 and higher version.

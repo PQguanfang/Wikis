@@ -313,7 +313,7 @@ Only players meet the conditions you set here will be able to execute the action
 
 ## Connect <mark style="color:red;">- Premium</mark>
 
-Require enable `bungeecord-sync.enabled` option in config.yml and correctly set the BungeeCord settings. For more info, please view [Multi Server Sync](../advanced/multi-server-sync.md) page.
+Require enable `bungeecord-sync.enabled` option in config.yml and correctly set the BungeeCord settings. For more info, please view [Multi Server Sync](../features/multi-server-sync-premium.md) page.
 
 ```yaml
     actions:

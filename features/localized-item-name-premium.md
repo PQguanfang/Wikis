@@ -1,4 +1,4 @@
-# Localized Item Name - Premium
+# 🌍Localized Item Name - Premium
 
 ## Requirements
 
@@ -170,14 +170,6 @@ Do you have problems? Try:
 * Server or plugin maybe lag when **first time** open the shop menu after restart the server, because we need build a cache for those localized item name. Under normal circumstances, you should not feel it unless you have a lot of products.
 
 ## Alternative methods
-
-### NeigeItems Hook&#x20;
-
-* Download NeigeItems here: [https://github.com/ankhorg/NeigeItems-Kotlin/releases](https://github.com/ankhorg/NeigeItems-Kotlin/releases)
-* You should download NeigeItems-xxx.jar (not NeigeItems-api), the file lager than 10MB.
-* Install it in your server.
-* All is done! Now plugin will auto display localized item name for now.
-* Be careful: NeigeItems for now does not support 1.20.5 and higher version.
 
 ### Set custom display-item for product
 

@@ -67,7 +67,7 @@ Product ID must be a single char, because we need use them in shop menu `layout`
 * display-item: Product display item in shop menu, it can be different from the real item player will obtain after purchase. For virtual items, you must set `display-item` here, otherwise they can not be displayed in GUI. For real items, you must enable `auto-set-first-product` option under `display-item` section to let you remove this section, after enable, if `display-item` is not set, the first product real items will be used as display item. This section use [Item format](broken-reference). **Optional (if not set, will use first products)**
   * display-item.modify-lore: Whether we will modify display item lore. **Optional (default to true)**
 * display-name: Set product display name in {product} placeholder and buy more menu display item. **Optional.**
-* add-lore: Set special [display item add lore](../advanced/display-item-add-lore.md) for this product, if not set, we will use default value set in config.yml. **Optional.**
+* add-lore: Set special [display item add lore](../menus/display-item-add-lore.md) for this product, if not set, we will use default value set in config.yml. **Optional.**
 * bedrock: View [this page](../menus/bedrock-menus-premium.md).
 * buy-more: Set whether this product can open buy more menu, **you must delete shop's buy-more option to make this option has effect! Optional.**
 * buy-more-menu: Set up separate buy more menu settings for the product. **Optional. Require 2.2.10+ version.**
@@ -105,24 +105,24 @@ Each single thing have those types:
 
 * Vanilla Item: Use [ItemFormat](../format/itemformat-tm.md) to tell us what Minecraft item you want to sell in shop or you want to player pay. **(Buy/Sell/Products)**
 * Hook Item: Use [Supported Plugins](../info/compatibility.md)'s item to tell us what custom item you want to sell in shop or you want to player pay. This type still use [ItemFormat](../format/itemformat-tm.md).**(Buy/Sell/Products)**
-* Match Item: Use [Custom Item Match Method](../advanced/custom-item-match-method.md) to tell us which items you want to match. **(Buy/Products)**
+* Match Item: Use [Custom Item Match Method](../features/custom-item-match-method.md) to tell us which items you want to match. **(Buy/Products)**
 * Vanilla Economy/Hook Economy: Use [EconomyFormat](../format/economyformat-tm.md) to tell us how much money you want to player pay or give to player. **(Buy/Sell/Products)**
 * Custom: If those types do not meet your need, you can make a custom single thing! You need add `match-placeholder` option at single thing config to make plugin know what the now amount player have of this custom product/price, and then we will compare the now amount you set here and the required amount. In the example above, we will compare player's health. **If your economy plugins do not supported, just place it's player balance placeholder here and all is solved! (Sell/Products)&#x20;**<mark style="color:red;">**(Premium)**</mark>
 * Free: Single thing do not include ItemFormat, EconomyFormat, match-item section and match-placeholder section will be consider as free.
 
 In product configurations, we set the corresponding type of single thing through several options. And according to the type you want, fill in the corresponding config format in these options. There may be additional options to fill in for different single things, as follows:
 
-* products: Product items. Support [Item format](../format/itemformat-tm.md) and [Economy format](../format/economyformat-tm.md). You can also add [Custom Sell Match Method](../advanced/custom-item-match-method.md) or other things depend on single thing type here. **Optional. If not set, player won't get anything after buy/sell. Useful for command shop.**
+* products: Product items. Support [Item format](../format/itemformat-tm.md) and [Economy format](../format/economyformat-tm.md). You can also add [Custom Sell Match Method](../features/custom-item-match-method.md) or other things depend on single thing type here. **Optional. If not set, player won't get anything after buy/sell. Useful for command shop.**
   * products.conditions: Player must meet the condition to use this product. **For more info, please view** [**Single Things**](common-examples.md) **page.**
   * products.give-actions: The action will run after this product is been give to player, see [Action](broken-reference) for more info. **Optional. For more info, please view** [**Single Things**](common-examples.md) **page.**
   * products.give-item: Whether we will give this product item to player when he trying to buy.
-* buy-prices: Product buy prices. Support Item format and [Economy format](../format/economyformat-tm.md). You can also add [Custom Sell Match Method](../advanced/custom-item-match-method.md) or other things depend on single thing type here. **Optional. If not set, product can not be purchased.**
+* buy-prices: Product buy prices. Support Item format and [Economy format](../format/economyformat-tm.md). You can also add [Custom Sell Match Method](../features/custom-item-match-method.md) or other things depend on single thing type here. **Optional. If not set, product can not be purchased.**
   * buy-prices.start-apply: Start which times this price will apply. Only supports `ANY` or `ALL` price type. **Optional. Default to 0.**
   * buy-prices.end-apply: Last times the price will apply. Only supports `ANY` or `ALL` price type. **Optional. Default to infinite.**
   * buy-prices.apply: Which times this price will apply, format: `[1,2,3,4]`. Only supports `ANY` or `ALL` price type. **Optional. Default use start-apply option value.**
   * buy-prices.placeholder: Price display name in {price} placeholder. **Optional. Default unknown language key.**
   * buy-prices.conditions: Player must meet the condition to use this price. **Optional. Default don't have any conditions.**&#x20;
-* sell-prices: Product sell prices. Support [Item format](../format/itemformat-tm.md) and [Economy format](../format/economyformat-tm.md). You can also add [Custom Sell Match Method](../advanced/custom-item-match-method.md) here. **Optional. If not set, product can not be selled.**
+* sell-prices: Product sell prices. Support [Item format](../format/itemformat-tm.md) and [Economy format](../format/economyformat-tm.md). You can also add [Custom Sell Match Method](../features/custom-item-match-method.md) here. **Optional. If not set, product can not be selled.**
   * sell-prices also support all sub options like in `buy-prices`.
   * sell-prices.give-actions: The action will run after this sell price is been give to player, see [Action](../format/action-format.md) for more info. **Optional.**
 

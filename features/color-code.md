@@ -1,10 +1,10 @@
-# Color Code
+# 🎨Color Code
 
 ## Hex Color
 
 To use hex color, you should use special color code, it should like this:
 
-**\&#\<Hex color code>.**
+**\&#Hex color code**
 
 For example, \&#ff0000.
 

@@ -1,8 +1,6 @@
-# Discount - Premium
+# 🔖Discount Placeholder - Premium
 
-We provide extra 1 way do this in premium version.
-
-Similar to [Discount](broken-reference) method2, but we added {discount} built-in placeholder in plugin.
+We added `{discount}` built-in placeholder in plugin.
 
 ## Configure
 
@@ -41,7 +39,7 @@ For conditions, view [Conditions](broken-reference).
 
 ## Use Placeholder
 
-Use `{discount_<ID>}` placeholder to display it's value. For more info, please view [Placeholders](placeholders.md) page.
+Use `{discount_<ID>}` placeholder to display it's value. For more info, please view [Placeholders](built-in-placeholder.md) page.
 
 Like:&#x20;
 
