@@ -54,7 +54,7 @@ placeholder:
 
 ## Use Placeholder
 
-Use `{random_<ID>;;<Number>}` placeholder to display it's value, like `{random_daily;;2}` will query `daily` random placeholder's **second** element picked. For more info, please view [Placeholders](placeholders.md) page. For example of this placeholder usage, please view [Daily Shop](../base/daily-shops.md) page.
+Use `{random_<ID>;;<Number>}` placeholder to display it's value, like `{random_daily;;2}` will query `daily` random placeholder's **second** element picked. For more info, please view [Placeholders](placeholders.md) page. For example of this placeholder usage, please view [Daily Shop](../shops/example-daily-shops.md) page.
 
 ## Reset Placeholder
 
@@ -63,15 +63,15 @@ You can reset placeholder by setting `reset-mode` and `reset-time` option.&#x20;
 Supports below reset mode:
 
 * ONCE: Each time it is used, it will reset and is not applicable to the price, as the price seen by the player opening the store and the actual transaction result are calculated twice, so you cannot achieve price synchronization.
-* TIMER/TIMED/NEVER: Please view [this page](../base/buy-sell-times-reset.md) to know more. We will generate reset time after random placeholder be used once. The reset time will not automatically adjust based on configuration updates. If you set the reset time incorrectly, you will need to delete the corresponding data.
+* TIMER/TIMED/NEVER: Please view [this page](broken-reference) to know more. We will generate reset time after random placeholder be used once. The reset time will not automatically adjust based on configuration updates. If you set the reset time incorrectly, you will need to delete the corresponding data.
 
-For more info, please view [this page](../base/buy-sell-times-reset.md).
+For more info, please view [this page](broken-reference).
 
 ## Example: Random Price
 
 ### Create new random placeholder
 
-Read [Rotate Product](../legacy/rotate-product.md) page first. In this example, we create a new random placeholder called `price` at `config.yml`.
+Read [Rotate Product](broken-reference) page first. In this example, we create a new random placeholder called `price` at `config.yml`.
 
 ```yaml
   random:

@@ -1,4 +1,4 @@
-# Buy More Menus
+# 🔽Buy More Menus
 
 ## Buy More Menus Config
 
@@ -104,6 +104,6 @@ You have 2 way to set buy more menu for products. By default, all products use t
       max-amount: 64
 ```
 
-You can also set `buy-more-menu` section in each product configs, in [Shops](shops.md) page, we have telled you how to do that with an example.
+You can also set `buy-more-menu` section in each product configs, in [Shops](../shops/shops.md) page, we have telled you how to do that with an example.
 
-If you want to disable buy more menu for specified shops or products, just use `buy-more` option in shop configs or product configs, this also claimed in [Shops](shops.md) page.
+If you want to disable buy more menu for specified shops or products, just use `buy-more` option in shop configs or product configs, this also claimed in [Shops](../shops/shops.md) page.

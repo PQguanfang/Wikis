@@ -1,14 +1,8 @@
-# Actions
-
-## Legacy (If you are using 3.0.0- version)
-
-This page is telling you new Action which start use at version 3.0.0. Before that version, you should use legacy version of Action Format at this [page](../legacy/actions-legacy.md).
-
-## Action Format
+# 🎬Action Format
 
 The action format will consist of several options.
 
-### General Options
+## General Options
 
 #### Apply Times
 

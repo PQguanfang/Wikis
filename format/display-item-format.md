@@ -1,10 +1,10 @@
-# Display Item Format
+# 🖼️Display Item Format
 
 You can use display item format in menu button and shop product's `display-item` option.
 
 ## Single
 
-If your display item is only one and does not have any condition to display it, simply use [Item Format](item-format.md) in this section!
+If your display item is only one and does not have any condition to display it, simply use [Item Format](itemformat-tm.md) in this section!
 
 ```yaml
   B:

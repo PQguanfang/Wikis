@@ -1,14 +1,8 @@
-# Conditions
-
-## Legacy (If you are using 3.0.0- version)
-
-This page is telling you new Condition which start use at version 3.0.0. Before that version, you should use legacy version of Condition Format at this [page](../legacy/conditions-legacy.md).
-
-## Condition Format
+# ⚖️Condition Format
 
 The condition format will consist of several options.
 
-### General Options
+## General Options
 
 #### Apply Times
 

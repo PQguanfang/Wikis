@@ -3,38 +3,40 @@
 * [Welcome](README.md)
 * [Compare](compare.md)
 
-## 📄Info
+## 📦Info
 
 * [✅Requirements](info/requirements.md)
 * [⚙️Install](info/install.md)
-* [Page](info/page.md)
+* [🔗Compatibility](info/compatibility.md)
+* [🛠️Configuration files](info/configuration-files.md)
+* [⌨️Commands](info/commands.md)
+* [📊Data](info/data.md)
+* [🚀Performance](info/performance.md)
+* [❓FAQ](info/faq.md)
 
-***
+## &#x20;📋Format
 
-* [中文 Wiki (过时)](zhong-wen-wiki-guo-shi.md)
+* [🛒Info of ItemFormat™](format/info-of-itemformat-tm.md)
+* [📝ItemFormat™](format/itemformat-tm.md)
+* [💹EconomyFormat™](format/economyformat-tm.md)
+* [🖼️Display Item Format](format/display-item-format.md)
+* [🎬Action Format](format/action-format.md)
+* [⚖️Condition Format](format/condition-format.md)
 
-## Base
+## &#x20;🔌Menus
 
-* [Directly Supported Plugins](base/directly-supported-plugins.md)
-* [Item Format](base/item-format.md)
-* [Item Format Arg List](base/item-format-arg-list.md)
-* [Full config.yml file](base/full-config.yml-file.md)
-* [Display Item Format](base/display-item-format.md)
-* [Economy Format](base/economy-format.md)
-* [Menus](base/menus.md)
-* [Buy More Menus](base/buy-more-menus.md)
-* [Actions](base/actions.md)
-* [Conditions](base/conditions.md)
-* [Shops](base/shops.md)
-* [Buy/Sell Times Reset](base/buy-sell-times-reset.md)
-* [Single Things](base/single-things.md)
-* [Stock (like in life)](base/stock-like-in-life.md)
-* [Daily Shops](base/daily-shops.md)
-* [Rewards](base/rewards.md)
-* [Commands](base/commands.md)
-* [Data](base/data.md)
-* [FAQ](base/faq.md)
-* [Performance](base/performance.md)
+* [🔲General Menus](menus/general-menus.md)
+* [🔽Buy More Menus](menus/buy-more-menus.md)
+* [🛏️Bedrock Menus - Premium](menus/bedrock-menus-premium.md)
+
+## 🛍️Shops
+
+* [📂Shops](shops/shops.md)
+* [🛒Products](shops/products.md)
+* [📚Common Examples](shops/common-examples.md)
+* [🌱Example: Stock (like in life)](shops/example-stock-like-in-life.md)
+* [📅Example: Daily Shops](shops/example-daily-shops.md)
+* [🏆Example: Rewards](shops/example-rewards.md)
 
 ## Advanced
 
@@ -48,8 +50,7 @@
 * [Random - Premium](advanced/random-premium.md)
 * [Crunch - Math Calculate](advanced/crunch-math-calculate.md)
 * [Sell Stick - Premium](advanced/sell-stick-premium.md)
-* [Bedrock UI - Premium](advanced/bedrock-ui-premium.md)
-* [Localized Item Name](advanced/localized-item-name.md)
+* [Localized Item Name - Premium](advanced/localized-item-name-premium.md)
 * [Multi Server Sync](advanced/multi-server-sync.md)
 * [Number Format](advanced/number-format.md)
 * [In-game Editor - Premium](advanced/in-game-editor-premium.md)
@@ -58,24 +59,7 @@
 * [Give Item Method](advanced/give-item-method.md)
 * [Log Transaction - Premium](advanced/log-transaction-premium.md)
 
-## Example
-
-* [Sell other plugins item](example/sell-other-plugins-item.md)
-* [Common Shop](example/common-shop.md)
-* [Economy Exchange](example/economy-exchange.md)
-
 ## Develop
 
 * [Develop Guide](develop/develop-guide.md)
 * [Can't do things](develop/cant-do-things.md)
-
-## Legacy
-
-* [Must Read (Legacy)](legacy/must-read-legacy.md)
-* [Item format (Legacy)](legacy/item-format-legacy.md)
-* [Discount (In free version)](legacy/discount-in-free-version.md)
-* [Better buy-more menu](legacy/better-buy-more-menu.md)
-* [Welcome](legacy/welcome.md)
-* [Rotate Product](legacy/rotate-product.md)
-* [Actions (Legacy)](legacy/actions-legacy.md)
-* [Conditions (Legacy)](legacy/conditions-legacy.md)

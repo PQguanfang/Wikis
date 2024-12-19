@@ -1,16 +1,16 @@
-# FAQ
+# ❓FAQ
 
 ## Q: Does the /shop command have permission?
 
-A: Use `/shop` can directly open a menu called `main`. This is a feature called **Auto Open**, and you can disable it at config.yml file with `menu.auto-open.enabled` option. If you only want some players to be exposed to this command, you can set `conditions` for the menu so that only players who meet the specified conditions can open the menu. For more info, please view [Menus](menus.md) page.
+A: Use `/shop` can directly open a menu called `main`. This is a feature called **Auto Open**, and you can disable it at config.yml file with `menu.auto-open.enabled` option. If you only want some players to be exposed to this command, you can set `conditions` for the menu so that only players who meet the specified conditions can open the menu. For more info, please view [Menus](../menus/general-menus.md) page.
 
 ## Q: How do I sell item from UltimateShop not directly supported item plugins?
 
 A: If you really read this Wiki carefully, you wouldn't ask such simple questions. Wiki has telled you solutions everywhere.
 
-* Save Item: We telled you a command called `/shop saveitem` at [Commands](commands.md) page, we also telled you can set `material` option in [Item Format](item-format.md)  to the save item ID you was set to use them.
-* Buy Actions: We telled you a option called `buy-actions` in shop configs at [Shops](shops.md) page. In [Actions](actions.md) page, we also telled you we support use command in actions, so just use the give item command here, all is done.
-* Give Actions: We telled you this feature at [Single Things](single-things.md) page which is very similar to Buy Actions. What's more, we even give you an example at that page.
+* Save Item: We telled you a command called `/shop saveitem` at [Commands](commands.md) page, we also telled you can set `material` option in [Item Format](../format/itemformat-tm.md)  to the save item ID you was set to use them.
+* Buy Actions: We telled you a option called `buy-actions` in shop configs at [Shops](../shops/shops.md) page. In [Actions](../format/action-format.md) page, we also telled you we support use command in actions, so just use the give item command here, all is done.
+* Give Actions: We telled you this feature at [Single Things](../shops/common-examples.md) page which is very similar to Buy Actions. What's more, we even give you an example at that page.
 
 ## **Q: Why can I only sell 64x items at once?**
 
@@ -19,27 +19,6 @@ A: If you really read this Wiki carefully, you wouldn't ask such simple question
 ## Q: How to change the max amount limit of buy more menu?
 
 A: There is a option called `menu.buy-more.<buy more menu name>.max-amount` option in `config.yml` file, or `buy-more-menu.max-amount` option in your product configs if you are setting up a separate buy more menu for a certain product.
-
-## **Q: How can I sell ItemsAdder item?**
-
-A:
-
-```yaml
-items:
-  A:
-    price-mode: CLASSIC_ALL
-    product-mode: CLASSIC_ALL
-    products:
-      1:
-        hook-plugin: ItemsAdder
-        hook-item: fishing_pack:common_fishing_bait
-    buy-prices:
-      1:
-        economy-plugin: Vault
-        amount: 5
-        start-apply: 0
-        placeholder: '&65 Coins'
-```
 
 ## **Q: What does start-apply mean?**
 
@@ -53,7 +32,7 @@ A: Check [Welcome](../) page for more info.
 
 ## Q: Can I set different add lore for each product?
 
-A: Yes, in [Shop](shops.md) page we have telled you that `add-lore` also works in each product configs!
+A: Yes, in [Shop](../shops/shops.md) page we have telled you that `add-lore` also works in each product configs!
 
 ## Q: Shop menu can not open after use once!
 
@@ -61,7 +40,7 @@ A: Make sure your `config.yml` is latest format, if not, update it. Or, you are 
 
 ## Q: How can I translate item name in buy more menu and plugin message?
 
-A: View [Localized Item Name](../advanced/localized-item-name.md) page.&#x20;
+A: View [Localized Item Name](../advanced/localized-item-name-premium.md) page.&#x20;
 
 ## Q: UltimateShop print Error:XXX message in console.
 

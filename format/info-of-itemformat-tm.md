@@ -1,8 +1,12 @@
-# Item Format Arg List
+# 🛒Info of ItemFormat™
 
-## How to use this page?
+ItemFormat is a configuration format provided by plugins that can generate **items in Minecraft games** through multi line YAML formatted text. If an option in a configuration file requires or supports **ItemFormat**, we will annotate it. A classic example is that you can fill in the ItemFormat in `buy-prices` options, so that the described item can be used as the buy price for the product.
 
-Each arg we will give you a link with `<version>` arg. Which you need is replace the `<version>` to your server's Minecraft version, like `1.21.3`, `1.20.4`, `1.20.6`. Please note that PaperAPI does not save each Minecraft version's Paper API, so you after open the link you are going to a strange site which not give you the information you need, don't worry, change the Minecraft version to another and try again.&#x20;
+## Item parameter possible value list
+
+In **ItemFormat**, there are some item parameter values that are not arbitrarily filled in. You can only fill in the value of the item parameter that exists in the game. For example, in `enchantments`, you can only fill in the ID of the enchantment that exists in the game (including newly added enchantments in some custom enchantment plugins and data packs). The following provides possible values for various item parameters.
+
+Each item parameters we will give you a link with `<version>` arg. Which you need is replace the `<version>` to your server's Minecraft version, like `1.21.3`, `1.20.4`, `1.20.6`. Please note that PaperAPI does not save each Minecraft version's Paper API, so you after open the link you are going to a strange site which not give you the information you need, don't worry, change the Minecraft version to another and try again.&#x20;
 
 ## Flag
 

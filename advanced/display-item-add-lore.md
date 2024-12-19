@@ -36,7 +36,7 @@ Default example:
 
 ## Per Product Setting
 
-You can set different add lore format for different product, add the `add-lore` arg in the product config. Check [shops](../base/shops.md) page product B to find the example.
+You can set different add lore format for different product, add the `add-lore` arg in the product config. Check [shops](../shops/shops.md) page product B to find the example.
 
 ## Prefix - Conditional Symbol
 

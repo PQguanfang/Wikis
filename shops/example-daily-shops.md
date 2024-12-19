@@ -1,10 +1,10 @@
-# Daily Shops
+# 📅Example: Daily Shops
 
 This page don't have any description of it because all things I can tell you have been claimed in [Shops](shops.md) page.&#x20;
 
 ## Create random placeholder
 
-We need to create a random placeholders. This placeholder can be used in conjunction with the [condition](conditions.md) system to achieve different products appearing at this shop every day, thereby achieving the same effect as the daily shop plugin.
+We need to create a random placeholders. This placeholder can be used in conjunction with the [condition](../format/condition-format.md) system to achieve different products appearing at this shop every day, thereby achieving the same effect as the daily shop plugin.
 
 In this example, we created a new random placeholder called `daily`.  And it's options represents:
 

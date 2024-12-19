@@ -1,36 +1,10 @@
-# Localized Item Name
+# Localized Item Name - Premium
 
-There is 3 ways to add localized item name to your shop products, in this way, if vanilla items are displayed in some situations, we will display it's localized item name instead of the English ID of the item in pure uppercase.
+## Requirements
 
-## NeigeItems Hook&#x20;
+* Server version 1.16+.
 
-* Download NeigeItems here: [https://github.com/ankhorg/NeigeItems-Kotlin/releases](https://github.com/ankhorg/NeigeItems-Kotlin/releases)
-* You should download NeigeItems-xxx.jar (not NeigeItems-api), the file lager than 10MB.
-* Install it in your server.
-* All is done! Now plugin will auto display localized item name for now.
-* Be careful: NeigeItems for now does not support 1.20.5 and higher version.
-
-## Set custom display-item for product
-
-* Use `display-name` option in product configs.
-* This method requires manual setting of localized names for items.
-
-For example:
-
-```yaml
-items:
-  A:
-    display-name: 'Apple' # Added line!
-    products:
-      1:
-        material: APPLE
-    buy-prices:
-      1:
-        economy-plugin: Vault
-        amount: 10
-```
-
-## Auto download and load Minecraft locate file - Premium (Require server version 1.16+)
+## Configs
 
 * Open `config.yml` file, and fine below contents:
 
@@ -181,10 +155,46 @@ config-files:
 
 <figure><img src="../.gitbook/assets/image (5).png" alt=""><figcaption></figcaption></figure>
 
-* Do you have problems? Try:
-  * Delete the json file generated at `plugins/UltimateShop` folder then regenerate this file.
-  * Are you using premium version? Only premium version support this for now.
-  * Did plugin print error message when generate the locate file? If yes, try restart the server and plugin will auto regenerate.
+## Problems
+
+Do you have problems? Try:
+
+* Delete the json file generated at `plugins/UltimateShop` folder then regenerate this file.
+* Are you using premium version? Only premium version support this for now.
+* Did plugin print error message when generate the locate file? If yes, try restart the server and plugin will auto regenerate.
+
+## Note
+
 * **After generate this file, please keep generate-new-one option to false.**&#x20;
 * **If your server upgraded game version, you need delete old locate file and regenerate new one.**
 * Server or plugin maybe lag when **first time** open the shop menu after restart the server, because we need build a cache for those localized item name. Under normal circumstances, you should not feel it unless you have a lot of products.
+
+## Alternative methods
+
+### NeigeItems Hook&#x20;
+
+* Download NeigeItems here: [https://github.com/ankhorg/NeigeItems-Kotlin/releases](https://github.com/ankhorg/NeigeItems-Kotlin/releases)
+* You should download NeigeItems-xxx.jar (not NeigeItems-api), the file lager than 10MB.
+* Install it in your server.
+* All is done! Now plugin will auto display localized item name for now.
+* Be careful: NeigeItems for now does not support 1.20.5 and higher version.
+
+### Set custom display-item for product
+
+* Use `display-name` option in product configs.
+* This method requires manual setting of localized names for items.
+
+For example:
+
+```yaml
+items:
+  A:
+    display-name: 'Apple' # Added line!
+    products:
+      1:
+        material: APPLE
+    buy-prices:
+      1:
+        economy-plugin: Vault
+        amount: 10
+```

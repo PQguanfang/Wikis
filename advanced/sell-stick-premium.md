@@ -33,6 +33,6 @@ sell-stick-items:
 
 A and B is ItemID, below it's their config section.
 
-Should use [Item Format](../legacy/item-format-legacy.md).
+Should use [Item Format](broken-reference).
 
 * useage-times: Maxium usage times of this item. If this option value is less than 0 or does not exist, we will make this sell stick is infinite.

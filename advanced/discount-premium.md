@@ -2,7 +2,7 @@
 
 We provide extra 1 way do this in premium version.
 
-Similar to [Discount](../legacy/discount-in-free-version.md) method2, but we added {discount} built-in placeholder in plugin.
+Similar to [Discount](broken-reference) method2, but we added {discount} built-in placeholder in plugin.
 
 ## Configure
 
@@ -37,7 +37,7 @@ Change the value you would like.
 * default: Default value, there is no reason you change this value other than 1.
 * vip/mvp: Condition ID value, players meet the conditions will use those value.
 
-For conditions, view [Conditions](../legacy/conditions-legacy.md).
+For conditions, view [Conditions](broken-reference).
 
 ## Use Placeholder
 

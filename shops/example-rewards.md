@@ -1,4 +1,4 @@
-# Rewards
+# 🏆Example: Rewards
 
 Rewards is very similar to Shops, but rewards don't have any price, and usually, it needs to be coordinated with the menu system.
 
@@ -126,7 +126,7 @@ Then also use condition system:
 
 ## Example for Streak Rewards
 
-Please download this example pack then carefully read [Display Item Format](display-item-format.md), [Shops](shops.md) and [Conditions](../legacy/conditions-legacy.md) page to understand it.&#x20;
+Please download this example pack then carefully read [Display Item Format](../format/display-item-format.md), [Shops](shops.md) and [Conditions](broken-reference) page to understand it.&#x20;
 
 <figure><img src="../.gitbook/assets/image (9).png" alt=""><figcaption></figcaption></figure>
 

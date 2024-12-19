@@ -1,16 +1,8 @@
-# Item Format
+# 📝ItemFormat™
 
 {% hint style="info" %}
 Mojang very like change material (item type), enchantment, potion and many other things's ID (or namespace key). For example, they changed sweeping enchantment ID to sweeping\_edge in 1.21. So, before you update your server version, you need carefully check that whether new versions have changed something, otherwise it will break your shop or menu configs.
 {% endhint %}
-
-## Legacy (If you are using 2.2.0- version)
-
-This page is telling you new Item Format which start use at version 2.2.0. Before that version, you should use legacy version of Item Format at this [page](../legacy/item-format-legacy.md).
-
-## Don't know how to possible value of each Item Format args?
-
-Please view Item Format Arg List page to know some of those args possible value.
 
 ## Hook Item
 
@@ -257,7 +249,7 @@ This is specific to items that can _store_ enchantments, as opposed to being enc
 
 ### Stored Enchants
 
-Similar to [Enchants](item-format.md#enchants).
+Similar to [Enchants](itemformat-tm.md#enchants).
 
 ```yaml
 stored-enchants:
