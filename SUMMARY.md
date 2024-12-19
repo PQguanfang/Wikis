@@ -2,6 +2,15 @@
 
 * [Welcome](README.md)
 * [Compare](compare.md)
+
+## 📄Info
+
+* [✅Requirements](info/requirements.md)
+* [⚙️Install](info/install.md)
+* [Page](info/page.md)
+
+***
+
 * [中文 Wiki (过时)](zhong-wen-wiki-guo-shi.md)
 
 ## Base
