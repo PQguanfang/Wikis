@@ -109,10 +109,10 @@ As long as you can ensure that the placeholder used in the formula is per player
 
 ## Set buy / sell limits for your products
 
-Please view [Shops](../shops/shops.md) page for info.
+Please view [Products](../shops/products.md) page for info and example.
 
 ## Reset dynamic price
 
 Many people ask this question, and I feel that the person asking this question simply does not understand the essence of UltimateShop. The dynamic price is determined by a formula, so you cannot reset the price directly. To reset the price, the variables used in your formula must be reset. If you use variables such as `{buy-times-server}` exactly as described in this section, they can be reset.
 
-You can reset the buy times or sell times by commands or auto reset feature, you can find them at [Commands](../info/commands.md) page and [Shops](../shops/shops.md) page.
+You can reset the buy times or sell times by our auto reset feature, you can find more info at [Buy/Sell Times Reset](../shops/product-config-buy-sell-times-reset.md) page.

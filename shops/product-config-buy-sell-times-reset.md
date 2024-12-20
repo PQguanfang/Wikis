@@ -1,5 +1,14 @@
 # ♻️Product Config: Buy/Sell Times Reset
 
+## FAQ: Why this feature do not crash my server since it also reset all players buy/sell times?
+
+This feature will not clear all players' buy/sell times at once. We will store **different timestamp data** based on the **reset mode**. When our estimated reset time has been reached, we will start resetting the data.&#x20;
+
+* If the player is on the server, the buy/sell times will only be reset after the player opens the shop. (Before they open the shop, the buy/sell times didn't be reset)
+* &#x20;If the player is not on the server, the buy/sell times will only be reset after they join the server.
+
+These measures are aimed at optimizing the performance of plugins when resetting data, and we will not change these behaviors. If you are surprised by these behaviors and do not want to do so, then replacing with other plugins is a better choice.
+
 ## Option Types
 
 Buy times have those options:

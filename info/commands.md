@@ -1,4 +1,4 @@
-# Commands
+# ⌨️Commands
 
 ## /shop menu \<menuID>/\<shopID>
 
@@ -36,19 +36,25 @@ Give specifeid player specified amount (if not set, default to 1) sell stick.&#x
 
 Require `ultimateshop.givesellstick` permission.
 
-## /shop setbuytimes/setselltimes \<shopID> \<productID> \<player> \[times]
+## /shop setbuytimes/setselltimes \<shopID> \<productID> \<player>/global \[times]
 
 Set player's specified product buy times to specified value.
 
 Require `ultimateshop.setbuytimes` permission.
 
-If didn't set times arg, we will think you are trying to reset the buy/sell times.
+If didn't set `times` arg, we will think you are trying to reset the buy/sell times.
 
 `productID` arg can be replaced to `*` symbol, then plugin will auto pick up all product in specified shop. <mark style="color:red;">**(Premium version only)**</mark>
 
 `setselltimes` is similar to setbuytimes here.
 
-## /shop addbuytimes/addselltimes \<shopID> \<productID> \<player> \<times>
+{% hint style="info" %}
+The global arg means set buy/sell times for `{buy-times-server}` or `{sell-times-server}` placeholer, not means set buy/sell times for all players.&#x20;
+
+It is **impossible** to set all player data at once through commands in UltimateShop. Because assuming your server has hundreds of thousands of player data, without excellent performance optimization code, the server will immediately crash. You may see very few economy plugins or item plugins providing this feature, but they are selling it as a selling point. We have not declared ourselves providing this feature on any occasion, and this feature will not be added in the future because it is very time-consuming and not very meaningful. You can achieve similar functions through the **auto reset** function, and relevant information can be viewed on [this page](../shops/product-config-buy-sell-times-reset.md).
+{% endhint %}
+
+## /shop addbuytimes/addselltimes \<shopID> \<productID> \<player>/global \<times>
 
 Add specified value to player's specified product buy times.
 
