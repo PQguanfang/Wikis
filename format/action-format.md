@@ -2,6 +2,10 @@
 
 The action format will consist of several options.
 
+{% hint style="info" %}
+The `actions` in the **Action Format** **example** only represent **Action Format** from now on. Please refer to the page description of the corresponding function for specific option names, such as `buy-actions`.
+{% endhint %}
+
 ## General Options
 
 #### Apply Times
