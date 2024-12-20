@@ -40,7 +40,7 @@
 * [📚Common Examples](shops/common-examples.md)
 * [🌱Example: Stock (like in life)](shops/example-stock-like-in-life.md)
 * [📅Example: Daily Shops](shops/example-daily-shops.md)
-* [🏆Example: Rewards](shops/example-rewards.md)
+* [🏆Example: Daily Rewards](shops/example-daily-rewards.md)
 
 ## 📍Placeholders
 
