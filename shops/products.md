@@ -52,12 +52,6 @@ items:
         start-apply: 0
 ```
 
-Each single product or price in one product we called **single thing**. So, each product have those thing type:
-
-* Buy Prices: The buy price of this product, player need pay the buy price to obtain this product, if this thing type do not exist (which means `buy-prices` section does not exist in the config), this product can not be purcahsed.
-* Sell Prices: The sell price of this product, player need sell the products to shop, then he will get the sell price you set here, if this thing type do not exist (which means `sell-prices` section does not exist in the config), this product can not be sold.
-* Products: The products of this  product, player will get the products you set here after buy, and need give his products to shop when selling.
-
 ## Items ID / Product ID
 
 Product ID must be a single char, because we need use them in shop menu `layout` option.
@@ -99,168 +93,49 @@ buy-limits-conditions:
 
 ## Single Thing Options
 
-Each thing type can set unlimited related to single things, like set 5 buy prices, 100 sell prices and even 1k products!
+This section of the configuration includes the following options:
 
-Each single thing have those types:
+* buy-prices
+* sell-prices
+* products
 
-* Vanilla Item: Use [ItemFormat](../format/itemformat-tm.md) to tell us what Minecraft item you want to sell in shop or you want to player pay. **(Buy/Sell/Products)**
-* Hook Item: Use [Supported Plugins](../info/compatibility.md)'s item to tell us what custom item you want to sell in shop or you want to player pay. This type still use [ItemFormat](../format/itemformat-tm.md).**(Buy/Sell/Products)**
-* Match Item: Use [Custom Item Match Method](../features/custom-item-match-method.md) to tell us which items you want to match. **(Buy/Products)**
-* Vanilla Economy/Hook Economy: Use [EconomyFormat](../format/economyformat-tm.md) to tell us how much money you want to player pay or give to player. **(Buy/Sell/Products)**
-* Custom: If those types do not meet your need, you can make a custom single thing! You need add `match-placeholder` option at single thing config to make plugin know what the now amount player have of this custom product/price, and then we will compare the now amount you set here and the required amount. In the example above, we will compare player's health. **If your economy plugins do not supported, just place it's player balance placeholder here and all is solved! (Sell/Products)&#x20;**<mark style="color:red;">**(Premium)**</mark>
-* Free: Single thing do not include ItemFormat, EconomyFormat, match-item section and match-placeholder section will be consider as free.
-
-In product configurations, we set the corresponding type of single thing through several options. And according to the type you want, fill in the corresponding config format in these options. There may be additional options to fill in for different single things, as follows:
-
-* products: Product items. Support [Item format](../format/itemformat-tm.md) and [Economy format](../format/economyformat-tm.md). You can also add [Custom Sell Match Method](../features/custom-item-match-method.md) or other things depend on single thing type here. **Optional. If not set, player won't get anything after buy/sell. Useful for command shop.**
-  * products.conditions: Player must meet the condition to use this product. **For more info, please view** [**Single Things**](common-examples.md) **page.**
-  * products.give-actions: The action will run after this product is been give to player, see [Action](broken-reference) for more info. **Optional. For more info, please view** [**Single Things**](common-examples.md) **page.**
-  * products.give-item: Whether we will give this product item to player when he trying to buy.
-* buy-prices: Product buy prices. Support Item format and [Economy format](../format/economyformat-tm.md). You can also add [Custom Sell Match Method](../features/custom-item-match-method.md) or other things depend on single thing type here. **Optional. If not set, product can not be purchased.**
-  * buy-prices.start-apply: Start which times this price will apply. Only supports `ANY` or `ALL` price type. **Optional. Default to 0.**
-  * buy-prices.end-apply: Last times the price will apply. Only supports `ANY` or `ALL` price type. **Optional. Default to infinite.**
-  * buy-prices.apply: Which times this price will apply, format: `[1,2,3,4]`. Only supports `ANY` or `ALL` price type. **Optional. Default use start-apply option value.**
-  * buy-prices.placeholder: Price display name in {price} placeholder. **Optional. Default unknown language key.**
-  * buy-prices.conditions: Player must meet the condition to use this price. **Optional. Default don't have any conditions.**&#x20;
-* sell-prices: Product sell prices. Support [Item format](../format/itemformat-tm.md) and [Economy format](../format/economyformat-tm.md). You can also add [Custom Sell Match Method](../features/custom-item-match-method.md) here. **Optional. If not set, product can not be selled.**
-  * sell-prices also support all sub options like in `buy-prices`.
-  * sell-prices.give-actions: The action will run after this sell price is been give to player, see [Action](../format/action-format.md) for more info. **Optional.**
-
-You may note: you can set action will run when the single thing is been give to player, and set the conditions that player need meet to use the single thing. This is very useful you want to play sound, excute command after player buy or sell.
-
-* Actions: Add `give-actions` section in single thing config. Very useful for command shop, permission shop, enchant shop. Also, **if your economy plugins/item plugins do not supported in UltimateShop, just put the command of give money/item here to solve the problem!** (`{player}` means player name, `{amount}` means the price/product amount) If you want to make the product be actions only, don't forget add `give-item: false` in the single thing option!
-* Conditions: Add `conditions` section in single thing config.&#x20;
+The introduction of these options is on a separate page, please [click here](products-config-single-thing.md) to view.
 
 ## Buy/Sell Times Reset Options
 
-### Option Types
+This section of the configuration includes the following options:
 
-Buy times have those options:
+* buy-times-reset-mode
+* buy-times-reset-time
+* buy-times-reset-time-format
+* sell-times-reset-mode
+* sell-times-reset-time
+* sell-times-reset-time-format
 
-* buy-times-reset-mode (before 3.3.0 is buy-limits-reset-mode, but they are same)
-* buy-times-reset-time (before 3.3.0 is buy-limits-reset-time, but they are same)
-* buy-times-reset-format
+The introduction of these options is on a separate page, please [click here](product-config-buy-sell-times-reset.md) to view.
 
-Sell times have those options:
+## Dynamic Value
 
-* sell-times-reset-mode (before 3.3.0 is sell-limits-reset-mode, but they are same)
-* sell-times-reset-time (before 3.3.0 is sell-limits-reset-time, but they are same)
-* sell-times-reset-format
+You can set placeholders and [Math Calculate Format](../format/math-calculate-format.md) in `buy-prices`, `sell-prices` section's `amount` option and `buy-limits`, `sell-limits` section's value in shop configs.
 
-If you want to enable buy times and sell times reset for all products, you can simply modify it at `config.yml` file.
+Also in `buy-prices` and `sell-prices` section, you can set new 2 options:
 
-```yaml
-use-times:
-  default-reset-mode: 'NEVER'
-  default-reset-time: '00:00:00'
-  # This only works for CUSTOM type of reset mode.
-  default-reset-time-format: 'yyyy-MM-dd HH:mm:ss'
-```
+* max-amount: Price max amount, useful for dynamic prices. **Optional.**
+* min-amount: Price min amount, useful for dynamic prices. **Optional.**
 
-No matter what methods you set it up in, we can see that this feature consists of three option types:
-
-* reset mode
-* reset time
-* reset time format (only required for CUSTOM type)
-
-### Reset Mode
-
-Support those modes:
-
-* NEVER:&#x20;
-* TIMER: It will reset after the time you specify, for example, after 5 hours.
-* TIMED: It will be reset at the corresponding time, such as 8:15 pm.
-* COOLDOWN\_TIMER (Added in 3.3.0) <mark style="color:red;">**- Premium**</mark>
-* COOLDOWN\_TIMED (Added in 3.3.0) <mark style="color:red;">**- Premium**</mark>
-* RANDOM\_PLACEHOLDER: Synchronize with the reset time of the specified random placeholder. (Added in 3.3.0) <mark style="color:red;">**- Premium**</mark>
-* CUSTOM: Directly enter the reset time in reset time, and the plugin will not perform any calculations. Recommend obtain reset time through the Placeholder API results. You need set time format at `reset-time-format` type option to helps us know how does your PlaceholderAPI results be like. (Added in 3.3.0) <mark style="color:red;">**- Premium**</mark>
-
-### Difference between COOLDOWN\_TIMED (or COOLDOWN\_TIMER) and TIMED (or TIMER)
-
-`TIMED` and `TIMER` will start generating reset time after each buy or sell until the player reaches the limit, while `COOLDOWN_TIMED` and `COOLDOWN_TIMER` will start generating reset time after the first buy or sell and will never update the reset time until the reset time reached.
-
-For this reason, when using `COOLDOWN_TIMED` or `COOLDOWN_TIMER` mode, the reset time will not automatically adjust due to server restarts, configuration modifications, or other reasons. This means that if you mistakenly set the product to refresh after 1 year, the reset time will not automatically change due to your correction, but `TIMED` or `TIMER` rules can do this.
-
-### Reset Time
-
-Different reset modes require different values to be filled in here. Supports placeholders, <mark style="color:red;">**the placeholder used here must be on the server side, which means that all players receive the same value.**</mark>
-
-#### NEVER
-
-Don't need anything here.
-
-#### TIMER/COOLDOWN\_TIMER
-
-You can enter 3 to 5 numbers here, separated by a `:` symbol between each number. For example: `15:00:00`.
-
-Each number from **right** to **left** represents:
-
-* Seconds
-* Minutes
-* Hours
-* Days <mark style="color:red;">**- Premium**</mark>
-* Months <mark style="color:red;">**- Premium**</mark>
-
-In this example, represents 15 hours later. Which means: **if now time is 2023-09-04 12:00:00. Will reset after 15 hours, which means 2023-09-05 03:00:00.**
-
-#### TIMED/COOLDOWN\_TIMED
-
-The composition of TIMED and TIMER is almost identical, but the first three digits from the right-hand side represent the time of day. Let's also take 15:00:00 as an example:
-
-If now time is 2023-09-04 12:00:00, will reset at 2023-09-04 15:00:00.
-
-This is the result obtained with days set to 0. If you set it to 1, we will add another day, and that's it.
-
-It is worth noting that if you want to do a daily store, days should be set to 0, and if you want to do a weekly store, days should be set to 6. Because you need to reset the number of times on the last day, not on the second day after the last day, right?
-
-#### CUSTOM <mark style="color:red;">**- Premium**</mark>
-
-You only need to enter a Placeholder API placeholder here, and the result of the placeholder must include the complete year, month, day, hour, minute, and second. You also need to enter their format in the reset time format option, because different types of placeholders return different time formats, making it difficult for plugins to achieve uniformity.&#x20;
-
-#### RANDOM\_PLACEHOLDER <mark style="color:red;">**- Premium**</mark>
-
-Enter a valid random placeholder ID here.
-
-### Dynamic Reset Time <mark style="color:red;">**- Premium**</mark>
-
-This example uses a random placeholder to randomly refresh products after 3, 4, or 5 hours, instead of a fixed time refresh.
-
-Created a random placeholder like:
+Please carefully note that if you want to use our PlaceholderAPI extansion's placeholder, you have to use our new format, for example:
 
 ```yaml
-  # Premium version only.
-  random:
-    reset:
-      reset-mode: ONCE
-      elements:
-        - '03:00:00'
-        - '04:00:00'
-        - '05:00:00'
-```
-
-Use this placeholder at `buy-times-reset-time` option.
-
-```yaml
-  B:
-    price-mode: ALL
-    product-mode: CLASSIC_ALL
-    products:
-      1:
-        material: GOLD_INGOT
-        amount: 1
     buy-prices:
-      # 
-    sell-prices:
-      #
-    buy-limits:
-      default: '2'
-    buy-times-reset-mode: 'TIMED'
-    buy-times-reset-time: '{random_reset}' # <--- Used here, sell-times also works!
+      1:
+        economy-plugin: Vault
+        amount: '15 - {sell-times-player} * 0.1 + %ultimateshop_farming_B_sell-times-player% * 0.1'
+        # We use the new format without { and } symbol.
+        placeholder: '{amount}$'
+        start-apply: 0
 ```
 
-### Reset Time do not correct?
-
-* The product must have been purchased or selled once before the next reset time can be stored. Otherwise, we can only display the possible reset time calculated based on the current time after the transaction is completed.
+Additionally, you need to set `menu.shop.click-update` to `true` if the related to product is also in the menu you opened. Otherwise this price won't auto update after you sell B product.
 
 ## Sub Buttons <mark style="color:red;">- Premium</mark>
 
@@ -268,3 +143,5 @@ Sometimes, you want to display same product in different menus, or you want to m
 
 * display-item: Supports set different display item for sub buttons.
 * as-sub-button: Type `Product ID` or `ShopID;;ProductID` here.
+
+The example of **Sub Buttons** can be found at [Shops](shops.md) page, please check out the `C` section under `items` in the head example.
