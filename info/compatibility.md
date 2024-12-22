@@ -51,7 +51,11 @@ items:
 
 ## **Indirect compatibility**
 
-Indirect compatibility refers to the flexible use of various features of plugins to enable them to associate with these plugins:
+Indirect compatibility refers to the flexible use of various features of plugins to enable them to associate with these plugins.
+
+* Save Item: We telled you a command called `/shop saveitem` at [Commands](commands.md) page, we also telled you can set `material` option in [Item Format](../format/itemformat-tm.md)  to the save item ID you was set to use them.
+* Buy Actions: We telled you a option called `buy-actions` in shop configs at [Shops](../shops/shops.md) page. In [Actions](../format/action-format.md) page, we also telled you we support use command in actions, so just use the give item command here, all is done.
+* Give Actions: We telled you this feature at [Single Things](../shops/common-examples.md) page which is very similar to Buy Actions. What's more, we even give you an example at that page.
 
 ### Example: Use for not supported item plugins as products
 
@@ -112,10 +116,52 @@ In this example, we mainly flexibly implemented different types of single thing 
         amount: 500
 ```
 
-## NeigeItems Item Name Translation Hook
+## NeigeItems: Item Name Translation Hook
 
-* Download NeigeItems here: [https://github.com/ankhorg/NeigeItems-Kotlin/releases](https://github.com/ankhorg/NeigeItems-Kotlin/releases)
-* You should download NeigeItems-xxx.jar (not NeigeItems-api), the file lager than 10MB.
-* Install it in your server.
-* All is done! Now plugin will auto display localized item name for now.
-* Be careful: NeigeItems for now does not support 1.20.5 and higher version.
+Through this hook, the localized names of vanilla items can be automatically displayed in the language set in NeigeItems.
+
+Download NeigeItems here: [https://github.com/ankhorg/NeigeItems-Kotlin/releases](https://github.com/ankhorg/NeigeItems-Kotlin/releases)
+
+You should download NeigeItems-xxx.jar (not NeigeItems-api), the file lager than 10MB.
+
+Install it in your server.
+
+All is done! Now plugin will auto display localized item name for now.
+
+## MythicChanger: Extra Item Format option
+
+Through this hook, based on the [ItemFormat](../format/itemformat-tm.md), items can be further modified to their desired appearance.
+
+This feature require your server must install **MythicChanger** plugin, please get it here:
+
+**FREE:** [Click to download](https://www.spigotmc.org/resources/mythicchanger-match-and-modify-all-your-items-without-trouble-1-14-1-21.98523/)
+
+**PREMIUM:** [Click to download](https://www.spigotmc.org/resources/mythicchanger-premium-match-and-modify-all-your-items-without-trouble-1-14-1-21.115913/)
+
+For how to configure the `change-item` section, please read MythicChanger's wiki, [click here](https://app.gitbook.com/o/1ZYzpAAIW7ljevWhGq0R/s/L4peJBqYHI4WQpPthtO4/) to visit. Please note that some of the change rules require <mark style="color:red;">**PREMIUM version of MythicChanger, not PREMIUM version of UltimateShop**</mark><mark style="color:red;">!</mark>
+
+{% hint style="info" %}
+If you are using **premium version of MythicChanger**, it will allow you use custom NBT tag by adding nbt-xxx rule here. You can also use `/mc viewnbt` command to view the hold item NBT info.
+{% endhint %}
+
+```yaml
+change-item:
+  set-name: '&fGood Diamond Sword'
+```
+
+## AdvancedEnchantments: Extra Item Format option <mark style="color:red;">- Premium</mark>
+
+Through this hook, based on the [ItemFormat](../format/itemformat-tm.md), items can have custom enchantments from AdvancedmentEnchantments.
+
+Plugin like `EcoEnchants, ExcellentEnchants` are vanilla enchants like plugin, you just need to put their enchantment ID to enchants option (like above).
+
+You can use plugin-enchants option to add plugin enchants for your item.
+
+```yaml
+plugin-enchants:
+  PLANTER: 5 # A AdvancedEnchantments enchantment
+```
+
+## MythicChanger: Custom Item Match
+
+[Custom Item Match Method](../features/custom-item-match-method.md) feature requires MythicChanger.

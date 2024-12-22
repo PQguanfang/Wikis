@@ -550,36 +550,11 @@ equippable:
 damage-resistant: is_fall # Damage Type Tag
 ```
 
-## Plugin Enchants  - <mark style="color:red;">UltimateShop-Premium Only</mark>
+## Extra Item Format Options
 
-Support `AdvancedEnchantments` only for now.
+Some additional **ItemFormat** options can be found on the [Compatibility](../info/compatibility.md) page. Their purpose is to hook with other plugins based on ItemFormat, so that other plugins can also participate in item generation.
 
-Plugin like `EcoEnchants, ExcellentEnchants` are vanilla enchants like plugin, you just need to put their enchantment ID to enchants option (like above).
+Supported plugins at the moment:
 
-You can use plugin-enchants option to add plugin enchants for your item.
-
-```yaml
-plugin-enchants:
-  PLANTER: 5 # A AdvancedEnchantments enchantment
-```
-
-## Change Item - Require MythicChanger
-
-## Support FlipCard, SpinToWin, UltimateShop only
-
-Change the item by MythicChanger, if you are using premium version of MythicChanger, it will allow you use custom NBT tag by adding nbt-xxx rule here. You can also use `/mc viewnbt` command to view the hold item NBT info.
-
-This feature require your server must install **MythicChanger** plugin, please get it here:
-
-**FREE:** [Click to download](https://www.spigotmc.org/resources/mythicchanger-match-and-modify-all-your-items-without-trouble-1-14-1-21.98523/)
-
-**PREMIUM:** [Click to download](https://www.spigotmc.org/resources/mythicchanger-premium-match-and-modify-all-your-items-without-trouble-1-14-1-21.115913/)
-
-For how to configure the `change-item` section, please read MythicChanger's wiki, [click here to visit](#user-content-fn-1)[^1]. Please note that some of the change rules require <mark style="color:red;">**PREMIUM version of MythicChanger, not PREMIUM version of UltimateShop**</mark><mark style="color:red;">!</mark>
-
-```yaml
-change-item:
-  set-name: '&fGood Diamond Sword'
-```
-
-[^1]: [https://mythicchanger.superiormc.cn/configs/fake-real-changes](https://mythicchanger.superiormc.cn/configs/fake-real-changes)
+* MythicChanger
+* AdvancedEnchantments <mark style="color:red;">- Premium</mark>

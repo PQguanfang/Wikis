@@ -4,14 +4,6 @@
 
 A: Use `/shop` can directly open a menu called `main`. This is a feature called **Auto Open**, and you can disable it at config.yml file with `menu.auto-open.enabled` option. If you only want some players to be exposed to this command, you can set `conditions` for the menu so that only players who meet the specified conditions can open the menu. For more info, please view [Menus](../menus/general-menus.md) page.
 
-## Q: How do I sell item from UltimateShop not directly supported item plugins?
-
-A: If you really read this Wiki carefully, you wouldn't ask such simple questions. Wiki has telled you solutions everywhere.
-
-* Save Item: We telled you a command called `/shop saveitem` at [Commands](commands.md) page, we also telled you can set `material` option in [Item Format](../format/itemformat-tm.md)  to the save item ID you was set to use them.
-* Buy Actions: We telled you a option called `buy-actions` in shop configs at [Shops](../shops/shops.md) page. In [Actions](../format/action-format.md) page, we also telled you we support use command in actions, so just use the give item command here, all is done.
-* Give Actions: We telled you this feature at [Single Things](../shops/common-examples.md) page which is very similar to Buy Actions. What's more, we even give you an example at that page.
-
 ## **Q: Why can I only sell 64x items at once?**
 
 **A:** The person asking this question may never know a truth: before using the plugin, you should be familiar with the `config.yml` file. In `config.yml`, there is an option called sell. max amount, and I want you to know its purpose by looking at its name.

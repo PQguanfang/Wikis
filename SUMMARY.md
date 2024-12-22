@@ -29,7 +29,7 @@
 * [🔲General Menus](menus/general-menus.md)
 * [🔽Buy More Menus](menus/buy-more-menus.md)
 * [🛏️Bedrock Menus - Premium](menus/bedrock-menus-premium.md)
-* [🛒Display Item Add Lore](menus/display-item-add-lore.md)
+* [🥉Display Item Add Lore](menus/display-item-add-lore.md)
 
 ## 🛍️Shops
 
@@ -56,7 +56,7 @@
 ## ✨Features
 
 * [🎨Color Code](features/color-code.md)
-* [🔢Easy Prices](features/easy-prices.md)
+* [💴Easy Prices](features/easy-prices.md)
 * [🪄Sell Stick - Premium](features/sell-stick-premium.md)
 * [🌍Localized Item Name - Premium](features/localized-item-name-premium.md)
 * [🌐Multi Server Sync - Premium](features/multi-server-sync-premium.md)
