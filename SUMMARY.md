@@ -58,6 +58,7 @@
 * [🎨Color Code](features/color-code.md)
 * [💴Easy Prices](features/easy-prices.md)
 * [🪄Sell Stick - Premium](features/sell-stick-premium.md)
+* [💾Saved Item](features/saved-item.md)
 * [🌍Localized Item Name - Premium](features/localized-item-name-premium.md)
 * [🌐Multi Server Sync - Premium](features/multi-server-sync-premium.md)
 * [🔢Number Format](features/number-format.md)
