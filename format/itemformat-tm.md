@@ -8,7 +8,7 @@ Mojang very like change material (item type), enchantment, potion and many other
 
 ### Hook Plugin
 
-Possible Value: `EcoItems, EcoArmor, MMOItems, ItemsAdder, Oraxen, MythicMobs, eco, NeigeItems, ExecutableItems, Nova`.&#x20;
+Possible Value: `EcoItems, EcoArmor, MMOItems, ItemsAdder, Oraxen, MythicMobs, eco, NeigeItems, ExecutableItems, Nexo`.&#x20;
 
 ```yaml
 hook-plugin: MMOItems
