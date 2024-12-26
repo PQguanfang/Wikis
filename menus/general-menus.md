@@ -8,7 +8,7 @@ There are 3 types of menus.
 
 * Common Menus: Just like other menu plugins doing. You can use them open other shop menus.
 * Shop Menus: Shop menus will display products in specified shop in it. Each shop config has a `menu` option to set their corresponding shop menu. The shop menu has all features of a common menu. Multiple shops can share the same shop menu, so when you open these stores, the layout of the menu will be the same.
-* Buy More Menus: Can select amount of you will buy or sell. This type of menus have more settings, please view [Buy More Menus](general-menus.md) page to know more. Buy more menu can only open from shop menus with selecting a product, it can not be directly opened.
+* Buy More Menus: Can select amount of you will buy or sell. This type of menus have more settings, please view [Buy More Menus](buy-more-menus.md) page to know more. **Buy more menu can only open from shop menus with selecting a product, it can not be directly opened**.
 
 ## Configs
 
@@ -19,7 +19,7 @@ There are 3 types of menus.
 * conditions: Only players who meet the conditions can open this menu, use [Condition Format](../format/condition-format.md) here.
 * open-actions: Do action when open this menu, use [Action Format](../format/action-format.md) here.
 * close-actions: Do action when close this menu, use [Action Format](../format/action-format.md) here. <mark style="color:red;">**Please carefully note that when you have already opened a menu, if you open other menus through actions or other means, it will also trigger close actions**</mark>**.**&#x20;
-* bedrock: Please view [Bedrock UI](bedrock-menus-premium.md) page to know about it.
+* bedrock: Please view [Bedrock M](bedrock-menus-premium.md)[enu](bedrock-menus-premium.md) page to know about it.
 
 Example:
 

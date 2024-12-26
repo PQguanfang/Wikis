@@ -55,7 +55,7 @@ Indirect compatibility refers to the flexible use of various features of plugins
 
 * Save Item: We telled you a command called `/shop saveitem` at [Commands](commands.md) page, we also telled you can set `material` option in [Item Format](../format/itemformat-tm.md)  to the save item ID you was set to use them.
 * Buy Actions: We telled you a option called `buy-actions` in shop configs at [Shops](../shops/shops.md) page. In [Actions](../format/action-format.md) page, we also telled you we support use command in actions, so just use the give item command here, all is done.
-* Give Actions: We telled you this feature at [Single Things](../shops/common-examples.md) page which is very similar to Buy Actions. What's more, we even give you an example at that page.
+* Give Actions: We telled you this feature at [Single Things](../shops/products-config-single-thing.md) page which is very similar to Buy Actions. What's more, we even give you an example at that page.
 
 ### Example: Use for not supported item plugins as products
 
@@ -153,9 +153,9 @@ change-item:
 
 Through this hook, based on the [ItemFormat](../format/itemformat-tm.md), items can have custom enchantments from AdvancedmentEnchantments.
 
-Plugin like `EcoEnchants, ExcellentEnchants` are vanilla enchants like plugin, you just need to put their enchantment ID to enchants option (like above).
+Plugin like `EcoEnchants, ExcellentEnchants` are vanilla enchants like plugin, you just need to put their enchantment ID to `enchants` option in [ItemFormat](../format/itemformat-tm.md#enchants).
 
-You can use plugin-enchants option to add plugin enchants for your item.
+You can use `plugin-enchants` option to add plugin enchants for your item.
 
 ```yaml
 plugin-enchants:

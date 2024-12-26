@@ -24,15 +24,15 @@ Each single thing have those types:
 In product configurations, we set the corresponding type of single thing through several options. And according to the type you want, fill in the corresponding config format in these options. There may be additional options to fill in for different single things, as follows:
 
 * products: Product items. Support [Item format](../format/itemformat-tm.md) and [Economy format](../format/economyformat-tm.md). You can also add [Custom Sell Match Method](../features/custom-item-match-method.md) or other things depend on single thing type here. **Optional. If not set, player won't get anything after buy/sell. Useful for command shop.**
-  * products.conditions: Player must meet the condition to use this product. **For more info, please view** [**Single Things**](common-examples.md) **page.**
-  * products.give-actions: The action will run after this product is been give to player, see [Action](broken-reference) for more info. **Optional. For more info, please view** [**Single Things**](common-examples.md) **page.**
+  * products.conditions: Player must meet the condition to use this product. Use [Condition Format](../format/condition-format.md)  here.
+  * products.give-actions: The action will run after this product is been give to player. Use [Action Format](../format/action-format.md) here.&#x20;
   * products.give-item: Whether we will give this product item to player when he trying to buy.
 * buy-prices: Product buy prices. Support Item format and [Economy format](../format/economyformat-tm.md). You can also add [Custom Sell Match Method](../features/custom-item-match-method.md) or other things depend on single thing type here. **Optional. If not set, product can not be purchased.**
   * buy-prices.start-apply: Start which times this price will apply. Only supports `ANY` or `ALL` price type. **Optional. Default to 0.**
   * buy-prices.end-apply: Last times the price will apply. Only supports `ANY` or `ALL` price type. **Optional. Default to infinite.**
   * buy-prices.apply: Which times this price will apply, format: `[1,2,3,4]`. Only supports `ANY` or `ALL` price type. **Optional. Default use start-apply option value.**
-  * buy-prices.placeholder: Price display name in {price} placeholder. **Optional. Default unknown language key.**
-  * buy-prices.conditions: Player must meet the condition to use this price. **Optional. Default don't have any conditions.**&#x20;
+  * buy-prices.placeholder: Price display name in `{price}` placeholder. **Optional. Default unknown language key.**
+  * buy-prices.conditions: Player must meet the condition to use this price. Use [Condition Format](../format/condition-format.md)  here. **Optional. Default don't have any conditions.**&#x20;
 * sell-prices: Product sell prices. Support [Item format](../format/itemformat-tm.md) and [Economy format](../format/economyformat-tm.md). You can also add [Custom Sell Match Method](../features/custom-item-match-method.md) here. **Optional. If not set, product can not be selled.**
   * sell-prices also support all sub options like in `buy-prices`.
   * sell-prices.give-actions: The action will run after this sell price is been give to player, see [Action](../format/action-format.md) for more info. **Optional.**

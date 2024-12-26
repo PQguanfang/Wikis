@@ -1,4 +1,4 @@
-# Display Item Add Lore
+# 🥉Display Item Add Lore
 
 ## General Setting
 
@@ -40,7 +40,7 @@ You can set different add lore format for different product, add the `add-lore` 
 
 ## Prefix - Conditional Symbol
 
-Each line start with '@+lower case' will be consider as conditional line. We will only display this line when this condition is meet.
+Each line start with `@+lower case` will be consider as conditional line. We will only display this line when this condition is meet.
 
 @a - This product has buy price. (Means has buy-prices section)
 
