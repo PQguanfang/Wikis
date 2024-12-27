@@ -165,3 +165,7 @@ plugin-enchants:
 ## MythicChanger: Custom Item Match
 
 [Custom Item Match Method](../features/custom-item-match-method.md) feature requires MythicChanger.
+
+## PlaceholderAPI: Extra placeholders <a href="#placeholderapi-extra-placeholders" id="placeholderapi-extra-placeholders"></a>
+
+UltimateShop provides those new placeholders to PlaceholderAPI, for more info, please view [this page](../placeholders/built-in-placeholder.md#placeholderapi-support).
