@@ -15,13 +15,15 @@ Buy times have those options:
 
 * buy-times-reset-mode (before 3.3.0 is buy-limits-reset-mode, but they are same)
 * buy-times-reset-time (before 3.3.0 is buy-limits-reset-time, but they are same)
-* buy-times-reset-format
+* buy-times-reset-time-format
+* buy-times-reset-value
 
 Sell times have those options:
 
 * sell-times-reset-mode (before 3.3.0 is sell-limits-reset-mode, but they are same)
 * sell-times-reset-time (before 3.3.0 is sell-limits-reset-time, but they are same)
-* sell-times-reset-format
+* sell-times-reset-time-format
+* sell-times-reset-value
 
 If you want to enable buy times and sell times reset for all products, you can simply modify it at `config.yml` file.
 
@@ -31,13 +33,15 @@ use-times:
   default-reset-time: '00:00:00'
   # This only works for CUSTOM type of reset mode.
   default-reset-time-format: 'yyyy-MM-dd HH:mm:ss'
+  default-reset-value: 0
 ```
 
 No matter what methods you set it up in, we can see that this feature consists of three option types:
 
 * reset mode
 * reset time
-* reset time format (only required for CUSTOM type)
+* reset time format (only required for `CUSTOM` type)
+* reset value
 
 ## Reset Mode
 
@@ -89,6 +93,15 @@ This is the result obtained with days set to 0. If you set it to 1, we will add 
 
 It is worth noting that if you want to do a daily store, days should be set to 0, and if you want to do a weekly store, days should be set to 6. Because you need to reset the number of times on the last day, not on the second day after the last day, right?
 
+This type of reset mode also supports set multi reset time, each reset time use `;;` to splite, we will pick up the earliest reset time. For example: <mark style="color:red;">(Premium only)</mark>
+
+```yaml
+    sell-times-reset-mode: 'TIMED'
+    sell-times-reset-time: '20:00:00;;19:00:00'
+```
+
+In this example, this product will reset reset at 19:00 and 20:00 every day.
+
 #### CUSTOM <mark style="color:red;">**- Premium**</mark>
 
 You only need to enter a Placeholder API placeholder here, and the result of the placeholder must include the complete year, month, day, hour, minute, and second. You also need to enter their format in the reset time format option, because different types of placeholders return different time formats, making it difficult for plugins to achieve uniformity.&#x20;
@@ -96,6 +109,10 @@ You only need to enter a Placeholder API placeholder here, and the result of the
 #### RANDOM\_PLACEHOLDER <mark style="color:red;">**- Premium**</mark>
 
 Enter a valid random placeholder ID here.
+
+## Reset Value <mark style="color:red;">**- Premium**</mark>
+
+By default, the reset value is 0, but, if you want to make some difference, this is allowed. Also this option supports placeholders, If combined with a random placeholder, it can achieve different reset values for players after each reset.
 
 ## Dynamic Reset Time <mark style="color:red;">**- Premium**</mark>
 
