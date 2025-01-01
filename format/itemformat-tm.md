@@ -20,12 +20,12 @@ For `EcoItems, Oraxen, MythicMobs`, you should write item id.
 
 For `ItemsAdder, eco`, you should write `namespace:item id`.&#x20;
 
-* Eco's namespace id plugin name, like `talismans`.&#x20;
+* `eco`'s namespace id plugin name, like `talismans`.  The `item id` follow below rules:&#x20;
   * Talisman: Just type talisman ID here.
   * EcoArmor:
     * Armor: `set_<setID>_<slotID>`&#x20;
-      * Advanced Armor: `set_<setID>_<slotID>_advanced`&#x20;
-      * Upgrade Crystal: `shard_<shardID>`
+    * Advanced Armor: `set_<setID>_<slotID>_advanced`&#x20;
+    * Upgrade Crystal: `shard_<shardID>`
   * Reforges: `stone_<reforgeID>`
 
 For `EcoArmor`, you should write `armor set id;;armor slot`. `armor slot` can be set to **BOOTS, CHESTPLATE, ELYTRA, HELMET, LEGGINGS**.
