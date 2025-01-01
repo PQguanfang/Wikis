@@ -114,6 +114,8 @@ Enter a valid random placeholder ID here.
 
 By default, the reset value is 0, but, if you want to make some difference, this is allowed. Also this option supports placeholders, If combined with a random placeholder, it can achieve different reset values for players after each reset.
 
+<mark style="color:red;">This option is very dangerous, you must set it carefully</mark>. You <mark style="color:red;">**MUST**</mark> ensure that **the value of buy/sell limits is always greater than the value of buy/sell reset**. This means that once reset, players must be able to repurchase/sell items again, otherwise you will see a situation where this item can never be purchased/sell again, and this situation is irreversible **UNLESS** you remove the buy/sell limits for this product or use commands to set the buy/sell times manually, <mark style="color:red;">**REMEMBER THIS**</mark>!
+
 ## Dynamic Reset Time <mark style="color:red;">**- Premium**</mark>
 
 This example uses a random placeholder to randomly refresh products after 3, 4, or 5 hours, instead of a fixed time refresh.
