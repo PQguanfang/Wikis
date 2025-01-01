@@ -101,7 +101,7 @@ Enter a valid random placeholder ID here.
 
 This example uses a random placeholder to randomly refresh products after 3, 4, or 5 hours, instead of a fixed time refresh.
 
-Created a random placeholder like:
+Created a random placeholder like this in `config.yml` file:
 
 ```yaml
   # Premium version only.
