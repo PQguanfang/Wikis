@@ -151,6 +151,43 @@ Use this placeholder at `buy-times-reset-time` option in any product configs.
     buy-times-reset-time: '{random_reset}' # <--- Used here, sell-times also works!
 ```
 
+## Dynamic Reset Value <mark style="color:red;">**- Premium**</mark>
+
+By default, each reset will lead to player's buy times or sell times to 0, but you can also change it to different value, and even the random value!
+
+Created a random placeholder like this in `config.yml` file:
+
+```yaml
+  # Premium version only.
+  random:
+    reset:
+      reset-mode: ONCE
+      elements:
+        - '0~20' # A random number from 0 to 20
+        - '40' # A fixed number
+```
+
+Use this placeholder at `buy-times-reset-valuvalue` option in any product configs.
+
+```yaml
+  B:
+    price-mode: ALL
+    product-mode: CLASSIC_ALL
+    products:
+      1:
+        material: GOLD_INGOT
+        amount: 1
+    buy-prices:
+      # 
+    sell-prices:
+      #
+    buy-limits:
+      default: '2'
+    buy-times-reset-mode: 'TIMED'
+    buy-times-reset-time: '19:00:00;;20:00:00' # <--- TIMED mode supports multi reset time!
+    buy-times-reset-value: '{random_resetvalue}' # <--- Used random placeholder
+```
+
 ## Reset Time do not correct?
 
 * The product must have been purchased or selled once before the next reset time can be stored. Otherwise, we can only display the possible reset time calculated based on the current time after the transaction is completed.
