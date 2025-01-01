@@ -35,7 +35,7 @@ Change the value you would like.
 * default: Default value, there is no reason you change this value other than 1.
 * vip/mvp: Condition ID value, players meet the conditions will use those value.
 
-For conditions, view [Conditions](broken-reference).
+Each condition id section should use [Condition Format](../format/condition-format.md).
 
 ## Use Placeholder
 
