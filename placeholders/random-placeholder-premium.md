@@ -2,9 +2,9 @@
 
 We added `{random}` built-in placeholder in premium version.
 
-## Configure
+## Config
 
-* Open config.yml, find below contents:
+* Open `config.yml`, find below contents:
 
 ```yaml
 placeholder:
@@ -65,7 +65,7 @@ Supports below reset mode:
 * ONCE: Each time it is used, it will reset and is not applicable to the price, as the price seen by the player opening the store and the actual transaction result are calculated twice, so you cannot achieve price synchronization.
 * TIMER/TIMED/NEVER: Please view [this page](../shops/products.md#buy-sell-times-reset-options) to know more. We will generate reset time after random placeholder be used once. The reset time will not automatically adjust based on configuration updates. If you set the reset time incorrectly, you will need to delete the corresponding data.
 
-For more info, please view [this page](broken-reference).
+For more info, please view [this page](../shops/product-config-buy-sell-times-reset.md).
 
 ## Example: Random Price
 
