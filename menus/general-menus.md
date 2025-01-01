@@ -68,6 +68,6 @@ buttons:
 For each button, we have those options:
 
 * display-item: The display item of this button, should use [Display Item Format](../format/display-item-format.md).
-* actions: The action will executed after we click this button.
-* fail-actions: The action will executed if we don't meet the condition of this button, see [Actions](broken-reference) for more info.&#x20;
-* conditions: The condition of this button, if player don't meet this condition, then we will execute the `fail-action`.
+* actions: The action will executed after we click this button. Use [Action Forma](../format/action-format.md)[t](../format/action-format.md) here.
+* fail-actions: The action will executed if we don't meet the condition of this button. Use [Action Forma](../format/action-format.md)[t](../format/action-format.md) here.
+* conditions: The condition of this button, if player don't meet this condition, then we will execute the `fail-action`. Use [Condition Format](../format/condition-format.md) here.
