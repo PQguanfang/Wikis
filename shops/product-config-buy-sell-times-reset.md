@@ -114,7 +114,7 @@ Created a random placeholder like this in `config.yml` file:
         - '05:00:00'
 ```
 
-Use this placeholder at `buy-times-reset-time` option.
+Use this placeholder at `buy-times-reset-time` option in any product configs.
 
 ```yaml
   B:
