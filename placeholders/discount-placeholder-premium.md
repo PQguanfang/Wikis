@@ -61,7 +61,7 @@ items:
         placeholder: '{amount} Coins'
 ```
 
-* 5 is base price, then use {discount\_buy} before it.
+* 5 is base price, then add `{discount_buy}` before it.
 
 ## Auto Apply Discount Placeholder
 
