@@ -15,6 +15,6 @@
 * The plugin theoretically supports any version between **1.14** and **1.21.4**.
 * Obviously, supporting so many versions is not an easy task. It is impossible for the author to test all versions between 1.14 and 1.21.4 every time the plugin is updated. If you encounter errors while using a certain version, <mark style="color:red;">please join our Discord feedback</mark>.
 
-## A economy plugin if you want to use custom currency
+## An economy plugin if you want to use custom currency
 
 * **UltimateShop** is just a shop plugin and does not provide custom economy functionality. If you need a custom economy as your server economy, please find a suitable economy plugin yourself. **Vault** is not an economy plugin, it is just a dependency plugin for many economy plugins. <mark style="color:red;">After installing Vault on the server, it is also necessary to install the economy plugins that support it</mark>.
