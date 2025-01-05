@@ -1,0 +1,16 @@
+---
+hidden: true
+---
+
+# 🆚Premium Vs Free
+
+|                                                                                                                                                                                                                                                  | Free                                   | Premium                                  |
+| ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | -------------------------------------- | ---------------------------------------- |
+| <p><strong>Commands</strong><br>Some commands are only available for premium version. For more info, please view <a href="commands.md">Commands</a> page.</p>                                                                                    | <mark style="color:red;">**13**</mark> | <mark style="color:green;">**17**</mark> |
+| <p><strong>More Command Args</strong><br>Premium version supports more command args. Like use <code>*</code> means all products. For more info, please view <a href="commands.md">Commands</a> page.</p>                                         | ❌                                      | ✅                                        |
+| <p><strong>UltimateShopEditor Addon</strong><br>Premium version supports use UltimateShopEditor addon plugin. For more info, please view <a href="../features/in-game-editor-premium.md">In-game Editor</a> page.</p>                            | ❌                                      | ✅                                        |
+| <p><strong>Multi Server Sync</strong><br>Premium version supports sync global server's data with multi server in one proxy server. For more info, please view <a href="../features/multi-server-sync-premium.md">Multi Server Sync</a> page.</p> | ❌                                      | ✅                                        |
+| <p><strong>Random Placeholder</strong><br>Premium version supports use built-in random placeholder. For more info, please view <a href="../placeholders/random-placeholder-premium.md">Random Placeholders</a> page.</p>                         | ❌                                      | ✅                                        |
+| <p><strong>Discount Placeholder</strong><br>Premium version supports use built-in discount placeholder. For more info, please view <a href="../placeholders/discount-placeholder-premium.md">Discount Placeholder</a> page.</p>                  | ❌                                      | ✅                                        |
+| <p><strong>More Built-in Placeholders</strong><br>Premium version supports more built-in placeholders. For more info, please view <a href="../placeholders/built-in-placeholder.md">Built-in Placeholders</a> page.</p>                          | ❌                                      | ✅                                        |
+|                                                                                                                                                                                                                                                  |                                        |                                          |
