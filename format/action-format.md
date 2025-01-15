@@ -35,7 +35,7 @@ When multiple products are about to be sold, adding this option means that only 
         multi-once: true # In buy more menu
 ```
 
-### Click Type
+#### Click Type
 
 This action only executed when player use this click type to active this action. Won't work for `open-actions`, `close-action` in menu configs and `buy-actions`, `sell-actions` in product configs.
 

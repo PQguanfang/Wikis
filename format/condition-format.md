@@ -24,9 +24,9 @@ This condition will only check when player have buy/sell spcified times product.
         end-apply: 5
 ```
 
-### Click Type
+#### Click Type
 
-This condition only executed when player use this click type to active this action.&#x20;
+This condition only checked when player use this click type to use the button.&#x20;
 
 ```yaml
     conditions:
