@@ -86,7 +86,9 @@ buy-limits:
   vip: 20
 buy-limits-conditions:
   vip: 
-    - 'permission: test.permission'
+    1:
+      type: permission
+      permission: 'test.permission'
 ```
 
 * sell-limits: Same as buy-limits, but use for sell.
