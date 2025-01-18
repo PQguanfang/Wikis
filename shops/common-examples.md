@@ -36,7 +36,9 @@ items:
       vip: 192
     sell-limits-conditions:
       vip:
-        - 'permission: group.vip'
+        1:
+          type: permission
+          permission: 'group.vip'
     sell-limits-reset-mode: 'TIMED'
     sell-limits-reset-time: '00:00:00'  
 ```
@@ -76,7 +78,9 @@ items:
       vip: 20
     buy-limits-conditions:
       vip:
-        - 'permission: group.vip'
+        1:
+          type: permission
+          permission 'group.vip'
     buy-limits-reset-mode: 'TIMED'
     buy-limits-reset-time: '00:00:00'
 ```
