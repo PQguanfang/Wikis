@@ -41,7 +41,8 @@ In product configurations, we set the corresponding type of single thing through
 
 You may note: you can set action will run when the single thing is been give to player, and set the conditions that player need meet to use the single thing. This is very useful you want to play sound, excute command after player buy or sell.
 
-* Actions: Add `give-actions` section in single thing config. Very useful for command shop, permission shop, enchant shop. Also, **if your economy plugins/item plugins do not supported in UltimateShop, just put the command of give money/item here to solve the problem!** (`{player}` means player name, `{amount}` means the price/product amount) If you want to make the product be actions only, don't forget add `give-item: false` in the single thing option!
+* Actions: Add `give-actions` section in single thing config. Very useful for command shop, permission shop, enchant shop. Also, **if your economy plugins/item plugins do not supported in UltimateShop, just put the command of give money/item here to solve the problem!** (`{player}` means player name, `{amount}` means the price/product amount)\
+  **If you want to make the product be actions only, don't forget add `give-item: false` in the single thing option!**
 * Conditions: Add `conditions` section in single thing config.&#x20;
 
 ### Different from single thing's `give-actions` and item's `buy-actions/sell-actions`:
