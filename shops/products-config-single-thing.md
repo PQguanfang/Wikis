@@ -83,3 +83,61 @@ is same as:
             rule: '=='
             value: 'A'
 ```
+
+Start from 3.4.3, you can customize the **keys** for conditions of **single things**. If you confirm that your products, buy prices, and sell prices are using same conditions at a time, you can set their keys to the same value, so that you don't have to configure their conditions separately for each single thing. For example:
+
+```yaml
+conditions:
+  products-key: 'conditions'
+  buy-prices-key: 'conditions'
+  sell-prices-key: 'conditions'
+  display-item-key: 'conditions'
+```
+
+with this shop config:
+
+```yaml
+items:
+  A:
+    price-mode: CLASSIC_ANY
+    product-mode: CLASSIC_ANY
+    products:
+      one:
+        material: REDSTONE
+        amount: 1
+        give-actions:
+          1:
+            type: message
+            message: 'Hello!'
+      two:
+        material: IRON_INGOT
+        amount: 1
+    sell-prices:
+      one:
+        economy-plugin: Vault
+        amount: 1
+        placeholder: '&6{amount} Coins'
+        start-apply: 0
+      two:
+        economy-plugin: Vault
+        amount: 3
+        placeholder: '&6{amount} Coins'
+        start-apply: 0
+    conditions:
+      one:
+        1:
+          type: placeholder
+          placeholder: '{random_daily}'
+          rule: '=='
+          value: 'A'
+      two:
+        1:
+          type: placeholder
+          placeholder: '{random_daily}'
+          rule: '=='
+          value: 'B'
+```
+
+In this example, if condition **one** is meet, we will also use the product with ID **one** and sell price wth ID **one**.
+
+For actions, it is recommended you use give-actions in each single thing instead of buy-actions or sell-actions, because their conditions are separate and cannot be synchronized with the conditions of a single thing, configuring them will be more complicated.
