@@ -278,7 +278,7 @@ Set the chance the action will be excuted, up to 100. 50 means this action has 5
 
 ## Any <mark style="color:red;">- Premium</mark>
 
-Randomly choose a action to execute.
+Randomly choose specified amount of actions to execute.
 
 ```yaml
     actions:
