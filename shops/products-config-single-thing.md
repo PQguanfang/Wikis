@@ -85,7 +85,7 @@ is same as:
             value: 'A'
 ```
 
-Start from 3.4.3, you can customize the **keys** for conditions of **single things**. If you confirm that your products, buy prices, and sell prices are using same conditions at a time, you can set their keys to the same value, so that you don't have to configure their conditions separately for each single thing. For example:
+Start from 3.4.3, you can customize the **keys** for conditions of **single things**. If you confirm that your products, buy prices, and sell prices are using same conditions at a time, you can set their keys to the same value, so that you don't have to configure their conditions separately for each single thing. You can find the settings at `config.yml` file like below:
 
 ```yaml
 conditions:
@@ -95,7 +95,7 @@ conditions:
   display-item-key: 'conditions'
 ```
 
-with this shop config:
+This example make all `conditions` key be same, so the shop config should be also like:
 
 ```yaml
 items:
