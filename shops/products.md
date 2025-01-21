@@ -120,6 +120,17 @@ The introduction of these options is on a separate page, please [click here](pro
 
 You can set placeholders and [Math Calculate Format](../format/math-calculate-format.md) in `buy-prices`, `sell-prices` section's `amount` option and `buy-limits`, `sell-limits` section's value in shop configs.
 
+Available built-in placeholder, for more info about them, please view [Built-In Placeholders](../placeholders/built-in-placeholder.md) page.
+
+* {buy-times-player}
+* {buy-times-server}
+* {sell-times-player}
+* {sell-times-server}
+* {last-buy-player}
+* {last-buy-server}
+* {last-sell-player}
+* {last-sell-server}
+
 Also in `buy-prices` and `sell-prices` section, you can set new 2 options:
 
 * max-amount: Price max amount, useful for dynamic prices. **Optional.**
