@@ -26,6 +26,8 @@ It is recommend that you view this file at GitHub, becuase Wiki's `config.yml` m
 #
 # Read the Wiki: ultimateshop.superiormc.cn
 
+# Some options require restart the server to make effect.
+
 debug: false
 
 config-files:
@@ -117,17 +119,26 @@ menu:
       buttons:
         amount:
           name: 'Amount'
-          tip: 'Type amount here! Type all to sell all!'
+          tip: 'Type amount here!'
     info:
       title: 'Product Info: {item-name} x{amount}'
       buttons:
         buy: 'Buy'
         sell: 'Sell'
         buy-more: 'Select Amount'
+        sell-all: 'Sell All'
+        # Remove this option if you don't want this button.
         back: '&cBack'
-  buy-more:
-    menu: buy-more
-    max-amount: 64
+  buy-more-menu:
+    default:
+      menu: buy-more
+      max-amount: 64
+    only-buy:
+      menu: buy-more-buy
+      max-amount: 64
+    only-sell:
+      menu: buy-more-sell
+      max-amount: 64
   auto-open:
     enabled: true
     menu: main
@@ -154,6 +165,9 @@ menu:
 use-times:
   default-reset-mode: 'NEVER'
   default-reset-time: '00:00:00'
+  # This only works for CUSTOM type of reset mode.
+  default-reset-time-format: 'yyyy-MM-dd HH:mm:ss'
+  default-reset-value: 0
 
 math:
   enabled: true
@@ -234,11 +248,13 @@ placeholder:
       mvp: 2
   discount-conditions:
     vip:
-      type: permission
-      permission: 'group.vip'
+      1:
+        type: permission
+        permission: 'group.vip'
     mvp:
-      type: permission
-      permission: 'group.mvp'
+      1:
+        type: permission
+        permission: 'group.mvp'
   # Premium version only.
   random:
     rotate:
@@ -251,11 +267,15 @@ placeholder:
     daily:
       reset-mode: TIMED
       reset-time: '00:00:00'
-      element-amount: 2
+      element-amount: 5
       elements:
         - 'A'
         - 'B'
         - 'C'
+        - 'D'
+        - 'E'
+        - 'F'
+        - 'G'
   # Premium version only
   compare:
     up: '↑'
@@ -276,9 +296,11 @@ placeholder:
   refresh:
     format: "yyyy-MM-dd HH:mm:ss"
     never: "Never"
-  cooldown:
-    format: "yyyy-MM-dd HH:mm:ss"
-    now: "Now"
+  # Premium version only
+  next:
+    with-day-format: "{d}d {h}h {m}m {s}s"
+    without-day-format: "{h}h {m}m {s}s"
+    never: "Waiting for next refresh"
   price:
     split-symbol-any: ', '
     split-symbol-all: ', '
@@ -303,8 +325,6 @@ placeholder:
     error: '&#ff3300Error!'
     buy-condition-not-meet: '&#ff3300Not meet the buy condition!'
     sell-condition-not-meet: '&#ff3300Not meet the sell condition!'
-    buy-in-cooldown: '&#ff3300In cooldown!'
-    sell-in-cooldown: '&#ff3300In cooldown!'
   # Premium version only.
   sell-stick:
     infinite: "&cInfinite"
@@ -331,6 +351,12 @@ prices:
     hook-item: AXE;;TEST_AXE
     amount: 1
     placeholder: '{amount} Mythic Axe'
+
+conditions:
+  products-key: 'products-conditions'
+  buy-prices-key: 'buy-prices-conditions'
+  sell-prices-key: 'sell-prices-conditions'
+  display-item-key: 'display-item-conditions'
 
 # Premium version only
 sell-stick-items:
