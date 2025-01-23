@@ -158,8 +158,8 @@ menu:
     buy-one-stack:
       1:
         type: buy
-        shop: {shop}
-        item: {item}
+        shop: '{shop}'
+        item: '{item}'
         amount: 64
 
 use-times:
