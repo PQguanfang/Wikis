@@ -2,10 +2,9 @@
 
 ## Enable Math Feature
 
-Change your config.yml file:
+Change your `config.yml` file:
 
-* For 1.2.8 user: Change `check-math: false` to `check-math: true`.
-* For 1.2.9+ user: Change
+* Change
 
 ```yaml
 math:
@@ -92,7 +91,7 @@ How to get the number called <mark style="color:red;">**n**</mark>? This number 
 
 \[(**Buy Price Base Price** - **Sell Price Base Price**)/(**Buy Up Price** - **Sell Down Price**)] >= Accumulation from 1 to n.
 
-In this example: (2.8-2.38)/(0.1-0.06) >= 1+2+3+4 (if up to 5, the formula will not meet), so <mark style="color:red;">n</mark> max number is 4 in this example.
+In this example: `(2.8-2.38)/(0.1-0.06) >= 1+2+3+4` (if up to 5, the formula will not meet), so <mark style="color:red;">n</mark> max number is 4 in this example.
 
 Remerber: <mark style="color:red;">Your different formulas require reasonable setting of different values in max-amount and min-amount. The safest approach is to set the price of each purchase or sellling change to the same value.</mark>
 
@@ -103,9 +102,22 @@ Another common dynamic price formula is price changed based on the percentage, l
 * In this example, first time buy with no sell is **100**, then is **150 (+50%)**, then is **225 (150 + 150 \* 50%)**.
 * Don't forget set `min-amount` option to a number near **100** to avoid the price become too low!
 
+## Available Placeholders
+
+* {buy-times-player}
+* {buy-times-server}
+* {sell-times-player}
+* {sell-times-server}
+* {last-buy-player}
+* {last-buy-server}
+* {last-sell-player}
+* {last-sell-server}
+
+For more info about those placeholders, please view [this page](../placeholders/built-in-placeholder.md).
+
 ## Dynamic Price per player
 
-As long as you can ensure that the placeholder used in the formula is per player, the calculated price result will naturally be per player. In the above example, we used global placeholders such as `{buy times server}`, and you only need to replace the `server` with the `player` to display the player's own buy times value. The relevant content is explained in detail in the [Placeholders](../placeholders/built-in-placeholder.md) page.
+As long as you can ensure that the placeholder used in the formula is per player, the calculated price result will naturally be per player. In the above example, we used global placeholders such as `{buy-times-server}`, and you only need to replace the `server` with the `player` to display the player's own buy times value. The relevant content is explained in detail in the [Placeholders](../placeholders/built-in-placeholder.md) page.
 
 ## Set buy / sell limits for your products
 
