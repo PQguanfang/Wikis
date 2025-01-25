@@ -52,11 +52,11 @@ For more info, please view [this page](../shops/product-config-buy-sell-times-re
 In this example, we create a new random placeholder config called `price.yml` at `random_placeholder` folder.
 
 ```yaml
-  reset-mode: TIMED
-  reset-time: '00:00:00'
-  elements:
-  # Random number from 5 to 100.
-    - '5~100'
+reset-mode: TIMED
+reset-time: '00:00:00'
+elements:
+# Random number from 5 to 100.
+- '5~100'
 ```
 
 ### Set dynamic value in your product configs
