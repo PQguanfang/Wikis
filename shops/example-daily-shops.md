@@ -6,7 +6,7 @@ This page don't have any description of it because all things I can tell you hav
 
 We need to create a random placeholders. This placeholder can be used in conjunction with the [condition](../format/condition-format.md) system to achieve different products appearing at this shop every day, thereby achieving the same effect as the daily shop plugin.
 
-In this example, we created a new random placeholder called `daily`.  And it's options represents:
+In this example, we created a new random placeholder config called `daily.yml` at `random_placeholder` folder. And it's options represents:
 
 * `reset-mode` and `reset-time`: This placeholder refreshed every day.
 * `element-amount`: This placeholder will randomly pick 5 elements when it refresh, this is same as the amount of slots in this daily shop.
@@ -15,19 +15,17 @@ In this example, we created a new random placeholder called `daily`.  And it's o
 * Please view [Random Placeholder](../placeholders/random-placeholder-premium.md) page for more info about random placeholder.
 
 ```yaml
-  random:
-    daily:
-      reset-mode: TIMED
-      reset-time: '00:00:00'
-      element-amount: 5
-      elements:
-        - 'A'
-        - 'B'
-        - 'C'
-        - 'D'
-        - 'E'
-        - 'F'
-        - 'G'
+reset-mode: TIMED
+reset-time: '00:00:00'
+element-amount: 5
+elements:
+- 'A'
+- 'B'
+- 'C'
+- 'D'
+- 'E'
+- 'F'
+- 'G'
 ```
 
 ## Configure Shop
@@ -580,7 +578,67 @@ items:
           value: 'G'
 ```
 
-## Price are same for all products?
+## FAQ: Too complex?
+
+Start from 3.4.3, you can customize the **keys** for conditions of **single things**. If you confirm that your products, buy prices, and sell prices are using same conditions at a time, you can set their keys to the same value, so that you don't have to configure their conditions separately for each single thing. You can find the settings at `config.yml` file like below:
+
+```yaml
+conditions:
+  products-key: 'conditions'
+  buy-prices-key: 'conditions'
+  sell-prices-key: 'conditions'
+  display-item-key: 'conditions'
+```
+
+This example make all `conditions` key be same, so the shop config should be also like:
+
+```yaml
+items:
+  A:
+    price-mode: CLASSIC_ANY
+    product-mode: CLASSIC_ANY
+    products:
+      one:
+        material: REDSTONE
+        amount: 1
+        give-actions:
+          1:
+            type: message
+            message: 'Hello!'
+      two:
+        material: IRON_INGOT
+        amount: 1
+    sell-prices:
+      one:
+        economy-plugin: Vault
+        amount: 1
+        placeholder: '&6{amount} Coins'
+        start-apply: 0
+      two:
+        economy-plugin: Vault
+        amount: 3
+        placeholder: '&6{amount} Coins'
+        start-apply: 0
+    conditions:
+      one:
+        1:
+          type: placeholder
+          placeholder: '{random_daily}'
+          rule: '=='
+          value: 'A'
+      two:
+        1:
+          type: placeholder
+          placeholder: '{random_daily}'
+          rule: '=='
+          value: 'B'
+```
+
+In this example, if condition **one** is meet, we will also use the product with ID **one** and sell price wth ID **one**.
+
+For actions, it is recommended you use give-actions in each single thing instead of buy-actions or sell-actions, because their conditions are separate and cannot be synchronized with the conditions of a single thing, configuring them will be more complicated.
+
+## FAQ: Price are same for all products?
 
 This is because you only created one unconditional price here, which results in all products using this price. If you don't want this, you can learn to do it like `display-item` and `products`.
 

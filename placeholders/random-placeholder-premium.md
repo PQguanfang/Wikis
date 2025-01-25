@@ -4,27 +4,16 @@ We added `{random}` built-in placeholder in premium version.
 
 ## Config
 
-* Open `config.yml`, find below contents:
+All random placeholder configs are stored in `random_placeholder` folder. The file name is it's ID, for example: `rotate.yml` means it's ID is `rotate`. An example of it's config is like below:
 
 ```yaml
-placeholder:
-  # Premium version only.
-  random:
-    rotate:
-      reset-mode: TIMED
-      reset-time: '00:00:00'
-      elements:
-        - 'A'
-        - 'B'
-        - 'C'
-    daily-shop:
-      reset-mode: TIMED
-      reset-time: '00:00:00'
-      elements:
-        - 'rotate' # This means this placeholder will include all rotate placeholder elements.
+reset-mode: TIMED
+reset-time: '00:00:00'
+elements:
+  - 'A'
+  - 'B'
+  - 'C'
 ```
-
-Change the value you'd like.
 
 * reset-mode/reset-time: Please view below to know.
 * element-amount: The amount of the element will picked. **(Added in 3.1.0)**
@@ -32,24 +21,13 @@ Change the value you'd like.
   * **Support use \~ symbol means pick random number, for example, 5\~100 means pick one random number from 5 to 100.**&#x20;
 
 ```yaml
-placeholder:
-  # Premium version only.
-  random:
-    rotate:
-      reset-mode: TIMED
-      reset-time: '00:00:00'
-      elements:
-        - 'A'
-        - 'B'
-        - 'C'
-    daily-shop:
-      reset-mode: TIMED
-      reset-time: '00:00:00'
-      element-amount: 2
-      elements:
-        - 'A'
-        - 'B'
-        - 'C'
+reset-mode: TIMED
+reset-time: '00:00:00'
+element-amount: 2
+elements:
+  - 'A'
+  - 'B'
+  - 'C'
 ```
 
 ## Use Placeholder
@@ -71,16 +49,14 @@ For more info, please view [this page](../shops/product-config-buy-sell-times-re
 
 ### Create new random placeholder
 
-In this example, we create a new random placeholder called `price` at `config.yml`.
+In this example, we create a new random placeholder config called `price.yml` at `random_placeholder` folder.
 
 ```yaml
-  random:
-    price:
-      reset-mode: TIMED
-      reset-time: '00:00:00'
-      elements:
-        # Random number from 5 to 100.
-        - '5~100'
+  reset-mode: TIMED
+  reset-time: '00:00:00'
+  elements:
+  # Random number from 5 to 100.
+    - '5~100'
 ```
 
 ### Set dynamic value in your product configs

@@ -11,7 +11,8 @@ The plugin generates the following configuration files, some of which will only 
 Many people seem to be confused about one thing: what you open through the `/shop` command is a menu, not a shop. If you want to set the slot for items in the shop menu, you should set it in the configuration file of the menu.
 {% endhint %}
 
-* `shops`: The location for storing menu configuration files.&#x20;
+* `shops`: The location for storing shop configuration files.&#x20;
+* `random_placeholders`: The loaction for storing random placeholder configuration files.
 * `config.yml` file: The location for main common settings for plugins.
 * `generated-item-format.yml` file: When using the `/shop generateeitemformat` command, we will parse the item you are holding into an **ItemFormat** and store the parsed **ItemFormat** content in this file.
 * `XX_xx.json` file: Localized files automatically generated through [Localized Item Name](../features/localized-item-name-premium.md) feature. The name of this file is determined based on the localized language you have set for this feature, but it usually ends in `.json`.
@@ -255,27 +256,6 @@ placeholder:
       1:
         type: permission
         permission: 'group.mvp'
-  # Premium version only.
-  random:
-    rotate:
-      reset-mode: TIMED
-      reset-time: '00:00:00'
-      elements:
-        - 'A'
-        - 'B'
-        - 'C'
-    daily:
-      reset-mode: TIMED
-      reset-time: '00:00:00'
-      element-amount: 5
-      elements:
-        - 'A'
-        - 'B'
-        - 'C'
-        - 'D'
-        - 'E'
-        - 'F'
-        - 'G'
   # Premium version only
   compare:
     up: '↑'
