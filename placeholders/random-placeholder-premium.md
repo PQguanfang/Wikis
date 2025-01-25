@@ -56,7 +56,7 @@ reset-mode: TIMED
 reset-time: '00:00:00'
 elements:
 # Random number from 5 to 100.
-- '5~100'
+  - '5~100'
 ```
 
 ### Set dynamic value in your product configs
