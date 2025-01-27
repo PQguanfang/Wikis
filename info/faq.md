@@ -20,7 +20,7 @@ This option will only work for `ANY` or `ALL` price-mode.
 
 ## Q: What is different from full (free) version and premium version?
 
-A: Check [this](compare.md) page for more info.
+A: Check [this](premium-vs-free.md) page for more info.
 
 ## Q: Can I set different add lore for each product?
 
