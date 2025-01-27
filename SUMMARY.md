@@ -14,7 +14,7 @@
 * [📊Data](info/data.md)
 * [🚀Performance](info/performance.md)
 * [❓FAQ](info/faq.md)
-* [🆚Premium Vs Free](info/premium-vs-free.md)
+* [🆚Compare](info/compare.md)
 
 ## &#x20;📋Format
 
