@@ -109,7 +109,7 @@ Then also use condition system:
             type: permission
             permission: 'group.vip'
           2:
-            type: placeholder: 
+            type: placeholder
             placeholder: '{random_chance}'
             rule: '>'
             value: '50'

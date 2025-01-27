@@ -1,6 +1,8 @@
 # 📅Example: Daily Shops
 
-This page don't have any description of it because all things I can tell you have been claimed in [Shops](shops.md) page.&#x20;
+{% hint style="info" %}
+This example will only work for <mark style="color:red;">**PREMIUM**</mark> version of **UltimateShop**!
+{% endhint %}
 
 ## Create random placeholder
 
