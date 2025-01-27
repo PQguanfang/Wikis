@@ -6,4 +6,4 @@ Wiki translations in other languages come from the community and do not represen
 
 **Translator:** snowcutieowo
 
-**Site:** [Click here (点击这里)](https://snowcutieowo.github.io/UltimateShop/snowcutieowo.github.io/UltimateShop)
+**Site:** [Click here (点击这里)](https://snowcutieowo.github.io/UltimateShop/)
