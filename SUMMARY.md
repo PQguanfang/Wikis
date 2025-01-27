@@ -1,6 +1,7 @@
 # Table of contents
 
 * [🎉Welcome](README.md)
+* [🌏Other Language Wiki](other-language-wiki.md)
 * [Compare](compare.md)
 
 ## 📦Info
