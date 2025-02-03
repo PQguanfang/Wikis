@@ -49,6 +49,21 @@ items:
         placeholder: '&65 Coins'
 ```
 
+### <mark style="color:red;">Directly</mark> supported protection plugins list  <a href="#directly-supported-protection-plugins-list-premium" id="directly-supported-protection-plugins-list-premium"></a>
+
+If players do not have permission to destroy blocks within these protection plugins areas, UltimateShop can prevent players use sell stick in these areas.
+
+* BentoBox
+* Dominion
+* GriefPrevention
+* HuskTowns
+* HuskClaims
+* Lands
+* PlotSquared
+* Residence
+* Towny
+* WorldGuard
+
 ## **Indirect compatibility**
 
 Indirect compatibility refers to the flexible use of various features of plugins to enable them to associate with these plugins.
