@@ -51,7 +51,7 @@ items:
 
 ### <mark style="color:red;">Directly</mark> supported protection plugins list  <a href="#directly-supported-protection-plugins-list-premium" id="directly-supported-protection-plugins-list-premium"></a>
 
-If players do not have permission to destroy blocks within these protection plugins areas, UltimateShop can prevent players use sell stick in these areas.
+If players do not have permission to open container within these protection plugins areas, UltimateShop can prevent players use sell stick in these areas.
 
 * BentoBox
 * Dominion
