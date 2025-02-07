@@ -24,7 +24,7 @@ This action will run only when player have buy/sell spcified times product.&#x20
         end-apply: 5
 ```
 
-#### Once
+#### Sell All Once / Multi Once
 
 When multiple products are about to be sold, adding this option means that only the first product's action will be executed. Very useful for sounds action, if you didn't add this, all product's sound action will execute.
 
@@ -33,6 +33,16 @@ When multiple products are about to be sold, adding this option means that only 
       1:
         sell-all-once: true # In sell all
         multi-once: true # In buy more menu
+```
+
+#### Open Once
+
+Only work for menu's open-actions option, if enabled, only the menu opened by the player for the first time will trigger this action, which means that if the opened menu was opened through another menu, this action cannot be triggered.
+
+```yaml
+    actions:
+      1:
+        open-once: true
 ```
 
 #### Click Type
