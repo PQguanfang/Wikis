@@ -557,3 +557,4 @@ Supported plugins at the moment:
 
 * MythicChanger
 * AdvancedEnchantments <mark style="color:red;">- Premium</mark>
+* NBTAPI - <mark style="color:red;">Premium</mark>

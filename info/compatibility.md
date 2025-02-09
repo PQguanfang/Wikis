@@ -137,9 +137,9 @@ Through this hook, the localized names of vanilla items can be automatically dis
 
 Download NeigeItems here: [https://github.com/ankhorg/NeigeItems-Kotlin/releases](https://github.com/ankhorg/NeigeItems-Kotlin/releases)
 
-You should download NeigeItems-xxx.jar (not NeigeItems-api), the file lager than 10MB.
+You should download `NeigeItems-xxx.jar (not NeigeItems-api)`, the file lager than 10MB.
 
-Install it in your server.
+Install it in your server and change it's `language` option in `config.yml` file.
 
 All is done! Now plugin will auto display localized item name for now.
 
@@ -159,10 +159,9 @@ For how to configure the `change-item` section, please read MythicChanger's wiki
 If you are using **premium version of MythicChanger**, it will allow you use custom NBT tag by adding nbt-xxx rule here. You can also use `/mc viewnbt` command to view the hold item NBT info.
 {% endhint %}
 
-```yaml
-change-item:
-  set-name: '&fGood Diamond Sword'
-```
+<pre class="language-yaml"><code class="lang-yaml"><strong>change-item:
+</strong>  set-name: '&#x26;fGood Diamond Sword'
+</code></pre>
 
 ## AdvancedEnchantments: Extra Item Format option <mark style="color:red;">- Premium</mark>
 
@@ -175,6 +174,26 @@ You can use `plugin-enchants` option to add plugin enchants for your item.
 ```yaml
 plugin-enchants:
   PLANTER: 5 # A AdvancedEnchantments enchantment
+```
+
+## NBTAPI: Extra Item Format option <mark style="color:red;">- Premium</mark>
+
+The format of this option is:
+
+```yaml
+nbt:
+  <NBT Type>:
+    <NBT Key>: <NBT Value>
+```
+
+For example:
+
+```yaml
+nbt:
+  string: 
+    customNBT: 'Hello!'
+  int:
+    anotherNBT: 5
 ```
 
 ## MythicChanger: Custom Item Match

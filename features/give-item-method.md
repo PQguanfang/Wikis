@@ -1,6 +1,17 @@
-# Give Item Method
+# 🔑Give Item Method
 
-here are 2 give item method in plugin.
+You can change give item method at `config.yml` file with below content:
+
+```yaml
+give-item:
+  # Support value: BUKKIT, SMART
+  # SMART will cost more server performance but will follow the vanilla max stack to give player item, also support check full.
+  give-method: BUKKIT
+  # Only support SMART give method.
+  check-full: false
+```
+
+Here are 2 give item method in plugin.
 
 ## BUKKIT
 

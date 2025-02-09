@@ -17,11 +17,26 @@ sell:
   # For each product, you can add match-item section to make custom sell match method, for more info, please view Wiki.
   sell-method: Bukkit
   # Only support ItemFormat sell method.
-  ignore-item-format-key:
-    - 'lore' 
-    - 'damage'
-    - 'tool.damage-per-block'
+  item-format:
+    require-same-key: false
+    ignore-key:
+      - 'lore'
+      - 'damage'
+      - 'enchants'
+      - 'tool.damage-per-block'
+      - 'nbt.CustomNBTKey'
 ```
+
+For options in `item-format` section:
+
+* require-same-key: This means that the items in the shop must have all the data of the items owned by the player.\
+  For example: The shop has a diamond sword without any enchantments, then player has a diamond sword with sharpness enchantment, if player try sell his diamond sword to shop and the `require-same-key` option is `true`, then this sword will not be allowed to sell, because the sword in shop miss the data of enchantment.
+* ignore-key: The list of ItemFormat™ Key that will be ignored when check whether items are same.\
+  For example: The shop has a diamond sword with sharpness enchantment, if player's sword don't has this enchantment, and you didn't set `enchants` at this option, then he can not sell the sword to shop, if you set `enchants` here, then we will ignore player's sword don't has this enchantment, and contine check other keys.
+
+{% hint style="info" %}
+You can parse the ItemFormat of a handheld item by using the command `/shop generateeitemformat`, and the key can also be indented. For example, if you only want to ignore the sharpness enchantment and do not want to ignore other enchantments, you can fill in `enchants.sharpness` in ignore-keys option instead of `enchants`.
+{% endhint %}
 
 ### Third-plugin Item
 

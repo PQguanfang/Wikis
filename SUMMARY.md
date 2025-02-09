@@ -72,5 +72,6 @@
 ## 💻Develop
 
 * [Develop Guide](develop/develop-guide.md)
+* [Events](develop/events.md)
 * [Hook into UltimateShop](develop/hook-into-ultimateshop.md)
 * [Can't do things](develop/cant-do-things.md)
