@@ -186,6 +186,16 @@ nbt:
     <NBT Key>: <NBT Value>
 ```
 
+Supported NBT Type: '
+
+* byte
+* short
+* int
+* long
+* float
+* double
+* string
+
 For example:
 
 ```yaml
@@ -193,7 +203,7 @@ nbt:
   string: 
     customNBT: 'Hello!'
   int:
-    anotherNBT: 5
+    anotherNBTComponent.theNBTKey: 5
 ```
 
 ## MythicChanger: Custom Item Match
