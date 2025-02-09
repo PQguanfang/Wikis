@@ -7,7 +7,7 @@
 By default, we support two sell match method, they are:
 
 * Bukkit: This sell method require inventory's item must 100% same as product item, if the item player has changed some thing, it can not be selled anymore. For example, add enchantments or change item name in anvil, they will change item's NBT info.
-* ItemFormat: ItemFormat only supports read vanilla NBT, and can set ignore list of item's vanilla NBT. If you add enchants and name in ignore list, then player can still sell item even the item has more enchantments or changed item name.
+* ItemFormat: ItemFormat can set ignore list of item's vanilla NBT. If you add enchants and name in ignore list, then player can still sell item even the item has more enchantments or changed item name.
 
 Example config:
 
