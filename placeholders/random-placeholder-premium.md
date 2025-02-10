@@ -78,13 +78,4 @@ items:
         amount: '{random_price}' # <--- Changed line
         placeholder: '&6{amount} Coins'
         start-apply: 0
-    buy-limits:
-      global: 320
-      default: 240
-      vip: 320
-    buy-limits-conditions:
-      vip:
-        - 'permission: group.vip'
-    buy-limits-reset-mode: 'TIMED'
-    buy-limits-reset-time: '00:00:00'
 ```
