@@ -18,6 +18,10 @@ A: This means which times this price will apply. If you set it to 5, price will 
 
 This option will only work for `ANY` or `ALL` price-mode.
 
+## Q: Item dupe when quickly click item outside menu.
+
+A: Some other plugin or mod lead to this problem. Try enable `ignore-click-outside` option jn `config.yml` file.
+
 ## Q: What is different from full (free) version and premium version?
 
 A: Check [this](premium-vs-free.md) page for more info.
