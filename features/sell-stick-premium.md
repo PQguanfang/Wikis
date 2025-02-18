@@ -1,38 +1,30 @@
 # 🪄Sell Stick - Premium
 
-Open `config.yml` and find below contents:
+All sell stick configs are stored in `random_placeholder` folder. The file name is it's ID, for example: `A.yml` means it's ID is `A`. An example of it's config is like below:
 
 ```yaml
-# Premium version only
-sell-stick-items:
-  A:
-    material: STICK
-    name: '&dSell stick &7(5 times)'
-    lore:
-      - '&fClick a chest to use this item!'
-      - ''
-      - '&cLeft usages: {times}'
-    usage-times: 5
-  B:
-    material: STICK
-    name: '&dAdvanced Sell stick &7(50 times)'
-    lore:
-      - '&fClick a chest to use this item!'
-      - ''
-      - '&cLeft usages: {times}'
-    usage-times: 50
-  C:
-    material: STICK
-    name: '&5Epic Sell Stick'
-    lore:
-      - '&fClick a chest to use this item!'
-      - ''
-      - '&cLeft usages: {times}'
-    usage-times: -1
+display-item:
+  material: STICK
+  name: '&dSell Stick &7(5 times)'
+  lore:
+    - '&fRight click a chest to use this item!'
+    - ''
+    - '&cLeft usages: {times}'
+
+usage-times: 5
+
+multiplier: 1.2
+
+actions:
+  1:
+    type: sound
+    sound: 'block.note_block.pling'
+
+conditions: []
 ```
 
-A and B is ItemID, below it's their config section.
-
-Should use [Item Format](../format/itemformat-tm.md).
-
+* display-item: The display item of sell stick. Should use [Item Format](../format/itemformat-tm.md).
 * useage-times: Maxium usage times of this item. If this option value is less than 0 or does not exist, we will make this sell stick is infinite.
+* multiplier: The multiplier of sell stick. It only supports economy type of price.
+* actions: The action will execute after use this sell stick. Should use [Action format](../format/action-format.md).
+* conditions: The condition player need meet to use this sell stick. Should use [Condition Format](../format/condition-format.md).
