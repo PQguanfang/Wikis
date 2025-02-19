@@ -1,6 +1,6 @@
 # 🪄Sell Stick - Premium
 
-All sell stick configs are stored in `random_placeholder` folder. The file name is it's ID, for example: `A.yml` means it's ID is `A`. An example of it's config is like below:
+All sell stick configs are stored in `sell_sticks` folder. The file name is it's ID, for example: `A.yml` means it's ID is `A`. An example of it's config is like below:
 
 ```yaml
 display-item:

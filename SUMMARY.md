@@ -47,7 +47,8 @@
 
 * [🔧Built-in Placeholder](placeholders/built-in-placeholder.md)
 * [🔀Random Placeholder - Premium](placeholders/random-placeholder-premium.md)
-* [🔖Discount Placeholder - Premium](placeholders/discount-placeholder-premium.md)
+* [⛓️Conditional Placeholder - Premium](placeholders/conditional-placeholder-premium.md)
+* [🔖Example: Discount](placeholders/example-discount.md)
 
 ## 💰Dynamic Prices
 

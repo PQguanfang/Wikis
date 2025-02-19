@@ -14,7 +14,7 @@ There are 3 types of menus.
 
 * title: Menu title, for shop menu type, support `{shop-name}` to display shop displayname which set in it's config.
 * size: Menu size, only support one of the number: **9,18,27,36,45,54**.
-* layout: Button layout, this is a list option, list row must equals `size/9`, each line lengh must equals 9.
+* layout: Button layout, this is a list option, list row must equals `size/9`, each line lengh must equals 9. Each character here corresponds to one slot in Minecraft, and 54 characters correspond to 54 slots.
 * buttons: Button configs, button ID must be a single char, and use it in `layout` option to set where this button display in menu.
 * conditions: Only players who meet the conditions can open this menu, use [Condition Format](../format/condition-format.md) here.
 * open-actions: Do action when open this menu, use [Action Format](../format/action-format.md) here.

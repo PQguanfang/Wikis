@@ -13,6 +13,8 @@ Many people seem to be confused about one thing: what you open through the `/sho
 
 * `shops`: The location for storing shop configuration files.&#x20;
 * `random_placeholders`: The loaction for storing random placeholder configuration files.
+* `conditional_placeholders`: The location for storing conditional placeholder configuration files.
+* `sell_sticks`: The location for storing sell stick configuration files.
 * `config.yml` file: The location for main common settings for plugins.
 * `generated-item-format.yml` file: When using the `/shop generateeitemformat` command, we will parse the item you are holding into an **ItemFormat** and store the parsed **ItemFormat** content in this file.
 * `XX_xx.json` file: Localized files automatically generated through [Localized Item Name](../features/localized-item-name-premium.md) feature. The name of this file is determined based on the localized language you have set for this feature, but it usually ends in `.json`.
@@ -56,10 +58,14 @@ sell:
   # For each product, you can add match-item section to make custom sell match method, for more info, please view Wiki.
   sell-method: Bukkit
   # Only support ItemFormat sell method.
-  ignore-item-format-key:
-    - 'lore'
-    - 'damage'
-    - 'tool.damage-per-block'
+  item-format:
+    require-same-key: false
+    ignore-key:
+      - 'lore'
+      - 'damage'
+      - 'enchants'
+      - 'tool.damage-per-block'
+      - 'nbt.string.CustomNBTKey'
   sell-all:
     ignore-items:
       # Format: Shop ID;;Item ID
@@ -70,6 +76,7 @@ sell:
     # In ticks.
     cooldown: 5
     hide-message: true
+    display-calculate-multiplier: true
     # Support value: LEFT, RIGHT and LEFT;;RIGHT
     # Do not change this value unless you are know what you are doing!
     click-type: RIGHT
@@ -217,9 +224,9 @@ display-item:
 
 placeholder:
   auto-settings:
-    # If enabled, we will auto add discount placeholder at all price amount.
+    # If enabled, we will auto add conditional placeholder at all price amount.
     # This can avoid the need to add the discount option in the amount options for each price.
-    add-discount-in-all-price-amount:
+    add-conditional-in-all-price-amount:
       enabled: false
       buy-placeholder: buy
       sell-placeholder: sell
@@ -235,27 +242,6 @@ placeholder:
     change-amount-in-all-price-placeholder:
       enabled: false
       replace-value: '%formatter_number_format_{amount}%'
-  # Premium version only.
-  discount:
-    buy:
-      mode: MIN
-      default: 1
-      vip: 0.5
-      mvp: 0.3
-    sell:
-      mode: MAX
-      default: 1
-      vip: 1.5
-      mvp: 2
-  discount-conditions:
-    vip:
-      1:
-        type: permission
-        permission: 'group.vip'
-    mvp:
-      1:
-        type: permission
-        permission: 'group.mvp'
   # Premium version only
   compare:
     up: '↑'
@@ -337,33 +323,6 @@ conditions:
   buy-prices-key: 'buy-prices-conditions'
   sell-prices-key: 'sell-prices-conditions'
   display-item-key: 'display-item-conditions'
-
-# Premium version only
-sell-stick-items:
-  A:
-    material: STICK
-    name: '&dSell Stick &7(5 times)'
-    lore:
-      - '&fRight click a chest to use this item!'
-      - ''
-      - '&cLeft usages: {times}'
-    usage-times: 5
-  B:
-    material: STICK
-    name: '&dAdvanced Sell Stick &7(50 times)'
-    lore:
-      - '&fRight click a chest to use this item!'
-      - ''
-      - '&cLeft usages: {times}'
-    usage-times: 50
-  C:
-    material: STICK
-    name: '&5Epic Sell Stick'
-    lore:
-      - '&fRight click a chest to use this item!'
-      - ''
-      - '&cLeft usages: {times}'
-    usage-times: -1
 
 auto-save:
   enabled: true
