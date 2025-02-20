@@ -40,11 +40,11 @@ For example:
 
 `%ultimateshop_example_A_buy-limit-player%`
 
-For random and discount placeholder, you don't need specife the shop and the product, just put the placeholder after `ultimateshop`. For example:
+For random, random times, random next, compare and conditional placeholder, you don't need specife the shop and the product, just put the placeholder after `ultimateshop`. For example:
 
 `%ultimateshop_{random-times_rotate}%`
 
-This don't support remove {} symbol.
+This don't support remove `{}` symbol.
 
 ## New Line Symbol
 
