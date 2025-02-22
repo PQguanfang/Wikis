@@ -222,6 +222,24 @@ Open specified common menus.
         shop: farming
 ```
 
+## Open Buy More Menu
+
+```yaml
+    actions:
+      1:
+        type: buy_more_menu
+        shop: farming
+        item: A
+```
+
+## Open Sell All Menu
+
+```yaml
+    actions:
+      1:
+        type: sell_all_menu
+```
+
 ## Buy Product
 
 ```yaml
