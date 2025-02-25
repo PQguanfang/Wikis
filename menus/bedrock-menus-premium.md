@@ -1,4 +1,4 @@
-# Bedrock UI - Premium
+# 🛏️Bedrock Menus - Premium
 
 ## Requirements
 
@@ -79,15 +79,6 @@ If your product configs do not has `display-item` section, you can simply add be
         amount: 1
         placeholder: '&6{amount} Coins'
         start-apply: 0
-    sell-limits:
-      global: 640
-      default: 128
-      vip: 192
-    sell-limits-conditions:
-      vip:
-        - 'permission: group.vip'
-    sell-limits-reset-mode: 'TIMED'
-    sell-limits-reset-time: '00:00:00'  
 ```
 
 For now, we support those options for bedrock buttons
