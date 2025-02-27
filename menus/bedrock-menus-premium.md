@@ -108,7 +108,9 @@ bedrock:
   content: 'test'
 
 open-actions:
-  - 'sound: item.book.page_turn;;1;;1'
+  1:
+    type: sound
+    sound: 'item.book.page_turn'
 ```
 
 * enabled: Whether we will auto open bedrock form UI to player. Only work for common type menu. Other menu types like shop menu, buy more menu and sell all menu are not work by this option. If you want to disable for all menus, there is a option called `menu.bedrock.enabled` at `config.yml` file.

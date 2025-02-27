@@ -131,18 +131,6 @@ In this example, we mainly flexibly implemented different types of single thing 
         amount: 500
 ```
 
-## NeigeItems: Item Name Translation Hook
-
-Through this hook, the localized names of vanilla items can be automatically displayed in the language set in NeigeItems.
-
-Download NeigeItems here: [https://github.com/ankhorg/NeigeItems-Kotlin/releases](https://github.com/ankhorg/NeigeItems-Kotlin/releases)
-
-You should download `NeigeItems-xxx.jar (not NeigeItems-api)`, the file lager than 10MB.
-
-Install it in your server and change it's `language` option in `config.yml` file.
-
-All is done! Now plugin will auto display localized item name for now.
-
 ## MythicChanger: Extra Item Format option
 
 Through this hook, based on the [ItemFormat](../format/itemformat-tm.md), items can be further modified to their desired appearance.
