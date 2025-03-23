@@ -16,7 +16,7 @@ hook-plugin: MMOItems
 
 ### Hook Item
 
-For `EcoItems, Oraxen, MythicMobs`, you should write item id.
+For `EcoItems, Oraxen, MythicMobs`, you should write `item id`.
 
 For `ItemsAdder, eco`, you should write `namespace:item id`.&#x20;
 
@@ -30,7 +30,7 @@ For `ItemsAdder, eco`, you should write `namespace:item id`.&#x20;
 
 For `EcoArmor`, you should write `armor set id;;armor slot`. `armor slot` can be set to **BOOTS, CHESTPLATE, ELYTRA, HELMET, LEGGINGS**.
 
-For `MMOItems`, you should write `itemTypeId;;itemId`.
+For `MMOItems`, you should write `item typeId;;item id`.
 
 ```yaml
 hook-item: AXE;;TEST_AXE
