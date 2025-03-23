@@ -18,6 +18,7 @@ Direct compatibility refers to the use of item plugins or the economy of economi
 * NeigeItems
 * ExecutableItems
 * Nexo
+* CraftEngine
 
 ### <mark style="color:red;">Directly</mark> supported economy plugins list
 
