@@ -30,11 +30,13 @@ For `ItemsAdder, eco`, you should write `namespace:item id`.&#x20;
 
 For `EcoArmor`, you should write `armor set id;;armor slot`. `armor slot` can be set to **BOOTS, CHESTPLATE, ELYTRA, HELMET, LEGGINGS**.
 
-For `MMOItems`, you should write `<itemTypeId>;;<itemId>`.
+For `MMOItems`, you should write `itemTypeId;;itemId`.
 
 ```yaml
 hook-item: AXE;;TEST_AXE
 ```
+
+For CraftEngine, you should write `namespace;;item id`.
 
 {% hint style="info" %}
 **Stop!** If you are just trying to get items from custom item plugins, `hook-plugin` and `hook-item` option should be enough for you, if your custom item plugins are not supported, please use command instead, all things below is suit for vanilla items, if you set them here, we will replace the related to item attributes and this will lead to the item you get here is different from the item should be in custom item plugins.
