@@ -133,6 +133,30 @@ items:
         command: "ws give %player_name% spawner chicken 1"
 ```
 
+or
+
+```yaml
+items:
+  A:
+    price-mode: CLASSIC_ALL
+    product-mode: CLASSIC_ALL
+    products:
+      1:
+      name: 'Chicken Spawner'
+      material: PLAYER_HEAD
+      skull: eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvNjQ3ZTJlNWQ1NWI2ZDA0OTQzNTE5YmVkMjU1N2M2MzI5ZTMzYjYwYjkwOWRlZTg5MjNjZDg4YjExNTIxMCJ9fX0=
+      amount: 1
+    buy-prices:
+      1:
+        economy-plugin: Vault
+        amount: 350000
+        placeholder: '{amount}⛂'
+    buy-actions:
+      1:
+        type: console_command
+        command: "ws give %player_name% spawner chicken 1"
+```
+
 ## Example: Seasonal Price
 
 ```yaml

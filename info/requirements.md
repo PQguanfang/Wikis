@@ -2,8 +2,8 @@
 
 ## Java Version
 
-* Basic Requirement: **Java8+**
-* **Java 17+** is <mark style="color:red;">recommended</mark>. Java17 and above versions are recommended, but plugins are compiled using **Java8**, so theoretically, you only need Java8 or higher versions.
+* Basic Requirement: **Java9+**
+* **Java 17+** is <mark style="color:red;">recommended</mark>. Java17 and above versions are recommended, but plugins are compiled using **Java9**, so theoretically, you only need Java9 or higher versions.
 
 ## Server Software
 
@@ -12,8 +12,8 @@
 
 ## Server Version
 
-* The plugin theoretically supports any version between **1.14** and **1.21.4**.
-* Obviously, supporting so many versions is not an easy task. It is impossible for the author to test all versions between 1.14 and 1.21.4 every time the plugin is updated. If you encounter errors while using a certain version, <mark style="color:red;">please join our Discord feedback</mark>.
+* The plugin theoretically supports any version between **1.14** and **1.21.5**.
+* Obviously, supporting so many versions is not an easy task. It is impossible for the author to test all versions between 1.14 and 1.21.5 every time the plugin is updated. If you encounter errors while using a certain version, <mark style="color:red;">please join our Discord feedback</mark>.
 
 ## An economy plugin if you want to use custom currency
 

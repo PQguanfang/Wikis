@@ -648,19 +648,19 @@ This is because you only created one unconditional price here, which results in 
 
 For example:
 
-```yaml
-general-configs:
-  sell-prices:
-    1:
+<pre class="language-yaml"><code class="lang-yaml"><strong>general-configs:
+</strong><strong>  # Configs...
+</strong><strong>
+</strong><strong>items:
+</strong><strong>  sell-prices:
+</strong>    1:
       economy-plugin: Vault
       amount: 1
-      placeholder: '&6{amount} Coins'
+      placeholder: '&#x26;6{amount} Coins'
       start-apply: 0
-
-items:
   sell-prices-conditions:
     1:
       # Conditions...
-```
+</code></pre>
 
 The reason why options like `products` are separated from their corresponding conditional options is that the products in your shop are fixed, so each slot has the same `products` option. However, the randomly selected product in each slot are not consistent, so the `conditions` option needs to be separated separately.
