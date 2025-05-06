@@ -8,6 +8,9 @@ settings:
   buy-more: true
   shop-name: 'Food Shop'
   hide-message: false
+  custom-command:
+    name: 'mineral'
+    description: 'Custom Words'
   
 general-configs:
   # This means all products in this shop will use this price mode and product mode.
@@ -146,6 +149,7 @@ buttons:
 * buy-more: Whether product in this shop can open buy more menu.
 * shop-name: Shop display name, which used in `{shop-name}` placeholder.
 * hide-message: Whether we hide the messages that will send after player buy or sell items in this shop.
+* custom-command: Custom Command Settings for this shop. <mark style="color:red;">**(PREMIUM)**</mark>
 
 ## General Configs
 
