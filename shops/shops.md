@@ -140,7 +140,9 @@ buttons:
       lore:
         - '&7Click to view previous page!'
     actions:
-      - 'shop_menu: crops'    
+      1:
+        type: shop_menu
+        shop: 'crops'    
 ```
 
 ## Settings
