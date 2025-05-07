@@ -20,7 +20,7 @@ There are 3 types of menus.
 * open-actions: Do action when open this menu, use [Action Format](../format/action-format.md) here.
 * close-actions: Do action when close this menu, use [Action Format](../format/action-format.md) here. <mark style="color:red;">**Please carefully note that when you have already opened a menu, if you open other menus through actions or other means, it will also trigger close actions**</mark>**.**&#x20;
 * bedrock: Please view [Bedrock M](bedrock-menus-premium.md)[enu](bedrock-menus-premium.md) page to know about it.
-* custom-command: Custom Command settings for common menu, if you want to set custom command for shop menu, please add them at [Shops](../shops/shops.md) config.
+* custom-command: Custom Command settings for common menu, if you want to set custom command for shop menu, please add them at [Shops](../shops/shops.md) config.  <mark style="color:red;">**(PREMIUM)**</mark>
 
 Example:
 
