@@ -37,7 +37,7 @@ items:
         amount: 5
         conditions:
           1:
-            type: permission: 
+            type: permission
             permission: 'group.vip'
         give-actions:
           1:
