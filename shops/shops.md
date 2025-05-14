@@ -151,7 +151,7 @@ buttons:
 * buy-more: Whether product in this shop can open buy more menu.
 * shop-name: Shop display name, which used in `{shop-name}` placeholder.
 * hide-message: Whether we hide the messages that will send after player buy or sell items in this shop.
-* custom-command: Custom Command Settings for this shop. <mark style="color:red;">**(PREMIUM)**</mark>
+* custom-command: Custom Open Command Settings for this shop. If not set, this menu can only be opened by `/shop menu` command. <mark style="color:red;">**(PREMIUM)**</mark>
 
 ## General Configs
 

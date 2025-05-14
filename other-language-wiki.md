@@ -4,6 +4,6 @@ Wiki translations in other languages come from the community and do not represen
 
 ## Chinese: 中文
 
-**Translator:** Snowcutieowo
+**Translator:** SnowCutieOwO
 
 **Site:** [Click here (点击这里)](https://snowcutieowo.github.io/UltimateShop/)

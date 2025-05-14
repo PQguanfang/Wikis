@@ -20,7 +20,7 @@ For console, should extra add `<player>` arg at the end of command, like `/shop 
 
 ## /shop quicksell \<shopID> \<productID> \[amount]
 
-Same as quickbuy, just replace quickbuy to quicksell.
+Same as `quickbuy`, just replace `quickbuy` to `quicksell`.
 
 `amount` arg can be replaced to `*` symbol, then plugin will auto sell all the items you can sell. <mark style="color:red;">**(Premium version only)**</mark>
 
@@ -32,7 +32,7 @@ Require `ultimateshop.reload` permission.
 
 ## /shop givesellstick \<itemID> \<playerID> \[amount] <mark style="color:red;">**(Premium version only)**</mark>
 
-Give specifeid player specified amount (if not set, default to 1) sell stick.&#x20;
+Give specifeid player specified amount (if not set, default to **1**) sell stick.&#x20;
 
 Require `ultimateshop.givesellstick` permission.
 
@@ -98,7 +98,7 @@ Require `ultimateshop.resetrandomplaceholder` permission.
 
 Set random placeholder value.&#x20;
 
-Different from resetrandomplaceholder, setrandomplaceholder won't reset refresh time and allow users pick specifeid element.
+Different from `resetrandomplaceholder`, `setrandomplaceholder` command won't reset refresh time and allow users pick specifeid element.
 
 Support add `-b` at the end of the command to bypass element exist check, which means you can set the custom element you'd like. For example, my random placeholder only have `A,B,C` total 3 elements, if I type **D** as element here, plugin will print error message, if you add `-b` suffix, then the placeholder value will be set to **D** and plugin never print error message, but it is not recommended.
 

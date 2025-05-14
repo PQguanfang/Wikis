@@ -71,13 +71,13 @@ Indirect compatibility refers to the flexible use of various features of plugins
 
 * [Save Item](../features/saved-item.md): We telled you a command called `/shop saveitem` at [Commands](commands.md) page, we also telled you can set `material` option in [Item Format](../format/itemformat-tm.md)  to the save item ID you was set to use them.
 * Buy Actions: We telled you a option called `buy-actions` in shop configs at [Shops](../shops/shops.md) page. In [Actions](../format/action-format.md) page, we also telled you we support use command in actions, so just use the give item command here, all is done.
-* Give Actions: We telled you this feature at [Single Things](../shops/products-config-single-thing.md) page which is very similar to Buy Actions. What's more, we even give you an example at that page.
+* Give Actions: We telled you this feature at [Single Things](../shops/products-config-single-thing.md) page which is very similar to **Buy Actions**. What's more, we even give you an example at that page.
 
 ### Example: Use for not supported item plugins as products
 
 In this example, we first fill in the **ItemFormat** through the display item option to describe the item from an incompatible plugin, so that players can see what the item looks like in the menu.
 
-In the `products` option, we use the [Custom Sell Match](../features/custom-item-match-method.md) feature, which allows us to flexibly set the rules for selling matches for this item, such as contains lore, etc. Then, we use `give-actions` format to execute the item give command, so that player can obtain this item after buy.
+In the `products` option, we use the [Custom Sell Match](../features/custom-item-match-method.md) feature, which allows us to flexibly set the rules for selling matches for this item, such as `contains-lore`, etc. Then, we use `give-actions` format to execute the item give command, so that player can obtain this item after buy.
 
 ```yaml
     display-item:
@@ -142,7 +142,7 @@ This feature require your server must install **MythicChanger** plugin, please g
 
 **PREMIUM:** [Click to download](https://www.spigotmc.org/resources/mythicchanger-premium-match-and-modify-all-your-items-without-trouble-1-14-1-21.115913/)
 
-For how to configure the `change-item` section, please read MythicChanger's wiki, [click here](https://app.gitbook.com/o/1ZYzpAAIW7ljevWhGq0R/s/L4peJBqYHI4WQpPthtO4/) to visit. Please note that some of the change rules require <mark style="color:red;">**PREMIUM version of MythicChanger, not PREMIUM version of UltimateShop**</mark><mark style="color:red;">!</mark>
+For how to configure the `change-item` section, please read MythicChanger's wiki, [click here](https://mythicchanger.superiormc.cn/) to visit. Please note that some of the change rules require <mark style="color:red;">**PREMIUM version of MythicChanger, not PREMIUM version of UltimateShop**</mark><mark style="color:red;">!</mark>
 
 {% hint style="info" %}
 If you are using **premium version of MythicChanger**, it will allow you use custom NBT tag by adding nbt-xxx rule here. You can also use `/mc viewnbt` command to view the hold item NBT info.

@@ -7,7 +7,7 @@
 * You need carefully follow [those steps](https://wiki.geysermc.org/floodgate/setup/) to setup floodgate in your backend server if you are using BungeeCord.
 
 {% hint style="info" %}
-If your server is correctly installed and configured with floorgate, the console will prompt `Hooking into floorgate` when UltimateShop start to run. If this prompt didn't appear but if you insist that your server has a floodgate, it is very likely that you accidentally downloaded the free version of the plugin. The paid version will have a special prompt at startup.
+If your server is correctly installed and configured with floodgate, the console will prompt `Hooking into floorgate` when UltimateShop start to run. If this prompt didn't appear but if you insist that your server has a floodgate, it is very likely that you accidentally downloaded the free version of the plugin. The <mark style="color:red;">**PREMIUM**</mark> version will have a special prompt at startup.
 {% endhint %}
 
 * All bedrock players will use the new UI. If not, you can try set `menu.bedrock.check-method` option value from **FLOODGATE** to **UUID** in `config.yml`.
@@ -44,7 +44,7 @@ or
         permission: 'test'
 ```
 
-If your product configs do not has `display-item` section, you can simply add bedrock section under your product configs section, or add them at single product section, for example:
+If your product configs do not has `display-item` section, you can simply add `bedrock` section under your product configs section, or add them at single product section, for example:
 
 ```yaml
   D:

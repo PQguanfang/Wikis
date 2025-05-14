@@ -56,7 +56,7 @@ This feature require your server must install **MythicChanger** plugin, please g
 
 **PREMIUM:** [Click to download](https://www.spigotmc.org/resources/mythicchanger-premium-match-and-modify-all-your-items-without-trouble-1-14-1-21.115913/)
 
-For how to configure the match-item section, please read MythicChanger's wiki, [click here to visit](https://mythicchanger.superiormc.cn/configs/match-item). Please note that some of the match rules require <mark style="color:red;">**PREMIUM version of MythicChanger, not PREMIUM version of UltimateShop**</mark>!
+For how to configure the match-item section, please read MythicChanger's wiki, [click here to visit](https://mythicchanger.superiormc.cn/). Please note that some of the match rules require <mark style="color:red;">**PREMIUM version of MythicChanger, not PREMIUM version of UltimateShop**</mark>!
 
 An example product config can be found below, in this example, both emerald and diamond can be selled, but only diamond are display in shop, after player try buy this product, he will only get diamond because `match-rule` section does not effect buy.
 
