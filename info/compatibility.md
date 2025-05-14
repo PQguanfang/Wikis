@@ -144,10 +144,6 @@ This feature require your server must install **MythicChanger** plugin, please g
 
 For how to configure the `change-item` section, please read MythicChanger's wiki, [click here](https://mythicchanger.superiormc.cn/) to visit. Please note that some of the change rules require <mark style="color:red;">**PREMIUM version of MythicChanger, not PREMIUM version of UltimateShop**</mark><mark style="color:red;">!</mark>
 
-{% hint style="info" %}
-If you are using **premium version of MythicChanger**, it will allow you use custom NBT tag by adding nbt-xxx rule here. You can also use `/mc viewnbt` command to view the hold item NBT info.
-{% endhint %}
-
 <pre class="language-yaml"><code class="lang-yaml"><strong>change-item:
 </strong>  set-name: '&#x26;fGood Diamond Sword'
 </code></pre>

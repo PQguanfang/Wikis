@@ -38,6 +38,10 @@ A: Make sure your `config.yml` is latest format, if not, update it. Or, you are 
 
 A: View [Localized Item Name](../features/localized-item-name-premium.md) page.&#x20;
 
+## Q: Why my item name is in Chinese?
+
+A: Disable [Localized Item Name](../features/localized-item-name-premium.md) feature.
+
 ## Q: UltimateShop print Error:XXX message in console.
 
 A: What I want to tell you is already put in the error message itself, like:
