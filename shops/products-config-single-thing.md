@@ -125,8 +125,8 @@ items:
         placeholder: '&6{amount} Coins'
         start-apply: 0
     conditions:
-      one:
-        1:
+      one: # Condition ID
+        1: # Means first condition
           type: placeholder
           placeholder: '{random_daily}'
           rule: '=='

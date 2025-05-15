@@ -39,16 +39,19 @@ If you want set multi display item for this button or product and use condition 
           - ''
           - '&#ff3300Already claimed!'
     display-item-conditions:
-      claimed: 
-        1:
+      claimed: # Condition ID
+        1: # Means first condition
           type: placeholder
           placeholder: '%ultimateshop_streak_A_{buy-times-player}%'
           rule: '>'
           value: '0'
+        2: # You can add more condition with Condition Format
+          type: world
+          world: 'testCondition'
       default:
         1:
           type: placeholder
           placeholder: '%ultimateshop_streak_A_{buy-times-player}%'
           rule: '='
-          value: '0'
+          value: '0'z
 ```
