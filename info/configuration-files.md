@@ -43,16 +43,6 @@ config-files:
     generate-new-one: false
     file: 'zh_cn.json'
 
-# Paper only feature.
-paper-api:
-  save-item: true
-  # For paper users, enable this option can use their API to directly get the skull, have the performance improve.
-  skull: true
-  use-component:
-    menu-title: false
-    message: false
-    item: false
-
 sell:
   # Support Value: Bukkit or ItemFormat.
   # For each product, you can add match-item section to make custom sell match method, for more info, please view Wiki.
