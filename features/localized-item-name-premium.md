@@ -1,5 +1,9 @@
 # 🌍Localized Item Name - Premium
 
+{% hint style="info" %}
+This feature is no need to **enabled** if you are using Paper 1.17.1+ server. (3.8.0+)
+{% endhint %}
+
 ## Requirements
 
 * Server version 1.16+.
@@ -18,8 +22,8 @@ config-files:
     file: 'zh_cn.json'
 ```
 
-* Please set `minecraft-locate-file.enabled` option to true.
-* Then also set `minecraft-locate-file.generate-new-one` option to true.
+* Please set `minecraft-locate-file.enabled` option to `true`.&#x20;
+* Then also set `minecraft-locate-file.generate-new-one` option to `true`.
 * Finally, set file option to your language locate file name. Support value:
   * af\_za.json
   * ar\_sa.json
