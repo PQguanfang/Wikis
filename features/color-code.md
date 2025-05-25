@@ -11,12 +11,13 @@ UltimateShop provides 2 color code format. The plugin will automatically determi
 
 ## Built-in Color Parser
 
-* Code from [here](https://github.com/CarmJos/EasyPlugin).
 * Format:
-  * To use hex color, you should use special color code, it should like this: **\&#Hex color code**
-  * For example, \&#ff0000.
-  * To use gradient color, you should use special gradient color code, it should like this: **&<#Start Color Code> Message &<#End Color Code>**
-  * For example, &<#666666>UltimateShop &<#ffffff>.
+  * To use hex color, you should use special color code, it should like this: **`&#Hex color code`**
+  * For example, `&#ff0000`.
+  * To use gradient color, you should use special gradient color code, it should like this: **`&<#Start Color Code> Message &<#End Color Code>`**
+  * For example, `&<#666666>UltimateShop &<#ffffff>`.
+  * To use common color, an example is `&b`.
+  * For version below 1.16, we will auto teanslate hex color to common color.
 * Support all versions and server core.
 * Only useful color feature supported.
 * You can use it everywhere.
