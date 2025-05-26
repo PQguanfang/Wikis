@@ -1,5 +1,9 @@
 # ⌨️Commands
 
+## ultimateshop.bypassprice
+
+This permission can help you bypass price check and won't cost any price.
+
 ## /shop menu \<menuID>/\<shopID>
 
 Open common menu or shop menu.&#x20;
