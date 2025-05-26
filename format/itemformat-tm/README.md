@@ -250,7 +250,7 @@ This is specific to items that can _store_ enchantments, as opposed to being enc
 
 ### Stored Enchants
 
-Similar to [Enchants](itemformat-tm.md#enchants).
+Similar to [Enchants](./#enchants).
 
 ```yaml
 stored-enchants:
@@ -553,7 +553,7 @@ damage-resistant: is_fall # Damage Type Tag
 
 ## Extra Item Format Options
 
-Some additional **ItemFormat** options can be found on the [Compatibility](../info/compatibility.md) page. Their purpose is to hook with other plugins based on ItemFormat, so that other plugins can also participate in item generation.
+Some additional **ItemFormat** options can be found on the [Compatibility](../../info/compatibility.md) page. Their purpose is to hook with other plugins based on ItemFormat, so that other plugins can also participate in item generation.
 
 Supported plugins at the moment:
 

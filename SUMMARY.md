@@ -18,7 +18,8 @@
 ## &#x20;📋Format
 
 * [🛒Info of ItemFormat™](format/info-of-itemformat-tm.md)
-* [📝ItemFormat™](format/itemformat-tm.md)
+* [📝ItemFormat™](format/itemformat-tm/README.md)
+  * [Component Format](format/itemformat-tm/component-format.md)
 * [💹EconomyFormat™](format/economyformat-tm.md)
 * [🖼️Display Item Format](format/display-item-format.md)
 * [🎬Action Format](format/action-format.md)

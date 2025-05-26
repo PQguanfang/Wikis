@@ -11,7 +11,7 @@ If you are Paper server users and don't want to use new Paper method one, you ne
 
 ## Use saved item
 
-You can use saved item in [ItemFormat](../format/itemformat-tm.md). In ItemFormat, there is a option called `material`, by default, you need type vanilla item ID there, but, you can also use saved item id to let plugin directly get the saved item instead of generate a whole new item with that type.
+You can use saved item in [ItemFormat](../format/itemformat-tm/). In ItemFormat, there is a option called `material`, by default, you need type vanilla item ID there, but, you can also use saved item id to let plugin directly get the saved item instead of generate a whole new item with that type.
 
 ```yaml
 display-item:

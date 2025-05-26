@@ -4,7 +4,7 @@ You can use display item format in menu button and shop product's `display-item`
 
 ## Single
 
-If your display item is only one and does not have any condition to display it, simply use [Item Format](itemformat-tm.md) in this section!
+If your display item is only one and does not have any condition to display it, simply use [Item Format](itemformat-tm/) in this section!
 
 ```yaml
   B:

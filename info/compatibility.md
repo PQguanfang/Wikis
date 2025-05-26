@@ -69,7 +69,7 @@ If players do not have permission to open container within these protection plug
 
 Indirect compatibility refers to the flexible use of various features of plugins to enable them to associate with these plugins.
 
-* [Save Item](../features/saved-item.md): We telled you a command called `/shop saveitem` at [Commands](commands.md) page, we also telled you can set `material` option in [Item Format](../format/itemformat-tm.md)  to the save item ID you was set to use them.
+* [Save Item](../features/saved-item.md): We telled you a command called `/shop saveitem` at [Commands](commands.md) page, we also telled you can set `material` option in [Item Format](../format/itemformat-tm/)  to the save item ID you was set to use them.
 * Buy Actions: We telled you a option called `buy-actions` in shop configs at [Shops](../shops/shops.md) page. In [Actions](../format/action-format.md) page, we also telled you we support use command in actions, so just use the give item command here, all is done.
 * Give Actions: We telled you this feature at [Single Things](../shops/products-config-single-thing.md) page which is very similar to **Buy Actions**. What's more, we even give you an example at that page.
 
@@ -134,7 +134,7 @@ In this example, we mainly flexibly implemented different types of single thing 
 
 ## MythicChanger: Extra Item Format option
 
-Through this hook, based on the [ItemFormat](../format/itemformat-tm.md), items can be further modified to their desired appearance.
+Through this hook, based on the [ItemFormat](../format/itemformat-tm/), items can be further modified to their desired appearance.
 
 This feature require your server must install **MythicChanger** plugin, please get it here:
 
@@ -150,9 +150,9 @@ For how to configure the `change-item` section, please read MythicChanger's wiki
 
 ## AdvancedEnchantments: Extra Item Format option <mark style="color:red;">- Premium</mark>
 
-Through this hook, based on the [ItemFormat](../format/itemformat-tm.md), items can have custom enchantments from AdvancedmentEnchantments.
+Through this hook, based on the [ItemFormat](../format/itemformat-tm/), items can have custom enchantments from AdvancedmentEnchantments.
 
-Plugin like `EcoEnchants, ExcellentEnchants` are vanilla enchants like plugin, you just need to put their enchantment ID to `enchants` option in [ItemFormat](../format/itemformat-tm.md#enchants).
+Plugin like `EcoEnchants, ExcellentEnchants` are vanilla enchants like plugin, you just need to put their enchantment ID to `enchants` option in [ItemFormat](../format/itemformat-tm/#enchants).
 
 You can use `plugin-enchants` option to add plugin enchants for your item.
 

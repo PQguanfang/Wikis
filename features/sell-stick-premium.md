@@ -23,7 +23,7 @@ actions:
 conditions: []
 ```
 
-* display-item: The display item of sell stick. Should use [Item Format](../format/itemformat-tm.md).
+* display-item: The display item of sell stick. Should use [Item Format](../format/itemformat-tm/).
 * useage-times: Maxium usage times of this item. If this option value is less than 0 or does not exist, we will make this sell stick is infinite.
 * multiplier: The multiplier of sell stick. It only supports economy type of price.
 * actions: The action will execute after use this sell stick. Should use [Action format](../format/action-format.md).
