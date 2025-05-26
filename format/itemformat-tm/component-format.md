@@ -119,7 +119,7 @@ component:
 ```yaml
 component:
   attributes:
-    GENERIC_MAX_HEALTH: # Attribute ID
+    max_health: # Attribute ID
       name: 'UltiamteShop'
       amount: 5
       operation: ADD_NUMBER

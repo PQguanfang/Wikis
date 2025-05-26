@@ -71,6 +71,44 @@ min-amount: 1
 max-amount: 15
 ```
 
+## Component (1.21.5+, Requrie Paper) <mark style="color:red;">- Premium</mark>
+
+Use Paper's DataComponent API instead of Spigot's ItemMeta API to modify item easily, also all 1.21.5+ item attribute will only be available in `component` option, like **Weapon**. For more info, please view [this page](component-format.md).
+
+```yaml
+component:
+  name: '<blue>A good sword'
+  lore:
+    - '<gray>This is really nice!'
+  custom-model-data:
+    float: # Custom Model Data Type
+      - '1'
+  max-stack: 6
+  food:
+    can-always-eat: true
+    nutrition: 5
+    saturation: 5
+  tool:
+    damage-per-block: 5
+    mining-speed: 1.3
+    destroy-blocks-in-creative: true
+    rules:
+      # blocks, speed, correctForDrops
+      - 'stone, 1.4, true'
+  song: otherside
+  hide-tooltip:
+    - 'lore'
+  enchants:
+    mending: 1
+  glow: true
+  attributes:
+    max_health: 
+      name: 'GENERIC_MAX_HEALTH' # Attribute ID
+      amount: 5
+      operation: ADD_NUMBER
+      slot: MAINHAND
+```
+
 ## Custom Name/Display Name
 
 According to your configuration file, there are two formats, one is the old version color code used before version 1.9, or the Text Component used in later versions. The former uses a color code format we created, while the latter uses Mini Message format, as detailed [here](https://docs.advntr.dev/minimessage/format.html). Mini Message format require your server core is Paper.
