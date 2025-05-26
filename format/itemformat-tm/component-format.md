@@ -82,21 +82,18 @@ component:
 
 ```yaml
 component:
-  glow: true
 ```
 
 ## Unbreakable
 
 ```yaml
 component:
-  unbreakable: true
 ```
 
 ## Rarity
 
 ```yaml
 component:
-  rarity: COMMON
 ```
 
 ## Hide Tooltips
@@ -107,12 +104,14 @@ component:
     - 'lore' # Data Type. For list of them, please view: https://jd.papermc.io/paper/1.21.5/io/papermc/paper/datacomponent/DataComponentTypes.html
 ```
 
-## Enchants
+## Enchants / Stored Enchants
 
 ```yaml
 component:
   enchants:
     mending: 1 # Enchant ID: Level
+  stored-enchants: # For enchantment book
+    mending: 1
 ```
 
 ## Attributes
@@ -125,4 +124,93 @@ component:
       amount: 5
       operation: ADD_NUMBER
       slot: ANY
+```
+
+## Damage / Max Damage
+
+```yaml
+component:
+  damage: 5
+  max-damage: 15
+```
+
+## Misc
+
+```yaml
+component:
+  banner-patterns:
+    BASE: WHITE # Pattern ID: Pattern Color
+  potion:
+    base-effect: 'WATER'
+    effects:
+      - 'SPEED, 100, 1, true, true, false' # Potion Type ID, Duration, Amplifier, Ambient, Particles, Icon
+    color: '255, 255, 0'
+    name: 'GOOD'
+  potion-duration-scale: 3
+  trim:
+    material: IRON
+    pattern: TIDE
+  leather-color: '255, 255, 0'
+  firework:
+    1: 
+      flicker: true
+      trial: true
+      colors:
+        base:
+          - 255, 255, 0
+        fade:
+          - 0, 0, 0
+      type: BALL
+      duration: 155
+  break-sound: 'namespace:name'
+  suspicious-stew-effects:
+    - 'SPEED, 100, 1, true, true, false'
+  charged-projectiles:
+    material: arrow # Item Format
+  axolotl-variant: LUCY
+  tropical-fish-base-color: WHITE
+  tropical-fish-pattern-color: WHITE
+  tropical-fish-pattern: KOB
+  bundle-contents:
+    1: 
+      material: STONE # Item Format
+    2:
+      material: APPLE
+      amount: 5
+  ominous-bottle-amplifier: 3
+  music: PONDER_GOAT_HORN
+  repair-cost: 15
+  enchantable: 15
+  glider: true
+  item-model: 'mycustom:itemmodel'
+  tootip-style: 'mycustom:tooltip'
+  use-cooldown:
+  cooldown-group: 'minecraft:custom_weapon'
+  cooldown-seconds: 1.5
+  damage-resistant: is_fall
+  equippable:
+    slot: head
+  blocks-attacks:
+    block-delay-seconds: 3
+    disable-cooldown-scale: 1.2
+    block-sound: 'mycustom:sound'
+    bypassed-by: 'arrow'
+  use-reminder:
+    material: arrow # Item Format
+  consumable:
+    consume-seconds: 1
+    animation: DRINK
+    sound: 'mycustom:sound'
+    effects:
+      random-teleport: 2
+      clear-effect: true
+      apply-effect:
+        probability: 6
+        effects:
+          - 'SPEED, 100, 1, true, true, false' # Potion Type ID, Duration, Amplifier, Ambient, Particles, Icon
+      play-sound: 'mycustom:sound'
+  weapon:
+    damage-per-attack: 5
+    disable-blocking-seconds: 3
+  skull: eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvN2YzZmVkMTZmZDU1MTkwOWZhNWUyOWNkZDY5N2VlMzQ2ZTYzMzkwYjM4M2E0MzAwYTY2MmE4MGI2NGQ5ZWIxNyJ9fX0=
 ```
