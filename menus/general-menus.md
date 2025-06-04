@@ -37,7 +37,10 @@ custom-command:
   name: 'mineral'
   description: 'Custom Words'
 
-conditions: []
+conditions: 
+  1:
+    type: permission
+    permission: 'test.required'
   
 open-actions:
   1:
