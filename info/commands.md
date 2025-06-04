@@ -74,9 +74,9 @@ Open sellall menu.
 
 Require `ultimateshop.sellall` permission.
 
-## /shop saveitem \<itemID> <a href="#mc-saveitem-less-than-itemid-greater-than" id="mc-saveitem-less-than-itemid-greater-than"></a>
+## /shop saveitem \<saveItemID> \<saveItemMethod> <a href="#mc-saveitem-less-than-itemid-greater-than" id="mc-saveitem-less-than-itemid-greater-than"></a>
 
-Save your hold items.
+Save your hold items. For more info, please view [Save Item](../features/saved-item-item-manager.md) page.
 
 Require `ultimateshop.saveitem` permission.
 

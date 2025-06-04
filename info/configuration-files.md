@@ -3,7 +3,7 @@
 The plugin generates the following configuration files, some of which will only be generated after you first use this feature.
 
 * `datas`: The location for storing plugin data files. <mark style="color:red;">It will only be generated without using a database. Do not modify any content here</mark>.
-* `items`: The location for storing saved item files. <mark style="color:red;">It will only be generated after save any item with /shop saveitem command. Do not modify any content here</mark>.
+* `items`: The location for storing saved item files.&#x20;
 * `languages`: The location for storing language files. You can set the language file used by the plugin through the `config-files.language` option in the `config.yml` file. You can customize various messages within the plugin game through language files. It is not supported to display the corresponding language file based on the player client language. You can only display the same language for all players.
 * `menus`: The location for storing menu configuration files.&#x20;
 
