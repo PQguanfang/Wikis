@@ -1,5 +1,9 @@
 # 💾Saved Item (Item Manager)
 
+{% hint style="info" %}
+Version before **3.8.4** has a bug: you need **reload** the plugin to load the saved item in some case.
+{% endhint %}
+
 ## Create your item
 
 You can create your own item at `items` folder of plugin, just create a **yml** file and then follow [ItemFormat](../format/itemformat-tm/) in this file. The file name is the item ID.
