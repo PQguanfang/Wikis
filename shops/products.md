@@ -118,18 +118,26 @@ The introduction of these options is on a separate page, please [click here](pro
 
 ## Dynamic Value
 
-You can set placeholders and [Math Calculate Format](../format/math-calculate-format.md) in `buy-prices`, `sell-prices` section's `amount` option and `buy-limits`, `sell-limits` section's value in shop configs.
+You can set placeholders (including PlaceholderAPI) and [Math Calculate Format](../format/math-calculate-format.md) in `buy-prices`, `sell-prices` section's `amount` option and `buy-limits`, `sell-limits` section's value in shop configs.
 
 Available built-in placeholder, for more info about them, please view [Built-In Placeholders](../placeholders/built-in-placeholder.md) page.
 
 * {buy-times-player}
 * {buy-times-server}
+* {buy-total-player} <mark style="color:red;">**- PREMIUM, 3.8.3+**</mark>
+* {buy-total-server} <mark style="color:red;">**- PREMIUM, 3.8.3+**</mark>
 * {sell-times-player}
 * {sell-times-server}
-* {last-buy-player}
-* {last-buy-server}
-* {last-sell-player}
-* {last-sell-server}
+* {sell-total-player} <mark style="color:red;">**- PREMIUM, 3.8.3+**</mark>
+* {sell-total-server} <mark style="color:red;">**- PREMIUM, 3.8.3+**</mark>
+* {last-buy-player} <mark style="color:red;">**- PREMIUM**</mark>
+* {last-buy-server} <mark style="color:red;">**- PREMIUM**</mark>
+* {last-sell-player} <mark style="color:red;">**- PREMIUM**</mark>
+* {last-sell-server} <mark style="color:red;">**- PREMIUM**</mark>
+* {last-buy-reset-player} <mark style="color:red;">**- PREMIUM**</mark>
+* {last-buy-reset-server} <mark style="color:red;">**- PREMIUM**</mark>
+* {last-sell-reset-player} <mark style="color:red;">**- PREMIUM**</mark>
+* {last-sell-reset-server} <mark style="color:red;">**- PREMIUM**</mark>
 
 Also in `buy-prices` and `sell-prices` section, you can set new 2 options:
 
