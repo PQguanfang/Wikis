@@ -134,10 +134,10 @@ Available built-in placeholder, for more info about them, please view [Built-In 
 * {last-buy-server} <mark style="color:red;">**- PREMIUM**</mark>
 * {last-sell-player} <mark style="color:red;">**- PREMIUM**</mark>
 * {last-sell-server} <mark style="color:red;">**- PREMIUM**</mark>
-* {last-buy-reset-player} <mark style="color:red;">**- PREMIUM**</mark>
-* {last-buy-reset-server} <mark style="color:red;">**- PREMIUM**</mark>
-* {last-sell-reset-player} <mark style="color:red;">**- PREMIUM**</mark>
-* {last-sell-reset-server} <mark style="color:red;">**- PREMIUM**</mark>
+* {last-buy-reset-player} <mark style="color:red;">**- PREMIUM, 3.8.3+**</mark>
+* {last-buy-reset-server} <mark style="color:red;">**- PREMIUM, 3.8.3+**</mark>
+* {last-sell-reset-player} <mark style="color:red;">**- PREMIUM, 3.8.3+**</mark>
+* {last-sell-reset-server} <mark style="color:red;">**- PREMIUM, 3.8.3+**</mark>
 
 Also in `buy-prices` and `sell-prices` section, you can set new 2 options:
 
