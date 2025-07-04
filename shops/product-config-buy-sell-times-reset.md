@@ -61,6 +61,8 @@ Support those modes:
 
 For this reason, when using `COOLDOWN_TIMED` or `COOLDOWN_TIMER` mode, the reset time will not automatically adjust due to server restarts, configuration modifications, or other reasons. This means that if you mistakenly set the product to refresh after 1 year, the reset time will not automatically change due to your correction, but `TIMED` or `TIMER` rules can do this.
 
+Also, when use last reset placeholder, `COOLDOWN_TIMED` or `COOLDOWN_TIMER` mode will return actual reset time, `TIMED` or `TIMER` mode will return the time that first buy or sell after reset.
+
 ## Reset Time
 
 Different reset modes require different values to be filled in here. Supports placeholders, <mark style="color:red;">**the placeholder used here must be on the server side, which means that all players receive the same value.**</mark>
