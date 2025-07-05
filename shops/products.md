@@ -124,20 +124,28 @@ Available built-in placeholder, for more info about them, please view [Built-In 
 
 * {buy-times-player}
 * {buy-times-server}
-* {buy-total-player} <mark style="color:red;">**- PREMIUM, 3.8.3+**</mark>
-* {buy-total-server} <mark style="color:red;">**- PREMIUM, 3.8.3+**</mark>
+* {buy-total-player} <mark style="color:red;">**- PREMIUM, 3.9.0+**</mark>
+* {buy-total-server} <mark style="color:red;">**- PREMIUM, 3.9.0+**</mark>
+
+{% hint style="info" %}
+Difference between **times** placeholder and **total** placeholder:
+
+* **times** placeholder will be reset to the value you set after each reset.
+* **total** placeholder will keep data after reset, and will accumulate previous times. Use command to set buy/sell times or other way will still effect total placeholder. This placeholder will auto reset when reaching the upper limit of int type data.
+{% endhint %}
+
 * {sell-times-player}
 * {sell-times-server}
-* {sell-total-player} <mark style="color:red;">**- PREMIUM, 3.8.3+**</mark>
-* {sell-total-server} <mark style="color:red;">**- PREMIUM, 3.8.3+**</mark>
+* {sell-total-player} <mark style="color:red;">**- PREMIUM, 3.9.0+**</mark>
+* {sell-total-server} <mark style="color:red;">**- PREMIUM, 3.9.0+**</mark>
 * {last-buy-player} <mark style="color:red;">**- PREMIUM**</mark>
 * {last-buy-server} <mark style="color:red;">**- PREMIUM**</mark>
 * {last-sell-player} <mark style="color:red;">**- PREMIUM**</mark>
 * {last-sell-server} <mark style="color:red;">**- PREMIUM**</mark>
-* {last-buy-reset-player} <mark style="color:red;">**- PREMIUM, 3.8.3+**</mark>
-* {last-buy-reset-server} <mark style="color:red;">**- PREMIUM, 3.8.3+**</mark>
-* {last-sell-reset-player} <mark style="color:red;">**- PREMIUM, 3.8.3+**</mark>
-* {last-sell-reset-server} <mark style="color:red;">**- PREMIUM, 3.8.3+**</mark>
+* {last-buy-reset-player} <mark style="color:red;">**- PREMIUM, 3.9.0+**</mark>
+* {last-buy-reset-server} <mark style="color:red;">**- PREMIUM, 3.9.0+**</mark>
+* {last-sell-reset-player} <mark style="color:red;">**- PREMIUM, 3.9.0+**</mark>
+* {last-sell-reset-server} <mark style="color:red;">**- PREMIUM, 3.9.0+**</mark>
 
 Also in `buy-prices` and `sell-prices` section, you can set new 2 options:
 
