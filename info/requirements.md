@@ -7,7 +7,7 @@
 
 ## Server Software
 
-* **Paper** and its downstream forks are <mark style="color:red;">recommended</mark>. When the plugin detects that your server software is Paper, it will enable some features that are only available in Paper, some of which can provide subtle performance improvements. Meanwhile, you can also choose whether to use these Paper only features in the `paper-api` section of the `config.yml` file. The Spigot server can theoretically also be used.
+* **Paper** and its downstream forks are <mark style="color:red;">recommended</mark>. When the plugin detects that your server software is Paper, it will enable some features that are only available in Paper, some of which can provide subtle performance improvements.
 * **Folia** server also supported. Please note: Folia's support is in the <mark style="color:red;">early testing stage</mark> and may be released in official versions or removed in the future. This support is not a guarantee.
 
 ## Server Version
