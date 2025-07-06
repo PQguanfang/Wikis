@@ -104,16 +104,53 @@ Another common dynamic price formula is price changed based on the percentage, l
 
 ## Available Placeholders
 
+You can set placeholders (including PlaceholderAPI) and [Math Calculate Format](../format/math-calculate-format.md) in `buy-prices`, `sell-prices` section's `amount` option and `buy-limits`, `sell-limits` section's value in shop configs.
+
+Available built-in placeholder, for more info about them, please view [Built-In Placeholders](../placeholders/built-in-placeholder.md) page.
+
 * {buy-times-player}
 * {buy-times-server}
+* {buy-total-player} <mark style="color:red;">**- PREMIUM, 3.9.0+**</mark>
+* {buy-total-server} <mark style="color:red;">**- PREMIUM, 3.9.0+**</mark>
+
+{% hint style="info" %}
+Difference between **times** placeholder and **total** placeholder:
+
+* **times** placeholder will be reset to the value you set after each reset.
+* **total** placeholder will keep data after reset, and will accumulate previous times. Use command to set buy/sell times or other way will still effect total placeholder. This placeholder will auto reset when reaching the upper limit of int type data.
+{% endhint %}
+
 * {sell-times-player}
 * {sell-times-server}
-* {last-buy-player}
-* {last-buy-server}
-* {last-sell-player}
-* {last-sell-server}
+* {sell-total-player} <mark style="color:red;">**- PREMIUM, 3.9.0+**</mark>
+* {sell-total-server} <mark style="color:red;">**- PREMIUM, 3.9.0+**</mark>
+* {last-buy-player} <mark style="color:red;">**- PREMIUM**</mark>
+* {last-buy-server} <mark style="color:red;">**- PREMIUM**</mark>
+* {last-sell-player} <mark style="color:red;">**- PREMIUM**</mark>
+* {last-sell-server} <mark style="color:red;">**- PREMIUM**</mark>
+* {last-buy-reset-player} <mark style="color:red;">**- PREMIUM, 3.9.0+**</mark>
+* {last-buy-reset-server} <mark style="color:red;">**- PREMIUM, 3.9.0+**</mark>
+* {last-sell-reset-player} <mark style="color:red;">**- PREMIUM, 3.9.0+**</mark>
+* {last-sell-reset-server} <mark style="color:red;">**- PREMIUM, 3.9.0+**</mark>
 
-For more info about those placeholders, please view [this page](../placeholders/built-in-placeholder.md).
+Also in `buy-prices` and `sell-prices` section, you can set new 2 options:
+
+* max-amount: Price max amount, useful for dynamic prices. **Optional.**
+* min-amount: Price min amount, useful for dynamic prices. **Optional.**
+
+Please carefully note that if you want to use our PlaceholderAPI extansion's placeholder, you have to use our new format, for example:
+
+```yaml
+    buy-prices:
+      1:
+        economy-plugin: Vault
+        amount: '15 - {sell-times-player} * 0.1 + %ultimateshop_farming_B_sell-times-player% * 0.1'
+        # We use the new format without { and } symbol.
+        placeholder: '{amount}$'
+        start-apply: 0
+```
+
+Additionally, you need to set `menu.shop.click-update` to `true` if the related to product is also in the menu you opened. Otherwise this price won't auto update after you sell B product.
 
 ## Dynamic Price per player
 
