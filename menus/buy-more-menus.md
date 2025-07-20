@@ -58,6 +58,7 @@ confirm-items:
       name: '&aConfirm'
       lore:
         - '&7Click to finish the trade!'
+      modify-lore: true
   D:
     display-item:
       material: PAPER
@@ -81,7 +82,8 @@ confirm-items:
 * amount-items: Select amount item config. `add-amount` can be replaced to `set-amount` option.
 * display-item: Must be a single char, use this char in `layout` option to set where it will display in menu.
 * confirm-items: Confirm buy or sell item config.
-* cobfirm-items.??.click-action: Make this confirm button can only do specified thing, like buy, sell.
+* confirm-items.??.click-action: Make this confirm button can only do specified thing, like buy, sell.
+* confirm-items.??.modify-lore: Whether we will modify display item lore to add info about price, limits and so on. You can set add lore info at `config.yml` file. **Optional (default to true)**
 
 ## Set Buy More Menu
 
