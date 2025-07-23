@@ -52,8 +52,13 @@ Support those modes:
 * TIMED: It will be reset at the corresponding time, such as 8:15 pm.
 * COOLDOWN\_TIMER (Added in 3.3.0) <mark style="color:red;">**- Premium**</mark>
 * COOLDOWN\_TIMED (Added in 3.3.0) <mark style="color:red;">**- Premium**</mark>
+* COOLDOWN\_CUSTOM (Added in 3.9.1) <mark style="color:red;">**- Premium**</mark>
 * RANDOM\_PLACEHOLDER: Synchronize with the reset time of the specified random placeholder. (Added in 3.3.0) <mark style="color:red;">**- Premium**</mark>
 * CUSTOM: Directly enter the reset time in reset time, and the plugin will not perform any calculations. Recommend obtain reset time through the Placeholder API results. You need set time format at `reset-time-format` type option to helps us know how does your PlaceholderAPI results be like. (Added in 3.3.0) <mark style="color:red;">**- Premium**</mark>
+
+{% hint style="info" %}
+For random placeholder reset mode: supports TIMER, TIMED, CUSTOM. The reset time of the random placeholder will be saved to the server, so its usage effect is the same as COOLDOWN\_TIMER, COOLDOWN\_TIMED and COOLDOWN\_CUSTOM.
+{% endhint %}
 
 ### Difference between COOLDOWN\_TIMED (or COOLDOWN\_TIMER) and TIMED (or TIMER)
 
@@ -104,7 +109,7 @@ This type of reset mode also supports set multi reset time, each reset time use 
 
 In this example, this product will reset reset at 19:00 and 20:00 every day.
 
-#### CUSTOM <mark style="color:red;">**- Premium**</mark>
+#### CUSTOM/COOLDOWN\_CUSTOM <mark style="color:red;">**- Premium**</mark>
 
 You only need to enter a Placeholder API placeholder here, and the result of the placeholder must include the complete year, month, day, hour, minute, and second. You also need to enter their format in the reset time format option, because different types of placeholders return different time formats, making it difficult for plugins to achieve uniformity.&#x20;
 
@@ -190,6 +195,20 @@ Use this placeholder at `buy-times-reset-valuvalue` option in any product config
     buy-times-reset-mode: 'TIMED'
     buy-times-reset-time: '19:00:00;;20:00:00' # <--- TIMED mode supports multi reset time!
     buy-times-reset-value: '{random_resetvalue}' # <--- Used random placeholder
+```
+
+## Cron Reset <mark style="color:red;">- Premium</mark>
+
+You can use Cron format in reset time.&#x20;
+
+* Set reset mode to `COOLDOWN_CUSTOM` (for random placeholder, set it to `CUSTOM`).
+* Use `{cron_"<Cron Expression"}` built-in placeholder in reset time.
+
+For example:
+
+```yaml
+    sell-times-reset-mode: 'COOLDOWN_CUSTOM'
+    sell-times-reset-time: '{cron_"0 0 0 ? * 5"}'
 ```
 
 ## Reset Time do not correct?
