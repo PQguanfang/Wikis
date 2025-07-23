@@ -213,6 +213,8 @@ For example:
 
 You can obtain the Cron expression you want by asking ChatGPT. For example, the Cron expression in this example means to reset at 0:00 every Thursday. We do not provide any help related to how to write Cron expression.
 
+Should use **Quartz** format.
+
 ## Reset Time do not correct?
 
 * The product must have been purchased or selled once before the next reset time can be stored. Otherwise, we can only display the possible reset time calculated based on the current time after the transaction is completed.
