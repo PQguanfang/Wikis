@@ -18,6 +18,7 @@
 ## 📚Quick Understand
 
 * [⚡Course 1](quick-understand/course-1.md)
+* [⚡Course 2](quick-understand/course-2.md)
 * [📚Quick Understand](quick-understand/quick-understand.md)
 
 ## &#x20;📋Format
