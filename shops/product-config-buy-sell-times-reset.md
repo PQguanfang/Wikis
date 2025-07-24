@@ -57,7 +57,7 @@ Support those modes:
 * CUSTOM: Directly enter the reset time in reset time, and the plugin will not perform any calculations. Recommend obtain reset time through the Placeholder API results. You need set time format at `reset-time-format` type option to helps us know how does your PlaceholderAPI results be like. (Added in 3.3.0) <mark style="color:red;">**- Premium**</mark>
 
 {% hint style="info" %}
-For random placeholder reset mode: supports TIMER, TIMED, CUSTOM. The reset time of the random placeholder will be saved to the server, so its usage effect is the same as COOLDOWN\_TIMER, COOLDOWN\_TIMED and COOLDOWN\_CUSTOM.
+For random placeholder reset mode: supports `TIMER`, `TIMED`, `CUSTOM`. The reset time of the random placeholder will be saved to the server, so its usage effect is the same as `COOLDOWN_TIMER`, `COOLDOWN_TIMED` and `COOLDOWN_CUSTOM`.
 {% endhint %}
 
 ### Difference between COOLDOWN\_TIMED (or COOLDOWN\_TIMER) and TIMED (or TIMER)
@@ -209,12 +209,18 @@ For example:
 ```yaml
     sell-times-reset-mode: 'COOLDOWN_CUSTOM'
     sell-times-reset-time: '{cron_"0 0 0 ? * 5"}'
+    # sell-times-reset-time-format: 'yyyy-MM-dd HH:mm:ss' 
+    # You do not need set a time format here, this just help you know there is a option that you can set custom time format.
 ```
 
 You can obtain the Cron expression you want by asking ChatGPT. For example, the Cron expression in this example means to reset at 0:00 every Thursday. We do not provide any help related to how to write Cron expression.
 
 Should use **Quartz** format.
 
+{% hint style="info" %}
+You **MUST** make sure that time format of the result of Cron placeholder (set it in `config.yml` file) and the time format you set here is same. By default, they are same.
+{% endhint %}
+
 ## Reset Time do not correct?
 
-* The product must have been purchased or selled once before the next reset time can be stored. Otherwise, we can only display the possible reset time calculated based on the current time after the transaction is completed.
+* The product must have been purchased or sold once before the next reset time can be stored. Otherwise, we can only display the possible reset time calculated based on the current time after the transaction is completed.
