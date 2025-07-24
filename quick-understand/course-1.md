@@ -22,7 +22,6 @@ items:
     # ...
   C:
     # ...
-
 ```
 
 In there you’ll find the `settings.menu` option, which is crucial because it’s the central hub that connects your shop and menu. In this example, we set it to `example-shop-menu`.
