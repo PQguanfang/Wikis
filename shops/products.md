@@ -7,6 +7,7 @@ items:
   A:
     price-mode: CLASSIC_ALL
     product-mode: CLASSIC_ALL
+    sell-all: true
     products:
       1:
         material: STRING
@@ -65,10 +66,15 @@ Product ID must be a single char, because we need use them in shop menu `layout`
 * bedrock: View [this page](../menus/bedrock-menus-premium.md).
 * buy-more: Set whether this product can open buy more menu, **you must delete shop's buy-more option to make this option has effect! Optional.**
 * buy-more-menu: Set up separate buy more menu settings for the product. **Optional. Require 2.2.10+ version.**
+* sell-all: Set whether this product can use sell all feature. **Optional, default to true. (Added in 3.9.3)**
 * price-mode: Support `ANY, ALL, CLASSIC_ANY, CLASSIC_ALL`. **Required.**
 * product-mode: Same as above. **Required if you have products section.**
 
-<table><thead><tr><th width="118">Mode</th><th width="179">ANY</th><th>ALL</th><th>CLASSIC_ANY</th><th>CLASSIC_ALL</th></tr></thead><tbody><tr><td>Product Give</td><td>Give random products that meet conditions.</td><td>Give all products.</td><td>Same as ANY.</td><td>Same as ALL.</td></tr><tr><td>Product /Price Take</td><td>First product/price that we found player meet condition and have enough amount.</td><td>Players must have all products/prices that meet conditions to sell.</td><td>Same as ANY.</td><td>Same as ALL.</td></tr><tr><td>Price Give (means sell)</td><td>First prices meet the condition requirements.</td><td>All prices will be given.</td><td>Same as ANY.</td><td>Same as ALL.</td></tr><tr><td>Price Support</td><td>Support dynamic price &#x26; <code>apply</code> option.</td><td>Same as ALL.</td><td>Price must be same at  everytime.</td><td>Same as CLASSIC_ALL.</td></tr><tr><td>Server  Performances</td><td>Maybe high when you have much buy/sell requests.</td><td>Same as ALL.</td><td>Low, just like other shop plugins doing!</td><td>Same as CLASSIC_ANY.</td></tr></tbody></table>
+{% hint style="info" %}
+**ANY** and **ALL** mode should only be used when you are using dynamic value in products or prices configs. If your configuration uses static values, we will automatically switch your mode to **CLASS** mode to avoid unnecessary performance waste.&#x20;
+{% endhint %}
+
+<table><thead><tr><th width="118">Mode</th><th width="179">ANY</th><th>ALL</th><th>CLASSIC_ANY</th><th>CLASSIC_ALL</th></tr></thead><tbody><tr><td>Product Give</td><td>Give random products that meet conditions.</td><td>Give all products.</td><td>Same as ANY.</td><td>Same as ALL.</td></tr><tr><td>Product /Price Take</td><td>First product/price that we found player meet condition and have enough amount.</td><td>Players must have all products/prices that meet conditions to sell.</td><td>Same as ANY.</td><td>Same as ALL.</td></tr><tr><td>Price Give (means sell)</td><td>First prices meet the condition requirements.</td><td>All prices will be given.</td><td>Same as ANY.</td><td>Same as ALL.</td></tr><tr><td>Price Support</td><td>Support dynamic price &#x26; <code>apply</code> option.</td><td>Same as ALL.</td><td>Price must be same at  everytime.</td><td>Same as CLASSIC_ALL.</td></tr><tr><td>Support Sell All</td><td><strong>No</strong><br>Due to the dynamic nature of price values, plugins have no way of knowing the maximum number of times you can sell a product</td><td><strong>No</strong><br>Due to the dynamic nature of price values, plugins have no way of knowing the maximum number of times you can sell a product</td><td>Yes</td><td>Yes</td></tr><tr><td>Server  Performances</td><td>Maybe high when you have much buy/sell requests.</td><td>Same as ALL.</td><td>Low, just like other shop plugins doing!</td><td>Same as CLASSIC_ANY.</td></tr></tbody></table>
 
 * buy-actions: The action will run after buy this product, use [Action Forma](../format/action-format.md)t here. **Optional.**
 * sell-actions: The action will run after sell this product,  use [Action Forma](../format/action-format.md)t here. **Optional.**
