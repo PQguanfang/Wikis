@@ -31,7 +31,7 @@ Default example:
     - '@a{buy-click}'
     - '@b{sell-click}'
     - '@k&#FFFACDRight-Shift click to pick amount!'
-    - '@b&#FFFACDDrop (Q key) to sell all!'
+    - '@m&#FFFACDDrop (Q key) to sell all!'
 ```
 
 ## Per Product Setting
@@ -64,9 +64,7 @@ Each line start with `@+lower case` will be consider as conditional line. We wil
 
 @k - Player is **not** opening buy more menu and this product has enabled buy more feature.
 
-@l - This product is in buying cooldown.
-
-@m - This product is in selling cooldown.
+@m - This product can use sell all feature.
 
 @n - Buy/sell price (corresponding to the Click type) is valid. For example, buy click type require buy price is valid.
 
