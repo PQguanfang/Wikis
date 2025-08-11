@@ -107,6 +107,10 @@ If you use the Paper server and the item is fixed (the items generated each time
 
 In this example, we mainly flexibly implemented different types of single thing and `give-actions` and `take-actions` options, whose functions can be found on the [Products](../shops/products.md) page. Specifically, assuming the player purchases this product, the `match-placeholder` in buy options is used to determine if the player has enough economy. If it meets the `buy-prices` requirement, the player will receive an apple in `products` section and execute `take-actions` section in buy-prices section. Similarly, during selling, as the player obtains the sell price, the `give-actions` in the sell price will be executed, and therefore the player will receive economy.
 
+{% hint style="info" %}
+Require <mark style="color:red;">**PREMIUM**</mark> version of UltimateShop!
+{% endhint %}
+
 ```yaml
     products:
       1:
