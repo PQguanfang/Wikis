@@ -92,6 +92,7 @@ In the `products` option, we use the [Custom Sell Match](../features/custom-item
         # Buy Give Command
         give-actions:
           1:
+            multi-once: true
             type: console_command
             command: 'items give {player} {amount}'
           2:
@@ -104,29 +105,31 @@ If you use the Paper server and the item is fixed (the items generated each time
 
 ### Example: Use for not supported economy plugins as prices.
 
-In this example, we mainly flexibly implemented different types of single thing and `give-actions` options, whose functions can be found on the [Products](../shops/products.md) page. Specifically, assuming the player purchases this product, the `match-placeholder` in buy options is used to determine if the player has enough economy. If it meets the requirement, the player will receive an apple. As a result, the `give-actions` will be executed and the player's economy will be taked. Similarly, during selling, as the player obtains the sell price, the `give-actions` in the sell price will be executed, and therefore the player will receive economy.
+In this example, we mainly flexibly implemented different types of single thing and `give-actions` and `take-actions` options, whose functions can be found on the [Products](../shops/products.md) page. Specifically, assuming the player purchases this product, the `match-placeholder` in buy options is used to determine if the player has enough economy. If it meets the `buy-prices` requirement, the player will receive an apple in `products` section and execute `take-actions` section in buy-prices section. Similarly, during selling, as the player obtains the sell price, the `give-actions` in the sell price will be executed, and therefore the player will receive economy.
 
 ```yaml
     products:
       1:
         # The product
         material: APPLE
-        # Buy Give Command
-        give-actions:
-          1:
-            type: console_command
-            command: 'eco take {player} {amount}'
         amount: 64
     buy-prices:
       1:
         # Buy Match Placeholder
         match-placeholder: '%economy_now_balance_placeholder%'
         amount: 500
+        # Buy Take Actions
+        take-actions:
+          1:
+            multi-once: true
+            type: console_command
+            command: 'eco take {player} {amount}'
     sell-prices:
       1:
-        # Sell Give Command
+        # Sell Give Actions
         give-actions:
           1:
+            multi-once: true
             type: 'console_command'
             command: 'eco give {player} {amount}'
         amount: 500
