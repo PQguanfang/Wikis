@@ -1,4 +1,8 @@
-# Easy Prices
+# 💴Easy Prices
+
+{% hint style="info" %}
+This feature has been <mark style="color:red;">removed</mark> in **3.10.0** version.
+{% endhint %}
 
 You can use `prices` section in `config.yml` file to create new easy prices!
 

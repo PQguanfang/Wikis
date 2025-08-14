@@ -63,7 +63,6 @@
 ## ✨Features
 
 * [🎨Color Code](features/color-code.md)
-* [💴Easy Prices](features/easy-prices.md)
 * [🪄Sell Stick - Premium](features/sell-stick-premium.md)
 * [💾Saved Item (Item Manager)](features/saved-item-item-manager.md)
 * [🌍Localized Item Name - Premium](features/localized-item-name-premium.md)
@@ -81,3 +80,7 @@
 * [Events](develop/events.md)
 * [Hook into UltimateShop](develop/hook-into-ultimateshop.md)
 * [Can't do things](develop/cant-do-things.md)
+
+## ❌Removed&#x20;
+
+* [💴Easy Prices](removed/easy-prices.md)
