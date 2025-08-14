@@ -1,7 +1,7 @@
 # 💴Easy Prices
 
-{% hint style="info" %}
-This feature has been <mark style="color:red;">removed</mark> in **3.10.0** version.
+{% hint style="warning" %}
+❌This feature is no longer get support and will be <mark style="color:red;">removed</mark> in future version.
 {% endhint %}
 
 You can use `prices` section in `config.yml` file to create new easy prices!
