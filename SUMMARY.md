@@ -15,11 +15,6 @@
 * [❓FAQ](info/faq.md)
 * [🆚Compare](info/premium-vs-free.md)
 
-## 📚Quick Understand
-
-* [⚡Course 1](quick-understand/course-1.md)
-* [⚡Course 2](quick-understand/course-2.md)
-
 ## &#x20;📋Format
 
 * [🛒Info of ItemFormat™](format/info-of-itemformat-tm.md)
@@ -44,6 +39,7 @@
 * [🛒Products](shops/products.md)
 * [💰Products Config: Single Thing](shops/products-config-single-thing.md)
 * [♻️Product Config: Buy/Sell Times Reset](shops/product-config-buy-sell-times-reset.md)
+* [⚡Example: Common Usage](shops/example-common-usage.md)
 * [🌱Example: Stock (like in life)](shops/example-stock-like-in-life.md)
 * [📅Example: Daily Shops](shops/example-daily-shops.md)
 * [🏆Example: Daily Rewards](shops/example-daily-rewards.md)

@@ -93,6 +93,7 @@ In product configurations, we set the corresponding type of single thing through
   * products.give-actions: The action will run after this product is been give to player. Use [Action Format](../format/action-format.md) here.&#x20;
   * products.take-actions: The action will run after this product is been taken from player. Use [Action Format](../format/action-format.md) here.&#x20;
   * products.give-item: Whether we will give this product item to player when he trying to buy.
+  * products.take: Whether we will take this product when player trying to sell. Useful if you just want to this item be a requirement but will not cost after sell.
 * buy-prices: Product buy prices. Support Item format and [Economy format](../format/economyformat-tm.md). You can also add [Custom Sell Match Method](../features/custom-item-match-method.md) or other things depend on single thing type here. **Optional. If not set, product can not be purchased.**
   * buy-prices.start-apply: Start which times this price will apply. Only supports `ANY` or `ALL` price type. **Optional. Default to 0.**
   * buy-prices.end-apply: Last times the price will apply. Only supports `ANY` or `ALL` price type. **Optional. Default to infinite.**
@@ -100,6 +101,7 @@ In product configurations, we set the corresponding type of single thing through
   * buy-prices.placeholder: Price display name in `{price}` placeholder. **Optional. Default unknown language key.**
   * buy-prices.conditions: Player must meet the condition to use this price. Use [Condition Format](../format/condition-format.md)  here. **Optional. Default don't have any conditions.**&#x20;
   * buy-prices.take-actions: The action will run after this buy price is been taken from player. Use [Action Format](../format/action-format.md) here.&#x20;
+  * buy-prices.take: Whether we will take this buy price when player trying to buy. Useful if you just want to this item be a requirement but will not cost after buy.
 * sell-prices: Product sell prices. Support [Item format](../format/itemformat-tm/) and [Economy format](../format/economyformat-tm.md). You can also add [Custom Sell Match Method](../features/custom-item-match-method.md) here. **Optional. If not set, product can not be selled.**
   * sell-prices also support all sub options like in `buy-prices`.
   * sell-prices.give-actions: The action will run after this sell price is been give to player, see [Action](../format/action-format.md) for more info. **Optional.**

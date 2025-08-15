@@ -1,6 +1,4 @@
-# ⚡Course 2
-
-Next, let's edit the shop configuration file. Taking the store configuration in Course 1 as an example, let's continue to improve it!
+# ⚡Example: Common Usage
 
 ```yaml
 settings:
