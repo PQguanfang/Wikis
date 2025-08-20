@@ -1,6 +1,10 @@
 # Develop Guide
 
-## &#x20;Get shop object <a href="#user-content-get-shop-object" id="user-content-get-shop-object"></a>
+{% hint style="info" %}
+Please note that UltimateShop is not a traditional shop plugin. It can dynamically display products and prices (and even the each single price amount), unlike other shop plugins where one ItemStack corresponds to one price.
+{% endhint %}
+
+## Get shop object <a href="#user-content-get-shop-object" id="user-content-get-shop-object"></a>
 
 ```java
 ConfigManager.configmanager.shopConfigs.get(shopID);
@@ -56,6 +60,19 @@ CacheManager.cacheManager.serverCache;
 ```java
 ShopHelper.getBuyPrices(items, player, 1);
 ShopHelper.getSellPrices(items, player, 1);
+```
+
+## Get whether the price is Vault
+
+All price/product configs follows [EconomyFormat](../format/economyformat-tm.md) or [ItemFormat](../format/itemformat-tm/).
+
+```java
+Map<AbstractSingleThing, BigDecimal> resultMap = takeResult.getResultMap();
+for (AbstractSingleThing singleThing : resultMap.keySet()) {
+   if (singleThing.getSingleSection().getString("economy-plugin", "").equals("Vault") {
+       return "This price includes Vault";
+   }
+}
 ```
 
 ## Give GiveResult
