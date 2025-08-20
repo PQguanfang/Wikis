@@ -50,3 +50,27 @@ Can get player's buy times, sell times data and so on.
 ```java
 CacheManager.cacheManager.serverCache;
 ```
+
+## Get price from ItemStack
+
+```java
+ShopHelper.getBuyPrices(items, player, 1);
+ShopHelper.getSellPrices(items, player, 1);
+```
+
+## Give GiveResult
+
+```java
+int sellUseTimes = ShopHelper.getSellUseTimes(item, player);
+GiveResult giveResult = ShopHelper.getSellPrices(items, player, 1);
+giveResult.give(sellUseTimes, 1, player, 1.01);
+```
+
+## Take TakeResult
+
+```java
+int buyUseTimes = ShopHelper.getBuyUseTimes(item, player);
+TakeResult takeResult = ShopHelper.getBuyPrices(items, player, 1);
+if (!takeResult.getResultBoolean) return "Your money not enough";
+takeResult.take(sellUseTimes, 1, player.getInventory(), player);
+```
