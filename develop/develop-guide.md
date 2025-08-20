@@ -77,6 +77,10 @@ for (AbstractSingleThing singleThing : resultMap.keySet()) {
 
 ## Give GiveResult
 
+{% hint style="info" %}
+This will not follow buy/sell limits, conditions check and so on. If you want to plugin check out whether player can buy or sell this item, you need use BuyProductMethod or SellProductMethod.
+{% endhint %}
+
 ```java
 int sellUseTimes = ShopHelper.getSellUseTimes(item, player);
 GiveResult giveResult = ShopHelper.getSellPrices(items, player, 1);
@@ -84,6 +88,10 @@ giveResult.give(sellUseTimes, 1, player, 1.01);
 ```
 
 ## Take TakeResult
+
+{% hint style="info" %}
+This will not follow buy/sell limits, conditions check and so on. If you want to plugin check out whether player can buy or sell this item, you need use BuyProductMethod or SellProductMethod.
+{% endhint %}
 
 ```java
 int buyUseTimes = ShopHelper.getBuyUseTimes(item, player);
