@@ -74,3 +74,9 @@ TakeResult takeResult = ShopHelper.getBuyPrices(items, player, 1);
 if (!takeResult.getResultBoolean) return "Your money not enough";
 takeResult.take(sellUseTimes, 1, player.getInventory(), player);
 ```
+
+## Get TakeResult from which product
+
+```java
+ObjectItem item = takeResult.getThings().getItem();
+```
