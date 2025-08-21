@@ -130,10 +130,8 @@ This example uses a random placeholder to randomly refresh products after 3, 4, 
 Created a random placeholder like this in random\_placeholder folder:
 
 ```yaml
-# Premium version only.
-reset:
-  reset-mode: ONCE
-  elements:
+reset-mode: ONCE
+elements:
   - '03:00:00'
   - '04:00:00'
   - '05:00:00'
@@ -163,13 +161,11 @@ Use this placeholder at `buy-times-reset-time` option in any product configs.
 
 By default, each reset will lead to player's buy times or sell times to 0, but you can also change it to different value, and even the random value!
 
-Created a random placeholder like this in random\_placeholder folder:
+Created a random placeholder like this in `random_placeholder` folder:
 
 ```yaml
-# Premium version only.
-reset:
-  reset-mode: ONCE
-  elements:
+reset-mode: ONCE
+elements:
   - '0~20' # A random number from 0 to 20
   - '40' # A fixed number
 ```

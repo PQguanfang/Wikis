@@ -211,3 +211,23 @@ items:
 In this example, if condition **one** is meet, we will also use the product with ID **one** and sell price wth ID **one**.
 
 For actions, it is recommended you use give-actions in each single thing instead of buy-actions or sell-actions, because their conditions are separate and cannot be synchronized with the conditions of a single thing, configuring them will be more complicated.
+
+## Auto Display Price at Item Lore
+
+* Download and install MythicChanger [here](https://www.spigotmc.org/resources/mythicchanger-auto-match-change-drag-change-gui-change-in-1-plugin-1-14-1-21-8.98523/). (This plugin requires packetevents)
+* Create a new file called `shop-display.yml` in `plugins/MythicChanger/rules` folder.
+* Copy those content in this file and restart the server.
+
+```yaml
+weight: 15
+
+only-in-player-inventory: true
+
+fake-changes:
+  add-price-lore:
+    - '&fBuy Price: &6{buy-price} &7per unit'
+    - '&fSell Price: &6{sell-price} &7per unit'
+    - '&fWorth: &6{total-price}'
+```
+
+<figure><img src="../.gitbook/assets/9b0906ace8ba0a265f6711301c6be2f7.png" alt=""><figcaption></figcaption></figure>
