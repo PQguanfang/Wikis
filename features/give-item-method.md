@@ -21,7 +21,7 @@ For example, you buy x64 ender peral, plugin will stack them in one slot which i
 
 In this picture, the first slot shows you the problem.
 
-<figure><img src="../.gitbook/assets/image (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 ## SMART - Early Alpha
 

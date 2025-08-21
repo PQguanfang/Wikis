@@ -36,631 +36,150 @@ elements:
 
 The various options used in this example are detailed on the [Shops](shops.md) page. If you are unsure of the purpose of each option, please refer to that article.
 
-<figure><img src="../.gitbook/assets/image (11).png" alt=""><figcaption></figcaption></figure>
-
 ```yaml
 settings:
-  menu: 'example-shop-menu'
+  menu: 'daily-shop-menu' # The menu ID
   buy-more: true
-  shop-name: 'Daily Shop'
+  shop-name: 'Daily Shop (Require Premium)'
   hide-message: false
 
 general-configs:
   price-mode: CLASSIC_ANY
   product-mode: CLASSIC_ANY
-  display-item:
-    1:
-      material: REDSTONE
-      amount: 1
-      name: '&eRedstone'
-      lore:
-        - '&fToday Product:'
-        - '&7  - Redstone'
-    2:
-      material: IRON_INGOT
-      amount: 1
-      name: '&eIron Ingot'
-      lore:
-        - '&fToday Product:'
-        - '&7  - Iron Ingot'
-    3:
-      material: GOLD_INGOT
-      amount: 1
-      name: '&eGold Ingot'
-      lore:
-        - '&fToday Product:'
-        - '&7  - Gold Ingot'
-    4:
-      material: COPPER_INGOT
-      amount: 1
-      name: '&eCopper Ingot'
-      lore:
-        - '&fToday Product:'
-        - '&7  - Copper Ingot'
-    5:
-      material: DIAMOND
-      amount: 1
-      name: '&eDiamond'
-      lore:
-        - '&fToday Product:'
-        - '&7  - Diamond'
-    6:
-      material: LAPIS_LAZULI
-      amount: 1
-      name: '&eLapis lazuli'
-      lore:
-        - '&fToday Product:'
-        - '&7  - Diamond'
-    7:
-      material: EMERALD
-      amount: 1
-      name: '&eEmerald'
-      lore:
-        - '&fToday Product:'
-        - '&7  - Emerald'
-  products:
-    1:
-      material: REDSTONE
-      amount: 1
-    2:
-      material: IRON_INGOT
-      amount: 1
-    3:
-      material: GOLD_INGOT
-      amount: 1
-    4:
-      material: COPPER_INGOT
-      amount: 1
-    5:
-      material: DIAMOND
-      amount: 1
-    6:
-      material: LAPIS_LAZULI
-      amount: 1
-    7:
-      material: EMERALD
-      amount: 1
-  sell-prices:
-    1:
-      economy-plugin: Vault
-      amount: 1
-      placeholder: '&6{amount} Coins'
-      start-apply: 0
   sell-limits:
     global: 640
     default: 18
     vip: 256
   sell-limits-conditions:
     vip:
-      1: 
+      1:
         type: permission
         permission: 'group.vip'
-  sell-limits-reset-mode: 'TIMED'
-  sell-limits-reset-time: '00:00:00'
+  sell-times-reset-mode: 'COOLDOWN_TIMED'
+  sell-times-reset-time: '{random_reset}'
 
 items:
   A:
+    products:
+      1:
+        material: REDSTONE
+        amount: 1
     sell-prices:
       1:
         economy-plugin: Vault
         amount: 1
         placeholder: '&6{amount} Coins'
         start-apply: 0
-    display-item-conditions:
-      1: 
-        1: 
-          type: placeholder
-          placeholder: '{random_daily;;1}'
-          rule: '=='
-          value: 'A'
-      2: 
-        1:
-          type: placeholder
-          placeholder: '{random_daily;;1}'
-          rule: '=='
-          value: 'B'
-      3:
-        1:
-          type: placeholder
-          placeholder: '{random_daily;;1}'
-          rule: '=='
-          value: 'C'
-      4:
-        1:
-          type: placeholder
-          placeholder: '{random_daily;;1}'
-          rule: '=='
-          value: 'D'
-      5:
-        1:
-          type: placeholder
-          placeholder: '{random_daily;;1}'
-          rule: '=='
-          value: 'E'
-      6:
-        1:
-          type: placeholder
-          placeholder: '{random_daily;;1}'
-          rule: '=='
-          value: 'F'
-      7:
-        1:
-          type: placeholder
-          placeholder: '{random_daily;;1}'
-          rule: '=='
-          value: 'G'
-    products-conditions:
-      1: 
-        1: 
-          type: placeholder
-          placeholder: '{random_daily;;1}'
-          rule: '=='
-          value: 'A'
-      2: 
-        1:
-          type: placeholder
-          placeholder: '{random_daily;;1}'
-          rule: '=='
-          value: 'B'
-      3:
-        1:
-          type: placeholder
-          placeholder: '{random_daily;;1}'
-          rule: '=='
-          value: 'C'
-      4:
-        1:
-          type: placeholder
-          placeholder: '{random_daily;;1}'
-          rule: '=='
-          value: 'D'
-      5:
-        1:
-          type: placeholder
-          placeholder: '{random_daily;;1}'
-          rule: '=='
-          value: 'E'
-      6:
-        1:
-          type: placeholder
-          placeholder: '{random_daily;;1}'
-          rule: '=='
-          value: 'F'
-      7:
-        1:
-          type: placeholder
-          placeholder: '{random_daily;;1}'
-          rule: '=='
-          value: 'G'
   B:
-    display-item-conditions:
-      1: 
-        1: 
-          type: placeholder
-          placeholder: '{random_daily;;2}'
-          rule: '=='
-          value: 'A'
-      2: 
-        1:
-          type: placeholder
-          placeholder: '{random_daily;;2}'
-          rule: '=='
-          value: 'B'
-      3:
-        1:
-          type: placeholder
-          placeholder: '{random_daily;;2}'
-          rule: '=='
-          value: 'C'
-      4:
-        1:
-          type: placeholder
-          placeholder: '{random_daily;;2}'
-          rule: '=='
-          value: 'D'
-      5:
-        1:
-          type: placeholder
-          placeholder: '{random_daily;;2}'
-          rule: '=='
-          value: 'E'
-      6:
-        1:
-          type: placeholder
-          placeholder: '{random_daily;;2}'
-          rule: '=='
-          value: 'F'
-      7:
-        1:
-          type: placeholder
-          placeholder: '{random_daily;;2}'
-          rule: '=='
-          value: 'G'
-    products-conditions:
-      1: 
-        1: 
-          type: placeholder
-          placeholder: '{random_daily;;2}'
-          rule: '=='
-          value: 'A'
-      2: 
-        1:
-          type: placeholder
-          placeholder: '{random_daily;;2}'
-          rule: '=='
-          value: 'B'
-      3:
-        1:
-          type: placeholder
-          placeholder: '{random_daily;;2}'
-          rule: '=='
-          value: 'C'
-      4:
-        1:
-          type: placeholder
-          placeholder: '{random_daily;;2}'
-          rule: '=='
-          value: 'D'
-      5:
-        1:
-          type: placeholder
-          placeholder: '{random_daily;;2}'
-          rule: '=='
-          value: 'E'
-      6:
-        1:
-          type: placeholder
-          placeholder: '{random_daily;;2}'
-          rule: '=='
-          value: 'F'
-      7:
-        1:
-          type: placeholder
-          placeholder: '{random_daily;;2}'
-          rule: '=='
-          value: 'G'
-  C:
-    display-item-conditions:
-      1: 
-        1: 
-          type: placeholder
-          placeholder: '{random_daily;;3}'
-          rule: '=='
-          value: 'A'
-      2: 
-        1:
-          type: placeholder
-          placeholder: '{random_daily;;3}'
-          rule: '=='
-          value: 'B'
-      3:
-        1:
-          type: placeholder
-          placeholder: '{random_daily;;3}'
-          rule: '=='
-          value: 'C'
-      4:
-        1:
-          type: placeholder
-          placeholder: '{random_daily;;3}'
-          rule: '=='
-          value: 'D'
-      5:
-        1:
-          type: placeholder
-          placeholder: '{random_daily;;3}'
-          rule: '=='
-          value: 'E'
-      6:
-        1:
-          type: placeholder
-          placeholder: '{random_daily;;3}'
-          rule: '=='
-          value: 'F'
-      7:
-        1:
-          type: placeholder
-          placeholder: '{random_daily;;3}'
-          rule: '=='
-          value: 'G'
-    products-conditions:
-      1: 
-        1: 
-          type: placeholder
-          placeholder: '{random_daily;;3}'
-          rule: '=='
-          value: 'A'
-      2: 
-        1:
-          type: placeholder
-          placeholder: '{random_daily;;3}'
-          rule: '=='
-          value: 'B'
-      3:
-        1:
-          type: placeholder
-          placeholder: '{random_daily;;3}'
-          rule: '=='
-          value: 'C'
-      4:
-        1:
-          type: placeholder
-          placeholder: '{random_daily;;3}'
-          rule: '=='
-          value: 'D'
-      5:
-        1:
-          type: placeholder
-          placeholder: '{random_daily;;3}'
-          rule: '=='
-          value: 'E'
-      6:
-        1:
-          type: placeholder
-          placeholder: '{random_daily;;3}'
-          rule: '=='
-          value: 'F'
-      7:
-        1:
-          type: placeholder
-          placeholder: '{random_daily;;3}'
-          rule: '=='
-          value: 'G'
-  D:
-    display-item-conditions:
-      1: 
-        1: 
-          type: placeholder
-          placeholder: '{random_daily;;4}'
-          rule: '=='
-          value: 'A'
-      2: 
-        1:
-          type: placeholder
-          placeholder: '{random_daily;;4}'
-          rule: '=='
-          value: 'B'
-      3:
-        1:
-          type: placeholder
-          placeholder: '{random_daily;;4}'
-          rule: '=='
-          value: 'C'
-      4:
-        1:
-          type: placeholder
-          placeholder: '{random_daily;;4}'
-          rule: '=='
-          value: 'D'
-      5:
-        1:
-          type: placeholder
-          placeholder: '{random_daily;;4}'
-          rule: '=='
-          value: 'E'
-      6:
-        1:
-          type: placeholder
-          placeholder: '{random_daily;;4}'
-          rule: '=='
-          value: 'F'
-      7:
-        1:
-          type: placeholder
-          placeholder: '{random_daily;;4}'
-          rule: '=='
-          value: 'G'
-    products-conditions:
-      1: 
-        1: 
-          type: placeholder
-          placeholder: '{random_daily;;4}'
-          rule: '=='
-          value: 'A'
-      2: 
-        1:
-          type: placeholder
-          placeholder: '{random_daily;;4}'
-          rule: '=='
-          value: 'B'
-      3:
-        1:
-          type: placeholder
-          placeholder: '{random_daily;;4}'
-          rule: '=='
-          value: 'C'
-      4:
-        1:
-          type: placeholder
-          placeholder: '{random_daily;;4}'
-          rule: '=='
-          value: 'D'
-      5:
-        1:
-          type: placeholder
-          placeholder: '{random_daily;;4}'
-          rule: '=='
-          value: 'E'
-      6:
-        1:
-          type: placeholder
-          placeholder: '{random_daily;;4}'
-          rule: '=='
-          value: 'F'
-      7:
-        1:
-          type: placeholder
-          placeholder: '{random_daily;;4}'
-          rule: '=='
-          value: 'G'
-  E:
-    display-item-conditions:
-      1: 
-        1: 
-          type: placeholder
-          placeholder: '{random_daily;;5}'
-          rule: '=='
-          value: 'A'
-      2: 
-        1:
-          type: placeholder
-          placeholder: '{random_daily;;5}'
-          rule: '=='
-          value: 'B'
-      3:
-        1:
-          type: placeholder
-          placeholder: '{random_daily;;5}'
-          rule: '=='
-          value: 'C'
-      4:
-        1:
-          type: placeholder
-          placeholder: '{random_daily;;5}'
-          rule: '=='
-          value: 'D'
-      5:
-        1:
-          type: placeholder
-          placeholder: '{random_daily;;5}'
-          rule: '=='
-          value: 'E'
-      6:
-        1:
-          type: placeholder
-          placeholder: '{random_daily;;5}'
-          rule: '=='
-          value: 'F'
-      7:
-        1:
-          type: placeholder
-          placeholder: '{random_daily;;5}'
-          rule: '=='
-          value: 'G'
-    products-conditions:
-      1: 
-        1: 
-          type: placeholder
-          placeholder: '{random_daily;;5}'
-          rule: '=='
-          value: 'A'
-      2: 
-        1:
-          type: placeholder
-          placeholder: '{random_daily;;5}'
-          rule: '=='
-          value: 'B'
-      3:
-        1:
-          type: placeholder
-          placeholder: '{random_daily;;5}'
-          rule: '=='
-          value: 'C'
-      4:
-        1:
-          type: placeholder
-          placeholder: '{random_daily;;5}'
-          rule: '=='
-          value: 'D'
-      5:
-        1:
-          type: placeholder
-          placeholder: '{random_daily;;5}'
-          rule: '=='
-          value: 'E'
-      6:
-        1:
-          type: placeholder
-          placeholder: '{random_daily;;5}'
-          rule: '=='
-          value: 'F'
-      7:
-        1:
-          type: placeholder
-          placeholder: '{random_daily;;5}'
-          rule: '=='
-          value: 'G'
-```
-
-## FAQ: Too complex?
-
-Start from 3.4.3, you can customize the **keys** for conditions of **single things**. If you confirm that your products, buy prices, and sell prices are using same conditions at a time, you can set their keys to the same value, so that you don't have to configure their conditions separately for each single thing. You can find the settings at `config.yml` file like below:
-
-```yaml
-conditions:
-  products-key: 'conditions'
-  buy-prices-key: 'conditions'
-  sell-prices-key: 'conditions'
-  display-item-key: 'conditions'
-```
-
-This example make all `conditions` key be same, so the shop config should be also like:
-
-```yaml
-items:
-  A:
-    price-mode: CLASSIC_ANY
-    product-mode: CLASSIC_ANY
     products:
-      one:
-        material: REDSTONE
-        amount: 1
-        give-actions:
-          1:
-            type: message
-            message: 'Hello!'
-      two:
+      1:
         material: IRON_INGOT
         amount: 1
     sell-prices:
-      one:
-        economy-plugin: Vault
-        amount: 1
-        placeholder: '&6{amount} Coins'
-        start-apply: 0
-      two:
+      1:
         economy-plugin: Vault
         amount: 3
         placeholder: '&6{amount} Coins'
         start-apply: 0
-    conditions:
-      one:
-        1:
-          type: placeholder
-          placeholder: '{random_daily}'
-          rule: '=='
-          value: 'A'
-      two:
-        1:
-          type: placeholder
-          placeholder: '{random_daily}'
-          rule: '=='
-          value: 'B'
+  C:
+    products:
+      1:
+        material: GOLD_INGOT
+        amount: 1
+    sell-prices:
+      1:
+        economy-plugin: Vault
+        amount: 1.6
+        placeholder: '&6{amount} Coins'
+        start-apply: 0
+  D:
+    products:
+      1:
+        material: COPPER_INGOT
+        amount: 1
+    sell-prices:
+      1:
+        economy-plugin: Vault
+        amount: 2
+        placeholder: '&6{amount} Coins'
+        start-apply: 0
+  E:
+    products:
+      1:
+        material: DIAMOND
+        amount: 1
+    sell-prices:
+      1:
+        economy-plugin: Vault
+        amount: 0.8
+        placeholder: '&6{amount} Coins'
+        start-apply: 0
+  F:
+    products:
+      1:
+        material: LAPIS_LAZULI
+        amount: 1
+      2:
+        material: EMERALD
+        amount: 1
+    sell-prices:
+      1:
+        economy-plugin: Vault
+        amount: 1.2
+        placeholder: '&6{amount} Coins'
+        start-apply: 0
+      2:
+        economy-plugin: Vault
+        amount: 3.3
+        placeholder: '&6{amount} Coins'
+        start-apply: 0
+  G:
+    products:
+      1:
+        material: EMERALD
+        amount: 1
+    sell-prices:
+      1:
+        economy-plugin: Vault
+        amount: 5
+        placeholder: '&6{amount} Coins'
+        start-apply: 0
 ```
 
-In this example, if condition **one** is meet, we will also use the product with ID **one** and sell price wth ID **one**.
+## Configure Menu
 
-For actions, it is recommended you use give-actions in each single thing instead of buy-actions or sell-actions, because their conditions are separate and cannot be synchronized with the conditions of a single thing, configuring them will be more complicated.
+The various options used in this example are detailed on the [Menus](../menus/general-menus.md) page. If you are unsure of the purpose of each option, please refer to that article.
 
-## FAQ: Price are same for all products?
+```yaml
+# PREMIUM version only.
 
-This is because you only created one unconditional price here, which results in all products using this price. If you don't want this, you can learn to do it like `display-item` and `products`.
+title: '{shop-name}'
+size: 36
 
-For example:
+open-actions:
+  1:
+    type: sound
+    sound: item.book.page_turn
 
-<pre class="language-yaml"><code class="lang-yaml"><strong>general-configs:
-</strong><strong>  # Configs...
-</strong><strong>
-</strong><strong>items:
-</strong><strong>  sell-prices:
-</strong>    1:
-      economy-plugin: Vault
-      amount: 1
-      placeholder: '&#x26;6{amount} Coins'
-      start-apply: 0
-  sell-prices-conditions:
-    1:
-      # Conditions...
-</code></pre>
+dynamic-layout: true
 
-The reason why options like `products` are separated from their corresponding conditional options is that the products in your shop are fixed, so each slot has the same `products` option. However, the randomly selected product in each slot are not consistent, so the `conditions` option needs to be separated separately.
+layout:
+  - '000000000'
+  - '000`{random_daily;;1}``{random_daily;;2}``{random_daily;;3}`000'
+  - '000000000'
+  - 'a0003000b'
+
+buttons:
+  3:
+    display-item:
+      material: ARROW
+      name: '&c« Go back'
+    actions:
+      1:
+        type: open_menu
+        menu: main
+```
+
+## Showcase
+
+<figure><img src="../.gitbook/assets/image.png" alt=""><figcaption></figcaption></figure>
