@@ -1,5 +1,15 @@
 # ⌨️Commands
 
+## FAQ:&#x20;
+
+### Does the /shop command have permission?
+
+A: Use `/shop` can directly open a menu called `main`. This is a feature called **Auto Open**, and you can disable it at config.yml file with `menu.auto-open.enabled` option. If you only want some players to be exposed to this command, you can set `conditions` for the menu so that only players who meet the specified conditions can open the menu. For more info, please view [Menus](../menus/general-menus.md) page.
+
+### Why it say condition not meet when open daily example menu?
+
+A: That menu already set a condition and you can find it at `menus/daily-shop-example.yml`.
+
 ## ultimateshop.bypassprice
 
 This permission can help you bypass price check and won't cost any price.
