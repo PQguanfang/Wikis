@@ -8,9 +8,9 @@ A: That is simply because you give self `*` permission so plugin will bypass pri
 
 A: No, actually they have small different, but you dind't find them. The simplest way is to change the `sell-methods` option in `config.yml` from `Bukkit` to `ItemFormat`.
 
-## Q: Does the /shop command have permission?
+## Q: Does the /shop command has permission?
 
-A: Use `/shop` can directly open a menu called `main`. This is a feature called **Auto Open**, and you can disable it at config.yml file with `menu.auto-open.enabled` option. If you only want some players to be exposed to this command, you can set `conditions` for the menu so that only players who meet the specified conditions can open the menu. For more info, please view [Menus](../menus/general-menus.md) page.
+A: Use `/shop` can directly open a menu called `main`. This is a feature called **Auto Open**, and you can disable it at `config.yml` file with `menu.auto-open.enabled` option. If you only want some players to be exposed to this command, you can set `conditions` for the menu so that only players who meet the specified conditions can open the menu. For more info, please view [Menus](../menus/general-menus.md) page.
 
 ## Q: Why it say condition not meet when open daily example menu?
 
