@@ -125,3 +125,15 @@ Open shop editor.
 Require **UltimateShopEditor** addon plugin, download it at SpigotMC.
 
 Require `ultimateshop.editor` permission.
+
+## /shop search
+
+Print the message that helps you know the hold item target product in shop.
+
+Require `ultimateshop.search` permission.
+
+## /shop sellhand
+
+Sell all hand item.
+
+Require `ultimateshop.sellhand` permission.
