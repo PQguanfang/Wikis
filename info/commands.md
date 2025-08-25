@@ -132,8 +132,8 @@ Print the message that helps you know the hold item target product in shop.
 
 Require `ultimateshop.search` permission.
 
-## /shop sellhand
+## /shop sellallhand
 
 Sell all hand item.
 
-Require `ultimateshop.sellhand` permission.
+Require `ultimateshop.sellallhand` permission.
