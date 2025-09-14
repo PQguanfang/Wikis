@@ -2,7 +2,7 @@
 
 ## Set dynamic value for your product configs
 
-Read [dynamic prices](../dynamic-prices/dynamic-price.md) before read this page. Similar to Dynamic Prices, if you want to make stock system, do it in `buy-limits` option, for example:
+The plugin itself does not store inventory data, but we can cleverly solve this problem by setting buy limits. Read [dynamic prices](../dynamic-prices/dynamic-price.md) before read this page. Similar to Dynamic Prices, if you want to make stock system, do it in `buy-limits` option and put `{server-times-server}` placeholder in it, for example:
 
 ```yaml
   A:
