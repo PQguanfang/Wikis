@@ -3,7 +3,7 @@
 The condition format will consist of several options.
 
 {% hint style="info" %}
-The `conditions` in the **Condition Format example** only represent **Condition Format** from now on. Please refer to the page description of the corresponding function for specific option names, such as `buy-conditions`.
+The `conditions` in the **Condition Format example** only represent **Condition Format** start from here. Please refer to the page description of the corresponding function for specific option names, such as `buy-conditions`.
 {% endhint %}
 
 ## General Options

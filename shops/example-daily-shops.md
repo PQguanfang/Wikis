@@ -6,7 +6,7 @@ This example will only work for <mark style="color:red;">**PREMIUM**</mark> vers
 
 ## Create random placeholder
 
-We need to create a random placeholders.&#x20;
+We need to create a random placeholder.&#x20;
 
 In this example, we created a new random placeholder config called `daily.yml` at `random_placeholder` folder. And it's options represents:
 
