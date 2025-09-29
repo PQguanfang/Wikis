@@ -47,3 +47,11 @@ Each action in `click-event-actions` support those options, like example above:
 * sell-only: This click event button will only display when this product can be sold (means has sell price).
 
 Those options only work in bedrock form UI or Java Dialog UI.
+
+## Showcase
+
+<figure><img src="../.gitbook/assets/image (13).png" alt=""><figcaption></figcaption></figure>
+
+<figure><img src="../.gitbook/assets/image (15).png" alt=""><figcaption></figcaption></figure>
+
+In this example, the **Buy One Stack** button only display in product inclused buy price.
