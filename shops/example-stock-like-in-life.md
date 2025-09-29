@@ -28,8 +28,8 @@ The plugin itself does not store inventory data, but we can cleverly solve this 
         start-apply: 0
     buy-limits:
       global: '{sell-times-server}' 
-    buy-limits-reset-mode: 'NEVER'
-    buy-limits-reset-time: '00:00:00' 
+    buy-times-reset-mode: 'NEVER'
+    buy-times-reset-time: '00:00:00' 
 ```
 
 We changed:
@@ -37,3 +37,7 @@ We changed:
 * `price-mode` option to `ANY` or `ALL`.
 * `buy-limits` option to `{sell-times-server}` . For sell limits, you need write `{buy-times-server}` here. Replace the placeholder to `{buy-times-player}` and `{sell-times-player}` to make the stock be per player.
 * `buy-limits-reset-mode` option to `'NEVER'`
+
+## FAQ: Restock
+
+The person who asked this question didn't understand this plugin at all. Your stock is achieved by setting a buy limit for the product. To restock, it is essentially resetting the buy times. This content is introduced on [this page](product-config-buy-sell-times-reset.md).
