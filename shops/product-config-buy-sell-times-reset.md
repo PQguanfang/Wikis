@@ -17,6 +17,7 @@ Buy times have those options:
 * buy-times-reset-time (before 3.3.0 is buy-limits-reset-time, but they are same)
 * buy-times-reset-time-format
 * buy-times-reset-value
+* buy-times-max-value
 
 Sell times have those options:
 
@@ -24,6 +25,7 @@ Sell times have those options:
 * sell-times-reset-time (before 3.3.0 is sell-limits-reset-time, but they are same)
 * sell-times-reset-time-format
 * sell-times-reset-value
+* sell-times-max-value
 
 If you want to enable buy times and sell times reset for all products, you can simply modify it at `config.yml` file.
 
@@ -34,6 +36,12 @@ use-times:
   # This only works for CUSTOM type of reset mode.
   default-reset-time-format: 'yyyy-MM-dd HH:mm:ss'
   default-reset-value: 0
+  # Set -1 to disable.
+  default-max-value: -1
+  # If set to true, product default buy / sell times will be set to reset value set in product configs or default value above.
+  set-reset-value-by-default: true
+  # If set to true, max value set in product configs or default value set above will only work for total placeholder.
+  max-value-for-total-only: true
 ```
 
 No matter what methods you set it up in, we can see that this feature consists of three option types:
@@ -42,6 +50,7 @@ No matter what methods you set it up in, we can see that this feature consists o
 * reset time
 * reset time format (only required for `CUSTOM` type)
 * reset value
+* max value
 
 ## Reset Mode
 
@@ -126,6 +135,16 @@ By default, the reset value is 0, but, if you want to make some difference, this
 ## Default Value <mark style="color:red;">**- Premium**</mark>
 
 The reset value will only be used after the buy times or sell times have been reset. Sometimes, if you not only want to do this, but also want to set it as the default value, you can enable the `use-times.set-reset-value-by-default` option in `config.yml` to do so. If you want a feature like default stock, it would be very useful.
+
+## Max Value <mark style="color:red;">**- Premium**</mark>
+
+You can set maximum values for buy times and sell times, and when the maximum value is reached, the plugin will no longer accumulate buy times and sell times.
+
+Please note:
+
+* After reaching the limit, players can still continue to purchase or sell products, but the plugin will not accumulate more times. If you want players to no longer purchase or recycle goods, then you should use the `buy-limits` option or `sell-limits` option in [Products](products.md) config instead of this feature.
+* Due to the setting of an upper limit that no longer accumulates, if the set upper limit is greater than the limit value, buy limits and sell limits will no longer be useful. Other features not mentioned may also be affected.
+* You can modify the `use-times.max-value-for-total-only` option in `config.yml` to ensure that the times placeholder accumulates normally even after reaching its maximum value, but the total placeholder does not continue to accumulate after reaching its maximum value. For information about these two placeholders, please refer to [this page](../placeholders/built-in-placeholder.md).
 
 ## Dynamic Reset Time <mark style="color:red;">**- Premium**</mark>
 
