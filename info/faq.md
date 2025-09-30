@@ -34,7 +34,7 @@ This option will only work for `ANY` or `ALL` price-mode.
 
 A: Some other plugin or mod lead to this problem. Try enable `ignore-click-outside` option jn `config.yml` file.
 
-## Q: What is different from full (free) version and premium version?
+## Q: What is different from free version and premium version?
 
 A: Check [this](premium-vs-free.md) page for more info.
 

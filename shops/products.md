@@ -95,6 +95,10 @@ buy-limits-conditions:
 
 * sell-limits: Same as buy-limits, but use for sell.
 
+{% hint style="info" %}
+For how to reset limits, please view [this page](product-config-buy-sell-times-reset.md).
+{% endhint %}
+
 ## Single Thing Options
 
 This section of the configuration includes the following options:
