@@ -55,6 +55,10 @@ items:
 
 ## General Options
 
+{% hint style="info" %}
+Click [here](shops.md) to see the detalied example of those general options.
+{% endhint %}
+
 * display-item: Product display item in shop menu, it can be different from the real item player will obtain after purchase. For virtual items, you must set `display-item` here, otherwise they can not be displayed in GUI. For real items, you must enable `auto-set-first-product` option under `display-item` section to let you remove this section, after enable, if `display-item` is not set, the first product real items will be used as display item. This section use [Item format](../format/itemformat-tm/). **Optional (if not set, will use first products)**
   * display-item.modify-lore: Whether we will modify display item lore to add info about price, limits and so on. You can set add lore info at `config.yml` file. **Optional (default to true)**
 * display-name: Set product display name in {product} placeholder and buy more menu display item. **Optional.**
@@ -62,6 +66,14 @@ items:
 * bedrock: View [this page](../menus/bedrock-menus-premium.md).
 * buy-more: Set whether this product can open buy more menu, **you must delete shop's buy-more option to make this option has effect! Optional.**
 * buy-more-menu: Set up separate buy more menu settings for the product. **Optional. Require 2.2.10+ version.**
+
+```yaml
+    buy-more: true
+    buy-more-menu:
+      menu: buy-more-2
+      max-amount: 16
+```
+
 * sell-all: Set whether this product can use sell all feature. **Optional, default to true. (Added in 3.9.3)**
 * price-mode: Support `ANY, ALL, CLASSIC_ANY, CLASSIC_ALL`. **Required.**
 * product-mode: Same as above. **Required if you have products section.**

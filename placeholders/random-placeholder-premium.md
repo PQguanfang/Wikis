@@ -9,25 +9,71 @@ All random placeholder configs are stored in `random_placeholders` folder. The f
 ```yaml
 reset-mode: TIMED
 reset-time: '00:00:00'
+per-player-element: true
+element-amount: 5
+elements:
+  A:
+    rate: 1
+    conditions:
+      1:
+        type: permission
+        permission: 'test.permission'
+  B:
+    rate: 5
+  C:
+    rate: 2
+  D:
+    rate: 5
+  E:
+    rate: 2
+  F:
+    rate: 15
+  G:
+    rate: 7
+```
+
+* per-player-element: If it is set to `false`, all players will use the value output by random placeholder. For example, player 1 will get **A**, and player 2 will get the same value, even if the player reaches 100 million, the value will be the same. If set to `true`, the values output by each player will be different from each other, and conditions can be set for elements. If an element does not meet the conditions, the player will never be able to extract it.
+
+{% hint style="info" %}
+This option is <mark style="color:red;">**NOT**</mark> recommended to be changed after enabling this random placeholder, as it may cause the plugin to detect errors (such as a per player random placeholder appearing in the global database) and output a prompt in the console that cannot be blocked.\
+The random placeholder of per player cannot be applied to global server scenarios, and vice versa. Random placeholders without per player enabled cannot be applied to per player scenarios. For example, when using the `resetrandomplaceholder` command, the per player's random placeholder must enter the player name in the command parameters, while the per player's random placeholder cannot enter the player name in the command parameters, otherwise the plugin will prompt an error.
+{% endhint %}
+
+* reset-mode/reset-time: Please view below to know.
+* element-amount: The amount of the element will picked in this placeholder. **(Added in 3.1.0)**
+* elements: The random element what placeholder will picked.&#x20;
+
+There are two ways to express `elements`.&#x20;
+
+The first is to write all elements in the form of a list, where the rate of each element is equal and without any conditions. **Support use \~ symbol means pick random number, for example, 5\~100 means pick one random number from 5 to 100.**
+
+```yaml
 elements:
   - 'A'
   - 'B'
   - 'C'
 ```
 
-* reset-mode/reset-time: Please view below to know.
-* element-amount: The amount of the element will picked. **(Added in 3.1.0)**
-* elements: The random element what placeholder will picked.&#x20;
-  * **Support use \~ symbol means pick random number, for example, 5\~100 means pick one random number from 5 to 100.**&#x20;
+```yaml
+elements:
+# Random number from 5 to 100.
+  - '5~100'
+```
+
+The second is to use the form of subsections, where each element has options for `rate` and `conditions` to fill in. The `conditions` option is not required and only support when `per-player-elemen`t being set to true. **(Added in 3.12.0)**
 
 ```yaml
-reset-mode: TIMED
-reset-time: '00:00:00'
-element-amount: 2
 elements:
-  - 'A'
-  - 'B'
-  - 'C'
+  A:
+    rate: 1
+    conditions:
+      1:
+        type: permission
+        permission: 'test.permission'
+  B:
+    rate: 5
+  C:
+    rate: 2
 ```
 
 ## Use Placeholder
