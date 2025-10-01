@@ -118,7 +118,7 @@ Different from `resetrandomplaceholder`, `setrandomplaceholder` command won't re
 
 The per player's random placeholder must enter the player name in the command parameters, while the per player's random placeholder cannot enter the player name in the command parameters, otherwise the plugin will prompt an error.
 
-Support add `-b` at the end of the command to bypass element exist check, which means you can set the custom element you'd like. For example, my random placeholder only have `A,B,C` total 3 elements, if I type **D** as element here, plugin will print error message, if you add `-b` suffix, then the placeholder value will be set to **D** and plugin never print error message, but it is not recommended.
+~~Support add `-b` at the end of the command to bypass element exist check, which means you can set the custom element you'd like. For example, my random placeholder only have `A,B,C` total 3 elements, if I type **D** as element here, plugin will print error message, if you add `-b` suffix, then the placeholder value will be set to **D** and plugin never print error message, but it is not recommended.~~ (Removed in 3.12.0, now this command no longer check element exist)
 
 Require `ultimateshop.setrandomplaceholder` permission.
 
