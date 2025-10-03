@@ -35,13 +35,18 @@ debug: false
 
 config-files:
   language: en_US
+  force-parse-mini-message: true
   # Premium version only.
   minecraft-locate-file:
     # After enable, we will autoload Minecraft locate file when we need know an item's locate name.
     # It will make server little lag when loading this file because this file is very large.
-    enabled: true
+    enabled: false
     generate-new-one: false
     file: 'zh_cn.json'
+
+cache:
+  # If you are facing multi servers sync issue, try greater this value.
+  load-delay: 7
 
 sell:
   # Support Value: Bukkit or ItemFormat.
@@ -60,12 +65,10 @@ sell:
     ignore-items:
       # Format: Shop ID;;Item ID
       - 'hideshop;;A'
-    hide-message: true
   sell-stick:
     # The min value here is 5, if you set value less than 5, we will auto set the cooldown to 5 tick.
     # In ticks.
     cooldown: 5
-    hide-message: true
     display-calculate-multiplier: true
     # Support value: LEFT, RIGHT and LEFT;;RIGHT
     # Do not change this value unless you are know what you are doing!
@@ -80,6 +83,8 @@ give-item:
   check-full: false
 
 menu:
+  # If enabled, products will auto be hidden in quickbuy & quicksell command, sell all if they are not display in shop menu.
+  secret-shop-items: true
   # Recommend use when you are running big server, it will make player no longer quickly click
   # and reopen shop menu to make sure UltimateShop not lag your server.
   # In ticks.
@@ -128,6 +133,7 @@ menu:
         # Remove this option if you don't want this button.
         back: '&cBack'
   buy-more-menu:
+    not-open-when-invalid: true
     default:
       menu: buy-more
       max-amount: 64
@@ -154,8 +160,18 @@ menu:
   # Premium version only.
   click-event-actions:
     buy-one-stack:
+      display-name: 'Buy One Stack'
+      buy-only: true
       1:
         type: buy
+        shop: '{shop}'
+        item: '{item}'
+        amount: 64
+    sell-one-stack:
+      display-name: 'Sell One Stack'
+      sell-only: true
+      1:
+        type: sell
         shop: '{shop}'
         item: '{item}'
         amount: 64
@@ -166,6 +182,12 @@ use-times:
   # This only works for CUSTOM type of reset mode.
   default-reset-time-format: 'yyyy-MM-dd HH:mm:ss'
   default-reset-value: 0
+  # Set -1 to disable.
+  default-max-value: -1
+  # If set to true, product default buy / sell times will be set to reset value set in product configs or default value above.
+  set-reset-value-by-default: true
+  # If set to true, max value set in product configs or default value set above will only work for total placeholder.
+  max-value-for-total-only: true
 
 math:
   enabled: true
@@ -180,6 +202,10 @@ log-transaction:
   format: '{player} | {shop} | {buy-or-sell} | {item-name}x{amount} | {price}'
 
 display-item:
+  # Require Paper 1.17.1+ version.
+  auto-translate-item-name: true
+  # If set to true, if your product default amount is 10, and you purchase it x64 in one time, we will display 640 as result in amount placeholder.
+  calculate-amount: true
   auto-set-first-product: true
   # @+lower case means conditional lore, do not remove them here.
   # Otherwise, the line without this will always display it.
@@ -207,7 +233,7 @@ display-item:
     - '@a{buy-click}-b'
     - '@b{sell-click}-b'
     - '@k&#FFFACDRight-Shift click to pick amount!-b'
-    - '@b&#FFFACDDrop (Q key) to sell all!-b'
+    - '@m&#FFFACDDrop (Q key) to sell all!-b'
     - '@n&c&l:( Can not do this-i'
     - '@a&cThis item can not be sold-i-m'
     - '@b&cThis item can not be purchased-i-m'
@@ -245,6 +271,8 @@ placeholder:
     can-used-everywhere: false
   math:
     scale: 0
+  cron:
+    format: "yyyy-MM-dd HH:mm:ss"
   data:
     # If your server never use dynamic value in prices or similar things, you can set this option to false.
     # This will improve little plugin performance.
