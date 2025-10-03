@@ -95,6 +95,7 @@ You have 2 way to set buy more menu for products. By default, all products use t
 
 ```yaml
   buy-more-menu:
+    not-open-when-invalid: true
     default:
       menu: buy-more
       max-amount: 64
@@ -109,6 +110,10 @@ You have 2 way to set buy more menu for products. By default, all products use t
 You can also set `buy-more-menu` section in each product configs, in [Shops](../shops/shops.md) page, we have telled you how to do that with an example.
 
 If you want to disable buy more menu for specified shops or products, just use `buy-more` option in shop configs or product configs, this also claimed in [Shops](../shops/shops.md) page.
+
+Other option:
+
+* not-open-when-invalid: If there is only a purchase button in the buy more menu and the product is not purchasable (meaning there is no buy price), then we consider this buy more menu to be invalid and cannot be opened, and the same applies to sell. (Added in 3.12.1)
 
 ## FAQ: Can we separate buy more and sell more?
 
