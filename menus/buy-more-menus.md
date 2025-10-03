@@ -109,3 +109,7 @@ You have 2 way to set buy more menu for products. By default, all products use t
 You can also set `buy-more-menu` section in each product configs, in [Shops](../shops/shops.md) page, we have telled you how to do that with an example.
 
 If you want to disable buy more menu for specified shops or products, just use `buy-more` option in shop configs or product configs, this also claimed in [Shops](../shops/shops.md) page.
+
+## FAQ: Can we separate buy more and sell more?
+
+A: This feature added in version 3.12.1, and premium version only, for example of it, please view [here](../features/custom-click-event-premium.md#example-only-buy-more-menu).

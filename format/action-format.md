@@ -232,6 +232,19 @@ Open specified common menus.
         item: A
 ```
 
+## Open Buy More Menu with Custom Buy More Menu settings <mark style="color:red;">- Premium</mark>
+
+```yaml
+    actions:
+      1:
+        type: buy_more_menu
+        shop: farming
+        item: A
+        buy-more-menu:
+          menu: buy-more-buy
+          max-amount: 128
+```
+
 ## Open Sell All Menu
 
 ```yaml
