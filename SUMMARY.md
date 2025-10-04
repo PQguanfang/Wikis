@@ -41,7 +41,7 @@
 * [♻️Product Config: Buy/Sell Times Reset](shops/product-config-buy-sell-times-reset.md)
 * [⚡Example: Common Usage](shops/example-common-usage.md)
 * [🌱Example: Stock (like in life)](shops/example-stock-like-in-life.md)
-* [📅Example: Daily Shops](shops/example-daily-shops.md)
+* [📅Example: Daily Shop/Rotating Shop](shops/example-daily-shop-rotating-shop.md)
 * [🏆Example: Daily Rewards](shops/example-daily-rewards.md)
 
 ## 📍Placeholders
