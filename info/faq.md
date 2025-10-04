@@ -40,7 +40,7 @@ A: Check [this](premium-vs-free.md) page for more info.
 
 ## Q: Can I set different add lore for each product?
 
-A: Yes, in [Shop](../shops/shops.md) page we have telled you that `add-lore` also works in each product configs!
+A: Yes, in [Shop](../shops/shops.md) page we have told you that `add-lore` also works in each product configs!
 
 ## Q: Shop menu can not open after use once!
 

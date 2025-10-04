@@ -10,6 +10,7 @@ All random placeholder configs are stored in `random_placeholders` folder. The f
 reset-mode: TIMED
 reset-time: '00:00:00'
 per-player-element: true
+element-sort: true
 element-amount: 5
 elements:
   A:
@@ -32,13 +33,14 @@ elements:
     rate: 7
 ```
 
-* per-player-element: If it is set to `false`, all players will use the value output by random placeholder. For example, player 1 will get **A**, and player 2 will get the same value, even if the player reaches 100 million, the value will be the same. If set to `true`, the values output by each player will be different from each other, and conditions can be set for elements. If an element does not meet the conditions, the player will never be able to extract it.
+* per-player-element: If set to `false`, all players will use the same value output by random placeholder. For example, player 1 will get **A**, and player 2 will get the same value, even if the player reaches 100 million, the value will be the same. If set to `true`, the values output by each player will be different from each other, and conditions can be set for elements. If an element does not meet the conditions, the player will never be able to extract it.
 
 {% hint style="info" %}
 This option is <mark style="color:red;">**NOT**</mark> recommended to be changed after enabling this random placeholder, as it may cause the plugin to detect errors (such as a per player random placeholder appearing in the global database) and output a prompt in the console that cannot be blocked.\
 The random placeholder of per player cannot be applied to global server scenarios, and vice versa. Random placeholders without per player enabled cannot be applied to per player scenarios. For example, when using the `resetrandomplaceholder` command, the per player's random placeholder must enter the player name in the command parameters, while the per player's random placeholder cannot enter the player name in the command parameters, otherwise the plugin will prompt an error.
 {% endhint %}
 
+* element-sort: If set to `false`, the result of the random placeholder will be out of order. For example, if you set `elements` to `A, B, C, D, E` and the randomly generated result is `B, D`, the result of the random placeholder may be `B, D`, or `D, B`. However, if set to `true`, the result will be output strictly in the order of elements, and the output result can only be `B, D`. **(Added in 3.12.2)**&#x20;
 * reset-mode/reset-time: Please view below to know.
 * element-amount: The amount of the element will picked in this placeholder. **(Added in 3.1.0)**
 * elements: The random element what placeholder will picked.&#x20;
