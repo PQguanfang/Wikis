@@ -22,6 +22,8 @@ Please view [Random Placeholder](../placeholders/random-placeholder-premium.md) 
 reset-mode: TIMED
 reset-time: '00:00:00'
 element-amount: 5
+per-player-element: false
+element-sort: true
 elements:
   - 'A'
   - 'B'
