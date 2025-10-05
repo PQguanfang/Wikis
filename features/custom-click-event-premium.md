@@ -94,7 +94,7 @@ Do not forgot also update your auto add lore configs to make product description
           max-amount: 128
     buy-more-sell:
       display-name: 'Buy'
-      buy-only: true
+      sell-only: true
       1:
         type: buy_more_menu
         shop: '{shop}'
