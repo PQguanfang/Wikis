@@ -34,6 +34,34 @@ This condition only checked when player use this click type to use the button.&#
         click-type: LEFT
 ```
 
+#### Actions <mark style="color:red;">- Premium</mark>
+
+```yaml
+    conditions:
+      1:
+        not-meet-actions:
+          1: 
+            type: message
+            message: 'Condition not meet'
+        meet-actions:
+          1: 
+            type: message
+            message: 'Condition meet'
+```
+
+You can set actions for the entire condition, and if you want to do that, it's like this:
+
+```yaml
+conditions:
+  not-meet-actions:
+      1: 
+        type: message
+        message: 'You must use this apply item in world!'
+  1:
+    type: world
+    world: 'test'
+```
+
 ## Available Placeholders
 
 * {world}
