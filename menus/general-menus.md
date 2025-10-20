@@ -13,6 +13,7 @@ There are 3 types of menus.
 ## Configs
 
 * title: Menu title, for shop menu type, support `{shop-name}` to display shop displayname which set in it's config.
+* dynamic-title: Please view [this page](../features/dynamic-title-premium.md).
 * size: Menu size, only support one of the number: **9,18,27,36,45,54**.
 * layout: Button layout, this is a list option. For more info, please view below.
 * dynamic-layout: If you are using dynamic value like placeholders in `layout` option, you need enable this option. This will cost extra performance. <mark style="color:red;">**(PREMIUM)**</mark>
