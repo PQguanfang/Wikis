@@ -37,4 +37,4 @@ dynamic-title: # <--- New dynamic title
   interval: 45
 ```
 
-All menu configs support add this section, before use this, you need set `menu.title-update.enabled` option value to `true` in `config.yml` file. If necessary, please set the value of the `menu.title-update.black-dynamic-title` option to `true` in `config.yml` file. This feature may also cause items flashing. By increasing the interval slightly and using the resend items pack, the situation may be slightly better.
+All menu configs support add this section, before use this, you need set `menu.title-update.enabled` option value to `false` in `config.yml` file. If necessary, please set the value of the `menu.title-update.black-dynamic-title` option to `true` in `config.yml` file. This feature may also cause items flashing. By increasing the interval slightly and using the resend items pack, the situation may be slightly better.
