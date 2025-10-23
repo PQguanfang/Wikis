@@ -95,6 +95,35 @@ Send a message to the player, support color code.
         message: 'Hello!'
 ```
 
+## Title
+
+Send title to the player, support the color code.
+
+```yaml
+    actions:
+      1:
+        type: title
+        main-title: 'Good day'
+        sub-title: 'Not bad'
+        fade-in: 10
+        stay: 70
+        fade-out: 30
+```
+
+## Particle
+
+```yaml
+    actions:
+      1: 
+        type: particle
+        particle: HEART
+        count: 20
+        offset-x: 0.3
+        offset-y: 1.0
+        offset-z: 0.3
+        speed: 0.01Y
+```
+
 ## Announcement
 
 Send a message to all online players, support color code.&#x20;
