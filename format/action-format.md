@@ -121,7 +121,7 @@ Send title to the player, support the color code.
         offset-x: 0.3
         offset-y: 1.0
         offset-z: 0.3
-        speed: 0.01Y
+        speed: 0.01
 ```
 
 ## Announcement
