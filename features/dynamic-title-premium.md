@@ -1,3 +1,7 @@
+---
+hidden: true
+---
+
 # 🌈Dynamic Title - Premium
 
 ## Requirements
