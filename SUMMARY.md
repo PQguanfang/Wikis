@@ -2,6 +2,7 @@
 
 * [🎉Welcome](README.md)
 * [🌏Other Language Wiki](other-language-wiki.md)
+* [💬Config Pack](config-pack.md)
 
 ## 📦Info
 
