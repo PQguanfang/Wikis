@@ -102,9 +102,15 @@ In this example, we create a new random placeholder config called `price.yml` at
 ```yaml
 reset-mode: TIMED
 reset-time: '00:00:00'
+element-sort: true
+element-amount: 50 
 elements:
 # Random number from 5 to 100.
   - '5~100'
+  - '4~40'
+  - '53~530'
+  - '32~140'
+  - '55~140'
 ```
 
 ### Set dynamic value in your product configs
@@ -123,7 +129,7 @@ items:
     buy-prices:
       1:
         economy-plugin: Vault
-        amount: '{random_price}' # <--- Changed line
+        amount: '{random_price;;1}' # <--- Changed line
         placeholder: '&6{amount} Coins'
         start-apply: 0
 ```
