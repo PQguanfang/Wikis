@@ -30,6 +30,10 @@ Each single thing have those types:
         material: emerald
       2:
         material: diamond
+        conditions:
+          1:
+            type: permission
+            permission: group.vip
     buy-prices:
       1:
         economy-plugin: Vault
@@ -83,7 +87,41 @@ Each single thing have those types:
             message: 'eco give {player} {amount} 1'
         amount: 500
         placeholder: '{amount}$'
-    
+  C:
+    display-item:
+      material: PAPER
+      custom-model-data: 200
+      name: '&fMagic Flight Paper &c(Level I)'
+      lore:
+        - '&fHold this and you can fly!'
+    products:
+      1:
+        # Custom Sell Match Rule - Explain the item match rule!
+        match-item:
+          contains-lore:
+            - 'Magic Flight Paper'
+        # Buy Give Command
+        give-actions:
+          1:
+            multi-once: true
+            type: console_command
+            command: 'flyitem give {player} {amount}' # Put custom item give command here!
+          2:
+            type: message
+            message: 'test message'
+        amount: 64
+    buy-prices:
+      1:
+        economy-type: exp
+        amount: 1
+        start-apply: 0
+        placeholder: '1 Exp'
+    sell-prices:
+      1:
+        economy-type: exp
+        amount: 1
+        start-apply: 0
+        placeholder: '1 Exp'
 ```
 
 In product configurations, we set the corresponding type of single thing through several options. And according to the type you want, fill in the corresponding config format in these options. There may be additional options to fill in for different single things, as follows:
@@ -135,10 +173,67 @@ You may note: you can set action will run when the single thing is been give to 
         economy-plugin: Vault
         amount: 150
         placeholder: '{amount}⛂'
-    buy-actions:
+    buy-actions: ## In product config
       1:
         type: console_command
         command: "crate give %player_name% magic" # Put command here.
+  B:
+    price-mode: CLASSIC_ALL
+    product-mode: CLASSIC_ALL
+    products:
+      1:
+        name: 'Magic Crate Key'
+        material: PAPER
+        custom-model-data: 500
+        amount: 1
+        give-item: false # You need add this to make sure the "fake" product will not give to player
+        give-actions: ## In single things config
+          1:
+            type: console_command
+            command: "crate give %player_name% magic"
+    buy-prices:
+      1:
+        economy-plugin: Vault
+        amount: 150
+        placeholder: '{amount}⛂'
+```
+
+In the above two examples, the final execution effect is identical. But can you think of it? If combined with the `conditions` option, using the **give actions** method can enable different players to execute different conditions!
+
+```yaml
+  B:
+    price-mode: CLASSIC_ALL
+    product-mode: CLASSIC_ALL
+    products:
+      1:
+        name: 'Magic Crate Key'
+        material: PAPER
+        custom-model-data: 500
+        amount: 1
+        give-item: false # You need add this to make sure the "fake" product will not give to player
+        give-actions: ## In single things config
+          1:
+            type: console_command
+            command: "crate give %player_name% magic"
+      2:
+        name: 'Magic Crate Key (VIP plus 1 for free)'
+        material: PAPER
+        custom-model-data: 500
+        amount: 1
+        give-item: false # You need add this to make sure the "fake" product will not give to player
+        give-actions: ## In single things config
+          1:
+            type: console_command
+            command: "crate give %player_name% magic"
+        conditions:
+          1:
+            type: permission
+            permission: group.vip
+    buy-prices:
+      1:
+        economy-plugin: Vault
+        amount: 150
+        placeholder: '{amount}⛂'
 ```
 
 ## Alternative Options
