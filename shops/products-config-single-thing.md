@@ -17,7 +17,7 @@ Each single thing have those types:
 * Match Item: Use [Custom Item Match Method](../features/custom-item-match-method.md) to tell us which items you want to match. **(Buy/Products)**
 * Vanilla Economy/Hook Economy: Use [EconomyFormat](../format/economyformat-tm.md) to tell us how much money you want to player pay or give to player. **(Buy/Sell/Products)**
 * Custom: If those types do not meet your need, you can make a custom single thing! You need add `match-placeholder` option at single thing config to make plugin know what the now amount player have of this custom product/price, and then we will compare the now amount you set here and the required amount. In the example above, we will compare player's health. **If your economy plugins do not supported, just place it's player balance placeholder here and all is solved! (Sell/Products)&#x20;**<mark style="color:red;">**(Premium)**</mark>
-* Free: Single thing do not include ItemFormat, EconomyFormat, match-item section and match-placeholder section will be consider as free.
+* Free/Empty: Single thing do not include ItemFormat, EconomyFormat, `match-item` section and `match-placeholder` section will be consider as free.
 
 ## Options
 
@@ -94,7 +94,7 @@ In product configurations, we set the corresponding type of single thing through
   * products.take-actions: The action will run after this product is been taken from player. Use [Action Format](../format/action-format.md) here.&#x20;
   * products.give-item: Whether we will give this product item to player when he trying to buy.
   * products.take: Whether we will take this product when player trying to sell. Useful if you just want to this item be a requirement but will not cost after sell.
-* buy-prices: Product buy prices. Support Item format and [Economy format](../format/economyformat-tm.md). You can also add [Custom Sell Match Method](../features/custom-item-match-method.md) or other things depend on single thing type here. **Optional. If not set, product can not be purchased.**
+* buy-prices: Product buy prices. Support [Item format](../format/itemformat-tm/)s and [Economy format](../format/economyformat-tm.md). You can also add [Custom Sell Match Method](../features/custom-item-match-method.md) or other things depend on single thing type here. **Optional. If not set, product can not be purchased.**
   * buy-prices.start-apply: Start which times this price will apply. Only supports `ANY` or `ALL` price type. **Optional. Default to 0.**
   * buy-prices.end-apply: Last times the price will apply. Only supports `ANY` or `ALL` price type. **Optional. Default to infinite.**
   * buy-prices.apply: Which times this price will apply, format: `[1,2,3,4]`. Only supports `ANY` or `ALL` price type. **Optional. Default use start-apply option value.**
@@ -102,7 +102,7 @@ In product configurations, we set the corresponding type of single thing through
   * buy-prices.conditions: Player must meet the condition to use this price. Use [Condition Format](../format/condition-format.md)  here. **Optional. Default don't have any conditions.**&#x20;
   * buy-prices.take-actions: The action will run after this buy price is been taken from player. Use [Action Format](../format/action-format.md) here.&#x20;
   * buy-prices.take: Whether we will take this buy price when player trying to buy. Useful if you just want to this item be a requirement but will not cost after buy.
-* sell-prices: Product sell prices. Support [Item format](../format/itemformat-tm/) and [Economy format](../format/economyformat-tm.md). You can also add [Custom Sell Match Method](../features/custom-item-match-method.md) here. **Optional. If not set, product can not be selled.**
+* sell-prices: Product sell prices. Support [Item format](../format/itemformat-tm/) and [Economy format](../format/economyformat-tm.md). You can also add [Custom Sell Match Method](../features/custom-item-match-method.md) here. **Optional. If not set, product can not be sold.**
   * sell-prices also support all sub options like in `buy-prices`.
   * sell-prices.give-actions: The action will run after this sell price is been give to player, see [Action](../format/action-format.md) for more info. **Optional.**
 
@@ -118,6 +118,28 @@ You may note: you can set action will run when the single thing is been give to 
 
 * `give-actions` only executed when the single thing is used and give to player. `buy-actions/sell-actions` will always executed when player successfully buy or sell the item.&#x20;
 * `give-actions`'s `{amount}` placeholder will return the single price/product amount, `buy-actions/sell-actions` will return the amount player buy or sell the item in this time. For example, player sell 64x apple, and obtain 100 coins by this, `give-actions`'s `{amount}` placeholder will return 100, and `buy-actions/sell-actions` will return 64.
+
+## Example: Command Shop
+
+```yaml
+  A:
+    price-mode: CLASSIC_ALL
+    product-mode: CLASSIC_ALL
+    display-item:
+      name: 'Magic Crate Key'
+      material: PAPER
+      custom-model-data: 500
+      amount: 1
+    buy-prices:
+      1:
+        economy-plugin: Vault
+        amount: 150
+        placeholder: '{amount}⛂'
+    buy-actions:
+      1:
+        type: console_command
+        command: "crate give %player_name% magic" # Put command here.
+```
 
 ## Alternative Options
 

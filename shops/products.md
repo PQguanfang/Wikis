@@ -59,13 +59,13 @@ items:
 Click [here](shops.md) to see the detalied example of those general options.
 {% endhint %}
 
-* display-item: Product display item in shop menu, it can be different from the real item player will obtain after purchase. For virtual items, you must set `display-item` here, otherwise they can not be displayed in GUI. For real items, you must enable `auto-set-first-product` option under `display-item` section to let you remove this section, after enable, if `display-item` is not set, the first product real items will be used as display item. This section use [Item format](../format/itemformat-tm/). **Optional (if not set, will use first products)**
+* display-item: Product display item in shop menu, it can be different from the real item player will obtain after purchase. For virtual items, you must set `display-item` here, otherwise they can not be displayed in GUI. For real items, you must enable `auto-set-first-product` option under `display-item` section in `config.yml` file to let you remove this section, after enable, if `display-item` is not set, the first product real items will be used as display item. This section use [Item format](../format/itemformat-tm/). **Optional (if not set, will use first products)**
   * display-item.modify-lore: Whether we will modify display item lore to add info about price, limits and so on. You can set add lore info at `config.yml` file. **Optional (default to true)**
-* display-name: Set product display name in {product} placeholder and buy more menu display item. **Optional.**
-* add-lore: Set special [display item add lore](../menus/display-item-add-lore.md) for this product, if not set, we will use default value set in config.yml. **Optional.**
+* display-name: Set product display name in `{product}` placeholder and buy more menu display item. **Optional. (if not set, we will use the display item name as product display name)**
+* add-lore: Set special [display item add lore](../menus/display-item-add-lore.md) for this product, if not set, we will use default value set in `config.yml`. **Optional.**
 * bedrock: View [this page](../menus/bedrock-menus-premium.md).
-* buy-more: Set whether this product can open buy more menu, **you must delete shop's buy-more option to make this option has effect! Optional.**
-* buy-more-menu: Set up separate buy more menu settings for the product. **Optional. Require 2.2.10+ version.**
+* buy-more: Set whether this product can open buy more menu, **you must delete shop's `buy-more` option to make this option has effect! Optional. (default to true)**
+* buy-more-menu: Set up separate buy more menu settings for the product. **Optional. Require 2.2.10+ version. (if not set, will use default value set in `config.yml` file)**
 
 ```yaml
     buy-more: true
@@ -84,9 +84,9 @@ Click [here](shops.md) to see the detalied example of those general options.
 
 <table><thead><tr><th width="118">Mode</th><th width="179">ANY</th><th>ALL</th><th>CLASSIC_ANY</th><th>CLASSIC_ALL</th></tr></thead><tbody><tr><td>Product Give</td><td>Give random products that meet conditions.</td><td>Give all products.</td><td>Same as ANY.</td><td>Same as ALL.</td></tr><tr><td>Product /Price Take</td><td>First product/price that we found player meet condition and have enough amount.</td><td>Players must have all products/prices that meet conditions to sell.</td><td>Same as ANY.</td><td>Same as ALL.</td></tr><tr><td>Price Give (means sell)</td><td>First prices meet the condition requirements.</td><td>All prices will be given.</td><td>Same as ANY.</td><td>Same as ALL.</td></tr><tr><td>Price Support</td><td>Support dynamic price &#x26; <code>apply</code> option.</td><td>Same as ALL.</td><td>Price must be same at  everytime.</td><td>Same as CLASSIC_ALL.</td></tr><tr><td>Support Sell All</td><td><strong>No</strong><br>Due to the dynamic nature of price values, plugins have no way of knowing the maximum number of times you can sell a product</td><td><strong>No</strong><br>Due to the dynamic nature of price values, plugins have no way of knowing the maximum number of times you can sell a product</td><td>Yes</td><td>Yes</td></tr><tr><td>Server  Performances</td><td>Maybe high when you have much buy/sell requests.</td><td>Same as ALL.</td><td>Low, just like other shop plugins doing!</td><td>Same as CLASSIC_ANY.</td></tr></tbody></table>
 
-* buy-actions: The action will run after buy this product, use [Action Forma](../format/action-format.md)t here. **Optional.**
-* sell-actions: The action will run after sell this product,  use [Action Forma](../format/action-format.md)t here. **Optional.**
-* fail-actions: The action will run if we fail to buy or sell this product,  use [Action Forma](../format/action-format.md)t here. **Optional. In example above we put this on general-configs and set it as a fail sound.**
+* buy-actions: The action will run after buy this product, use [Action Forma](../format/action-format.md)[t](../format/action-format.md) here. **Optional.**&#x20;
+* sell-actions: The action will run after sell this product,  use [Action Format](../format/action-format.md) here. **Optional.**
+* fail-actions: The action will run if we fail to buy or sell this product,  use [Action Format](../format/action-format.md) here. **Optional. In example above we put this on general-configs and set it as a fail sound.**
 * buy-conditions: The condition player need to meet to buy this product, use [Condition Format](../format/condition-format.md) here. **Optional**.
 * sell-conditions: The condition player need to meet to sell this product, use [Condition Format](../format/condition-format.md) here. **Optional**.
 * buy-limits: Set the maximum times of buy/sell times. **Optional. If not set, product can be purchased with unlimited times.**
@@ -138,6 +138,8 @@ The introduction of these options is on a separate page, please [click here](pro
 
 You can set placeholders (including PlaceholderAPI) and [Math Calculate Format](../format/math-calculate-format.md) in `buy-prices`, `sell-prices` section's `amount` option and `buy-limits`, `sell-limits` section's value in shop configs.
 
+By default, dynamic values are calculated in real-time and are not refreshed periodically. However, players will not see real-time values in the GUI. We will only refresh the dynamic values displayed in the GUI after the player opens the UI or clicks the item each time. For example, if you set a dynamic value in the purchase price and the dynamic value is changed when the player opens the GUI, although the player will not notice this change in the GUI display item, the plugin will calculate the price based on the updated dynamic value at the final purchase. This is a decision made to balance server performance and save costs.
+
 Available built-in placeholder, for more info about them, please view [Built-In Placeholders](../placeholders/built-in-placeholder.md) page.
 
 * {buy-times-player}
@@ -157,13 +159,34 @@ Difference between **times** placeholder and **total** placeholder:
 * {sell-total-player} <mark style="color:red;">**- PREMIUM, 3.9.0+**</mark>
 * {sell-total-server} <mark style="color:red;">**- PREMIUM, 3.9.0+**</mark>
 * {last-buy-player} <mark style="color:red;">**- PREMIUM**</mark>
+
+Display the time interval between the last purchase of this item by a single player, in seconds. If the player has not purchased this item or the buy time has been reset, it will return `0`.
+
 * {last-buy-server} <mark style="color:red;">**- PREMIUM**</mark>
+
+Display the time interval between the last purchase of this item by global server, in seconds. If no one has not purchased this item before or the buy time has been reset, it will return `0`.
+
 * {last-sell-player} <mark style="color:red;">**- PREMIUM**</mark>
-* {last-sell-server} <mark style="color:red;">**- PREMIUM**</mark>
+
+Display the time interval between the last sell of this item by a single player, in seconds. If the player has not sold this item or the sell time has been reset, it will return `0`.
+
+* {last-sell-server} <mark style="color:red;">**- PREMIUM**</mark>\
+  Display the time interval between the last sell of this item by global server, in seconds. If no one sold this item before or the sell time has been reset, it will return `0`.
 * {last-buy-reset-player} <mark style="color:red;">**- PREMIUM, 3.9.0+**</mark>
+
+Display the time interval between the last buy reset or first buy time after reset (depends on the reset mode you selected, for more info, please view [this page](https://ultimateshop.superiormc.cn/shops/product-config-buy-sell-times-reset)) of this item by a single player, in seconds. If the player has not purchased this item or the buy time has been reset, it will return last buy time.
+
 * {last-buy-reset-server} <mark style="color:red;">**- PREMIUM, 3.9.0+**</mark>
+
+Display the time interval between the last buy reset or first buy time after reset (depends on the reset mode you selected, for more info, please view [this page](https://ultimateshop.superiormc.cn/shops/product-config-buy-sell-times-reset)) of this item by global server, in seconds. If the player has not purchased this item or the buy time has been reset, it will return last buy time.
+
 * {last-sell-reset-player} <mark style="color:red;">**- PREMIUM, 3.9.0+**</mark>
+
+Display the time interval between the last sell reset or first sell time after reset (depends on the reset mode you selected, for more info, please view [this page](https://ultimateshop.superiormc.cn/shops/product-config-buy-sell-times-reset)) of this item by a single player, in seconds. If the player has not purchased this item or the buy time has been reset, it will return last sell time.
+
 * {last-sell-reset-server} <mark style="color:red;">**- PREMIUM, 3.9.0+**</mark>
+
+Display the time interval between the last sell reset or first sell time after reset (depends on the reset mode you selected, for more info, please view [this page](https://ultimateshop.superiormc.cn/shops/product-config-buy-sell-times-reset)) of this item by global server, in seconds. If the player has not purchased this item or the buy time has been reset, it will return last sell time.
 
 Also in `buy-prices` and `sell-prices` section, you can set new 2 options:
 
