@@ -173,7 +173,7 @@ You may note: you can set action will run when the single thing is been give to 
         economy-plugin: Vault
         amount: 150
         placeholder: '{amount}⛂'
-    buy-actions: ## In product config
+    buy-actions: # In product config
       1:
         type: console_command
         command: "crate give %player_name% magic" # Put command here.
@@ -187,7 +187,7 @@ You may note: you can set action will run when the single thing is been give to 
         custom-model-data: 500
         amount: 1
         give-item: false # You need add this to make sure the "fake" product will not give to player
-        give-actions: ## In single things config
+        give-actions: # In single things config
           1:
             type: console_command
             command: "crate give %player_name% magic"
@@ -211,7 +211,7 @@ In the above two examples, the final execution effect is identical. But can you 
         custom-model-data: 500
         amount: 1
         give-item: false # You need add this to make sure the "fake" product will not give to player
-        give-actions: ## In single things config
+        give-actions: # In single things config
           1:
             type: console_command
             command: "crate give %player_name% magic"
@@ -221,7 +221,7 @@ In the above two examples, the final execution effect is identical. But can you 
         custom-model-data: 500
         amount: 1
         give-item: false # You need add this to make sure the "fake" product will not give to player
-        give-actions: ## In single things config
+        give-actions: # In single things config
           1:
             type: console_command
             command: "crate give %player_name% magic"

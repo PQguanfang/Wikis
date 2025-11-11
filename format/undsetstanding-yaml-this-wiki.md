@@ -65,15 +65,15 @@ items:
 
 They exist side by side at the top of the configuration. This is shop configs, so you should get available top level options at [Shops](../shops/shops.md) page. In that page, we told you available keys with very big font size.
 
-<figure><img src="../.gitbook/assets/screenshot-20251110-195743.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/screenshot-20251110-195743.png" alt="" width="375"><figcaption></figcaption></figure>
 
 with very detalied example.
 
-<figure><img src="../.gitbook/assets/f5bb3326-2945-4e51-b046-fcf31187d9d5.jpeg" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/f5bb3326-2945-4e51-b046-fcf31187d9d5.jpeg" alt="" width="375"><figcaption></figcaption></figure>
 
 All of them has detelied info:
 
-<figure><img src="../.gitbook/assets/433e92d7-b423-4e64-b49b-86e2f8a57171.jpeg" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/433e92d7-b423-4e64-b49b-86e2f8a57171.jpeg" alt="" width="375"><figcaption></figcaption></figure>
 
 2️⃣ Level 2 Under settings:
 
@@ -90,19 +90,19 @@ Under items:
 * A is a **child key** representing a shop category or an item group. A means this product ID is A, and all section under A will only work for this product.
 
 <pre class="language-yaml"><code class="lang-yaml"><strong>items:
-</strong><strong>  buy-prices: ## Will not work
+</strong><strong>  buy-prices: # Will not work
 </strong>      1:
         economy-plugin: Vault
         amount: '0.63'
         placeholder: '{amount}$'
   A:
-    menu: 'example-shop-menu' ## Will not work.
-    buy-more: true ## Will not work.
-    shop-name: 'Blocks Shop' ## Will not work.
-    hide-message: false ## Will not work.
-    price-mode: CLASSIC_ALL ## Only work for product A
-    product-mode: CLASSIC_ALL ## Only work for product A
-    products: ## Only work for product A
+    menu: 'example-shop-menu' # Will not work.
+    buy-more: true # Will not work.
+    shop-name: 'Blocks Shop' # Will not work.
+    hide-message: false # Will not work.
+    price-mode: CLASSIC_ALL # Only work for product A
+    product-mode: CLASSIC_ALL # Only work for product A
+    products: # Only work for product A
       1:
         material: GRASS_BLOCK
         amount: 1
@@ -117,22 +117,22 @@ Under items:
 * and so on.\
   are all **children** of A. All of those options will only work for product A, and should not put them in other place.
 
-<figure><img src="../.gitbook/assets/0618eff5-040f-4981-a802-a1370b652f4c.jpeg" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/0618eff5-040f-4981-a802-a1370b652f4c.jpeg" alt="" width="375"><figcaption></figcaption></figure>
 
 Since it is product config, you can get all options available at [Products](../shops/products.md) page with detalied info.
 
 ```yaml
-items: ## Will work.
-  B: ## Will work.
-    products: ## Will work.
-      1: ## Will work.
-        material: APPLE ## Will work.
-        amount: 64 ## Will work.
-        give-actions: ## Will work.
-          1: ## Will work.
-            multi-once: true ## Will work.
-            type: message ## Will work.
-            message: 'eco give {player} {amount}' ## Will work.
+items: # Will work.
+  B: # Will work.
+    products: # Will work.
+      1: # Will work.
+        material: APPLE # Will work.
+        amount: 64 # Will work.
+        give-actions: # Will work.
+          1: # Will work.
+            multi-once: true # Will work.
+            type: message # Will work.
+            message: 'eco give {player} {amount}' # Will work.
 ```
 
 4️⃣ Level 4 Under products:
@@ -156,7 +156,7 @@ Under buy-prices → 1:
 
 They are using [EconomyFormat](economyformat-tm.md) and placeholder option inside price section.
 
-<figure><img src="../.gitbook/assets/72215cbb-e2ce-4bb7-9572-b32d5e6606a0.jpeg" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/72215cbb-e2ce-4bb7-9572-b32d5e6606a0.jpeg" alt="" width="375"><figcaption></figcaption></figure>
 
 ## Hierarchical Tree Diagram
 
