@@ -191,3 +191,17 @@ layout:
   - '000000000'
   - 'a0003000b'
 ```
+
+## Click Update <mark style="color:red;">- Premium</mark>
+
+Set `menu.title-update.enabled` option value to `true` in `config.yml` file. After enable, after each click button in menu, the title will be updated, very useful for display placeholder in title and then auto update value fater each click.
+
+```yaml
+  # PREMIUM version only
+  title-update:
+    enabled: true # <--- Set to true
+    black-dynamic-title: true
+    resend-items-pack: false
+```
+
+The Minecraft client itself does not support changing the title of a container after opening it, so you will see items flashing and quickly reappearing, which cannot be solved. You can try enable `menu.title-update.resend-items-pack` value to `true` in `config.yml` file. This will only slightly alleviate the situation.
