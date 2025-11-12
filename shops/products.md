@@ -193,6 +193,8 @@ Also in `buy-prices` and `sell-prices` section, you can set new 2 options:
 * max-amount: Price max amount, useful for dynamic prices. **Optional.**
 * min-amount: Price min amount, useful for dynamic prices. **Optional.**
 
+When you use dynamic value in `amount` option, you can use `min-amount` and `max-amount` option to limit it's min value and max value. Useful for dynamic price.
+
 Please carefully note that if you want to use our PlaceholderAPI extansion's placeholder, you have to use our new format, for example:
 
 ```yaml

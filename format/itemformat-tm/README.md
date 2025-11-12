@@ -64,7 +64,7 @@ amount: 5
 
 ## Min Amount/Max Amount - Only support in price/products
 
-Useful for dynamic prices.
+When you use dynamic value in `amount` option, you can use `min-amount` and `max-amount` option to limit it's min value and max value. Useful for dynamic price.
 
 ```yaml
 min-amount: 1
