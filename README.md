@@ -1,4 +1,14 @@
-# Welcome
+# 🎉Welcome
+
+{% hint style="warning" %}
+Are you looking for an amazing entity loot reward plugin? Check out our new plugin: **MythicRewards**!
+
+Check it here: [https://www.spigotmc.org/resources/mythicrewards-boss-kill-reward-drop-plugin-with-custom-rule-support-1-14-1-12-10.129453/](https://www.spigotmc.org/resources/mythicrewards-boss-kill-reward-drop-plugin-with-custom-rule-support-1-14-1-12-10.129453/)
+
+And... If you have purcahsed <mark style="color:red;">**PREMIUM**</mark> version of UltimateShop, you can unlock it's <mark style="color:red;">**PREMIUM**</mark> version without pay extra money! (The free version link includes premium version codes, those codes will auto unlock if your server installed pemium version of UltimateShop).
+
+Why not try it now?
+{% endhint %}
 
 * UltimateShop is a powerful shop plugin for Spigot, we just try added all premium shop plugins feature to this plugin.
 * Multi-based shop plugin! The relationship between products and prices is many to many, and can be freely controlled by conditional systems. You want to player pay 500 points and 1 stack diamond to buy one powerful diamond sword and 5 days VIP permission group? This can be easy done in UltimateShop!
