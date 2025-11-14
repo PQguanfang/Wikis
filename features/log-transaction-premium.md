@@ -1,4 +1,4 @@
-# Log Transaction - Premium
+# 💳Log Transaction - Premium
 
 Open `config.yml` and find below contents:
 
@@ -22,6 +22,7 @@ log-transaction:
 * {shop-name} - Shop Display Name
 * {buy-or-sell}
 * {price}
+* {time} - Display the log time
 
 ## Showcase
 
