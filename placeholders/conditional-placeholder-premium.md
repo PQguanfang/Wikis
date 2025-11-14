@@ -34,4 +34,43 @@ conditions:
 
 ## Use Placeholder
 
-Use `{conditional_<ID>}` placeholder to display it's value. For more info, please view [Placeholders](built-in-placeholder.md) page. For example: `{conditional_buy}`
+Use `{conditional_<ID>}` placeholder to display it's value. For more info, please view [Placeholders](built-in-placeholder.md) page. For example: `{conditional_buy}###`\
+
+
+## Example: Conditional Product
+
+* Create a new conditional placeholder like this:
+
+```
+mode: DEFAULT
+
+value:
+  default: A # Product ID
+  vip: B # Product ID
+  mvp: C # Product ID
+
+conditions:
+  vip:
+    1:
+      type: permission
+      permission: 'group.vip'
+  mvp:
+    1:
+      type: permission
+      permission: 'group.mvp'
+```
+
+* Make sure your shop includes product with ID `A, B, C`.
+* Open your shop's menu configs, find `layout` option:
+
+```
+dynamic-layout: true
+
+layout:
+  - '000000000'
+  - '000`{conditional_yourPlaceholderName}``{conditional_yourPlaceholderName}``{conditional_yourPlaceholderName}`000'
+  - '000000000'
+  - 'a0003000b'
+```
+
+Replace `yourPlaceholderName` to the file name of the conditional placeholder you used.

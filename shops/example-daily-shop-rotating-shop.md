@@ -1,7 +1,8 @@
-# 📅Example: Daily Shops
+# 📅Example: Daily Shop/Rotating Shop
 
 {% hint style="info" %}
-This example will only work for <mark style="color:red;">**PREMIUM**</mark> version of **UltimateShop**!
+This example will only work for <mark style="color:red;">**PREMIUM**</mark> version of **UltimateShop**!\
+This example is using random placeholder to display different product in one shop, you can also use conditinal placeholder to make different condition display different product, for example of it, please view [here](../placeholders/conditional-placeholder-premium.md#example-conditional-product).
 {% endhint %}
 
 ## Create random placeholder
