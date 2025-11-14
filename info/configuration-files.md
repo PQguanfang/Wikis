@@ -91,6 +91,10 @@ menu:
   cooldown:
     click: -1
     reopen: -1
+  # PREMIUM version only
+  title-update:
+    enabled: false
+    resend-items-pack: false
   ignore-click-outside: false
   shop:
     # Whether shop menu will refresh every 1 second.
@@ -104,6 +108,13 @@ menu:
   sell-all:
     size: 54
     title: '&fSell All &7- Esc to confirm sell!'
+    dynamic-title:
+      enabled: false
+      titles:
+        - "§aUltimateShop §7| §fSell All here~"
+        - "§bUltimateShop §7| §fSell All here~"
+        - "§dUltimateShop §7| §fSell All here~"
+      interval: 15
     black-slots: []
   # Premium version only
   bedrock:
@@ -199,7 +210,8 @@ log-transaction:
   enabled: false
   # If set to empty value, we will just print the log into console.
   file: 'log.txt'
-  format: '{player} | {shop} | {buy-or-sell} | {item-name}x{amount} | {price}'
+  format: '{time} | {player} | {shop} | {buy-or-sell} | {item-name} x{amount} | {price}'
+  time-format: "yyyy-MM-dd HH:mm:ss"
 
 display-item:
   # Require Paper 1.17.1+ version.
@@ -341,6 +353,12 @@ conditions:
   buy-prices-key: 'buy-prices-conditions'
   sell-prices-key: 'sell-prices-conditions'
   display-item-key: 'display-item-conditions'
+
+time-offset:
+  enabled: false
+  offset-hours: 0
+  offset-minutes: 0
+  offset-seconds: 0
 
 auto-save:
   enabled: true
