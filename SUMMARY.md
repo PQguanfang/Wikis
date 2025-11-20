@@ -18,7 +18,7 @@
 
 ## &#x20;📋Format
 
-* [📊 Undsetstanding YAML/This wiki](format/undsetstanding-yaml-this-wiki.md)
+* [📊 Understanding YAML/This wiki](format/understanding-yaml-this-wiki.md)
 * [🛒Info of ItemFormat™](format/info-of-itemformat-tm.md)
 * [📝ItemFormat™](format/itemformat-tm/README.md)
   * [Component Format](format/itemformat-tm/component-format.md)
