@@ -7,7 +7,7 @@ UltimateShop provides 2 color code format. The plugin will automatically determi
 * You can check this format [here](https://docs.advntr.dev/minimessage/format.html).
 * Requrie Paper or it's fork and at least 1.17.1 server version.
 * Can use many advanced feature like font, hover or more.
-* You can almost it everywhere.
+* You can almost use it everywhere.
 
 ## Built-in Color Parser
 

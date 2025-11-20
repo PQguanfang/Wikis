@@ -44,7 +44,7 @@ use-times:
   max-value-for-total-only: true
 ```
 
-No matter what methods you set it up in, we can see that this feature consists of three option types:
+No matter what methods you set it up in, we can see that this feature consists of 5 option types:
 
 * reset mode
 * reset time
