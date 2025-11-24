@@ -194,13 +194,14 @@ layout:
 
 ## Click Update <mark style="color:red;">- Premium</mark>
 
+Require your server install both packetevents and MythicChanger plugin in your server.
+
 Set `menu.title-update.enabled` option value to `true` in `config.yml` file. After enable, after each click button in menu, the title will be updated, very useful for display placeholder in title and then auto update value fater each click.
 
 ```yaml
   # PREMIUM version only
   title-update:
     enabled: true # <--- Set to true
-    black-dynamic-title: true
     resend-items-pack: false
 ```
 
