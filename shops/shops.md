@@ -8,6 +8,7 @@ settings:
   buy-more: true
   shop-name: 'Food Shop'
   hide-message: false
+  secret-shop-items: true
   custom-command:
     name: 'mineral'
     description: 'Custom Words'
@@ -151,6 +152,7 @@ buttons:
 * buy-more: Whether product in this shop can open buy more menu.
 * shop-name: Shop display name, which used in `{shop-name}` placeholder.
 * hide-message: Whether we hide the messages that will send after player buy or sell items in this shop.
+* secret-shop-items: If enabled, if the player does not meet the open condition of the menu corresponding to the shop where the product is located or the product is not displayed in the menu, the corresponding product will be automatically hidden and cannot be traded.
 * custom-command: Custom Open Command Settings for this shop. If not set, this menu can only be opened by `/shop menu` command. <mark style="color:red;">**(PREMIUM)**</mark>
 
 ## General Configs
