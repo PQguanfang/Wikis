@@ -35,7 +35,7 @@ Default example:
     - '@a@u@y{buy-click}'
     - '@b@v@y{sell-click}'
     - '@k@q@y&#FFFACDRight-Shift click to pick amount!'
-    - '@m@y&#FFFACDDrop (Q key) to sell all!'
+    - '@m@v@y&#FFFACDDrop (Q key) to sell all!'
     - '(@n)&c&l:( Can not do this'
     - '(@a)@u@p&cThis item can not be purchased'
     - '(@b)@v@p&cThis item can not be sold'
