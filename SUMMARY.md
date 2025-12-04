@@ -33,7 +33,8 @@
 * [🔲General Menus](menus/general-menus.md)
 * [🔽Buy More Menus](menus/buy-more-menus.md)
 * [🛏️Bedrock Menus - Premium](menus/bedrock-menus-premium.md)
-* [🥉Display Item Add Lore](menus/display-item-add-lore.md)
+* [🥉Display Item Add Lore](menus/display-item-add-lore/README.md)
+  * [Display Item Add Lore (Legacy)](menus/display-item-add-lore/display-item-add-lore-legacy.md)
 
 ## 🛍️Shops
 
