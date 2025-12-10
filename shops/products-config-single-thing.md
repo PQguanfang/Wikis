@@ -19,6 +19,10 @@ Each single thing have those types:
 * Custom: If those types do not meet your need, you can make a custom single thing! You need add `match-placeholder` option at single thing config to make plugin know what the now amount player have of this custom product/price, and then we will compare the now amount you set here and the required amount. In the example above, we will compare player's health. **If your economy plugins do not supported, just place it's player balance placeholder here and all is solved! (Sell/Products)&#x20;**<mark style="color:red;">**(Premium)**</mark>
 * Free/Empty: Single thing do not include ItemFormat, EconomyFormat, `match-item` section and `match-placeholder` section will be consider as free.
 
+## Dynamic Value
+
+You can use dynamic value in single thing's amount option. For available placeholders, please view [this page](products.md#dynamic-value). For math calculate format, please view [this page](../format/math-calculate-format.md).
+
 ## Options
 
 ```yaml

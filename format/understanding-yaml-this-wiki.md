@@ -1,4 +1,4 @@
-# 📊 Undsetstanding YAML/This wiki
+# 📊Understanding YAML/This wiki
 
 In the UltimateShop plugin, all configuration files use the YAML format. Understanding YAML syntax is essential for editing and customizing your setup. Let’s go through it with real examples from the plugin.
 

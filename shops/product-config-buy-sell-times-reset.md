@@ -9,6 +9,13 @@ This feature will not clear all players' buy/sell times at once. We will store *
 
 These measures are aimed at optimizing the performance of plugins when resetting data, and we will not change these behaviors. If you are surprised by these behaviors and do not want to do so, then replacing with other plugins is a better choice.
 
+## Reset
+
+We will only attempt to reset under the following circumstances:
+
+* Before the player performs a purchase/sell operation
+* When the player opens the shop GUI
+
 ## Option Types
 
 Buy times have those options:
@@ -129,6 +136,8 @@ Enter a valid random placeholder ID here.
 ## Reset Value <mark style="color:red;">**- Premium**</mark>
 
 By default, the reset value is 0, but, if you want to make some difference, this is allowed. Also this option supports placeholders, If combined with a random placeholder, it can achieve different reset values for players after each reset.
+
+The reset value is apply for each reset, if player never buy or sell the product, you need consider set default value before using reset value. For more info, please view below "Default Value" section.
 
 <mark style="color:red;">This option is very dangerous, you must set it carefully</mark>. You <mark style="color:red;">**MUST**</mark> ensure that **the value of buy/sell limits is always greater than the value of buy/sell reset**. This means that once reset, players must be able to repurchase/sell items again, otherwise you will see a situation where this item can never be purchased/sell again, and this situation is irreversible **UNLESS** you remove the buy/sell limits for this product or use commands to set the buy/sell times manually, <mark style="color:red;">**REMEMBER THIS**</mark>!
 
