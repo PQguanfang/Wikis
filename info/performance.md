@@ -58,6 +58,10 @@ In most cases, you just want the GUI to update and display the latest data when 
 
 If you pursue ultimate plugin performance, it's best not to turn on this option either.
 
+```yaml
+  auto-reset-mode: false
+```
+
 ## Use BUKKIT item give method.
 
 This item give method has the best performance, but the cost is that there may be some issues with stacking items, and when the player's inventory is full, we can only throw the excess items on the ground instead of preventing the player from further trading.
