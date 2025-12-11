@@ -78,9 +78,9 @@ sell:
 give-item:
   # Support value: BUKKIT, SMART
   # SMART will cost more server performance but will follow the vanilla max stack to give player item, also support check full.
-  give-method: BUKKIT
+  give-method: SMART
   # Only support SMART give method.
-  check-full: false
+  check-full: true
 
 menu:
   # Recommend use when you are running big server, it will make player no longer quickly click
@@ -89,7 +89,7 @@ menu:
   cooldown:
     click: -1
     reopen: -1
-  # PREMIUM version only
+  # PREMIUM version only, if enabled, can update dynamic value used in GUI title.
   title-update:
     enabled: false
     resend-items-pack: false
@@ -136,6 +136,7 @@ menu:
         back: '&cBack'
   buy-more-menu:
     not-open-when-invalid: true
+    display-item-max-stack: true
     default:
       menu: buy-more
       max-amount: 64
@@ -194,6 +195,7 @@ use-times:
   set-reset-value-by-default: true
   # If set to true, max value set in product configs or default value set above will only work for total placeholder.
   max-value-for-total-only: true
+  auto-reset-mode: true
 
 math:
   enabled: true
