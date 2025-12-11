@@ -141,3 +141,9 @@ Require `ultimateshop.search` permission.
 Sell all hand item.
 
 Require `ultimateshop.sellallhand` permission.
+
+## /shop updategui \[player]
+
+Update GUI for specified player. Only buttons will be updated, inventory title will not update.
+
+Require `ultimateshop.updategui` permission.
