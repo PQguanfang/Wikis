@@ -15,6 +15,7 @@ We will only attempt to reset under the following circumstances:
 
 * Before the player performs a purchase/sell operation
 * When the player opens the shop GUI
+* Auto reset (require enable `use-times.auto-reset-mode` option in `config.yml` file, will cost more server performance)
 
 ## Option Types
 

@@ -3,7 +3,7 @@
 ## Java Version
 
 * Basic Requirement: **Java16+**
-* **Java 17+** is <mark style="color:red;">recommended</mark>. Java17 and above versions are recommended, but plugins are compiled using **Java16**, so theoretically, you only need Java15 or higher versions.
+* **Java 17+** is <mark style="color:red;">recommended</mark>. Java17 and above versions are recommended, but plugins are compiled using **Java16**, so theoretically, you only need Java17 or higher versions.
 
 ## Server Software
 
