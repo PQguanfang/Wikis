@@ -192,7 +192,7 @@ layout:
   - 'a0003000b'
 ```
 
-## Click Update <mark style="color:red;">- Premium</mark>
+## Title Update <mark style="color:red;">- Premium</mark>
 
 Require your server install both packetevents and MythicChanger plugin in your server.
 
