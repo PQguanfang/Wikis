@@ -425,6 +425,8 @@ Update all buttons in opened GUI. Will not update gui title.
 
 ## Update GUI Title <mark style="color:red;">- Premium</mark>
 
+Require server enable title update feature, for more info, please view [this page](https://ultimateshop.superiormc.cn/menus/general-menus#title-update-premium).
+
 ```yaml
     actions:
       1:
