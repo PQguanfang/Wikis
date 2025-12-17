@@ -147,3 +147,11 @@ Require `ultimateshop.sellallhand` permission.
 Update GUI for specified player. Only buttons will be updated, inventory title will not update.
 
 Require `ultimateshop.updategui` permission.
+
+## /shop updateguititle \[player] <mark style="color:red;">**(Premium version only)**</mark>
+
+Update GUI title for specifed player. Only gui title will be updated, buttons will not update.
+
+Require server enable title update feature, for more info, please view [this page](../menus/general-menus.md#title-update-premium).
+
+Require `ultimateshop.updateguititle` permission.
