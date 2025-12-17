@@ -12,6 +12,8 @@ The `actions` in the **Action Format** **example** only represent **Action Forma
 
 This action will run only when player have buy/sell spcified times product.&#x20;
 
+Optional, if not set, will execute action every time.
+
 * start-apply: Start which times this action will apply. **Optional. Default to 0.**
 * end-apply: Last times the action will apply. **Optional. Default to infinite.**
 * apply: Which times this action will apply, format: `[1,2,3,4]`. **Optional. Default use start-apply option value.**
@@ -49,10 +51,25 @@ Only work for menu's open-actions option, if enabled, only the menu opened by th
 
 This action only executed when player use this click type to active this action. Won't work for `open-actions`, `close-action` in menu configs and `buy-actions`, `sell-actions` in product configs.
 
+Optional, if not set, this action will execute for each click type.
+
 ```yaml
     actions:
       1:
-        click-type: LEFT
+        click-type: LEFT 
+```
+
+### Java Only/Bedrock Only <mark style="color:red;">- PREMIUM</mark>
+
+This action only executed if player is java or bedrock players.
+
+Optional, if not set, both java and bedrock players will execute this action.
+
+```yaml
+    actions:
+      1:
+        java-only: true
+        bedrock-only: true
 ```
 
 ## Available Placeholders
@@ -394,4 +411,22 @@ Require enable `bungeecord-sync.enabled` option in config.yml and correctly set 
       1:
         type: connect
         server: 'lobby'
+```
+
+## Update GUI
+
+Update all buttons in opened GUI. Will not update gui title.
+
+```yaml
+    actions:
+      1:
+        type: update_gui
+```
+
+## Update GUI Title <mark style="color:red;">- Premium</mark>
+
+```yaml
+    actions:
+      1:
+        type: update_title
 ```

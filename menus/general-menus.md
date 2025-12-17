@@ -194,15 +194,37 @@ layout:
 
 ## Title Update <mark style="color:red;">- Premium</mark>
 
-Require your server install both packetevents and MythicChanger plugin in your server.
+Require your server install both **packetevents and MythicChanger** plugin in your server.
 
-Set `menu.title-update.enabled` option value to `true` in `config.yml` file. After enable, after each click button in menu, the title will be updated, very useful for display placeholder in title and then auto update value fater each click.
+Set `menu.title-update.enabled` option value to `true`, then  `menu.title-update.click-update` or `menu.title-update.circle-update` option value to `true` in `config.yml` file to active title update feature. After enable, after each click button in menu, the title will be updated, very useful for display placeholder in title and then auto update value fater each click or every second auto update.
 
 ```yaml
-  # PREMIUM version only
+  # PREMIUM version only, if enabled, can update dynamic value used in GUI title.
   title-update:
-    enabled: true # <--- Set to true
+    enabled: true # <--- Set it to true
+    # Whether gui title will refresh every buttons every 1 second.
+    # This will refresh placeholder that displayed in menu title.
+    circle-update: false
+    # Whether gui title will refresh every buttons when click any of them.
+    # This will refresh placeholder that displayed in menu title.
+    click-update: true # <--- Set it to true
     resend-items-pack: false
 ```
 
 The Minecraft client itself does not support changing the title of a container after opening it, so you will see items flashing and quickly reappearing, which cannot be solved. You can try enable `menu.title-update.resend-items-pack` value to `true` in `config.yml` file. This will only slightly alleviate the situation.
+
+## All Buttons Update
+
+Find those content at `config.yml` file. Do not recommend enable it as it will cost more performance.
+
+```yaml
+  menu-update:
+    # Whether menu will refresh every buttons every 1 second.
+    # This will refresh placeholder that displayed in display item lore.
+    # But maybe lead to server lag if you have much online players, and they are all opening shop GUI.
+    circle-update: false
+    # Whether menu will refresh every buttons when click any of them.
+    # This will refresh placeholder that displayed in display item lore.
+    # But maybe lead to server lag if you have much online players, and they are all opening shop GUI.
+    click-update: false
+```

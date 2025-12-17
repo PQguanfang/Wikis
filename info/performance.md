@@ -39,15 +39,24 @@ Recommend use when you are running big server, it will make player no longer qui
 Enabling these options will significantly increase server performance consumption, but buttons within the GUI will be able to automatically update.
 
 ```yaml
-  shop:
-    # Whether shop menu will refresh every 1 second.
+  menu-update:
+    # Whether menu will refresh every buttons every 1 second.
     # This will refresh placeholder that displayed in display item lore.
     # But maybe lead to server lag if you have much online players, and they are all opening shop GUI.
-    update: false
-    # Whether shop menu will refresh every click in it.
+    circle-update: false
+    # Whether menu will refresh every buttons when click any of them.
     # This will refresh placeholder that displayed in display item lore.
     # But maybe lead to server lag if you have much online players, and they are all opening shop GUI.
     click-update: false
+   # PREMIUM version only, if enabled, can update dynamic value used in GUI title.
+  title-update:
+    # Whether gui title will refresh every buttons every 1 second.
+    # This will refresh placeholder that displayed in menu title.
+    circle-update: false
+    # Whether gui title will refresh every buttons when click any of them.
+    # This will refresh placeholder that displayed in menu title.
+    click-update: true
+    resend-items-pack: false
 ```
 
 In most cases, you just want the GUI to update and display the latest data when we reset buy times or sell times, so you can achieve this idea through `use-times.auto-reset-mode` option.
