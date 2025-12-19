@@ -5,7 +5,7 @@
 This feature will not clear all players' buy/sell times at once. We will store **different timestamp data** based on the **reset mode**. When our estimated reset time has been reached, we will start resetting the data.&#x20;
 
 * If the player is on the server, the buy/sell times will only be reset after the player opens the shop. (Before they open the shop, the buy/sell times didn't be reset)
-* &#x20;If the player is not on the server, the buy/sell times will only be reset after they join the server.
+* If the player is not on the server, the buy/sell times will only be reset after they join the server.
 
 These measures are aimed at optimizing the performance of plugins when resetting data, and we will not change these behaviors. If you are surprised by these behaviors and do not want to do so, then replacing with other plugins is a better choice.
 
@@ -16,6 +16,10 @@ We will only attempt to reset under the following circumstances:
 * Before the player performs a purchase/sell operation
 * When the player opens the shop GUI
 * Auto reset (require enable `use-times.auto-reset-mode` option in `config.yml` file, will cost more server performance)
+
+{% hint style="info" %}
+This option solves the problem that the buy times and sell times cannot be reset in a timely manner when the reset time has arrived. If the product has never been purchased or sold, then there is no reset time and it will naturally not be reset
+{% endhint %}
 
 ## Option Types
 
