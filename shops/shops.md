@@ -84,6 +84,10 @@ items:
     add-lore:
       - '@a&ePurchase: {buy-price}'
       - '@b&eSell: {sell-price}'
+      - '&eDrop to buy, right to sell'
+    click-event:
+      buy: 'DROP'
+      sell: 'RIGHT'
     bedrock:
       hide: false
       icon: 'url;;https://raw.githubusercontent.com/Jens-Co/MinecraftItemImages/main/1.20/bread.png'

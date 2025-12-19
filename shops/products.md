@@ -63,6 +63,18 @@ Click [here](shops.md) to see the detalied example of those general options.
   * display-item.modify-lore: Whether we will modify display item lore to add info about price, limits and so on. You can set add lore info at `config.yml` file. **Optional (default to true)**
 * display-name: Set product display name in `{product}` placeholder and buy more menu display item. **Optional. (if not set, we will use the display item name as product display name)**
 * add-lore: Set special [display item add lore](../menus/display-item-add-lore/) for this product, if not set, we will use default value set in `config.yml`. **Optional.**
+* click-event: Set special click event for this product, if not set, we will use default value set in `config.yml`. Don't forgot also modify `add-lore` option to correspond to the modified click event.
+
+```yaml
+    add-lore:
+      - '@a&ePurchase: {buy-price}'
+      - '@b&eSell: {sell-price}'
+      - '&eDrop to buy, right to sell' # Modified add lore to to correspond to the modified click event
+    click-event:
+      buy: 'DROP'
+      sell: 'RIGHT'
+```
+
 * bedrock: View [this page](../menus/bedrock-menus-premium.md).
 * buy-more: Set whether this product can open buy more menu, **you must delete shop's `buy-more` option to make this option has effect! Optional. (default to true)**
 * buy-more-menu: Set up separate buy more menu settings for the product. **Optional. Require 2.2.10+ version. (if not set, will use default value set in `config.yml` file)**

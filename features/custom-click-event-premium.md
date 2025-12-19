@@ -3,6 +3,10 @@
 * Start from version 2.5.1, you can set custom click event for products in shop GUI.
 * Find those contents at `config.yml` file.
 
+{% hint style="info" %}
+We support override default click event for specifed product, for more info, please view [Products](../shops/products.md) page.
+{% endhint %}
+
 ```yaml
   # Support value: https://hub.spigotmc.org/javadocs/spigot/org/bukkit/event/inventory/ClickType.htm
   # Support use ;; symbol to make multi click type.
