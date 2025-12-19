@@ -40,3 +40,11 @@ database:
     user: root
     password: 123456
 ```
+
+| Database                    | JDBC URL Example                              | JDBC Class               |
+| --------------------------- | --------------------------------------------- | ------------------------ |
+| MySQL                       | jdbc:mysql://localhost:3306/ultimateshop      | com.mysql.cj.jdbc.Driver |
+| MariaDB (Added in 4.1.4)    | jdbc:mariadb://localhost:3306/ultimateshop    | org.mariadb.jdbc.Driver  |
+| PostgreSQL (Added in 4.1.4) | jdbc:postgresql://localhost:5432/ultimateshop | org.postgresql.Driver    |
+| SQLLite (Added in 4.1.4)    | jdbc:sqlite:plugins/UltimateShop/data.db      | org.sqlite.JDBC          |
+| h2 (Added in 4.1.4)         | jdbc:h2:file:./plugins/UltimateShop/data      | org.h2.Driver            |
