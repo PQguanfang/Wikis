@@ -15,7 +15,7 @@ We will only attempt to reset under the following circumstances:
 
 * Before the player performs a purchase/sell operation
 * When the player opens the shop GUI
-* Auto reset (require enable `use-times.auto-reset-mode` option in `config.yml` file, will cost more server performance)
+* Auto reset (require enable `use-times.auto-reset-mode` option in `config.yml` file, will cost more server performance, player must online, otherwise we will try auto reset when he rejoin the server)
 
 {% hint style="info" %}
 This option solves the problem that the buy times and sell times cannot be reset in a timely manner when the reset time has arrived. If the product has never been purchased or sold, then there is no reset time and it will naturally not be reset
@@ -83,7 +83,15 @@ For random placeholder reset mode: supports `TIMER`, `TIMED`, `CUSTOM`. The rese
 
 ### Difference between COOLDOWN\_TIMED (or COOLDOWN\_TIMER) and TIMED (or TIMER)
 
-`TIMED` and `TIMER` will start generating reset time after each buy or sell until the player reaches the limit, while `COOLDOWN_TIMED` and `COOLDOWN_TIMER` will start generating reset time after the first buy or sell and will never update the reset time until the reset time reached.
+`TIMED` and `TIMER` will start generating reset time after each buy or sell until the player reaches the limit, while `COOLDOWN_TIMED` and `COOLDOWN_TIMER` will immediately start generating the next reset time after the last reset and save the generated time. It will not reset again unless the rest time is reached.
+
+{% hint style="info" %}
+We will only attempt to reset and generate new reset time for `COOLDOWN_TIMED` and `COOLDOWN_TIMER`  reset mode under the following circumstances:
+
+* Before the player performs a purchase/sell operation
+* When the player opens the shop GUI
+* Auto reset (require enable `use-times.auto-reset-mode` option in `config.yml` file, will cost more server performance, player must online, otherwise we will try auto reset when he rejoin the server)
+{% endhint %}
 
 For this reason, when using `COOLDOWN_TIMED` or `COOLDOWN_TIMER` mode, the reset time will not automatically adjust due to server restarts, configuration modifications, or other reasons. This means that if you mistakenly set the product to refresh after 1 year, the reset time will not automatically change due to your correction, but `TIMED` or `TIMER` rules can do this.
 
