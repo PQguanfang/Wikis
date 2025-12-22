@@ -34,13 +34,13 @@ conditions:
 
 ## Use Placeholder
 
-Use `{conditional_<ID>}` placeholder to display it's value. For more info, please view [Placeholders](built-in-placeholders.md) page. For example: `{conditional_buy}###`<br>
+Use `{conditional_<ID>}` placeholder to display it's value. For more info, please view [Placeholders](built-in-placeholders.md) page. For example: `{conditional_buy}`<br>
 
 ## Example: Conditional Product
 
 * Create a new conditional placeholder like this:
 
-```
+```yaml
 mode: DEFAULT
 
 value:
@@ -62,7 +62,7 @@ conditions:
 * Make sure your shop includes product with ID `A, B, C`.
 * Open your shop's menu configs, find `layout` option:
 
-```
+```yaml
 dynamic-layout: true
 
 layout:

@@ -71,7 +71,7 @@ items:
 ```
 
 * `5` is base price, then add `{conditional_buy}` or `{conditional_sell}` before it.
-* If player meet vip condition, the `{condition_buy}` will return `0.5`, so he will only need pay `0.5*8` which means only `2.5` coins!
+* If player meet vip condition, the `{condition_buy}` will return `0.5`, so he will only need pay `0.5*4` which means only `2.5` coins!
 
 ## Auto Apply Discount
 

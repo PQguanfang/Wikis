@@ -62,9 +62,10 @@ elements:
   - '5~100'
 ```
 
-The second is to use the form of subsections, where each element has options for `rate` and `conditions` to fill in. The `conditions` option is not required and only support when `per-player-elemen`t being set to true. **(Added in 3.12.0)**
+The second is to use the form of subsections, where each element has options for `rate` and `conditions` to fill in. The `conditions` option is not required and only support when `per-player-element` option being set to true. **(Added in 3.12.0)**
 
 ```yaml
+per-player-element: true # <--- Only support use condition when this option to true
 elements:
   A:
     rate: 1

@@ -260,6 +260,7 @@ Should use **Quartz** format.
 You **MUST** make sure that time format of the result of Cron placeholder (set it in `config.yml` file) and the time format you set here is same. By default, they are same.
 {% endhint %}
 
-## Reset Time do not correct?
+## Reset Time does not correct?
 
 * The product must have been purchased or sold once before the next reset time can be stored. Otherwise, we can only display the possible reset time calculated based on the current time after the transaction is completed.
+* We will only reset the player's data when they are online. If the player is not online but has reached the reset time, we will reset it when they join the server again. The new reset time will be based on the current time, not the ideal reset time (because the player is not online at this time). The server data does not have this problem (because the server is always online), so it is very normal to use different reset times for the server and player. (Usually happens in `COOLDOWN_TIMER` reset mode)
