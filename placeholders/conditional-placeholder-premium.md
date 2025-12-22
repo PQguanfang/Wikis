@@ -34,7 +34,7 @@ conditions:
 
 ## Use Placeholder
 
-Use `{conditional_<ID>}` placeholder to display it's value. For more info, please view [Placeholders](built-in-placeholder.md) page. For example: `{conditional_buy}###`<br>
+Use `{conditional_<ID>}` placeholder to display it's value. For more info, please view [Placeholders](built-in-placeholders.md) page. For example: `{conditional_buy}###`<br>
 
 ## Example: Conditional Product
 

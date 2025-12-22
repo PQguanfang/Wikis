@@ -15,6 +15,11 @@ There are 3 types of menus.
 * title: Menu title, for shop menu type, support `{shop-name}` to display shop displayname which set in it's config.
 * size: Menu size, only support one of the number: **9,18,27,36,45,54**.
 * layout: Button layout, this is a list option. For more info, please view below.
+
+{% hint style="warning" %}
+The `layout` option and `size` option must correspond. If your layout is based on **4x9** format, then your size must be set to **36**, otherwise the plugin will encounter errors.
+{% endhint %}
+
 * dynamic-layout: If you are using dynamic value like placeholders in `layout` option, you need enable this option. This will cost extra performance. <mark style="color:red;">**(PREMIUM)**</mark>
 * buttons: Button configs, button ID is being used in `layout` option to set where this button display in menu.
 * conditions: Only players who meet the conditions can open this menu, use [Condition Format](../format/condition-format.md) here.
@@ -215,7 +220,9 @@ The Minecraft client itself does not support changing the title of a container a
 
 ## All Buttons Update
 
-Find those content at `config.yml` file. Do not recommend enable it as it will cost more performance.
+Set whether keep trying to refresh the button display in the GUI after the player opens it. Find those content at `config.yml` file. Do not recommend enable it as it will cost more performance.
+
+If you just want us trying to refresh the button when we reset buy or sell times, you can use `use-times.auto-reset-mode` option instead. That option can help you filter out all button displays that only refresh when reset occurs, thereby saving server performance.
 
 ```yaml
   menu-update:

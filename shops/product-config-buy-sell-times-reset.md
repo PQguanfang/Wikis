@@ -166,7 +166,7 @@ Please note:
 
 * After reaching the limit, players can still continue to purchase or sell products, but the plugin will not accumulate more times. If you want players to no longer purchase or recycle goods, then you should use the `buy-limits` option or `sell-limits` option in [Products](products.md) config instead of this feature.
 * Due to the setting of an upper limit that no longer accumulates, if the set upper limit is greater than the limit value, buy limits and sell limits will no longer be useful. Other features not mentioned may also be affected.
-* You can modify the `use-times.max-value-for-total-only` option in `config.yml` to ensure that the times placeholder accumulates normally even after reaching its maximum value, but the total placeholder does not continue to accumulate after reaching its maximum value. For information about these two placeholders, please refer to [this page](../placeholders/built-in-placeholder.md).
+* You can modify the `use-times.max-value-for-total-only` option in `config.yml` to ensure that the times placeholder accumulates normally even after reaching its maximum value, but the total placeholder does not continue to accumulate after reaching its maximum value. For information about these two placeholders, please refer to [this page](../placeholders/built-in-placeholders.md).
 
 ## Dynamic Reset Time <mark style="color:red;">**- Premium**</mark>
 

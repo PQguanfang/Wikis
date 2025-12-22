@@ -204,4 +204,4 @@ nbt:
 
 ## PlaceholderAPI: Extra placeholders <a href="#placeholderapi-extra-placeholders" id="placeholderapi-extra-placeholders"></a>
 
-UltimateShop provides those new placeholders to PlaceholderAPI, for more info, please view [this page](../placeholders/built-in-placeholder.md#placeholderapi-support).
+UltimateShop provides those new placeholders to PlaceholderAPI, for more info, please view [this page](../placeholders/built-in-placeholders.md#placeholderapi-support).

@@ -80,7 +80,7 @@ elements:
 
 ## Use Placeholder
 
-Use `{random_<ID>;;<Number>}` placeholder to display it's value, like `{random_daily;;2}` will query `daily` random placeholder's **second** element picked. For more info, please view [Placeholders](built-in-placeholder.md) page. For example of this placeholder usage, please view [Daily Shop](../shops/example-daily-shop-rotating-shop.md) page.
+Use `{random_<ID>;;<Number>}` placeholder to display it's value, like `{random_daily;;2}` will query `daily` random placeholder's **second** element picked. For more info, please view [Placeholders](built-in-placeholders.md) page. For example of this placeholder usage, please view [Daily Shop](../shops/example-daily-shop-rotating-shop.md) page.
 
 ## Reset Placeholder
 

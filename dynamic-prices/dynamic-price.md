@@ -106,7 +106,7 @@ Another common dynamic price formula is price changed based on the percentage, l
 
 You can set placeholders (including PlaceholderAPI) and [Math Calculate Format](../format/math-calculate-format.md) in `buy-prices`, `sell-prices` section's `amount` option and `buy-limits`, `sell-limits` section's value in shop configs.
 
-Available built-in placeholder, for more info about them, please view [Built-In Placeholders](../placeholders/built-in-placeholder.md) page.
+Available built-in placeholder, for more info about them, please view [Built-In Placeholders](../placeholders/built-in-placeholders.md) page.
 
 * {buy-times-player}
 * {buy-times-server}
@@ -154,7 +154,7 @@ Additionally, you need to set `menu.shop.click-update` to `true` if the related 
 
 ## Dynamic Price per player
 
-As long as you can ensure that the placeholder used in the formula is per player, the calculated price result will naturally be per player. In the above example, we used global placeholders such as `{buy-times-server}`, and you only need to replace the `server` with the `player` to display the player's own buy times value. The relevant content is explained in detail in the [Placeholders](../placeholders/built-in-placeholder.md) page.
+As long as you can ensure that the placeholder used in the formula is per player, the calculated price result will naturally be per player. In the above example, we used global placeholders such as `{buy-times-server}`, and you only need to replace the `server` with the `player` to display the player's own buy times value. The relevant content is explained in detail in the [Placeholders](../placeholders/built-in-placeholders.md) page.
 
 ## Set buy / sell limits for your products
 

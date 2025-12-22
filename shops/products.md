@@ -150,9 +150,9 @@ The introduction of these options is on a separate page, please [click here](pro
 
 You can set placeholders (including PlaceholderAPI) and [Math Calculate Format](../format/math-calculate-format.md) in `buy-prices`, `sell-prices` section's `amount` option and `buy-limits`, `sell-limits` section's value in shop configs.
 
-By default, dynamic values are calculated in real-time and are not refreshed periodically. However, players will not see real-time values in the GUI. We will only refresh the dynamic values displayed in the GUI after the player opens the UI or clicks the item each time. For example, if you set a dynamic value in the purchase price and the dynamic value is changed when the player opens the GUI, although the player will not notice this change in the GUI display item, the plugin will calculate the price based on the updated dynamic value at the final purchase. This is a decision made to balance server performance and save costs.
+By default, dynamic values are calculated in real-time and are not refreshed periodically. However, players will not see real-time values in the GUI. We will only refresh the dynamic values displayed in the GUI after the player opens the UI or clicks the item each time. For example, if you set a dynamic value in the purchase price and the dynamic value is changed when the player opens the GUI, although the player will not notice this change in the GUI display item, the plugin will calculate the price based on the updated dynamic value at the final purchase. This is a decision made to balance server performance and save costs. If you don't want this and want to dynamic value display refresh immediately, please [click here](../menus/general-menus.md#all-buttons-update).
 
-Available built-in placeholder, for more info about them, please view [Built-In Placeholders](../placeholders/built-in-placeholder.md) page.
+Available built-in placeholder, for more info about them, please view [Built-In Placeholders](../placeholders/built-in-placeholders.md) page.
 
 * {buy-times-player}
 * {buy-times-server}
@@ -194,11 +194,11 @@ Display the time interval between the last buy reset or first buy time after res
 
 * {last-sell-reset-player} <mark style="color:red;">**- PREMIUM, 3.9.0+**</mark>
 
-Display the time interval between the last sell reset or first sell time after reset (depends on the reset mode you selected, for more info, please view [this page](https://ultimateshop.superiormc.cn/shops/product-config-buy-sell-times-reset)) of this item by a single player, in seconds. If the player has not purchased this item or the buy time has been reset, it will return last sell time.
+Display the time interval between the last sell reset or first sell time after reset (depends on the reset mode you selected, for more info, please view [this page](https://ultimateshop.superiormc.cn/shops/product-config-buy-sell-times-reset)) of this item by a single player, in seconds. If the player has not sold this item or the sell time has been reset, it will return last sell time.
 
 * {last-sell-reset-server} <mark style="color:red;">**- PREMIUM, 3.9.0+**</mark>
 
-Display the time interval between the last sell reset or first sell time after reset (depends on the reset mode you selected, for more info, please view [this page](https://ultimateshop.superiormc.cn/shops/product-config-buy-sell-times-reset)) of this item by global server, in seconds. If the player has not purchased this item or the buy time has been reset, it will return last sell time.
+Display the time interval between the last sell reset or first sell time after reset (depends on the reset mode you selected, for more info, please view [this page](https://ultimateshop.superiormc.cn/shops/product-config-buy-sell-times-reset)) of this item by global server, in seconds. If the player has not sold this item or the sell time has been reset, it will return last sell time.
 
 Also in `buy-prices` and `sell-prices` section, you can set new 2 options:
 
