@@ -192,9 +192,9 @@ layout:
   - 'a0003000b'
 ```
 
-## Title Update <mark style="color:red;">- Premium</mark>
+## Title Update <mark style="color:red;">- Premium, Require Paper</mark>
 
-Require your server install both **packetevents and MythicChanger** plugin in your server.
+Require your server install both **packetevents and MythicChanger** plugin in your server, only support for Paper server users.
 
 Set `menu.title-update.enabled` option value to `true`, then  `menu.title-update.click-update` or `menu.title-update.circle-update` option value to `true` in `config.yml` file to active title update feature. After enable, after each click button in menu, the title will be updated, very useful for display placeholder in title and then auto update value fater each click or every second auto update.
 
