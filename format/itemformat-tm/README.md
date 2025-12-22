@@ -4,11 +4,15 @@
 Mojang very like change material (item type), enchantment, potion and many other things's ID (or namespace key). For example, they changed sweeping enchantment ID to sweeping\_edge in 1.21. So, before you update your server version, you need carefully check that whether new versions have changed something, otherwise it will break your shop or menu configs.
 {% endhint %}
 
+{% hint style="info" %}
+Hold a item then use command `/shop generateitemformat` to parse the ItemFormat of it. After execute this command, a new file called `generated-item-format.yml` wll be generated at `plugins/UltimateShop` folder. (or `plugins/<pluginNameYouAreUsing>`)
+{% endhint %}
+
 ## Hook Item
 
 ### Hook Plugin
 
-Possible Value: `EcoItems, EcoArmor, MMOItems, ItemsAdder, Oraxen, MythicMobs, eco, NeigeItems, ExecutableItems, Nexo`.&#x20;
+Possible Value: `EcoItems, EcoArmor, MMOItems, ItemsAdder, Oraxen, MythicMobs, eco, NeigeItems, ExecutableItems, Nexo, CraftEngine`.&#x20;
 
 ```yaml
 hook-plugin: MMOItems
@@ -16,7 +20,7 @@ hook-plugin: MMOItems
 
 ### Hook Item
 
-For `EcoItems, Oraxen, MythicMobs`, you should write `item id`.
+For `EcoItems, Oraxen, MythicMobs, Nexo`, you should write `item id`.
 
 For `ItemsAdder, eco`, you should write `namespace:item id`.&#x20;
 
@@ -36,7 +40,7 @@ For `MMOItems`, you should write `item typeId;;item id`.
 hook-item: AXE;;TEST_AXE
 ```
 
-For CraftEngine, you should write `namespace;;item id`.
+For `CraftEngine`, you should write `namespace;;item id`.
 
 {% hint style="info" %}
 **Stop!** If you are just trying to get items from custom item plugins, `hook-plugin` and `hook-item` option should be enough for you, if your custom item plugins are not supported, please use command instead, all things below is suit for vanilla items, if you set them here, we will replace the related to item attributes and this will lead to the item you get here is different from the item should be in custom item plugins.
