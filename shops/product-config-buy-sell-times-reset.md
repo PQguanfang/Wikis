@@ -83,7 +83,7 @@ For random placeholder reset mode: supports `TIMER`, `TIMED`, `CUSTOM`. The rese
 
 ### Difference between COOLDOWN\_TIMED (or COOLDOWN\_TIMER) and TIMED (or TIMER)
 
-`TIMED` and `TIMER` will start generating reset time after each buy or sell until the player reaches the limit, while `COOLDOWN_TIMED` and `COOLDOWN_TIMER` will immediately start generating the next reset time after the last reset and save the generated time. It will not reset again unless the rest time is reached.
+`TIMED` and `TIMER` will start generating reset time after each buy or sell until the player reaches the limit and not save the generated reset time, while `COOLDOWN_TIMED` and `COOLDOWN_TIMER` will immediately start generating the next reset time after the last reset and save the generated time. It will not reset again unless the rest time is reached.
 
 {% hint style="info" %}
 We will only attempt to reset and generate new reset time for `COOLDOWN_TIMED` and `COOLDOWN_TIMER`  reset mode under the following circumstances:
@@ -164,7 +164,7 @@ You can set maximum values for buy times and sell times, and when the maximum va
 
 Please note:
 
-* After reaching the limit, players can still continue to purchase or sell products, but the plugin will not accumulate more times. If you want players to no longer purchase or recycle goods, then you should use the `buy-limits` option or `sell-limits` option in [Products](products.md) config instead of this feature.
+* After reaching the limit, players can still continue to purchase or sell products, but the plugin will not accumulate more times. If you want players to no longer purchase or sell products, then you should use the `buy-limits` option or `sell-limits` option in [Products](products.md) config instead of this feature.
 * Due to the setting of an upper limit that no longer accumulates, if the set upper limit is greater than the limit value, buy limits and sell limits will no longer be useful. Other features not mentioned may also be affected.
 * You can modify the `use-times.max-value-for-total-only` option in `config.yml` to ensure that the times placeholder accumulates normally even after reaching its maximum value, but the total placeholder does not continue to accumulate after reaching its maximum value. For information about these two placeholders, please refer to [this page](../placeholders/built-in-placeholders.md).
 
@@ -172,7 +172,7 @@ Please note:
 
 This example uses a random placeholder to randomly refresh products after 3, 4, or 5 hours, instead of a fixed time refresh.
 
-Created a random placeholder like this in random\_placeholder folder:
+Created a random placeholder like this in `random_placeholder` folder:
 
 ```yaml
 reset-mode: ONCE
@@ -198,7 +198,7 @@ Use this placeholder at `buy-times-reset-time` option in any product configs.
       #
     buy-limits:
       default: '2'
-    buy-times-reset-mode: 'TIMED'
+    buy-times-reset-mode: 'COOLDOWN_TIMED'
     buy-times-reset-time: '{random_reset}' # <--- Used here, sell-times also works!
 ```
 
