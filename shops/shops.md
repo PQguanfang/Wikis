@@ -152,7 +152,9 @@ buttons:
 
 ## Settings
 
-* menu: Shop menu name, which means menu file name.
+*   menu: Shop menu name, which means menu file name. It’s the central hub that connects your shop and menu. In this example, we set it to `example-shop-menu`.
+
+    You should be find the menu file at the `menus` folder, it will called `example-shop-menu.yml`. For info about menus, please view [Menus](../menus/general-menus.md) page.
 * buy-more: Whether product in this shop can open buy more menu.
 * shop-name: Shop display name, which used in `{shop-name}` placeholder.
 * hide-message: Whether we hide the messages that will send after player buy or sell items in this shop.
@@ -172,10 +174,17 @@ The product configuration options set here will apply to all products. For `buy-
 
 ## Items
 
-Items is products, product can not only be real items, but also virtual items, like 100 gems economy.
+Items is products, products can not only being real items, but also virtual items, like 100 gems economy.
 
 For more info, please view [Products](products.md) page.
 
 ## Buttons
 
-Shops can add buttons which has custom actions when player clicks it, view [Menus](../menus/general-menus.md) page for more info.
+Shops can add buttons which has custom actions when player clicks it.
+
+For each button, we have those options:
+
+* display-item: The display item of this button, should use [Display Item Format](https://ultimateshop.superiormc.cn/format/display-item-format).
+* actions: The action will executed after we click this button. Use [Action Forma](https://ultimateshop.superiormc.cn/format/action-format)[t](https://ultimateshop.superiormc.cn/format/action-format) here.
+* fail-actions: The action will executed if we don't meet the condition of this button. Use [Action Forma](https://ultimateshop.superiormc.cn/format/action-format)[t](https://ultimateshop.superiormc.cn/format/action-format) here.
+* conditions: The condition of this button, if player don't meet this condition, then we will execute the `fail-action`. Use [Condition Format](https://ultimateshop.superiormc.cn/format/condition-format) here.

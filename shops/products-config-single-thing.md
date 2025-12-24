@@ -136,11 +136,11 @@ In product configurations, we set the corresponding type of single thing through
   * products.take-actions: The action will run after this product is been taken from player. Use [Action Format](../format/action-format.md) here.&#x20;
   * products.give-item: Whether we will give this product item to player when he trying to buy.
   * products.take: Whether we will take this product when player trying to sell. Useful if you just want to this item be a requirement but will not cost after sell.
-* buy-prices: Product buy prices. Support [Item format](../format/itemformat-tm/)s and [Economy format](../format/economyformat-tm.md). You can also add [Custom Sell Match Method](../features/custom-item-match-method.md) or other things depend on single thing type here. **Optional. If not set, product can not be purchased.**
+* buy-prices: Product buy prices. Support [Item formats](../format/itemformat-tm/) and [Economy format](../format/economyformat-tm.md). You can also add [Custom Sell Match Method](../features/custom-item-match-method.md) or other things depend on single thing type here. **Optional. If not set, product can not be purchased.**
   * buy-prices.start-apply: Start which times this price will apply. Only supports `ANY` or `ALL` price type. **Optional. Default to 0.**
   * buy-prices.end-apply: Last times the price will apply. Only supports `ANY` or `ALL` price type. **Optional. Default to infinite.**
   * buy-prices.apply: Which times this price will apply, format: `[1,2,3,4]`. Only supports `ANY` or `ALL` price type. **Optional. Default use start-apply option value.**
-  * buy-prices.placeholder: Price display name in `{price}` placeholder. **Optional. Default unknown language key.**
+  * buy-prices.placeholder: Price display name in `{price}` placeholder. **Required.**
   * buy-prices.conditions: Player must meet the condition to use this price. Use [Condition Format](../format/condition-format.md)  here. **Optional. Default don't have any conditions.**&#x20;
   * buy-prices.take-actions: The action will run after this buy price is been taken from player. Use [Action Format](../format/action-format.md) here.&#x20;
   * buy-prices.take: Whether we will take this buy price when player trying to buy. Useful if you just want to this item be a requirement but will not cost after buy.
@@ -155,7 +155,7 @@ Also in `buy-prices` and `sell-prices` section, you can set new 2 options:
 
 When you use dynamic value in `amount` option, you can use `min-amount` and `max-amount` option to limit it's min value and max value. Useful for dynamic price.
 
-Please carefully note that if you want to use our PlaceholderAPI extansion's placeholder, you have to use our new format, for example:
+Please carefully note that if you want to use our PlaceholderAPI extansion's placeholder, you have to use our new PlaceholderAPI format, for example:
 
 ```yaml
     buy-prices:
@@ -167,7 +167,7 @@ Please carefully note that if you want to use our PlaceholderAPI extansion's pla
         start-apply: 0
 ```
 
-Additionally, you need to set `menu.shop.click-update` to `true` if the related to product is also in the menu you opened. Otherwise this price won't auto update after you sell B product.
+Additionally, you need to set `menu.menu-update.click-update` to `true` if the related to product is also in the menu you opened. Otherwise this price won't auto update after you sell B product.
 
 ## Actions and Conditions for Single Thing
 

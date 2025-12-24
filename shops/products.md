@@ -59,11 +59,11 @@ items:
 Click [here](shops.md) to see the detalied example of those general options.
 {% endhint %}
 
-* display-item: Product display item in shop menu, it can be different from the real item player will obtain after purchase. For virtual items, you must set `display-item` here, otherwise they can not be displayed in GUI. For real items, you must enable `auto-set-first-product` option under `display-item` section in `config.yml` file to let you remove this section, after enable, if `display-item` is not set, the first product real items will be used as display item. This section use [Item format](../format/itemformat-tm/). **Optional (if not set, will use first products)**
-  * display-item.modify-lore: Whether we will modify display item lore to add info about price, limits and so on. You can set add lore info at `config.yml` file. **Optional (default to true)**
-* display-name: Set product display name in `{product}` placeholder and buy more menu display item. **Optional. (if not set, we will use the display item name as product display name)**
+* display-item: Product display item in shop menu, it can be different from the real item player will obtain after purchase. For virtual products, you must set `display-item` here, otherwise they can not be displayed in GUI. For real item products, you must enable `auto-set-first-product` option under `display-item` section in `config.yml` file to allow you remove this section, after enable, if `display-item` is not set, the first real item product will be used as display item. This section use [Item format](../format/itemformat-tm/). **Optional (if not set, will use first products)**
+  * display-item.modify-lore: Whether we will modify display item lore to add info about price, limits and so on. You can set add lore info at `config.yml` file or `add-lore` option in product config, for more info about it, please view [Display Item Add Lore](../menus/display-item-add-lore/) page. **Optional (default to true)**
+* display-name: Set product display name in `{product}` placeholder and buy more menu display item. **Optional. (if not set, we will use the display item's name as product display name)**
 * add-lore: Set special [display item add lore](../menus/display-item-add-lore/) for this product, if not set, we will use default value set in `config.yml`. **Optional.**
-* click-event: Set special click event for this product, if not set, we will use default value set in `config.yml`. Don't forgot also modify `add-lore` option to correspond to the modified click event.
+* click-event: Set special click event for this product, if not set, we will use default value set in `config.yml`. Don't forgot also modify `add-lore` option to correspond to the modified click event. **Optional.**
 
 ```yaml
     add-lore:
@@ -76,7 +76,7 @@ Click [here](shops.md) to see the detalied example of those general options.
 ```
 
 * bedrock: View [this page](../menus/bedrock-menus-premium.md).
-* buy-more: Set whether this product can open buy more menu, **you must delete shop's `buy-more` option to make this option has effect! Optional. (default to true)**
+* buy-more: Set whether this product can open buy more menu. **Optional. (default to true)**
 * buy-more-menu: Set up separate buy more menu settings for the product. **Optional. Require 2.2.10+ version. (if not set, will use default value set in `config.yml` file)**
 
 ```yaml
@@ -87,6 +87,7 @@ Click [here](shops.md) to see the detalied example of those general options.
 ```
 
 * sell-all: Set whether this product can use sell all feature. **Optional, default to true. (Added in 3.9.3)**
+* buy-prices/sell-prices/products: Please view [this page](products-config-single-thing.md).
 * price-mode: Support `ANY, ALL, CLASSIC_ANY, CLASSIC_ALL`. **Required.**
 * product-mode: Same as above. **Required if you have products section.**
 
@@ -228,4 +229,4 @@ Sometimes, you want to display same product in different menus, or you want to m
 * display-item: Supports set different display item for sub buttons.
 * as-sub-button: Type `Product ID` or `ShopID;;ProductID` here.
 
-The example of **Sub Buttons** can be found at [Shops](shops.md) page, please check out the `C` section under `items` in the head example.
+The example  config of **Sub Buttons** can be found at [Shops](shops.md) page, please check out the `C` section under `items` in the head example.
