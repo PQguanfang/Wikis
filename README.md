@@ -10,6 +10,30 @@ And... If you have purcahsed <mark style="color:red;">**PREMIUM**</mark> version
 Why not try it now?
 {% endhint %}
 
+## Links
+
+### Get the plugin
+
+**SpigotMC:** [FREE](https://www.spigotmc.org/resources/ultimateshop-menus-rewards-shop-daily-shop-item-in-1-plugin-1-14-1-21-10.110601/) | [PREMIUM](https://www.spigotmc.org/resources/ultimateshop-premium-be-je-menus-rewards-shop-daily-shop-item-in-1-plugin-1-14-1-21-10.113069/) (will post each update)
+
+**Polymart:** [FREE](https://polymart.org/product/4296/ultimateshop) | [PREMIUM](https://polymart.org/product/3397/ultimateshop-premium) (will post each update)
+
+**BuiltByBit:** [PREMIUM](https://builtbybit.com/resources/ultimateshop.32830) (will post each update)
+
+**Modrinth:** [FREE](https://modrinth.com/plugin/ultimateshop) (weekly update, maybe not latest version)
+
+**Hanger:** [FREE](https://hangar.papermc.io/PQguanfang/UltimateShop) (monthly update, maybe not latest version)
+
+### Get support
+
+* All users have an obligation to comply with our rules after joining the Discord server, which can be viewed in the rules channel. If you do not agree with our rules, you will not be able to receive our service support. Users who violate the rules will be punished according to the situation, including permanent ban.
+* Every user is obligated to comply with our plugin terms of use. You can find these in the **LICENSE** file within the JAR file. We do not provide any assistance to users who fail to comply with the terms of use.
+* Compared to users who have purchased the paid version, our service support priority for free users will be lower, with more requirements and restrictions. I have invested a lot of time and effort in developing plugins, but despite this, I have provided a free version and the complete plugin source code. I have not closed the source or restricted the number of user IP addresses used. Therefore, better service support is not free, and you should not ask me to provide good service for free. If you want your issue to be taken seriously, please consider purchasing a paid version to support plugin development.
+* Support is only available at our [Discord](https://discord.gg/rzajeybhbw) server.&#x20;
+* 因 Discord 在中国大陆区域不可用，如果您在中国大陆购买了此插件，可以凭购买的账号平台、名称，在此QQ群享受售后服务：815351827。
+
+## Info
+
 * UltimateShop is a powerful shop plugin for Spigot, we just try added all premium shop plugins feature to this plugin.
 * Multi-based shop plugin! The relationship between products and prices is many to many, and can be freely controlled by conditional systems. You want to player pay 500 points and 1 stack diamond to buy one powerful diamond sword and 5 days VIP permission group? This can be easy done in UltimateShop!
 * Apply price system, you can make each times player buy a product need pay different prices!
