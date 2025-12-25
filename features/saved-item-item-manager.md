@@ -14,7 +14,7 @@ You can use command `/shop saveitem <saveItemID> <saveItemMethod>` command to sa
 
 * Bukkit
   * If you are using Spigot version of UltimateShop: Use BukkitAPI's method to save item. The method only support saving vanilla data and persistent data stored through BukkitAPI, and other custom NBT data from other plugins will not be saved.
-  * If you are using Paper version of UltimateShop: Use PaperAPI's method to save item, this new method can 100% save item data, no data will lose. **(Paper and 1.15+ server only)**
+  * If you are using Paper version of UltimateShop: Use PaperAPI's method to save item, this new method can 100% save item data, no data will lose. **(Paper and 1.17.1+ server only)**
 * ItemFormat: will parse item into [Item Format](../format/itemformat-tm/).
 
 An example for item config file that use Bukkit save item method with Paper version of UltimateShop:
