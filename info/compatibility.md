@@ -52,6 +52,10 @@ items:
 
 ### <mark style="color:red;">Directly</mark> supported protection plugins list  <a href="#directly-supported-protection-plugins-list-premium" id="directly-supported-protection-plugins-list-premium"></a>
 
+{% hint style="info" %}
+Although the protection plugin you are using is not on this list, as long as the corresponding plugin can prevent the player from interacting with the corresponding container, UltimateShop will not trigger a sell stick, depending on how the author of the plugin you are using wrote their plugin.
+{% endhint %}
+
 If players do not have permission to open container within these protection plugins areas, UltimateShop can prevent players use sell stick in these areas.
 
 * BentoBox
