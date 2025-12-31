@@ -6,7 +6,7 @@ This means real life stock, for set limit of buy/sell times, please view [Produc
 
 ## Set dynamic value for your product configs
 
-The plugin itself does not store inventory data, but we can cleverly solve this problem by setting buy limits. Read [dynamic prices](../dynamic-prices/dynamic-price.md) before read this page. Similar to Dynamic Prices, if you want to make stock system, do it in `buy-limits` option and put `{server-times-server}` placeholder in it, for example:
+The plugin itself does not store stock data, however, the logic of stock is essentially that player A sells an item to the shop, then the shop can sell the item sold by player A to player B. You only need to set a buy limit, and the value of the buy limit is the number of times the product is sold globally, that is, the placeholder: `{server-times-server}`. Read [dynamic prices](../dynamic-prices/dynamic-price.md) before read this page. Similar to Dynamic Prices, if you want to make stock system, do it in `buy-limits` option and put `{server-times-server}` placeholder in it, for example:
 
 ```yaml
   A:
@@ -46,4 +46,7 @@ In this way, we can ensure that players can only purchase items in the same quan
 
 ## FAQ: Restock
 
-The person who asked this question didn't understand this plugin at all. Your stock is achieved by setting a buy limit for the product. To restock, it is essentially resetting the buy times. This content is introduced on [this page](product-config-buy-sell-times-reset.md).
+The person who asked this question didn't understand this plugin at all. Your stock is achieved by setting a buy limit for the product. To restock, it is essentially resetting the buy times.&#x20;
+
+* This content of auto reset buy/sell times is introduced on [this page](product-config-buy-sell-times-reset.md).
+* Use command `/shop setselltimes <shop> <product> global 0`.
