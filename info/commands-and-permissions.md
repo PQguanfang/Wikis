@@ -1,4 +1,4 @@
-# ⌨️Commands
+# ⌨️Commands & Permissions
 
 ## FAQ:&#x20;
 
@@ -13,6 +13,10 @@ A: That menu already set a condition and you can find it at `menus/daily-shop-ex
 ## ultimateshop.bypassprice
 
 This permission can help you bypass price check and won't cost any price.
+
+## ultimateshop.bypass.protection
+
+This permission can help you bypass protection (anti grief) check when using sell stick.&#x20;
 
 ## /shop menu \<menuID>/\<shopID>
 

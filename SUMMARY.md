@@ -10,7 +10,7 @@
 * [⚙️Install](info/install.md)
 * [🔗Compatibility](info/compatibility.md)
 * [🛠️Configuration files](info/configuration-files.md)
-* [⌨️Commands](info/commands.md)
+* [⌨️Commands & Permissions](info/commands-and-permissions.md)
 * [📊Data](info/data.md)
 * [🚀Performance](info/performance.md)
 * [❓FAQ](info/faq.md)
@@ -33,8 +33,7 @@
 * [🔲General Menus](menus/general-menus.md)
 * [🔽Buy More Menus](menus/buy-more-menus.md)
 * [🛏️Bedrock Menus - Premium](menus/bedrock-menus-premium.md)
-* [🥉Display Item Add Lore](menus/display-item-add-lore/README.md)
-  * [Display Item Add Lore (Legacy)](menus/display-item-add-lore/display-item-add-lore-legacy.md)
+* [🥉Display Item Add Lore](menus/display-item-add-lore.md)
 
 ## 🛍️Shops
 

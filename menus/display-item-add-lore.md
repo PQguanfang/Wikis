@@ -1,7 +1,7 @@
 # 🥉Display Item Add Lore
 
 {% hint style="info" %}
-This page showing you the rematered display item add lore feature stating from plugin version 4.0.0, if you still using older version, please [click this page](display-item-add-lore-legacy.md).
+This page showing you the rematered display item add lore feature stating from plugin version 4.0.0.
 {% endhint %}
 
 ## General Setting
@@ -43,7 +43,7 @@ Default example:
 
 ## Per Product Setting
 
-You can set different add lore format for each product, add the `add-lore` op6ion in the product config. Check [shops](../../shops/shops.md) page product **B** to find the example.
+You can set different add lore format for each product, add the `add-lore` op6ion in the product config. Check [shops](../shops/shops.md) page product **B** to find the example.
 
 ```yaml
 items:
@@ -92,9 +92,9 @@ Each line start with `@+lower case` will be consider as conditional line. We wil
 
 @q - Player is **not** opening buy more menu.
 
-@x - Player is from bedrock version. Require using [Bedrock Menus](../bedrock-menus-premium.md) feature.
+@x - Player is from bedrock version. Require using [Bedrock Menus](bedrock-menus-premium.md) feature.
 
-@y - Player is **not** from bedrock version. Require using [Bedrock Menus](../bedrock-menus-premium.md) feature.
+@y - Player is **not** from bedrock version. Require using [Bedrock Menus](bedrock-menus-premium.md) feature.
 
 @u - This button can buy product.&#x20;
 

@@ -83,6 +83,8 @@ elements:
 
 Use `{random_<ID>;;<Number>}` placeholder to display it's value, like `{random_daily;;2}` will query `daily` random placeholder's **second** element picked. For more info, please view [Placeholders](built-in-placeholders.md) page. For example of this placeholder usage, please view [Daily Shop](../shops/example-daily-shop-rotating-shop.md) page.
 
+Use `{random_times_<ID>}` placeholder to display the reset time of the placeholder, like `{random_times_daily}`.
+
 ## Reset Placeholder
 
 You can reset placeholder by setting `reset-mode` and `reset-time` option.&#x20;
@@ -93,6 +95,10 @@ Supports below reset mode:
 * TIMER/TIMED/NEVER: Please view [this page](../shops/products.md#buy-sell-times-reset-options) to know more. We will generate reset time after random placeholder be used once. The reset time will not automatically adjust based on configuration updates. If you set the reset time incorrectly, you will need to delete the corresponding data.
 
 For more info, please view [this page](../shops/product-config-buy-sell-times-reset.md).
+
+## Testing
+
+You can know about the reset time of the random placeholder by using the command `/shop getplaceholdvalue {random times_<placeholdID>}`. And by using `/shop getplaceplaceervalue {random_<placeholdID>}` to know the current value of the random placeholder, you can compare whether the value before reset is the same after reset by this way.
 
 ## Example: Random Price
 

@@ -60,9 +60,9 @@ Click [here](shops.md) to see the detalied example of those general options.
 {% endhint %}
 
 * display-item: Product display item in shop menu, it can be different from the real item player will obtain after purchase. For virtual products, you must set `display-item` here, otherwise they can not be displayed in GUI. For real item products, you must enable `auto-set-first-product` option under `display-item` section in `config.yml` file to allow you remove this section, after enable, if `display-item` is not set, the first real item product will be used as display item. This section use [Item format](../format/itemformat-tm/). **Optional (if not set, will use first products)**
-  * display-item.modify-lore: Whether we will modify display item lore to add info about price, limits and so on. You can set add lore info at `config.yml` file or `add-lore` option in product config, for more info about it, please view [Display Item Add Lore](../menus/display-item-add-lore/) page. **Optional (default to true)**
+  * display-item.modify-lore: Whether we will modify display item lore to add info about price, limits and so on. You can set add lore info at `config.yml` file or `add-lore` option in product config, for more info about it, please view [Display Item Add Lore](../menus/display-item-add-lore.md) page. **Optional (default to true)**
 * display-name: Set product display name in `{product}` placeholder and buy more menu display item. **Optional. (if not set, we will use the display item's name as product display name)**
-* add-lore: Set special [display item add lore](../menus/display-item-add-lore/) for this product, if not set, we will use default value set in `config.yml`. **Optional.**
+* add-lore: Set special [display item add lore](../menus/display-item-add-lore.md) for this product, if not set, we will use default value set in `config.yml`. **Optional.**
 * click-event: Set special click event for this product, if not set, we will use default value set in `config.yml`. Don't forgot also modify `add-lore` option to correspond to the modified click event. **Optional.**
 
 ```yaml

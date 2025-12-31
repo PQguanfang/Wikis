@@ -28,3 +28,7 @@ conditions: []
 * multiplier: The multiplier of sell stick. It only supports economy type of price.
 * actions: The action will execute after use this sell stick. Should use [Action format](../format/action-format.md).
 * conditions: The condition player need meet to use this sell stick. Should use [Condition Format](../format/condition-format.md).
+
+After confiure the sell stick, you can reload the plugin then use `/shop givesellstick` to obtain sell stick item. For more info, please view [here](../info/commands-and-permissions.md#shop-givesellstick-less-than-itemid-greater-than-less-than-playerid-greater-than-amount-premium-vers).
+
+You can check Supported Protection Plugins list [here](../info/compatibility.md#directly-supported-protection-plugins-list-premium). You can use permission `ultimateshop.bypass.protection` to bypass protection check for sell stick use.
