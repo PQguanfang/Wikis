@@ -49,4 +49,4 @@ In this way, we can ensure that players can only purchase items in the same quan
 The person who asked this question didn't understand this plugin at all. Your stock is achieved by setting a buy limit for the product. To restock, it is essentially resetting the buy times.&#x20;
 
 * This content of auto reset buy/sell times is introduced on [this page](product-config-buy-sell-times-reset.md).
-* Use command `/shop setselltimes <shop> <product> global 0`.
+* Use command `/shop setselltimes <shop> <product> global <newStockPlusNowSellTimes>`. If you want to restock 50 amount, and the now sell time is 75, then you need put 125 to `<newStockPlusNowSellTimes>`.
