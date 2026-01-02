@@ -2,9 +2,9 @@
 
 Each single product or price in one product we called **single thing**. So, each product have those thing type:
 
-* Buy Prices: The buy price of this product, player need pay the buy price to obtain this product, if this thing type do not exist (which means `buy-prices` section does not exist in the config), this product can not be purcahsed.
-* Sell Prices: The sell price of this product, player need sell the products to shop, then he will get the sell price you set here, if this thing type do not exist (which means `sell-prices` section does not exist in the config), this product can not be sold.
-* Products: The products of this  product, player will get the products you set here after buy, and need give his products to shop when selling.
+* Buy Prices: The buy price of this product, player need pay the buy price to obtain this product, if this thing type does not exist (which means `buy-prices` section does not exist in the config), this product can not be purcahsed.
+* Sell Prices: The sell price of this product, player need sell the products to shop, then he will get the sell price you set here, if this thing type does not exist (which means `sell-prices` section does not exist in the config), this product can not be sold.
+* Products: The products of this  product, player will get the products you set here after buy, and need give his products to shop when selling. If this thing type type does not exist (which means products does not exist in the config), then player won't get anything after buy it, and won't cost anything after sell it, however, option like `buy-actions, sell-actions, buy-conditions, sell-coditions` will still work as execepted.
 
 ## Single Thing Types
 
