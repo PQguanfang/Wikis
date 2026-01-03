@@ -79,6 +79,8 @@ Similarly, if we cannot find this custom language in the corresponding language 
 
 The default language text is directly filled into the text content that needs to be output, along with [color codes](color-code.md). However, you can also utilize this feature to enable the plugin to display not only regular chat box messages, but also actionbars, titles, bossbars, sounds, and more!
 
+You can still use color codes (including MiniMessage) while using our advanced message format.
+
 ### Common Usage
 
 ```yaml
