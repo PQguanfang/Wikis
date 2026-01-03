@@ -60,6 +60,7 @@
 
 ## ✨Features
 
+* [🌏Advanced Language Managment](features/advanced-language-managment.md)
 * [🎨Color Code](features/color-code.md)
 * [💴Easy Prices](features/easy-prices.md)
 * [🪄Sell Stick - Premium](features/sell-stick-premium.md)
