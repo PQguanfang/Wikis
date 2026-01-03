@@ -13,6 +13,10 @@ config-files:
 
 The input here is the name of the language file (without the suffix). All language files are stored in the "`languages`" folder. You can also create a new language file by simply copying the "`en_US.yml`" file and renaming it to the corresponding language code. For example, `zh_CN.yml`.
 
+{% hint style="warning" %}
+Content below was added in plugin version **4.2.0**.
+{% endhint %}
+
 ## Per Player Language <mark style="color:red;">- Premium</mark>
 
 You can enable `per-player-language` at `config.yml` file. After being enabled, the plugin will determine which language file to display to the player based on their client language. The server must have the relevant language files preloaded; otherwise, it will display content using the default language file.
