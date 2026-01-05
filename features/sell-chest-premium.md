@@ -62,14 +62,33 @@ The most thing is same as [Sell Stick](sell-stick-premium.md), I will only tell 
 
 ```yaml
 sell-chest:
-    period-ticks: 60
+    period-ticks: 600
+    batch-count: 5
     send-sell-message: true
     price-empty: '{lang}'
     hologram:
       enabled: true
 ```
 
-* period-ticks: The interval between each sell, measured in ticks. 20 ticks = 1 second.
+*
+
+    #### `period-ticks: 600`
+
+    Controls how often the sell chest system runs. In this example:\
+    The value is in **Minecraft ticks** (20 ticks = 1 second).
+
+    * `600 ticks = 30 seconds`
+    * Every 30 seconds, the system processes **one batch** of sell chests.
+
+    #### `batch-count: 5`
+
+    Controls how many **batches** all sell chests are divided into per cycle. In this example:
+
+    * All sell chests are split into **5 batches**
+    * **Only one batch is processed each period**
+    * A full cycle requires **5 executions**
+
+    The purpose of doing this is to save server performance. We will not set separate loop timers for each sell chest to avoid server performance degradation caused by too many sell chests, nor will we arrange all sell chests in the same loop timer to cause server lag.
 * send-sell-message: Whether we will send message after each sell.
 * price-empty: The text displayed in hologram if there is no history for the sell chest.
 * hologram: Settings for the hologram feature. Require you install DecentHolograms in server.
