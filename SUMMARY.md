@@ -64,6 +64,7 @@
 * [🎨Color Code](features/color-code.md)
 * [💴Easy Prices](features/easy-prices.md)
 * [🪄Sell Stick - Premium](features/sell-stick-premium.md)
+* [🎁Sell Chest - Premium](features/sell-chest-premium.md)
 * [💾Saved Item (Item Manager)](features/saved-item-item-manager.md)
 * [🌍Localized Item Name - Premium](features/localized-item-name-premium.md)
 * [🌐Multi Server Sync - Premium](features/multi-server-sync-premium.md)
