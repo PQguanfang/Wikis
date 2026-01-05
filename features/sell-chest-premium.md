@@ -53,6 +53,10 @@ actions:
 conditions: []
 ```
 
+{% hint style="warning" %}
+The display item of sell chest <mark style="color:red;">**ONLY**</mark> support use **CHEST** as material. Otherwise, it won't work!
+{% endhint %}
+
 The most thing is same as [Sell Stick](sell-stick-premium.md), I will only tell you about different things:
 
 * holograms: The content of the hologram showed above sell chest. Require DecentHolograms.

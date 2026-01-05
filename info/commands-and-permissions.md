@@ -50,7 +50,13 @@ Require `ultimateshop.reload` permission.
 
 ## /shop givesellstick \<itemID> \<playerID> \[amount] <mark style="color:red;">**(Premium version only)**</mark>
 
-Give specifeid player specified amount (if not set, default to **1**) sell stick.&#x20;
+Give specifeid player specified amount (if not set, default to **1**) [sell stick](../features/sell-stick-premium.md).&#x20;
+
+Require `ultimateshop.givesellstick` permission.
+
+## /shop givesellchest \<itemID> \<playerID> \[amount] <mark style="color:red;">**(Premium version only)**</mark>
+
+Give specifeid player specified amount (if not set, default to **1**) [sell chest](../features/sell-chest-premium.md).
 
 Require `ultimateshop.givesellstick` permission.
 
