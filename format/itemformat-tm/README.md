@@ -75,9 +75,11 @@ min-amount: 1
 max-amount: 15
 ```
 
-## Component (1.21.5+, Requrie Paper) <mark style="color:red;">- Premium</mark>
+## Component (1.21.6+, Requrie Paper) <mark style="color:red;">- Premium</mark>
 
 Use Paper's DataComponent API instead of Spigot's ItemMeta API to modify item easily, also all 1.21.5+ item attribute will only be available in `component` option, like **Weapon**. For more info, please view [this page](component-format.md).
+
+Start from 4.2.1 version, this feature require 1.21.6+ servers.
 
 ```yaml
 component:
