@@ -1,6 +1,6 @@
 # ♻️Product Config: Buy/Sell Times Reset
 
-## FAQ: Why this feature do not crash my server since it also reset all players buy/sell times?
+## FAQ: Why this feature does not crash my server since it also reset all players buy/sell times?
 
 This feature will not clear all players' buy/sell times at once. We will store **different timestamp data** based on the **reset mode**. When our estimated reset time has been reached, we will start resetting the data.&#x20;
 
@@ -18,7 +18,7 @@ We will only attempt to reset under the following circumstances:
 * Auto reset (require enable `use-times.auto-reset-mode` option in `config.yml` file, will cost more server performance, player must online, otherwise we will try auto reset when he rejoin the server)
 
 {% hint style="info" %}
-This option solves the problem that the buy times and sell times cannot be reset in a timely manner when the reset time has arrived. If the product has never been purchased or sold, then there is no reset time and it will naturally not be reset
+If the product has never been purchased or sold (for COOLDOWN\_TIMED and COOLDOWN\_TIMER, require first view the product, like open shop GUI), then there is no reset time and it will naturally not be reset.
 {% endhint %}
 
 ## Option Types
@@ -56,6 +56,10 @@ use-times:
   max-value-for-total-only: true
 ```
 
+{% hint style="info" %}
+`set-reset-value-by-default` and `max-value-for-total-only` only exist in config.yml file.
+{% endhint %}
+
 No matter what methods you set it up in, we can see that this feature consists of 5 option types:
 
 * reset mode
@@ -71,11 +75,11 @@ Support those modes:
 * NEVER:&#x20;
 * TIMER: It will reset after the time you specify, for example, after 5 hours.
 * TIMED: It will be reset at the corresponding time, such as 8:15 pm.
+* RANDOM\_PLACEHOLDER: Synchronize with the reset time of the specified random placeholder. (Added in 3.3.0) <mark style="color:red;">**- Premium**</mark>
+* CUSTOM: Directly enter the reset time in reset time, and the plugin will not perform any calculations. Recommend obtain reset time through the Placeholder API results. You need set time format at `reset-time-format` type option to helps us know how does your PlaceholderAPI results be like. (Added in 3.3.0) <mark style="color:red;">**- Premium**</mark>
 * COOLDOWN\_TIMER (Added in 3.3.0) <mark style="color:red;">**- Premium**</mark>
 * COOLDOWN\_TIMED (Added in 3.3.0) <mark style="color:red;">**- Premium**</mark>
 * COOLDOWN\_CUSTOM (Added in 3.9.1) <mark style="color:red;">**- Premium**</mark>
-* RANDOM\_PLACEHOLDER: Synchronize with the reset time of the specified random placeholder. (Added in 3.3.0) <mark style="color:red;">**- Premium**</mark>
-* CUSTOM: Directly enter the reset time in reset time, and the plugin will not perform any calculations. Recommend obtain reset time through the Placeholder API results. You need set time format at `reset-time-format` type option to helps us know how does your PlaceholderAPI results be like. (Added in 3.3.0) <mark style="color:red;">**- Premium**</mark>
 
 {% hint style="info" %}
 For random placeholder reset mode: supports `TIMER`, `TIMED`, `CUSTOM`. The reset time of the random placeholder will be saved to the server, so its usage effect is the same as `COOLDOWN_TIMER`, `COOLDOWN_TIMED` and `COOLDOWN_CUSTOM`.
@@ -83,7 +87,7 @@ For random placeholder reset mode: supports `TIMER`, `TIMED`, `CUSTOM`. The rese
 
 ### Difference between COOLDOWN\_TIMED (or COOLDOWN\_TIMER) and TIMED (or TIMER)
 
-`TIMED` and `TIMER` will start generating reset time after each buy or sell until the player reaches the limit and not save the generated reset time, while `COOLDOWN_TIMED` and `COOLDOWN_TIMER` will immediately start generating the next reset time after the last reset and save the generated time. It will not reset again unless the rest time is reached.
+`TIMED` and `TIMER` will start generating reset time after each buy or sell until the player reaches the limit and not save the generated reset time, while `COOLDOWN_TIMED` and `COOLDOWN_TIMER` will immediately start generating the next reset time after the last reset or first view this product (like open shop GUI) and save the generated time. It will not reset again unless the rest time is reached.
 
 {% hint style="info" %}
 We will only attempt to reset and generate new reset time for `COOLDOWN_TIMED` and `COOLDOWN_TIMER`  reset mode under the following circumstances:
@@ -95,7 +99,7 @@ We will only attempt to reset and generate new reset time for `COOLDOWN_TIMED` a
 
 For this reason, when using `COOLDOWN_TIMED` or `COOLDOWN_TIMER` mode, the reset time will not automatically adjust due to server restarts, configuration modifications, or other reasons. This means that if you mistakenly set the product to refresh after 1 year, the reset time will not automatically change due to your correction, but `TIMED` or `TIMER` rules can do this.
 
-Also, when use last reset placeholder, `COOLDOWN_TIMED` or `COOLDOWN_TIMER` mode will return actual reset time, `TIMED` or `TIMER` mode will return the time that first buy or sell after reset.
+Also, when use the last reset placeholders, `COOLDOWN_TIMED` or `COOLDOWN_TIMER` mode will return actual reset time, `TIMED` or `TIMER` mode will return the time that first buy or sell after reset.
 
 ## Reset Time
 
@@ -127,7 +131,7 @@ If now time is 2023-09-04 12:00:00, will reset at 2023-09-04 15:00:00.
 
 This is the result obtained with days set to 0. If you set it to 1, we will add another day, and that's it.
 
-It is worth noting that if you want to do a daily store, days should be set to 0, and if you want to do a weekly store, days should be set to 6. Because you need to reset the number of times on the last day, not on the second day after the last day, right?
+If you want to do a daily shop, **days** should be set to 0, and if you want to do a weekly shop, **days** should be set to 6. Because you need to reset the number of times on the last day, not on the second day after the last day, right?
 
 This type of reset mode also supports set multi reset time, each reset time use `;;` to splite, we will pick up the earliest reset time. For example: <mark style="color:red;">(Premium only)</mark>
 
@@ -166,7 +170,7 @@ Please note:
 
 * After reaching the limit, players can still continue to purchase or sell products, but the plugin will not accumulate more times. If you want players to no longer purchase or sell products, then you should use the `buy-limits` option or `sell-limits` option in [Products](products.md) config instead of this feature.
 * Due to the setting of an upper limit that no longer accumulates, if the set upper limit is greater than the limit value, buy limits and sell limits will no longer be useful. Other features not mentioned may also be affected.
-* You can modify the `use-times.max-value-for-total-only` option in `config.yml` to ensure that the times placeholder accumulates normally even after reaching its maximum value, but the total placeholder does not continue to accumulate after reaching its maximum value. For information about these two placeholders, please refer to [this page](../placeholders/built-in-placeholders.md).
+* You can modify the `use-times.max-value-for-total-only` option in `config.yml` to ensure that the times placeholder accumulates normally even after reaching its maximum value, but the total placeholder does not continue to accumulate after reaching its maximum value. This can solve the problem told above. For information about these two placeholders, please refer to [this page](../placeholders/built-in-placeholders.md).
 
 ## Dynamic Reset Time <mark style="color:red;">**- Premium**</mark>
 
