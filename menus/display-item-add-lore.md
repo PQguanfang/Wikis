@@ -108,9 +108,9 @@ You can reverse the conditional symbol by adding English parentheses before and 
 Suffix has been removed in display item add lore from 4.0.0.
 {% endhint %}
 
-## New Line Symbol
+## Multi Line Price&#x20;
 
-Use `;;` symbol if you want to start a new line, this is very useful for some people want to display price in multi lines.
+Use `;;` symbol if you want to display price in multi lines.
 
 ```yaml
 placeholder:
@@ -118,4 +118,15 @@ placeholder:
     split-symbol-any: ';;' # <--- Changed this in config.yml
     split-symbol-all: ';;' # <--- Changed this in config.yml
     unknown: "Unknown"
+```
+
+You need also update your `add-lore` settings:
+
+```yaml
+  add-lore:
+    - '@n '
+    - '@a&ePurchase: '
+    - '@a   &7[-] &f{buy-price}'
+    - '@b&eSell:'
+    - '@a   &7[-] &f {sell-price}'
 ```
