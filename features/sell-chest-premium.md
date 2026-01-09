@@ -2,7 +2,7 @@
 
 {% hint style="warning" %}
 The **sell chest** feature is not currently introduced as a core function of UltimateShop and is still in the early testing phase. It may be officially released in future versions or potentially removed if it contains irreparable critical issues. \
-Sell chest is now available at **4.2.0b-Sell Chest Test** version.
+Sell chest is now available at **4.2.0b or later** version.
 {% endhint %}
 
 ## Limitation
