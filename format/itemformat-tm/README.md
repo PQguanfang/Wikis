@@ -79,7 +79,9 @@ max-amount: 15
 
 Use Paper's DataComponent API instead of Spigot's ItemMeta API to modify item easily, also all 1.21.5+ item attribute will only be available in `component` option, like **Weapon**. For more info, please view [this page](component-format.md).
 
-Start from 4.2.1 version, this feature require 1.21.6+ servers.
+You can found a option called `debuild-item-method` at `config.yml` file. You can set this option to **LEGACY** or **COMPONENT**. **COMPONENT** method only supports 1.21.6+ Paper servers, after set method set COMPONENT, we will parse item into this `component` option.
+
+Start from 4.2.1 version, this feature require 1.21.6+ Paper servers.
 
 ```yaml
 component:
@@ -441,9 +443,10 @@ Config section format is multi sub options.
 
 For `type` possible value: `BALL, BALL_LARGE, STAR, BURST, CREEPER`.
 
-<pre class="language-yaml"><code class="lang-yaml"><strong>firework:
-</strong><strong>  1: 
-</strong>    flicker: true
+```yaml
+firework:
+  1: 
+    flicker: true
     trial: true
     colors:
       base:
@@ -451,7 +454,7 @@ For `type` possible value: `BALL, BALL_LARGE, STAR, BURST, CREEPER`.
       fade:
         - 666666
     type: BALL
-</code></pre>
+```
 
 ## Firework Star
 
@@ -459,8 +462,9 @@ For `type` possible value: `BALL, BALL_LARGE, STAR, BURST, CREEPER`.
 
 For `type` possible value: `BALL, BALL_LARGE, STAR, BURST, CREEPER`.
 
-<pre class="language-yaml"><code class="lang-yaml"><strong>firework:
-</strong>  flicker: true
+```yaml
+firework:
+  flicker: true
   trial: true
   colors:
     base:
@@ -468,7 +472,7 @@ For `type` possible value: `BALL, BALL_LARGE, STAR, BURST, CREEPER`.
     fade:
       - 666666
   type: BALL
-</code></pre>
+```
 
 ## Suspicious Stew (1.14+)
 
@@ -476,9 +480,10 @@ For `type` possible value: `BALL, BALL_LARGE, STAR, BURST, CREEPER`.
 
 Effects format: `Potion Type ID, Duration, Amplifier, Ambient, Particles, Icon`.
 
-<pre class="language-yaml"><code class="lang-yaml"><strong>effects:
-</strong>  - 'SPEED, 100, 1, true, true, false'
-</code></pre>
+```yaml
+effects:
+  - 'SPEED, 100, 1, true, true, false'
+```
 
 ## Bundle (1.17+)/Shulker
 
