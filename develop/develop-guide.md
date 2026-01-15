@@ -4,6 +4,53 @@
 Please note that UltimateShop is not a traditional shop plugin. It can dynamically display products and prices (and even the each single price amount), unlike other shop plugins where one ItemStack corresponds to one price.
 {% endhint %}
 
+## Add as dependency <a href="#user-content-get-shop-object" id="user-content-get-shop-object"></a>
+
+{% hint style="info" %}
+As of January 15, 2026, the latest plugin version number is **4.2.3**. If this date is too far away, then you should check the latest plugin version number yourself, as the provided plugin version may be outdated or unavailable.
+{% endhint %}
+
+```xml
+<repositories>
+    <repository>
+        <id>repo-lanink-cn</id>
+        <url>https://repo.lanink.cn/repository/maven-public/</url>
+    </repository>
+</repositories>
+
+<dependencies>
+        <dependency>
+        <groupId>cn.superiormc.ultimateshop</groupId>
+        <artifactId>plugin</artifactId>
+        <version>[PLUGIN VERSION]</version>
+        <scope>provided</scope>
+    </dependency>
+</dependencies>
+```
+
+```graphql
+repositories {
+    maven {
+        url "https://repo.lanink.cn/repository/maven-public/"
+    }
+}
+
+dependencies {
+    compileOnly group: 'cn.superiormc.ultimateshop', name: 'plugin', version: '[PLUGIN VERSION]'
+}
+
+```
+
+```kts
+repositories {
+    maven("https://repo.lanink.cn/repository/maven-public/")
+}
+
+dependencies {
+    compileOnly("cn.superiormc.ultimateshop:plugin:[PLUGIN VERSION]")
+}
+```
+
 ## Get shop object <a href="#user-content-get-shop-object" id="user-content-get-shop-object"></a>
 
 ```java
