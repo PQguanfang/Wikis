@@ -19,7 +19,7 @@ As of January 15, 2026, the latest plugin version number is **4.2.3**. If this d
 </repositories>
 
 <dependencies>
-        <dependency>
+    <dependency>
         <groupId>cn.superiormc.ultimateshop</groupId>
         <artifactId>plugin</artifactId>
         <version>[PLUGIN VERSION]</version>

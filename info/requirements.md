@@ -12,8 +12,8 @@
 
 ## Server Version
 
-* The plugin theoretically supports any version between **1.14** and **1.21.10**.
-* Obviously, supporting so many versions is not an easy task. It is impossible for the author to test all versions between 1.14 and 1.21.10 every time the plugin is updated. If you encounter errors while using a certain version, <mark style="color:red;">please join our Discord feedback</mark>.
+* The plugin theoretically supports any version between **1.14** and **1.21.11**.
+* Obviously, supporting so many versions is not an easy task. It is impossible for the author to test all versions between 1.14 and 1.21.11 every time the plugin is updated. If you encounter errors while using a certain version, <mark style="color:red;">please join our Discord feedback</mark>.
 
 ## An economy plugin if you want to use custom currency
 
