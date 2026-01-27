@@ -177,10 +177,22 @@ You may note: you can set action will run when the single thing is been give to 
   **If you want to make the product be actions only, don't forget add `give-item: false` in the single thing option!**
 * Conditions: Add `conditions` section in single thing config.&#x20;
 
-### Different from single thing's `give-actions` and item's `buy-actions/sell-actions`:
+### Different from single thing's `give-actions/take-actions` and item's `buy-actions/sell-actions`:
 
 * `give-actions` only executed when the single thing is used and give to player. `buy-actions/sell-actions` will always executed when player successfully buy or sell the item.&#x20;
-* `give-actions`'s `{amount}` placeholder will return the single price/product amount, `buy-actions/sell-actions` will return the amount player buy or sell the item in this time. For example, player sell 64x apple, and obtain 100 coins by this, `give-actions`'s `{amount}` placeholder will return 100, and `buy-actions/sell-actions` will return 64.
+* `give-actions`'s `{amount}` placeholder will return the single price/product amount, `buy-actions/sell-actions` will return the amount player buy or sell the item in this time. For example, player sell this product 5 quantity in buy more menu:
+
+```yaml
+    products:
+      1:
+        name: 'Magic Crate Key'
+        material: PAPER
+        custom-model-data: 500
+        amount: 4 # Base amount is 4
+```
+
+* `give-action/take-actions`'s {amount} will return 20. (because player will receive 20x create keys after this purchase)
+* `buy-action/sell-actions`'s {amount} will return 5. (because player just buy this product 5 quantity)
 
 ## Example: Command Shop
 
