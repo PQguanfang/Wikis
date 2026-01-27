@@ -28,7 +28,7 @@ Optional, if not set, will execute action every time.
 
 #### Sell All Once / Multi Once
 
-When multiple products are about to be sold, adding this option means that only the first product's action will be executed. Very useful for sounds action, if you didn't add this, all product's sound action will execute.
+When multiple quantity / products are about to be sold, adding this option means that only the first product's action will be executed. Very useful for sounds action, if you didn't add this, all product's sound action will execute.
 
 ```yaml
     actions:

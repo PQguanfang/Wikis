@@ -201,7 +201,11 @@ You may note: you can set action will run when the single thing is been give to 
     buy-actions: # In product config
       1:
         type: console_command
-        command: "crate give %player_name% magic" # Put command here.
+        command: "crate give {player} magic" # Put command here.
+      2:
+        multi-once: true # If you want to use {amount} placeholder in your give item command, make sure add this line to make sure this action only execute once when purchase multi quantity.
+        type: console_command
+        command: "crate give {player} magic {amount}" 
   B:
     price-mode: CLASSIC_ALL
     product-mode: CLASSIC_ALL
@@ -215,7 +219,11 @@ You may note: you can set action will run when the single thing is been give to 
         give-actions: # In single things config
           1:
             type: console_command
-            command: "crate give %player_name% magic"
+            command: "crate give {player} magic"
+          2:
+            multi-once: true # If you want to use {amount} placeholder in your give item command, make sure add this line to make sure this action only execute once when purchase multi quantity.
+            type: console_command
+            command: "crate give {player} magic {amount}" 
     buy-prices:
       1:
         economy-plugin: Vault
@@ -238,8 +246,9 @@ In the above two examples, the final execution effect is identical. But can you 
         give-item: false # You need add this to make sure the "fake" product will not give to player
         give-actions: # In single things config
           1:
+            multi-once: true
             type: console_command
-            command: "crate give %player_name% magic"
+            command: "crate give {player} magic {amount}"
       2:
         name: 'Magic Crate Key (VIP plus 1 for free)'
         material: PAPER
@@ -248,8 +257,9 @@ In the above two examples, the final execution effect is identical. But can you 
         give-item: false # You need add this to make sure the "fake" product will not give to player
         give-actions: # In single things config
           1:
+            multi-once: true
             type: console_command
-            command: "crate give %player_name% magic"
+            command: "crate give {player} magic {amount}"
         conditions:
           1:
             type: permission

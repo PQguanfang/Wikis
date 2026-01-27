@@ -118,9 +118,14 @@ items:
       1:
         type: console_command
         command: "ws give %player_name% spawner chicken 1"
+      # or
+      # 2:
+      #  multi-once: true
+      #  type: console_command
+      #  command: "ws give %player_name% spawner chicken {amount}"
 ```
 
-* You can first enter the command `/shop generateeitemformat` to generate an **Item Format** and fill it into the `display-item` option. This way, even if you haven't set any items, the plugin can still display the item in the store by reading the item in the `display-item` option.
+* You can first enter the command `/shop generateitemformat` to generate an **Item Format** and fill it into the `display-item` option. This way, even if you haven't set any items, the plugin can still display the item in the store by reading the item in the `display-item` option.
 * This product didn't set `sell-prices` option, so it can not be sold.
 * After purchase, we will execute `buy-actions` which includes execute the command you set. For more info about Actions, please read [Action Format](../format/action-format.md) page.
 
