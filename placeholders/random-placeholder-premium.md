@@ -91,8 +91,9 @@ You can reset placeholder by setting `reset-mode` and `reset-time` option.&#x20;
 
 Supports below reset mode:
 
-* ONCE: Each time it is used, it will reset and is not applicable to the price, as the price seen by the player opening the store and the actual transaction result are calculated twice, so you cannot achieve price synchronization.
-* TIMER/TIMED/NEVER: Please view [this page](../shops/products.md#buy-sell-times-reset-options) to know more. We will generate reset time after random placeholder be used once. The reset time will not automatically adjust based on configuration updates. If you set the reset time incorrectly, you will need to delete the corresponding data.
+* **ONCE**: Each time it is used, it will reset and is not applicable to the price, as the price seen by the player opening the store and the actual transaction result are calculated twice, so you cannot achieve price synchronization.
+* **TIMER/TIMED/CUSTOM/NEVER**: Please view [this page](../shops/products.md#buy-sell-times-reset-options) to know more. We will generate reset time after random placeholder be used once. The reset time will not automatically adjust based on configuration updates. If you set the reset time incorrectly, you will need to delete the corresponding data.
+* Do <mark style="color:red;">**NOT**</mark> use COOLDOWN\_TIMER/COOLDOWN\_TIMED/COOLDOWN\_CUSTOM reset mode here, they will not work in random placeholder, and since random placeholder data is always saved in server, so random placeholder's TIMER/TIMED/CUSTOM effect is same as product config's CUSTOM\_TIMER/CUSTOM\_TIMED/COOLDOWN\_CUSTOM reset mode.
 
 For more info, please view [this page](../shops/product-config-buy-sell-times-reset.md).
 

@@ -245,9 +245,11 @@ Use this placeholder at `buy-times-reset-valuvalue` option in any product config
 You can use Cron format in reset time.&#x20;
 
 * Set reset mode to `COOLDOWN_CUSTOM` (for random placeholder, set it to `CUSTOM`).
-* Use `{cron_"<Cron Expression"}` built-in placeholder in reset time. Don't miss out the `"` symbol.
+* Use `{cron_"<Cron Expression>"}` built-in placeholder in reset time. Don't miss out the `"` symbol. The `<Cron Expression>`  should use **Quartz** format.
 
 For example:
+
+Product config:
 
 ```yaml
     sell-times-reset-mode: 'COOLDOWN_CUSTOM'
@@ -256,9 +258,14 @@ For example:
     # You do not need set a time format here, this just help you know there is a option that you can set custom time format.
 ```
 
-You can obtain the Cron expression you want by asking ChatGPT. For example, the Cron expression in this example means to reset at 0:00 every Thursday. We do not provide any help related to how to write Cron expression.
+Random Placeholder config:
 
-Should use **Quartz** format.
+```yaml
+reset-mode: 'CUSTOM'
+reset-time: '{cron_"0 0 0 ? * 5
+```
+
+You can obtain the Cron expression you want by asking ChatGPT or use [this tool](https://freeformatter.com/cron-expression-generator-quartz.html). For example, the Cron expression in this example means to reset at 0:00 every Thursday. We do not provide any help related to how to write Cron expression.
 
 {% hint style="info" %}
 You **MUST** make sure that time format of the result of Cron placeholder (set it in `config.yml` file) and the time format you set here is same. By default, they are same.
