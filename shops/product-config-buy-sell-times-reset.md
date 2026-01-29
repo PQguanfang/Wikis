@@ -135,12 +135,21 @@ If you want to do a daily shop, **days** should be set to 0, and if you want to 
 
 This type of reset mode also supports set multi reset time, each reset time use `;;` to splite, we will pick up the earliest reset time. For example: <mark style="color:red;">(Premium only)</mark>
 
+Product config:
+
 ```yaml
     sell-times-reset-mode: 'TIMED'
     sell-times-reset-time: '20:00:00;;19:00:00'
 ```
 
-In this example, this product will reset reset at 19:00 and 20:00 every day.
+Random Placeholder config:
+
+```yaml
+reset-mode: 'TIMED'
+reset-time: '20:00:00;;19:00:00'
+```
+
+In this example, this product or random placeholder will reset reset at 19:00 and 20:00 every day.
 
 #### CUSTOM/COOLDOWN\_CUSTOM <mark style="color:red;">**- Premium**</mark>
 
@@ -262,7 +271,7 @@ Random Placeholder config:
 
 ```yaml
 reset-mode: 'CUSTOM'
-reset-time: '{cron_"0 0 0 ? * 5
+reset-time: '{cron_"0 0 0 ? * 5}'
 ```
 
 You can obtain the Cron expression you want by asking ChatGPT or use [this tool](https://freeformatter.com/cron-expression-generator-quartz.html). For example, the Cron expression in this example means to reset at 0:00 every Thursday. We do not provide any help related to how to write Cron expression.
