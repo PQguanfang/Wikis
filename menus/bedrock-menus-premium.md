@@ -7,7 +7,7 @@
 * You need carefully follow [those steps](https://wiki.geysermc.org/floodgate/setup/) to setup floodgate in your backend server if you are using BungeeCord.
 
 {% hint style="info" %}
-If your server is correctly installed and configured with floodgate, the console will prompt `Hooking into floorgate` when UltimateShop start to run. If this prompt didn't appear but if you insist that your server has a floodgate, it is very likely that you accidentally downloaded the free version of the plugin. The <mark style="color:red;">**PREMIUM**</mark> version will have a special prompt at startup.
+If your server is correctly installed and configured with floodgate, the console will prompt `Hooking into floodgate` when UltimateShop start to run. If this prompt didn't appear but if you insist that your server has a floodgate, it is very likely that you accidentally downloaded the free version of the plugin. The <mark style="color:red;">**PREMIUM**</mark> version will have a special prompt at startup.
 {% endhint %}
 
 * All bedrock players will use the new UI. If not, you can try set `menu.bedrock.check-method` option value from **FLOODGATE** to **UUID** in `config.yml`.
@@ -83,7 +83,7 @@ If your product configs do not has `display-item` section, you can simply add `b
 
 For now, we support those options for bedrock buttons
 
-* icon: The icon of this button, format is `path;;<image path> or url;;<image url>`. The image path is bedrock texture path, not your plugin path, for example: `path;;textures/blocks/stone_granite.png`. If you don't know what it is, ingore this, don't ask me.
+* icon: The icon of this button, format is `path;;<image path> or url;;<image url>`. The image path is bedrock texture path, not your plugin path, for example: `path;;textures/blocks/stone_granite.png`.
 
 For example:
 
