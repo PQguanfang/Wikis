@@ -1,7 +1,7 @@
 # 🌍Localized Item Name - Premium
 
 {% hint style="info" %}
-This feature is no need to **enabled** if you are using Paper 1.17.1+ server. (3.8.0+)
+If you are using Paper 1.17.1+ server: plugin will auto translate item vanilla name based on player client language which is more flexible than this feature, so you don't need **enable** this feature if you are using newer and modern server version. (3.8.0+)
 {% endhint %}
 
 ## Requirements
