@@ -1,25 +1,19 @@
 # ♻️Product Config: Buy/Sell Times Reset
 
-## Note
-
-This feature will not clear all players' buy/sell times at once. We will store **different timestamp data** based on the **reset mode**. When our estimated reset time has been reached, we will start resetting the data.&#x20;
-
-* If the player is on the server, the buy/sell times will only be reset after the player opens the shop. (Before they open the shop, the buy/sell times didn't be reset)
-* If the player is not on the server, the buy/sell times will only be reset after they join the server.
-
-These measures are aimed at optimizing the performance of plugins when resetting data, and we will not change these behaviors. If you are surprised by these behaviors and do not want to do so, then replacing with other plugins is a better choice.
-
 ## Reset
 
 We will only attempt to reset under the following circumstances:
 
-* Before the player performs a purchase/sell operation
-* When the player opens the shop GUI
-* Auto reset (require enable `use-times.auto-reset-mode` option in `config.yml` file, will cost more server performance, player must online, otherwise we will try auto reset when he rejoin the server)
+* If the player is not on the server, the buy/sell times will only be reset after they join the server.
+* If the player is on the server, the buy/sell times will only be reset:
+  * Before the player performs a purchase/sell operation
+  * When the player opens the shop GUI
+  * Auto reset (require enable `use-times.auto-reset-mode` option in `config.yml` file, will cost more server performance)
+* Reset require the products must has generated a reset time, if there is no reset time existed, it will naturally not be reset:&#x20;
+  * For reset mode that start with `COOLDOWN_`: require first view the product to generate new reset time, like open shop GUI).
+  * For reset mode that **NOT** start with `COOLDOWN_`: require first buy or sell the product to generate new reset time.
 
-{% hint style="info" %}
-If the product has never been purchased or sold (for COOLDOWN\_TIMED and COOLDOWN\_TIMER, require first view the product, like open shop GUI), then there is no reset time and it will naturally not be reset.
-{% endhint %}
+These measures are aimed at optimizing the performance of plugins when resetting data, and we will not change these behaviors. If you are surprised by these behaviors and do not want to do so, then replacing with other plugins is a better choice.
 
 ## Option Types
 
@@ -85,17 +79,9 @@ Support those modes:
 
 `TIMED` and `TIMER` will start generating reset time after each buy or sell until the player reaches the limit and not save the generated reset time, while `COOLDOWN_TIMED` and `COOLDOWN_TIMER` will immediately start generating the next reset time after the last reset or first view this product (like open shop GUI) and save the generated time. It will not reset again unless the rest time is reached.
 
-{% hint style="info" %}
-We will only attempt to reset and generate new reset time for `COOLDOWN_TIMED` and `COOLDOWN_TIMER`  reset mode under the following circumstances:
-
-* Before the player performs a purchase/sell operation
-* When the player opens the shop GUI
-* Auto reset (require enable `use-times.auto-reset-mode` option in `config.yml` file, will cost more server performance, player must online, otherwise we will try auto reset when he rejoin the server)
-{% endhint %}
-
 For this reason, when using `COOLDOWN_TIMED` or `COOLDOWN_TIMER` mode, the reset time will not automatically adjust due to server restarts, configuration modifications, or other reasons. This means that if you mistakenly set the product to refresh after 1 year, the reset time will not automatically change due to your correction, but `TIMED` or `TIMER` rules can do this.
 
-Also, when use the last reset placeholders, `COOLDOWN_TIMED` or `COOLDOWN_TIMER` mode will return actual reset time, `TIMED` or `TIMER` mode will return the time that first buy or sell after reset.
+Also, when use the last reset placeholders, `COOLDOWN_TIMED` or `COOLDOWN_TIMER` mode will return actual reset time, `TIMED` or `TIMER` mode will return first buy or sell time after last reset.
 
 ## Reset Time
 
