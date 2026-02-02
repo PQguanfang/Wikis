@@ -1,6 +1,6 @@
 # ♻️Product Config: Buy/Sell Times Reset
 
-## FAQ: Why this feature does not crash my server since it also reset all players buy/sell times?
+## Note
 
 This feature will not clear all players' buy/sell times at once. We will store **different timestamp data** based on the **reset mode**. When our estimated reset time has been reached, we will start resetting the data.&#x20;
 
@@ -81,10 +81,6 @@ Support those modes:
 * COOLDOWN\_TIMED (Added in 3.3.0) <mark style="color:red;">**- Premium**</mark>
 * COOLDOWN\_CUSTOM (Added in 3.9.1) <mark style="color:red;">**- Premium**</mark>
 
-{% hint style="info" %}
-For random placeholder reset mode: supports `TIMER`, `TIMED`, `CUSTOM`. The reset time of the random placeholder will be saved to the server, so its usage effect is the same as `COOLDOWN_TIMER`, `COOLDOWN_TIMED` and `COOLDOWN_CUSTOM`.
-{% endhint %}
-
 ### Difference between COOLDOWN\_TIMED (or COOLDOWN\_TIMER) and TIMED (or TIMER)
 
 `TIMED` and `TIMER` will start generating reset time after each buy or sell until the player reaches the limit and not save the generated reset time, while `COOLDOWN_TIMED` and `COOLDOWN_TIMER` will immediately start generating the next reset time after the last reset or first view this product (like open shop GUI) and save the generated time. It will not reset again unless the rest time is reached.
@@ -104,6 +100,12 @@ Also, when use the last reset placeholders, `COOLDOWN_TIMED` or `COOLDOWN_TIMER`
 ## Reset Time
 
 Different reset modes require different values to be filled in here. Supports placeholders, <mark style="color:red;">**the placeholder used here must be on the server side, which means that all players receive the same value.**</mark>
+
+When using a reset mode that does not start with `COOLDOWN_`, please be careful about using dynamic placeholders in the `reset time`.
+
+These modes do not store the timestamp of the next scheduled reset. Instead, their logic is to check whether the current time has surpassed the configured `reset time` whenever a purchase or sell occurs. If your `reset time` placeholder updates automatically _before_ the transaction takes place, you may encounter a situation where the displayed reset time has updated, but the actual buy/sell counts remain un-reset.
+
+If you don't understand this, there is a simplest rule of thumb: If you must use placeholders in your `reset time`, switch to a reset mode that starts with `COOLDOWN_`.
 
 #### NEVER
 
@@ -135,18 +137,9 @@ If you want to do a daily shop, **days** should be set to 0, and if you want to 
 
 This type of reset mode also supports set multi reset time, each reset time use `;;` to splite, we will pick up the earliest reset time. For example: <mark style="color:red;">(Premium only)</mark>
 
-Product config:
-
 ```yaml
     sell-times-reset-mode: 'TIMED'
     sell-times-reset-time: '20:00:00;;19:00:00'
-```
-
-Random Placeholder config:
-
-```yaml
-reset-mode: 'TIMED'
-reset-time: '20:00:00;;19:00:00'
 ```
 
 In this example, this product or random placeholder will reset reset at 19:00 and 20:00 every day.
@@ -253,7 +246,7 @@ Use this placeholder at `buy-times-reset-value` option in any product configs.
 
 You can use Cron format in reset time.&#x20;
 
-* Set reset mode to `COOLDOWN_CUSTOM` (for random placeholder, set it to `CUSTOM`).
+* Set reset mode to `COOLDOWN_CUSTOM`.
 * Use `{cron_"<Cron Expression>"}` built-in placeholder in reset time. Don't miss out the `"` symbol. The `<Cron Expression>`  should use **Quartz** format.
 
 For example:
@@ -267,13 +260,6 @@ Product config:
     # You do not need set a time format here, this just help you know there is a option that you can set custom time format.
 ```
 
-Random Placeholder config:
-
-```yaml
-reset-mode: 'CUSTOM'
-reset-time: '{cron_"0 0 0 ? * 5}'
-```
-
 You can obtain the Cron expression you want by asking ChatGPT or use [this tool](https://freeformatter.com/cron-expression-generator-quartz.html). For example, the Cron expression in this example means to reset at 0:00 every Thursday. We do not provide any help related to how to write Cron expression.
 
 {% hint style="info" %}
@@ -284,3 +270,7 @@ You **MUST** make sure that time format of the result of Cron placeholder (set i
 
 * The product must have been purchased or sold (for `TIMED/TIMER`) OR been viewed (for `COOLDOWN_TIMED/COOLDOWN_TIMER`) once before the next reset time can be stored. Otherwise, we can only display the possible reset time calculated based on the current time after the transaction is completed.
 * We will only reset the player's data when they are online. If the player is not online but has reached the reset time, we will reset it when they join the server again. The new reset time will be based on the current time, not the ideal reset time (because the player is not online at this time). The server data does not have this problem (because the server is always online), so it is very normal to use different reset times for the server and player. (Usually happens in `COOLDOWN_TIMER` reset mode)
+
+## Reset Time Updated but Buy times/Sell times not cleared?
+
+* If you must use placeholders in your `reset time`, switch to a reset mode that starts with `COOLDOWN_`.

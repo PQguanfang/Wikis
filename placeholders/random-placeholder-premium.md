@@ -89,13 +89,83 @@ Use `{random_times_<ID>}` placeholder to display the reset time of the placehold
 
 You can reset placeholder by setting `reset-mode` and `reset-time` option.&#x20;
 
+### Reset Mode
+
 Supports below reset mode:
 
 * **ONCE**: Each time it is used, it will reset and is not applicable to the price, as the price seen by the player opening the store and the actual transaction result are calculated twice, so you cannot achieve price synchronization.
-* **TIMER/TIMED/CUSTOM/NEVER**: Please view [this page](../shops/products.md#buy-sell-times-reset-options) to know more. We will generate reset time after random placeholder be used once. The reset time will not automatically adjust based on configuration updates. If you set the reset time incorrectly, you will need to delete the corresponding data.
-* Do <mark style="color:red;">**NOT**</mark> use COOLDOWN\_TIMER/COOLDOWN\_TIMED/COOLDOWN\_CUSTOM reset mode here, they will not work in random placeholder, and since random placeholder data is always saved in server, so random placeholder's TIMER/TIMED/CUSTOM effect is same as product config's CUSTOM\_TIMER/CUSTOM\_TIMED/COOLDOWN\_CUSTOM reset mode.
+* **TIMER**: It will reset after the time you specify, for example, after 5 hours.
+* **TIMED**: It will be reset at the corresponding time, such as 8:15 pm.
+* **CUSTOM**: Directly enter the reset time in reset time, and the plugin will not perform any calculations. Recommend obtain reset time through the Placeholder API results. You need set time format at `reset-time-format`  option to helps us know how does your PlaceholderAPI results be like.&#x20;
 
-For more info, please view [this page](../shops/product-config-buy-sell-times-reset.md).
+We will generate reset time after random placeholder be used once. The reset time will not automatically adjust based on configuration updates. If you set the reset time incorrectly, you will need to delete the corresponding data.
+
+Do <mark style="color:red;">**NOT**</mark> use `COOLDOWN_TIMER/COOLDOWN_TIMED/COOLDOWN_CUSTOM` reset mode here, they will not work in random placeholder, and since random placeholder data is always saved in server, so random placeholder's `TIMER/TIMED/CUSTOM` effect is same as product config's `CUSTOM_TIMER/CUSTOM_TIMED/COOLDOWN_CUSTOM` reset mode.
+
+### Reset Time
+
+Different reset modes require different values to be filled in here. Supports placeholders, <mark style="color:red;">**the placeholder used here must be on the server side, which means that all players receive the same value.**</mark>
+
+#### NEVER
+
+Don't need anything here.
+
+#### TIMER
+
+You can enter 3 to 5 numbers here, separated by a `:` symbol between each number. For example: `15:00:00`.
+
+Each number from **right** to **left** represents:
+
+* Seconds
+* Minutes
+* Hours
+* Days
+* Months&#x20;
+
+In this example, represents 15 hours later. Which means: **if now time is 2023-09-04 12:00:00. Will reset after 15 hours, which means 2023-09-05 03:00:00.**
+
+#### TIMED
+
+The composition of TIMED and TIMER is almost identical, but the first three digits from the right-hand side represent the time of day. Let's also take 15:00:00 as an example:
+
+If now time is 2023-09-04 12:00:00, will reset at 2023-09-04 15:00:00.
+
+This is the result obtained with days set to 0. If you set it to 1, we will add another day, and that's it.
+
+If you want to do a daily shop, **days** should be set to 0, and if you want to do a weekly shop, **days** should be set to 6. Because you need to reset the number of times on the last day, not on the second day after the last day, right?
+
+This type of reset mode also supports set multi reset time, each reset time use `;;` to splite, we will pick up the earliest reset time. For example:&#x20;
+
+```yaml
+reset-mode: 'TIMED'
+reset-time: '20:00:00;;19:00:00'
+```
+
+In this example, this product or random placeholder will reset reset at 19:00 and 20:00 every day.
+
+#### CUSTOM
+
+You only need to enter a Placeholder API placeholder here, and the result of the placeholder must include the complete year, month, day, hour, minute, and second. You also need to enter their format in the reset time format option, because different types of placeholders return different time formats, making it difficult for plugins to achieve uniformity.&#x20;
+
+### Cron Reset (Weekly Reset/Monthly Reset)&#x20;
+
+You can use Cron format in reset time.&#x20;
+
+* Set reset mode to `CUSTOM`.
+* Use `{cron_"<Cron Expression>"}` built-in placeholder in reset time. Don't miss out the `"` symbol. The `<Cron Expression>`  should use **Quartz** format.
+
+For example:
+
+```yaml
+reset-mode: 'CUSTOM'
+reset-time: '{cron_"0 0 0 ? * 5}'
+```
+
+You can obtain the Cron expression you want by asking ChatGPT or use [this tool](https://freeformatter.com/cron-expression-generator-quartz.html). For example, the Cron expression in this example means to reset at 0:00 every Thursday. We do not provide any help related to how to write Cron expression.
+
+{% hint style="info" %}
+You **MUST** make sure that time format of the result of Cron placeholder (set it in `config.yml` file) and the time format you set here is same. By default, they are same.
+{% endhint %}
 
 ## Testing
 
