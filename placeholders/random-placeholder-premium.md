@@ -93,6 +93,7 @@ You can reset placeholder by setting `reset-mode` and `reset-time` option.&#x20;
 
 Supports below reset mode:
 
+* **NEVER**
 * **ONCE**: Each time it is used, it will reset and is not applicable to the price, as the price seen by the player opening the store and the actual transaction result are calculated twice, so you cannot achieve price synchronization.
 * **TIMER**: It will reset after the time you specify, for example, after 5 hours.
 * **TIMED**: It will be reset at the corresponding time, such as 8:15 pm.
