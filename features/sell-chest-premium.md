@@ -65,7 +65,7 @@ The most thing is same as [Sell Stick](sell-stick-premium.md), I will only tell 
 ## Setting in config.yml file
 
 ```yaml
-sell-chest:
+  sell-chest:
     period-ticks: 600
     batch-count: 5
     send-sell-message: true
