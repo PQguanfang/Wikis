@@ -1,5 +1,9 @@
 # 🔽Buy More Menus
 
+{% hint style="info" %}
+Buy more menu means select quantity you want, not means open a new menu that can purchase this item again.
+{% endhint %}
+
 ## Buy More Menus Config
 
 Buy more menus have those special options compare than common menu:
