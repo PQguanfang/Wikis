@@ -62,7 +62,7 @@ confirm-items:
       name: '&aConfirm'
       lore:
         - '&7Click to finish the trade!'
-      modify-lore: true
+    modify-lore: true
   D:
     display-item:
       material: PAPER
