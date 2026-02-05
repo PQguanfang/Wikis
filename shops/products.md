@@ -92,7 +92,7 @@ Click [here](shops.md) to see the detalied example of those general options.
 * product-mode: Same as above. **Required if you have products section.**
 
 {% hint style="info" %}
-**ANY** and **ALL** mode should only be used when you are using dynamic value in products or prices configs. If your configuration uses static values, we will automatically switch your mode to **CLASS** mode to avoid unnecessary performance waste.&#x20;
+**ANY** and **ALL** mode should only be used when you are using dynamic value in products or prices configs. If your configuration uses static values, we will automatically switch your mode to **CLASSIC** mode to avoid unnecessary performance waste.&#x20;
 {% endhint %}
 
 <table><thead><tr><th width="118">Mode</th><th width="179">ANY</th><th>ALL</th><th>CLASSIC_ANY</th><th>CLASSIC_ALL</th></tr></thead><tbody><tr><td>Product Give</td><td>Give random products that meet conditions.</td><td>Give all products.</td><td>Same as ANY.</td><td>Same as ALL.</td></tr><tr><td>Product /Price Take</td><td>First product/price that we found player meet condition and have enough amount.</td><td>Players must have all products/prices that meet conditions to sell.</td><td>Same as ANY.</td><td>Same as ALL.</td></tr><tr><td>Price Give (means sell)</td><td>First prices meet the condition requirements.</td><td>All prices will be given.</td><td>Same as ANY.</td><td>Same as ALL.</td></tr><tr><td>Price Support</td><td>Support dynamic price &#x26; <code>apply</code> option.</td><td>Same as ALL.</td><td>Price must be same at  everytime.</td><td>Same as CLASSIC_ALL.</td></tr><tr><td>Support Sell All</td><td><strong>No</strong><br>Due to the dynamic nature of price values, plugins have no way of knowing the maximum number of times you can sell a product</td><td><strong>No</strong><br>Due to the dynamic nature of price values, plugins have no way of knowing the maximum number of times you can sell a product</td><td>Yes</td><td>Yes</td></tr><tr><td>Server  Performances</td><td>Maybe high when you have much buy/sell requests.</td><td>Same as ALL.</td><td>Low, just like other shop plugins doing!</td><td>Same as CLASSIC_ANY.</td></tr></tbody></table>
@@ -141,19 +141,23 @@ This section of the configuration includes the following options:
 * buy-times-reset-mode
 * buy-times-reset-time
 * buy-times-reset-time-format
-* sell-times-reset-mode
+* buy-times-reset-value
+* buy-times-max-value
+* sell-times-reset-mode&#x20;
 * sell-times-reset-time
 * sell-times-reset-time-format
+* sell-times-reset-value
+* sell-times-max-value
 
 The introduction of these options is on a separate page, please [click here](product-config-buy-sell-times-reset.md) to view.
 
 ## Dynamic Value
 
-You can set placeholders (including PlaceholderAPI) and [Math Calculate Format](../format/math-calculate-format.md) in `buy-prices`, `sell-prices` section's `amount` option and `buy-limits`, `sell-limits` section's value in shop configs.
+You can set placeholders (including PlaceholderAPI) and [Math Calculate Format](../format/math-calculate-format.md) in `buy-prices`, `sell-prices` section's `amount` option and `buy-limits`, `sell-limits` section's value in product configs.
 
 By default, dynamic values are calculated in real-time and are not refreshed periodically. However, players will not see real-time values in the GUI. We will only refresh the dynamic values displayed in the GUI after the player opens the UI or clicks the item each time. For example, if you set a dynamic value in the purchase price and the dynamic value is changed when the player opens the GUI, although the player will not notice this change in the GUI display item, the plugin will calculate the price based on the updated dynamic value at the final purchase. This is a decision made to balance server performance and save costs. If you don't want this and want to dynamic value display refresh immediately, please [click here](../menus/general-menus.md#all-buttons-update).
 
-Available built-in placeholder, for more info about them, please view [Built-In Placeholders](../placeholders/built-in-placeholders.md) page.
+Available built-in placeholder list as below, for more info about them, please view [Built-In Placeholders](../placeholders/built-in-placeholders.md) page.
 
 * {buy-times-player}
 * {buy-times-server}
