@@ -1,7 +1,8 @@
-# Number Format
+# 🔢Number Format
 
-* Download PlaceholderAPI and **Formatter** expansion with command `/papi ecloud download Formatter`. Click [here](https://github.com/PlaceholderAPI/PlaceholderAPI/wiki/Placeholders#formatter) to know more.
-* Edit product price placeholder option with this placeholder: `%formatter_number_format_{amount}%`.
+* Download and install **PlaceholderAPI** plugin in your server.
+* Install **Formatter** expansion with this command `/papi ecloud download Formatter`. Click [here](https://github.com/PlaceholderAPI/PlaceholderAPI/wiki/Placeholders#formatter) to know more.
+* Edit `placeholder` option in price configs to this: `%formatter_number_format_{amount}%`.
 
 Example:
 
@@ -23,7 +24,7 @@ Example:
 
 <figure><img src="../.gitbook/assets/image (8).png" alt=""><figcaption></figcaption></figure>
 
-* Start from **2.3.2**, you can just use those options in config.yml to let plugin help you change `{amount}` placeholder instead of you change it manually!
+* Start from **2.3.2**, you can just use those options in `config.yml` to let plugin help you change `{amount}` placeholder instead of you change it manually!
 
 ```yaml
 placeholder:
