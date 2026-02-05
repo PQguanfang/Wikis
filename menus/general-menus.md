@@ -13,8 +13,8 @@ There are 3 types of menus.
 ## Configs
 
 * title: Menu title, for shop menu type, support `{shop-name}` to display shop displayname which set in it's config.
-* size: Menu size, only support one of the number: **9,18,27,36,45,54**.
-* layout: Button layout, this is a list option. For more info, please view below.
+* size: Menu size, only support one of the number: **9,18,27,36,45,54**. For detalied info, please view below.
+* layout: Button layout, this is a list option. For more info, please view below. For detalied info, please view below.
 
 {% hint style="warning" %}
 The `layout` option and `size` option must correspond. If your layout is based on **4x9** format, then your size must be set to **36**, otherwise the plugin will encounter errors.
@@ -24,7 +24,7 @@ The `layout` option and `size` option must correspond. If your layout is based o
 * buttons: Button configs, button ID is being used in `layout` option to set where this button display in menu.
 * conditions: Only players who meet the conditions can open this menu, use [Condition Format](../format/condition-format.md) here.
 * open-actions: Do action when open this menu, use [Action Format](../format/action-format.md) here.
-* close-actions: Do action when close this menu, use [Action Format](../format/action-format.md) here. <mark style="color:red;">**Please carefully note that when you have already opened a menu, if you open other menus through actions or other means, it will also trigger close actions**</mark>**.**&#x20;
+* close-actions: Do action when close this menu, use [Action Format](../format/action-format.md) here. <mark style="color:red;">**Please carefully note that when you have already opened a menu, if you open other menus through actions or other means, it will also trigger close actions of the opened menu**</mark>**.**&#x20;
 * bedrock: Please view [Bedrock M](bedrock-menus-premium.md)[enu](bedrock-menus-premium.md) page to know about it.
 * custom-command: Custom Command settings for common menu, if you want to set custom command for shop menu, please add them at [Shops](../shops/shops.md) config.  <mark style="color:red;">**(PREMIUM)**</mark>
 
@@ -140,7 +140,7 @@ In this example:
 * Actually, since there is no product or button with an ID of `0`, nothing will be displayed in the slot with a character of `0`.
 * If the shop using this menu has products with IDs `A, B, C, D, etc`., the corresponding products will be displayed in the corresponding slots.
 * The same goes for buttons. I forgot to tell you that you can set custom buttons not only in the menu configuration file, but also in the shop configuration file.
-* If you change the value of the `size` option, don't forget to remove the extra lines in the `layout` option. For example, if you set the value of the size option to 36, then the character composition of the layout option is 4x9.
+* If you change the value of the `size` option, don't forget to remove the extra lines in the `layout` option. For example, if you set the value of the size option to **36**, then the character composition of the layout option is **4x9**.
 
 You can also use multiple characters to represent slots, in which case you need to use `` ` `` symbols to separate these multiple characters for the plugin to recognize them. For example:
 
@@ -201,7 +201,7 @@ layout:
 
 Require your server install both **packetevents and MythicChanger** plugin in your server, only support for Paper server users.
 
-Set `menu.title-update.enabled` option value to `true`, then  `menu.title-update.click-update` or `menu.title-update.circle-update` option value to `true` in `config.yml` file to active title update feature. After enable, after each click button in menu, the title will be updated, very useful for display placeholder in title and then auto update value fater each click or every second auto update.
+Set `menu.title-update.enabled` option value to `true`, then set  `menu.title-update.click-update` or `menu.title-update.circle-update` option value to `true` in `config.yml` file to active title update feature. After enable, after each click button in menu, the title will be updated, very useful for display placeholder in title and then auto update value fater each click or every second auto update.
 
 ```yaml
   # PREMIUM version only, if enabled, can update dynamic value used in GUI title.
@@ -222,7 +222,7 @@ The Minecraft client itself does not support changing the title of a container a
 
 Set whether keep trying to refresh the button display in the GUI after the player opens it. Find those content at `config.yml` file. Do not recommend enable it as it will cost more performance.
 
-If you just want us trying to refresh the button when we reset buy or sell times, you can use `use-times.auto-reset-mode` option instead. That option can help you filter out all button displays that only refresh when reset occurs, thereby saving server performance.
+If you just want us trying to refresh the product button when we reset buy or sell times of it, you can use `use-times.auto-reset-mode` option instead. That option can help you filter out all button displays that only refresh when reset occurs, thereby saving server performance.
 
 ```yaml
   menu-update:
