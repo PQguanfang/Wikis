@@ -578,7 +578,7 @@ use-cooldown:
   cooldown-seconds: 1.5
 ```
 
-## Equippable <mark style="color:red;">- Premium</mark>
+## Equippable (1.21.2+) <mark style="color:red;">- Premium</mark>
 
 ```yaml
 equippable:
