@@ -13,10 +13,109 @@ Each thing type can set unlimited related to single things, like set 5 buy price
 Each single thing have those types:
 
 * Vanilla Item: Use [ItemFormat](../format/itemformat-tm/) to tell us what Minecraft item you want to sell in shop or you want to player pay. **(Buy/Sell/Products)**
-* Hook Item: Use [Supported Plugins](../info/compatibility.md)'s item to tell us what custom item you want to sell in shop or you want to player pay. This type still use [ItemFormat](../format/itemformat-tm/).**(Buy/Sell/Products)**
+
+```yaml
+    products: # or buy-prices / sell-prices
+      1:
+        material: emerald
+        custom-model-data: 15
+      2:
+        material: diamond
+        amount: 16
+```
+
+* Hook Item: Use [Supported Plugins](../info/compatibility.md)'s item to tell us what custom item you want to sell in shop or you want to player pay. This type still use [ItemFormat](../format/itemformat-tm/). **(Buy/Sell/Products)**
+
+```yaml
+   products: # or buy-prices / sell-prices
+      1:
+        hook-plugin: MMOItems
+        hook-item: 'AXE;;MAGIC_AXE'
+```
+
 * Match Item: Use [Custom Item Match Method](../features/custom-item-match-method.md) to tell us which items you want to match. **(Buy/Products)**
+
+```yaml
+   # Because this product does not exist a real item, so we have to set display item for this product
+   # Otherwise it can not be displayed in GUI.
+   display-item:
+      material: PAPER
+      custom-model-data: 200
+      name: '&fMagic Flight Paper &c(Level I)'
+      lore:
+        - '&fHold this and you can fly!'
+   products: # or buy-prices / sell-prices
+      1:
+        # Custom Sell Match Rule - Explain the item match rule!
+        match-item:
+          contains-lore:
+            - 'Magic Flight Paper'
+        # Buy Give Command
+        give-actions:
+          1:
+            multi-once: true
+            type: console_command
+            command: 'flyitem give {player} {amount}' # Put custom item give command here!
+          2:
+            type: message
+            message: 'test message'
+        amount: 64
+```
+
 * Vanilla Economy/Hook Economy: Use [EconomyFormat](../format/economyformat-tm.md) to tell us how much money you want to player pay or give to player. **(Buy/Sell/Products)**
-* Custom: If those types do not meet your need, you can make a custom single thing! You need add `match-placeholder` option at single thing config to make plugin know what the now amount player have of this custom product/price, and then we will compare the now amount you set here and the required amount. In the example above, we will compare player's health. **If your economy plugins do not supported, just place it's player balance placeholder here and all is solved! (Sell/Products)&#x20;**<mark style="color:red;">**(Premium)**</mark>
+
+```yaml
+    # Because this product does not exist a real item, so we have to set display item for this product
+    # Otherwise it can not be displayed in GUI.
+    display-item:
+      material: GOLD_INGOT
+      name: '&6$15'
+    products: # or buy-prices / sell-prices
+      1:
+        economy-plugin: Vault
+        amount: '15'
+```
+
+* Custom: If those types do not meet your need, you can make a custom single thing! You need add `match-placeholder` option at single thing config to make plugin know what the now amount player have of this custom product/price, and then we will compare the now amount you set here and the required amount. In the example below, we will compare player's health. **If your economy plugins do not supported, just place it's player balance placeholder here and all is solved! (Buy/Products)&#x20;**<mark style="color:red;">**(Premium)**</mark>
+
+```yaml
+   buy-prices:
+      1:
+        # Buy Match Placeholder
+        match-placeholder: '%player_health%'
+        placeholder: '{amount} Health'
+        amount: 5
+        take-actions:
+          1:
+            multi-once: true
+            type: console_command
+            command: 'health take {player} {amount}' # Example fake command, does not exist in your server.
+```
+
+```yaml
+    # Because this product does not exist a real item, so we have to set display item for this product
+    # Otherwise it can not be displayed in GUI.
+    display-item:
+      material: APPLE
+      name: '&c5 Health'
+    products:
+      1:
+        # Sell Match Placeholder
+        match-placeholder: '%player_health%'
+        placeholder: '{amount} Health'
+        amount: 5
+        give-actions:
+          1:
+            multi-once: true
+            type: console_command
+            command: 'health give {player} {amount}' # Example fake command, does not exist in your server
+        take-actions:
+          1:
+            multi-once: true
+            type: console_command
+            command: 'health take {player} {amount}' # Example fake command, does not exist in your server.
+```
+
 * Free/Empty: Single thing do not include ItemFormat, EconomyFormat, `match-item` section and `match-placeholder` section will be consider as free.
 
 ## Dynamic Value
@@ -56,8 +155,6 @@ You can use dynamic value in single thing's amount option. For available placeho
       1:
         economy-plugin: Vault
         amount: '15'
-        max-amount: 455
-        min-amount: 1
         placeholder: '{amount}$'
         start-apply: 0 
   B:
