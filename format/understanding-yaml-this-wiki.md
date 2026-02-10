@@ -154,9 +154,9 @@ They are following [ItemFormat](itemformat-tm/).
 
 Under `buy-prices` → `1`:
 
-* economy-plugin: Vault → the economy system used.
-* amount: '0.63' → the price.
-* placeholder: '{amount}$' → how the price is displayed.
+* `economy-plugin: Vault` → the economy system used.
+* `amount: '0.63'` → the price.
+* `placeholder: '{amount}$'` → how the price is displayed.
 
 They are following [EconomyFormat](economyformat-tm.md) and placeholder option inside price section.
 
