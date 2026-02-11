@@ -71,8 +71,8 @@ Support those modes:
 * TIMED: It will be reset at the corresponding time, such as 8:15 pm.
 * RANDOM\_PLACEHOLDER: Synchronize with the reset time of the specified random placeholder. (Added in 3.3.0) <mark style="color:red;">**- Premium**</mark>
 * CUSTOM: Directly enter the reset time in reset time, and the plugin will not perform any calculations. Recommend obtain reset time through the Placeholder API results. You need set time format at `reset-time-format` type option to helps us know how does your PlaceholderAPI results be like. (Added in 3.3.0) <mark style="color:red;">**- Premium**</mark>
-* COOLDOWN\_TIMER (Added in 3.3.0) <mark style="color:red;">**- Premium**</mark>
-* COOLDOWN\_TIMED (Added in 3.3.0) <mark style="color:red;">**- Premium**</mark>
+* COOLDOWN\_TIMER (Added in 3.3.0)&#x20;
+* COOLDOWN\_TIMED (Added in 3.3.0)&#x20;
 * COOLDOWN\_CUSTOM (Added in 3.9.1) <mark style="color:red;">**- Premium**</mark>
 
 ### Difference between COOLDOWN\_TIMED (or COOLDOWN\_TIMER) and TIMED (or TIMER)
