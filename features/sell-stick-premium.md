@@ -3,7 +3,7 @@
 {% hint style="info" %}
 It is not possible to calculate the total earn of sell stick because UltimateShop supports multiple price types for a single product, rather than many plugins of the same type having one item stack corresponding to a double type **Vault** price. If that's the case, then only the logic of adding numbers can be implemented, but unfortunately, UltimateShop not only supports products **Vault** prices, you can even use custom fake prices, so it is very hard to calculate total earn.
 
-Products that using dynamic price is also supported in sell stick. For example, you set each time the sell price decreases by $1, with a base price of $10, selling 5 units of this product would result in a total of $10 + $9 + $8 + $7 + $6 + $5, etc.
+Products that using dynamic price is also supported in sell stick. For example, you set each time the sell price decreases by $1, with a base price of $10, selling X units of this product would result in a total of $10 + $9 + $8 + $7 + $6 + $5, etc.
 {% endhint %}
 
 All sell stick configs are stored in `sell_sticks` folder. The file name is it's ID, for example: `A.yml` means it's ID is `A`. An example of it's config is like below:
