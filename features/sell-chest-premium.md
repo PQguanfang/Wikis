@@ -5,6 +5,10 @@ The **sell chest** feature is not currently introduced as a core function of Ult
 Sell chest is now available at **4.2.0b or later** version.
 {% endhint %}
 
+{% hint style="danger" %}
+Sell chest placed before you update to **4.2.6** version will no longer work after upgrade, This is due to a change in the logic for storing the location of the sell chest. You can ask the player to replace the sell chest to resolve this issue.
+{% endhint %}
+
 ## Limitation
 
 * Folia server does <mark style="color:red;">**NOT**</mark> support this feature.
@@ -19,7 +23,7 @@ Sell chest is now available at **4.2.0b or later** version.
 
 * Sell chest will only work both the chunk is loaded and the owner is online. No plan to support multi players share same sell chest.
 * Only players who place sell chests will be considered owners. But all players can destroy the sell chest.
-* Products that using dynamic price is also supported in sell stick. For example, you set each time the sell price decreases by $1, with a base price of $10, selling 5 units of this product would result in a total of $10 + $9 + $8 + $7 + $6 + $5, etc.
+* Products that using dynamic price is also supported in sell chest. For example, you set each time the sell price decreases by $1, with a base price of $10, selling 5 units of this product would result in a total of $10 + $9 + $8 + $7 + $6 + $5, etc.
 
 ## Config
 
