@@ -69,6 +69,13 @@ If players do not have permission to open container within these protection plug
 * Towny
 * WorldGuard
 
+### <mark style="color:red;">Directly</mark> supported hologram plugins list  <a href="#directly-supported-protection-plugins-list-premium" id="directly-supported-protection-plugins-list-premium"></a>
+
+Support create hologram to display sell chest info.
+
+* CMI
+* DecentHolograms
+
 ## **Indirect compatibility**
 
 Indirect compatibility refers to the flexible use of various features of plugins to enable them to associate with these plugins.
