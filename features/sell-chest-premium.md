@@ -71,14 +71,20 @@ The most thing is same as [Sell Stick](sell-stick-premium.md), I will only tell 
 
 ```yaml
   sell-chest:
+    enabled: true
+    debug: false
     period-ticks: 600
     batch-count: 5
     send-sell-message: true
     price-empty: '{lang}'
     hologram:
       enabled: true
+      # Support value: DecentHolograms, CMI
+      plugin: 'DecentHolograms'
 ```
 
+* enabled: Whether use this feature. If you do not need this feature and want to has better performance, you can try disable this option.
+* debug: Will pring debug info at console related to sell chest after enable.
 *   perior-ticks and batch-count:
 
     #### `period-ticks: 600`
@@ -100,7 +106,9 @@ The most thing is same as [Sell Stick](sell-stick-premium.md), I will only tell 
     The purpose of doing this is to save server performance. We will not set separate loop timers for each sell chest to avoid server performance degradation caused by too many sell chests, nor will we arrange all sell chests in the same loop timer to cause server lag.
 * send-sell-message: Whether we will send message after each sell.
 * price-empty: The text displayed in hologram if there is no history for the sell chest.
-* hologram: Settings for the hologram feature. Require you install DecentHolograms in server.
+* hologram: Settings for the hologram feature.&#x20;
+  * enabled: Whether display holgoram above sell chest.
+  * plugin: Set hologram plugin. For list of supported plugin, please click [here](../info/compatibility.md#directly-supported-protection-plugins-list-premium-1).
 
 ## Showcase
 
