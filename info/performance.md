@@ -8,7 +8,22 @@ Different from `CLASSIC_ANY, CLASSIC_ALL` mode, `ANY` and `ALL` mode, the calcul
 
 ## MMOItems/MythicMobs Item generation performance.
 
-Both plugins are spend much server resource to generate item than vanilla items.&#x20;
+Both plugins are spend much server resource to generate item than vanilla items. If possible and your item is static item with no things like dynamic stat or level requirement, you can try use [Save Item](../features/saved-item-item-manager.md) instead.
+
+{% hint style="info" %}
+For suggestions **below**:\
+The change you need made are all exist in `config.yml` file.
+{% endhint %}
+
+## Disable sell chest.
+
+If you are not using sell chest feature, you can disable this feature to save serve performance.
+
+```yaml
+sell:
+  sell-chest:
+    enabled: false 
+```
 
 ## Set placeholder.click.enabled option to false.
 
@@ -82,4 +97,15 @@ give-item:
   give-method: BUKKIT
   # Only support SMART give method.
   check-full: false
+```
+
+## Use Bukkit sell item match method.
+
+This can save some server performance, but the drawback is that the items to be sold must be identical to the items in the shop, with no differences, even including anvil cost, enchants, etc. (Items with durability and enchantable items basically cannot be sold to the shop because of this)
+
+```yaml
+sell:
+  # Support Value: Bukkit or ItemFormat.
+  # For each product, you can add match-item section to make custom sell match method, for more info, please view Wiki.
+  sell-method: Bukkit
 ```
