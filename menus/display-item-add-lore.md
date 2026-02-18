@@ -43,7 +43,7 @@ Default example:
 
 ## Per Product Setting
 
-You can set different add lore format for each product, add the `add-lore` op6ion in the product config. Check [shops](../shops/shops.md) page product **B** to find the example.
+You can set different add lore format for each product, add the `add-lore` option in the product config. Check [shops](../shops/shops.md) page product **B** to find the example.
 
 ```yaml
 items:
