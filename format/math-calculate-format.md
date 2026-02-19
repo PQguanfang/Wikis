@@ -2,6 +2,10 @@
 
 Unlike most plugins, UltimateShop allows you to fill in the Placeholder API and mathematical calculation format in almost all options applicable to numbers, making it easy to set the price, buy/sell limits, and more you want.
 
+{% hint style="info" %}
+You need enable `math.enabled` option in your `config.yml` file to use this feature.
+{% endhint %}
+
 ## List of match calculate format
 
 `max` - Compare two number and return bigger value. (`max(4,5)`)
