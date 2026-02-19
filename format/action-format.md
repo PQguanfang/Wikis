@@ -72,6 +72,27 @@ Optional, if not set, both java and bedrock players will execute this action.
         bedrock-only: true
 ```
 
+### Fail Type
+
+Only support `fail-actions` in product configs.
+
+Supported fail type:
+
+* ERROR
+* PERMISSION
+* PLAYER\_MAX
+* SERVER\_MAX
+* NOT\_ENOUGH
+* INVENTORY\_FULL
+
+```yml
+    fail-actions:
+      1:
+        fail-type: 'PLAYER_MAX'
+        type: message
+        message: 'Hello'
+```
+
 ## Available Placeholders
 
 * {world}
