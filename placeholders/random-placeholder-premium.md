@@ -94,12 +94,12 @@ You can reset placeholder by setting `reset-mode` and `reset-time` option.&#x20;
 Supports below reset mode:
 
 * **NEVER**
-* **ONCE**: Each time it is used, it will reset and is not applicable to the price, as the price seen by the player opening the store and the actual transaction result are calculated twice, so you cannot achieve price synchronization.
+* **ONCE**: Each time the placeholer is used, it will reset and is not able to use in the price, as the price seen by the player opening the shop and the actual transaction result are calculated twice, so you cannot achieve price synchronization which means price player seen in shop will not same as the price player actually cost.
 * **TIMER**: It will reset after the time you specify, for example, after 5 hours.
 * **TIMED**: It will be reset at the corresponding time, such as 8:15 pm.
 * **CUSTOM**: Directly enter the reset time in reset time, and the plugin will not perform any calculations. Recommend obtain reset time through the Placeholder API results. You need set time format at `reset-time-format`  option to helps us know how does your PlaceholderAPI results be like.&#x20;
 
-We will generate reset time after random placeholder be used once. The reset time will not automatically adjust based on configuration updates. If you set the reset time incorrectly, you will need to delete the corresponding data.
+We will first generate reset time after random placeholder be used once. The reset time will not automatically adjust based on configuration updates. If you set the reset time incorrectly, you will need to delete the corresponding data.
 
 Do <mark style="color:red;">**NOT**</mark> use `COOLDOWN_TIMER/COOLDOWN_TIMED/COOLDOWN_CUSTOM` reset mode here, they will not work in random placeholder, and since random placeholder data is always saved in server, so random placeholder's `TIMER/TIMED/CUSTOM` effect is same as product config's `CUSTOM_TIMER/CUSTOM_TIMED/COOLDOWN_CUSTOM` reset mode.
 
