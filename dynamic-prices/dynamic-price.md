@@ -164,4 +164,4 @@ Please view [Products](../shops/products.md) page for info and example.
 
 Many people ask this question, and I feel that the person asking this question simply does not understand the essence of UltimateShop. The dynamic price is determined by a formula, so you cannot reset the price directly. To reset the price, the placeholders used in your formula must be reset. If you use placeholders such as `{buy-times-server}` exactly as described in this section, they can be reset.
 
-You can reset the buy times or sell times by our auto reset feature, you can find more info at [Buy/Sell Times Reset](../shops/product-config-buy-sell-times-reset.md) page.
+You can reset the buy times or sell times by our auto reset feature, you can find more info at [Buy/Sell Times Reset](../shops/product-config-buy-sell-times-reset.md) page or use `/shop setbuytimes/setselltimes` command
