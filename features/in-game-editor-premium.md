@@ -1,4 +1,8 @@
-# In-game Editor - Premium
+---
+hidden: true
+---
+
+# ✏️In-game Editor - Premium
 
 * Download the addon plugin [here](https://www.spigotmc.org/resources/ultimateshopeditor-in-game-shop-editor-for-ultimateshop-plugin-w-i-p.99542/).
 * Restart your server. This addon plugin require use UltimateShop premium 2.2.0+.
