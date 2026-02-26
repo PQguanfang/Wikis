@@ -157,7 +157,15 @@ buttons:
     You should be find the menu file at the `menus` folder, it will called `example-shop-menu.yml`. For info about menus, please view [Menus](../menus/general-menus.md) page.
 * buy-more: Whether product in this shop can open buy more menu.
 * shop-name: Shop display name, which used in `{shop-name}` placeholder.
-* hide-message: Whether we hide the messages that will send after player buy or sell items in this shop. By default, only hide success buy or sell message, for fail message like limit reached or not enough money, you need **also** set `placeholder.click.enabled` option value to `true` in your `config.yml` file to hide them.
+* hide-message: Whether we hide the messages that will send after player buy or sell items in this shop.&#x20;
+
+{% hint style="warning" %}
+By default, only hide success buy or sell message, for fail message like limit reached or not enough money, you have 2 methods to hide them
+
+* Try **also** set `placeholder.click.enabled` option value to `true` in your `config.yml` file to hide them. This will display fail status at display item lore and will cost extra performance.
+* Try set `force-display-fail-message` option value to `true` in your `config.yml` file. This way is recommended. (4.2.11+)
+{% endhint %}
+
 * secret-shop-items: If enabled, if the player does not meet the open condition of the menu corresponding to the shop where the product is located or the product is not displayed in the menu, the corresponding product will be automatically hidden and cannot be traded. You can set secret rule at `config.yml` file.
 
 ```yaml
