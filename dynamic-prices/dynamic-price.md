@@ -154,7 +154,7 @@ Additionally, you need to set `menu.shop.click-update` to `true` if the related 
 
 ## Dynamic Price per player
 
-As long as you can ensure that the placeholder used in the formula is per player, the calculated price result will naturally be per player. In the above example, we used global placeholders such as `{buy-times-server}`, and you only need to replace the `server` with the `player` to display the player's own buy times value. The relevant content is explained in detail in the [Placeholders](../placeholders/built-in-placeholders.md) page.
+As long as you can ensure that the placeholder used in the formula is per player output value, the calculated price result will naturally be per player. In the above example, we used global placeholders such as `{buy-times-server}`, and you only need to replace the `server` with the `player` to display the player's own buy times value. The relevant content is explained in detail in the [Placeholders](../placeholders/built-in-placeholders.md) page.
 
 ## Set buy / sell limits for your products
 
@@ -162,6 +162,6 @@ Please view [Products](../shops/products.md) page for info and example.
 
 ## Reset dynamic price
 
-Many people ask this question, and I feel that the person asking this question simply does not understand the essence of UltimateShop. The dynamic price is determined by a formula, so you cannot reset the price directly. To reset the price, the variables used in your formula must be reset. If you use variables such as `{buy-times-server}` exactly as described in this section, they can be reset.
+Many people ask this question, and I feel that the person asking this question simply does not understand the essence of UltimateShop. The dynamic price is determined by a formula, so you cannot reset the price directly. To reset the price, the placeholders used in your formula must be reset. If you use placeholders such as `{buy-times-server}` exactly as described in this section, they can be reset.
 
 You can reset the buy times or sell times by our auto reset feature, you can find more info at [Buy/Sell Times Reset](../shops/product-config-buy-sell-times-reset.md) page.
