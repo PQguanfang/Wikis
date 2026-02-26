@@ -238,4 +238,8 @@ Sometimes, you want to display same product in different menus, or you want to m
 * display-item: Supports set different display item for sub buttons.
 * as-sub-button: Type `Product ID` or `ShopID;;ProductID` here.
 
-The example  config of **Sub Buttons** can be found at [Shops](shops.md) page, please check out the `C` section under `items` in the head example.
+The example config of **Sub Buttons** can be found at [Shops](shops.md) page, please check out the `C` section under `items` in the head example.
+
+{% hint style="warning" %}
+If the corresponding product of the sub button is not displayed in the shop GUI, or if the player does not meet the conditions to open the corresponding shop menu, the item cannot be traded. If this is not desired, change the `settings.secret-shop-items` option in the shop configuration to `false`.
+{% endhint %}

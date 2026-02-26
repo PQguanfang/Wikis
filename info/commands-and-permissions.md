@@ -42,6 +42,10 @@ Same as `quickbuy`, just replace `quickbuy` to `quicksell`.
 
 `amount` arg can be replaced to `*` symbol, then plugin will auto sell all the items you can sell. <mark style="color:red;">**(Premium version only)**</mark>
 
+{% hint style="warning" %}
+If the corresponding product is not displayed in the shop GUI, or if the player does not meet the conditions to open the corresponding shop menu, the item cannot be traded. If this is not desired, change the `settings.secret-shop-items` option in the shop configuration to `false`.
+{% endhint %}
+
 ## /shop reload
 
 Reload the plugin, some configs need you restart server.
@@ -131,14 +135,6 @@ The per player's random placeholder must enter the player name in the command pa
 ~~Support add `-b` at the end of the command to bypass element exist check, which means you can set the custom element you'd like. For example, my random placeholder only have `A,B,C` total 3 elements, if I type **D** as element here, plugin will print error message, if you add `-b` suffix, then the placeholder value will be set to **D** and plugin never print error message, but it is not recommended.~~ (Removed in 3.12.0, now this command no longer check element exist)
 
 Require `ultimateshop.setrandomplaceholder` permission.
-
-## /shop editor <mark style="color:red;">**(Premium version only)**</mark>
-
-Open shop editor.
-
-Require **UltimateShopEditor** addon plugin, download it at SpigotMC.
-
-Require `ultimateshop.editor` permission.
 
 ## /shop search
 
