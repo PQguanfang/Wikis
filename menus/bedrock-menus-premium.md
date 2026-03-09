@@ -4,7 +4,7 @@
 
 * Both Geyser and Floodgate are **required in your Spigot server**. If you are using BungeeCord proxy, you need install them both in backward server and proxy server.
 * You must set Geyser's `auth-type` to **`floodgate`**.&#x20;
-* You need carefully follow [those steps](https://wiki.geysermc.org/floodgate/setup/) to setup floodgate in your backend server if you are using BungeeCord.
+* You need carefully follow [those steps](https://geysermc.org/wiki/floodgate/setup/?platform=proxy-servers) to setup floodgate in your backend server if you are using BungeeCord.
 
 {% hint style="info" %}
 If your server is correctly installed and configured with floodgate, the console will prompt `Hooking into floodgate` when UltimateShop start to run. If this prompt didn't appear but if you insist that your server has a floodgate, it is very likely that you accidentally downloaded the free version of the plugin. The <mark style="color:red;">**PREMIUM**</mark> version will have a special prompt at startup.
