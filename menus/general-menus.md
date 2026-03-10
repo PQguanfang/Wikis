@@ -133,6 +133,8 @@ buttons:
 <strong>  # ...
 </strong></code></pre>
 
+Also, you can set up a separate menu configuration for this store through the "menu-settings" option, for example:
+
 Among them, the `layout` option is crucial, as it determines where your products or buttons will be displayed. You will find that it consists of **6x9** characters, with each character corresponding to a slot in the Minecraft chest inventory. The characters entered in the corresponding position represent the items or buttons with the corresponding ID that we will display.
 
 In this example:
