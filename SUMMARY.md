@@ -32,6 +32,7 @@
 
 * [🔲General Menus](menus/general-menus.md)
 * [🔽Buy More Menus](menus/buy-more-menus.md)
+* [🔀Conditional Display](menus/conditional-display.md)
 * [🛏️Bedrock Menus - Premium](menus/bedrock-menus-premium.md)
 * [🥉Display Item Add Lore](menus/display-item-add-lore.md)
 

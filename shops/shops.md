@@ -5,6 +5,16 @@ An example shop file is here:
 ```yaml
 settings:
   menu: 'example-shop-menu'
+  # Optional: inline menu config for this shop. You can use this without settings.menu.
+  menu-settings:
+    dynamic-layout: false
+    layout:
+      - '000000000'
+      - '0ABCDEFG0'
+      - '0HIJKLMN0'
+      - '0OPQRSTU0'
+      - '000000000'
+      - 'a0003000b'
   buy-more: true
   shop-name: 'Food Shop'
   hide-message: false
@@ -154,9 +164,10 @@ buttons:
 
 *   menu: Shop menu name, which means menu file name. It’s the central hub that connects your shop and menu. In this example, we set it to `example-shop-menu`.
 
-    You should be find the menu file at the `menus` folder, it will called `example-shop-menu.yml`. For info about menus, please view [Menus](../menus/general-menus.md) page.
-* buy-more: Whether product in this shop can open buy more menu.
-* shop-name: Shop display name, which used in `{shop-name}` placeholder.
+    You should be find the menu file at the `menus` folder, it will called `example-shop-menu.yml`. For info about menus, please view [Menus](../menus/general-menus.md) page.&#x20;
+* menu-settings: You can set up a separate menu configuration exclusively for this shop. This part will overwrite the corresponding menu configuration. You can remove `menu` option if this part include all menu options you want to.
+* buy-more: Whether product in this shop can open buy more menu.&#x20;
+* shop-name: Shop display name, which used in `{shop-name}` placeholder.&#x20;
 * hide-message: Whether we hide the messages that will send after player buy or sell items in this shop.&#x20;
 
 {% hint style="warning" %}

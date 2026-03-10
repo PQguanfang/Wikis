@@ -180,6 +180,8 @@ items: # or buttons:
     #...
 ```
 
+You can also use conditional display in `layout` option, for more info, please view [Conditional Display](conditional-display.md) page.
+
 ## Dynamic Layout <mark style="color:red;">- Premium</mark>
 
 You can even also use PlaceholderAPI or built-in placeholder value in `layout` option, but you need enable `dynamic-layout` option in menu configs. Like:
