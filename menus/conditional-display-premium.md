@@ -1,4 +1,4 @@
-# 🔀Conditional Display
+# 🔀Conditional Display - Premium
 
 Sometimes, you may want to display Product A when the first condition is met, Product B when the second condition is met, and Product C when neither condition is met, or follow a similar logic. This feature can assist you in achieving this.
 
@@ -34,7 +34,7 @@ You can set `display-conditions` option both in button configs or product config
 
 ## Set menu configs layout option
 
-You can use this new format in layout option:
+You should use this new format in layout option:
 
 ```yaml
 `D||E||F`
@@ -42,7 +42,10 @@ You can use this new format in layout option:
 
 This means that the products or buttons with IDs D, E, and F will be checked in order until the display conditions of the corresponding product or button are met. For example, if the display conditions for D are not met, but the display conditions for E are met, then the corresponding slot will display the product or button with ID E.
 
+Also, you need set menu config's `dynamic-layout` option to `true` to use this feature.
+
 ```yaml
+dynamic-layout: true
 layout:
   - '000000000'
   - '0ABC`D||E||F`EFG0'

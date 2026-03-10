@@ -203,7 +203,7 @@ items: # or buttons:
     #...
 ```
 
-You can also use conditional display in `layout` option, for more info, please view [Conditional Display](conditional-display.md) page.
+You can also use conditional display in `layout` option, for more info, please view [Conditional Display](conditional-display-premium.md) page.
 
 ## Dynamic Layout <mark style="color:red;">- Premium</mark>
 
