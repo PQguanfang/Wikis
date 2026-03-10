@@ -7,7 +7,9 @@ All menu files are saved in `/menus/` folder.
 There are 3 types of menus.
 
 * Common Menus: Just like other menu plugins doing. You can use them open other shop menus.
-* Shop Menus: Shop menus will display products in specified shop in it. Each shop config has a `menu` option to set their corresponding shop menu. The shop menu has all features of a common menu. Multiple shops can share the same shop menu, so when you open these stores, the layout of the menu will be the same.
+* Shop Menus: Shop menus will display products in specified shop in it. The shop menu has all features of a common menu.&#x20;
+  * Set `menu` option to set their corresponding shop menu in shop configs.
+  * Or, use `menu-settings` directly in the shop configuration to set up a separate menu configuration exclusively for this shop.
 * Buy More Menus: Can select amount of you will buy or sell. This type of menus have more settings, please view [Buy More Menus](buy-more-menus.md) page to know more. **Buy more menu can only open from shop menus with selecting a product, it can not be directly opened**.
 
 ## Configs
@@ -99,6 +101,7 @@ The menu and shop feature in the plugin are separate, and their configurations a
 The following is a sample configuration file for a shop:
 
 ```yaml
+# This is a shop config exist in /shops/ folder.
 settings:
   menu: 'example-shop-menu'
   buy-more: true
@@ -118,7 +121,8 @@ In there youâ€™ll find the `settings.menu` option, which is crucial because itâ€
 
 You should be find the menu file at the `menus` folder, it will called `example-shop-menu.yml`.
 
-<pre class="language-yaml"><code class="lang-yaml">title: '{shop-name}'
+<pre class="language-yaml"><code class="lang-yaml"># This is a menu config exist in /menus/ folder.
+title: '{shop-name}'
 size: 54
 
 layout:
@@ -133,7 +137,25 @@ buttons:
 <strong>  # ...
 </strong></code></pre>
 
-Also, you can set up a separate menu configuration for this store through the "menu-settings" option, for example:
+Also, you can set up a separate menu configuration for this shop through the `menu-settings` option in shop configs, for example:
+
+<pre class="language-yaml"><code class="lang-yaml"><strong># This is a shop config exist in /shops/ folder.
+</strong><strong>settings:
+</strong>  shop-name: 'Example Shop'
+  # Override menu config for this shop.
+  menu-settings:
+    title: '{shop-name}'
+    size: 18
+    dynamic-layout: false
+    layout:
+      - '000000000'
+      - '0ABCDEFG0'
+    buttons:
+      3:
+        display-item:
+          material: ARROW
+          name: '{lang:back-button}'
+</code></pre>
 
 Among them, the `layout` option is crucial, as it determines where your products or buttons will be displayed. You will find that it consists of **6x9** characters, with each character corresponding to a slot in the Minecraft chest inventory. The characters entered in the corresponding position represent the items or buttons with the corresponding ID that we will display.
 
@@ -154,7 +176,6 @@ layout:
   - '0OPQRSTU0'
   - '000000000'
   - 'a0003000b'
-
 ```
 
 with this shop or button configs:
