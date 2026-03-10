@@ -50,7 +50,7 @@
 ## 📍Placeholders
 
 * [🔧Built-in Placeholders](placeholders/built-in-placeholders.md)
-* [🔀Random Placeholder - Premium](placeholders/random-placeholder-premium.md)
+* [🎲Random Placeholder - Premium](placeholders/random-placeholder-premium.md)
 * [⛓️Conditional Placeholder - Premium](placeholders/conditional-placeholder-premium.md)
 * [🔖Example: Discount](placeholders/example-discount.md)
 
