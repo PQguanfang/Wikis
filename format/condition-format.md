@@ -36,6 +36,10 @@ This condition only checked when player use this click type to use the button.&#
 
 #### Actions <mark style="color:red;">- Premium</mark>
 
+{% hint style="info" %}
+You should use `fail-actions` in products config if you want to modify the product buy or sell condition not meet message.
+{% endhint %}
+
 ```yaml
     conditions:
       1:
@@ -66,6 +70,40 @@ conditions:
 
 * {world}
 * {amount}
+
+### Item-Level `buy-conditions` and `sell-conditions`
+
+When you use `buy-conditions` or `sell-conditions` on the item itself, `{amount}` means the number of times the player is trying to buy or sell that item.
+
+If the player buys 5, then `{amount}` is `5`.
+
+### Single Thing `apply-conditions` and Legacy `conditions`
+
+When you use `apply-conditions` on a single thing, `{amount}` is always `1`.
+
+The same is true for legacy `conditions`, because in code they work as the old form of `apply-conditions`.
+
+Why?
+
+* `apply-conditions` are checked before the plugin finishes selecting the final single things
+* at that stage, the real calculated amount is not ready yet
+
+So in this layer:
+
+* `{amount}` does not mean the final price
+* `{amount}` does not mean the final product amount
+* `{amount}` is just `1`
+
+This means `apply-conditions` are for choosing branches, not for checking the real calculated amount.
+
+### Single Thing `require-conditions`
+
+When you use `require-conditions` on a single thing, `{amount}` means the final calculated amount of that selected single thing
+
+
+
+This is the most important difference from `apply-conditions`.
+
 * {player\_x}
 * {player\_y}
 * {player\_z}

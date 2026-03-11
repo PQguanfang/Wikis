@@ -98,6 +98,32 @@ Supported fail type:
 
 * {world}
 * {amount}
+
+### Item-Level `buy-actions` and `sell-actions`
+
+When you use `buy-actions` or `sell-actions` on the item itself, `{amount}` means the item-level transaction amount prepared by the buy or sell flow.
+
+In practice:
+
+* if `display-item.calculate-amount` is `false`, `{amount}` is always `1` for the item action layer
+* if `display-item.calculate-amount` is `true`, `{amount}` is `transaction quantity * display item amount`
+
+Example:
+
+* display item amount: `1`
+* player buys `5`
+* item `buy-actions` sees `{amount} = 5`
+
+Another example:
+
+* display item amount: `64`
+* player buys `5`
+* item `buy-actions` sees `{amount} = 320`
+
+### Single Thing `give-actions` and `take-actions`
+
+When you use `give-actions` or `take-actions` on a single thing, `{amount}` also means the real final amount of that specific single thing.
+
 * {player\_x}
 * {player\_y}
 * {player\_z}
