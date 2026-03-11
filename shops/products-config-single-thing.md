@@ -133,7 +133,7 @@ You can use dynamic value in single thing's amount option. For available placeho
         material: emerald
       2:
         material: diamond
-        conditions:
+        apply-conditions:
           1:
             type: permission
             permission: group.vip
@@ -228,7 +228,8 @@ You can use dynamic value in single thing's amount option. For available placeho
 In product configurations, we set the corresponding type of single thing through several options. And according to the type you want, fill in the corresponding config format in these options. There may be additional options to fill in for different single things, as follows:
 
 * products: Product items. Support [Item format](../format/itemformat-tm/) and [Economy format](../format/economyformat-tm.md). You can also add [Custom Sell Match Method](../features/custom-item-match-method.md) or other things depend on single thing type here. **Optional. If not set, player won't get anything after buy/sell. Useful for command shop.**
-  * products.conditions: Player must meet the condition to use this product. Use [Condition Format](../format/condition-format.md)  here.
+  * products.apply-conditions: Only players meet the condition will apply use this product. Use [Condition Format](../format/condition-format.md) here. **Optional. Default don't have any conditions.**&#x20;
+  * products.require-conditions: Player must meet the condition to buy or sell this product. Use [Condition Format](../format/condition-format.md) here. **Optional. Default don't have any conditions.**&#x20;
   * products.give-actions: The action will run after this product is been give to player. Use [Action Format](../format/action-format.md) here.&#x20;
   * products.take-actions: The action will run after this product is been taken from player. Use [Action Format](../format/action-format.md) here.&#x20;
   * products.give-item: Whether we will give this product item to player when he trying to buy.
@@ -238,7 +239,8 @@ In product configurations, we set the corresponding type of single thing through
   * buy-prices.end-apply: Last times the price will apply. Only supports `ANY` or `ALL` price type. **Optional. Default to infinite.**
   * buy-prices.apply: Which times this price will apply, format: `[1,2,3,4]`. Only supports `ANY` or `ALL` price type. **Optional. Default use start-apply option value.**
   * buy-prices.placeholder: Price display name in `{price}` placeholder. **Required.**
-  * buy-prices.conditions: Player must meet the condition to use this price. Use [Condition Format](../format/condition-format.md)  here. **Optional. Default don't have any conditions.**&#x20;
+  * products.apply-conditions: Only players meet the condition will apply use this buy price. Use [Condition Format](../format/condition-format.md) here. **Optional. Default don't have any conditions.**&#x20;
+  * products.require-conditions: Player must meet the condition to use this price to buy or sell product. Use [Condition Format](../format/condition-format.md) here. **Optional. Default don't have any conditions.**&#x20;
   * buy-prices.take-actions: The action will run after this buy price is been taken from player. Use [Action Format](../format/action-format.md) here.&#x20;
   * buy-prices.take: Whether we will take this buy price when player trying to buy. Useful if you just want to this item be a requirement but will not cost after buy.
 * sell-prices: Product sell prices. Support [Item format](../format/itemformat-tm/) and [Economy format](../format/economyformat-tm.md). You can also add [Custom Sell Match Method](../features/custom-item-match-method.md) here. **Optional. If not set, product can not be sold.**
