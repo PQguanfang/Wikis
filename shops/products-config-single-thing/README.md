@@ -1,7 +1,5 @@
 # 💰Products Config: Single Thing
 
-## Products Config: Single Thing
-
 This page explains the `products`, `buy-prices`, and `sell-prices` sections in a way that matches how the plugin actually works in code.
 
 If you only remember one idea, remember this:
@@ -10,13 +8,30 @@ If you only remember one idea, remember this:
 * A product can have many single things.
 * The plugin decides which single things are usable, calculates their amount, checks requirements, and then gives/takes them.
 
-### 1. What Is a Single Thing?
+## What Is a Single Thing?
 
 Inside one shop item, these three sections are all made of single things:
 
-* `products`: What the player receives when buying, and what the player must provide when selling.
-* `buy-prices`: What the player must pay to buy.
-* `sell-prices`: What the player receives after selling.
+#### `products`
+
+What the player receives when buying, and what the player must provide when selling. Optional.
+
+If `products` does not exist:
+
+* buying can still run `buy-actions`
+* selling can still run `sell-actions`
+* but the player will not receive any product on buy
+* and will not need to provide any product on sell
+
+This is useful for command shops.
+
+#### `buy-prices`
+
+What the player must pay to buy. Optional, but if it does not exist, the product cannot be bought.
+
+#### `sell-prices`
+
+What the player receives after selling. Optional, but if it does not exist, the product cannot be sold.
 
 Example:
 
@@ -47,7 +62,7 @@ In this example:
 * `buy-prices.1` is a single thing
 * `sell-prices.1` is a single thing
 
-### 2. How the Plugin Uses Single Things
+## How the Plugin Uses Single Things?
 
 When a player buys or sells, the plugin does not just read the section from top to bottom. It follows this logic:
 
@@ -61,7 +76,182 @@ When a player buys or sells, the plugin does not just read the section from top 
 
 This is why `apply-conditions` and `require-conditions` are not the same thing.
 
-### 3. The Difference Between `apply-conditions` and `require-conditions`
+## Single Thing Types
+
+The plugin determines the type of a single thing from the options you put inside it.
+
+### Vanilla Item
+
+Use normal [ItemFormat](https://ultimateshop.superiormc.cn/format/itemformat-tm) to tell us what Minecraft item you want to sell in shop or you want to player pay. **(Buy/Sell/Products)**
+
+```yaml
+products:
+  1:
+    material: emerald
+  2:
+    material: diamond
+    amount: 16
+```
+
+Use this when:
+
+* the thing is a normal Minecraft item
+* you want the plugin to compare, give, or take an actual item
+
+### Hook Item
+
+Use [Supported Plugins](https://ultimateshop.superiormc.cn/info/compatibility)'s item to tell us what custom item you want to sell in shop or you want to player pay. This type still use [ItemFormat](https://ultimateshop.superiormc.cn/format/itemformat-tm). **(Buy/Sell/Products)**
+
+```yaml
+products:
+  1:
+    hook-plugin: MMOItems
+    hook-item: 'AXE;;MAGIC_AXE'
+```
+
+Use this when:
+
+* the thing is provided by another item plugin
+* you still want UltimateShop to treat it like an item
+
+### Match Item
+
+Use custom item matching rules from [Custom Item Match Method](https://ultimateshop.superiormc.cn/features/custom-item-match-method) to tell us which items you want to match. **(Buy/Products)**
+
+```yaml
+products:
+  1:
+    match-item:
+      contains-lore:
+        - 'Magic Flight Paper'
+    amount: 64
+```
+
+Use this when:
+
+* there is no exact item ID to compare
+* you want to match by lore, NBT, name, or other custom rules
+
+### Vanilla Economy / Hook Economy
+
+Use an economy balance instead of an item. Following [EconomyFormat](https://ultimateshop.superiormc.cn/format/economyformat-tm).
+
+```yaml
+buy-prices:
+  1:
+    economy-plugin: Vault
+    amount: 15
+    placeholder: '{amount}$'
+```
+
+Use this when:
+
+* the player should pay or receive money, points, exp, levels, etc.
+
+### Custom <mark style="color:red;">- Premium</mark>
+
+Use `match-placeholder` when the thing is not a normal item or supported economy.
+
+```yaml
+buy-prices:
+  1:
+    match-placeholder: '%player_health%'
+    amount: 5
+    placeholder: '{amount} Health'
+    take-actions:
+      1:
+        multi-once: true
+        type: console_command
+        command: 'health take {player} {amount}'
+```
+
+Use this when:
+
+* you want to compare any custom numeric value
+* the plugin does not natively support that currency or system
+
+Important:
+
+* the placeholder is used to read how much the player currently has
+* `take-actions` / `give-actions` are what actually modify that value
+
+### Free / Empty
+
+If a single thing does not define item data, economy data, `match-item`, or `match-placeholder`, it is treated as free.
+
+This is useful for:
+
+* command shops
+* permission shops
+* action-only rewards
+
+## Options for Single Things
+
+These options are the most important ones users actually work with.
+
+#### `amount`
+
+The base amount of the single thing.
+
+This can be:
+
+* a fixed number
+* a PlaceholderAPI value
+* a math expression
+* a dynamic formula
+
+Example:
+
+```yaml
+amount: '55 + ({buy-times-server} - {sell-times-server}) * 0.1'
+```
+
+#### `apply-conditions`
+
+Whether this single thing should participate in the transaction.
+
+#### `require-conditions`
+
+Whether the transaction is allowed to use this single thing after selection.
+
+#### `give-actions`
+
+Actions that run when this single thing is given to the player.
+
+Typical uses:
+
+* command shop rewards
+* permission rewards
+* custom currency rewards
+
+#### `take-actions`
+
+Actions that run when this single thing is taken from the player.
+
+Typical uses:
+
+* taking a custom currency
+* running a command cost
+* syncing with another plugin
+
+#### `give-item`
+
+Only useful for product-like item rewards.
+
+If set to `false`, the plugin will not give the actual item, but `give-actions` can still run.
+
+This is how most command shops work.
+
+#### `take`
+
+If set to `false`, the single thing is still checked as a requirement, but it is not actually removed.
+
+This is useful when you want:
+
+* a required item
+* but not an item that gets consumed
+
+### The Difference Between `apply-conditions` and `require-conditions`
 
 This is the most important part of the whole system.
 
@@ -137,217 +327,89 @@ Result:
 * this price can still be selected
 * but the purchase fails if the player does not have `shop.buy.special`
 
-#### Legacy `conditions`
+### Different from single thing's `give-actions` / `take-actions` and item's `buy-actions` / `sell-actions`
 
-In code, `conditions` is treated as a legacy alias of `apply-conditions`.
+These two action levels look similar, but they are not meant for the same job.
 
-That means:
+#### Single thing `give-actions` / `take-actions`
 
-* `conditions` = old style apply condition
-* `apply-conditions` = clearer new name
-* `require-conditions` = a different check with different behavior
+These actions belong to one specific single thing.
 
-If you want the single thing to be skipped, use `apply-conditions`. If you want the transaction to fail, use `require-conditions`.
+They only run when:
 
-### 4. Single Thing Types
+* that exact single thing is selected
+* and that exact single thing is really being given or taken
 
-The plugin determines the type of a single thing from the options you put inside it.
+This means they are best for:
 
-#### Vanilla Item
+* one special reward branch
+* one special price branch
+* one custom currency branch
+* one command that should only run for one single thing
 
-Use normal item format.
+#### Item `buy-actions` / `sell-actions`
 
-```yaml
-products:
-  1:
-    material: emerald
-  2:
-    material: diamond
-    amount: 16
-```
+These actions belong to the whole shop item.
 
-Use this when:
+They run when:
 
-* the thing is a normal Minecraft item
-* you want the plugin to compare, give, or take an actual item
+* the whole buy transaction succeeds, or
+* the whole sell transaction succeeds
 
-#### Hook Item
+They are not tied to one specific single thing branch.
 
-Use custom items from supported plugins.
+This means they are best for:
 
-```yaml
-products:
-  1:
-    hook-plugin: MMOItems
-    hook-item: 'AXE;;MAGIC_AXE'
-```
+* global success messages
+* logging
+* sounds
+* commands that should always run after a successful buy or sell
+* effects that belong to the whole product, not one price or reward branch
 
-Use this when:
+#### The most important difference: `{amount}`
 
-* the thing is provided by another item plugin
-* you still want UltimateShop to treat it like an item
+For single thing actions:
 
-#### Match Item
+* `{amount}` means the final amount of that specific single thing
 
-Use custom item matching rules.
+For item actions:
 
-```yaml
-products:
-  1:
-    match-item:
-      contains-lore:
-        - 'Magic Flight Paper'
-    amount: 64
-```
-
-Use this when:
-
-* there is no exact item ID to compare
-* you want to match by lore, NBT, name, or other custom rules
-
-#### Vanilla Economy / Hook Economy
-
-Use an economy balance instead of an item.
-
-```yaml
-buy-prices:
-  1:
-    economy-plugin: Vault
-    amount: 15
-    placeholder: '{amount}$'
-```
-
-Use this when:
-
-* the player should pay or receive money, points, exp, levels, etc.
-
-#### Custom
-
-Use `match-placeholder` when the thing is not a normal item or supported economy.
-
-```yaml
-buy-prices:
-  1:
-    match-placeholder: '%player_health%'
-    amount: 5
-    placeholder: '{amount} Health'
-    take-actions:
-      1:
-        multi-once: true
-        type: console_command
-        command: 'health take {player} {amount}'
-```
-
-Use this when:
-
-* you want to compare any custom numeric value
-* the plugin does not natively support that currency or system
-
-Important:
-
-* the placeholder is used to read how much the player currently has
-* `take-actions` / `give-actions` are what actually modify that value
-
-#### Free / Empty
-
-If a single thing does not define item data, economy data, `match-item`, or `match-placeholder`, it is treated as free.
-
-This is useful for:
-
-* command shops
-* permission shops
-* action-only rewards
-
-### 5. Which Sections Are Optional?
-
-#### `products`
-
-Optional.
-
-If `products` does not exist:
-
-* buying can still run `buy-actions`
-* selling can still run `sell-actions`
-* but the player will not receive any product on buy
-* and will not need to provide any product on sell
-
-This is useful for command shops.
-
-#### `buy-prices`
-
-Optional, but if it does not exist, the product cannot be bought.
-
-#### `sell-prices`
-
-Optional, but if it does not exist, the product cannot be sold.
-
-### 6. Common Options for Single Things
-
-These options are the most important ones users actually work with.
-
-#### `amount`
-
-The base amount of the single thing.
-
-This can be:
-
-* a fixed number
-* a PlaceholderAPI value
-* a math expression
-* a dynamic formula
+* `{amount}` means the product-level transaction amount passed by the buy/sell flow
+* in common setups, this is the total displayed amount for the transaction
+* if `display-item.calculate-amount` is disabled, it is usually just the buy/sell quantity
 
 Example:
 
 ```yaml
-amount: '55 + ({buy-times-server} - {sell-times-server}) * 0.1'
+products:
+  1:
+    material: PAPER
+    amount: 4
+    give-actions:
+      1:
+        type: message
+        message: 'Single thing amount = {amount}'
+
+buy-actions:
+  1:
+    type: message
+    message: 'Item action amount = {amount}'
 ```
 
-#### `apply-conditions`
+If the player buys this item 5 times:
 
-Whether this single thing should participate in the transaction.
+* the single thing `give-actions` receives the real product amount for that branch
+* the item-level `buy-actions` receives the transaction amount prepared by the item buy flow
 
-#### `require-conditions`
+In many normal setups, both values may look similar. But they are still coming from different layers, and they should be used for different purposes.
 
-Whether the transaction is allowed to use this single thing after selection.
+#### Practical rule
 
-#### `give-actions`
+Use single thing actions when the logic belongs to one selected price or reward.
 
-Actions that run when this single thing is given to the player.
+Use item actions when the logic should always run after a successful buy or sell, no matter which single thing branch was used.
 
-Typical uses:
-
-* command shop rewards
-* permission rewards
-* custom currency rewards
-
-#### `take-actions`
-
-Actions that run when this single thing is taken from the player.
-
-Typical uses:
-
-* taking a custom currency
-* running a command cost
-* syncing with another plugin
-
-#### `give-item`
-
-Only useful for product-like item rewards.
-
-If set to `false`, the plugin will not give the actual item, but `give-actions` can still run.
-
-This is how most command shops work.
-
-#### `take`
-
-If set to `false`, the single thing is still checked as a requirement, but it is not actually removed.
-
-This is useful when you want:
-
-* a required item
-* but not an item that gets consumed
-
-### 7. Price-Only Options
+### Price-Only Options
 
 These options mainly matter in `buy-prices` and `sell-prices`.
 
@@ -397,7 +459,7 @@ buy-prices:
     placeholder: '{amount}$'
 ```
 
-### 8. About Modes: `ANY`, `ALL`, `CLASSIC_ANY`, `CLASSIC_ALL`
+## About Modes: `ANY`, `ALL`, `CLASSIC_ANY`, `CLASSIC_ALL`
 
 You do not need to understand every detail to use them, but this mental model helps:
 
@@ -412,7 +474,7 @@ Practical advice:
 * use `CLASSIC_ANY` for "pick one valid reward/price" setups
 * use `ANY` / `ALL` only when you need apply ranges or more advanced dynamic behavior
 
-### 9. Shared Condition Keys
+## Shared Condition Keys
 
 The plugin also supports shared apply-condition sections through `config.yml`:
 
@@ -453,9 +515,9 @@ Important:
 * these shared keys are for apply conditions
 * `require-conditions` is still configured inside the single thing itself
 
-### 10. Two Very Common Patterns
+## Two Very Common Patterns
 
-#### Pattern A: Normal item shop
+### Pattern A: Normal item shop
 
 ```yaml
 A:
@@ -484,73 +546,7 @@ This is the simplest setup:
 * selling takes apples
 * selling gives money
 
-#### Pattern B: Command shop
-
-```yaml
-A:
-  price-mode: CLASSIC_ALL
-  product-mode: CLASSIC_ALL
-  display-item:
-    name: 'Magic Crate Key'
-    material: PAPER
-    custom-model-data: 500
-    amount: 1
-  products:
-    1:
-      material: PAPER
-      custom-model-data: 500
-      amount: 1
-      give-item: false
-      give-actions:
-        1:
-          multi-once: true
-          type: console_command
-          command: "crate give {player} magic {amount}"
-  buy-prices:
-    1:
-      economy-plugin: Vault
-      amount: 150
-      placeholder: '{amount}$'
-```
-
-Why this works:
-
-* the product exists so the plugin has something to process
-* `give-item: false` stops the fake item from being given
-* `give-actions` gives the real reward by command
-
-### 11. When Should I Put Logic on the Item, and When on the Single Thing?
-
-Use single thing logic when the rule belongs to one specific price or reward.
-
-Good examples:
-
-* one VIP reward among several rewards
-* one seasonal price among several prices
-* one command reward that should only run in one branch
-
-Use item-level logic like `buy-actions`, `sell-actions`, `buy-conditions`, `sell-conditions` when the rule should apply to the whole product no matter which single thing was selected.
-
-### 12. Best Practices
-
-* Start with `CLASSIC_ALL` unless you really need advanced behavior.
-* Use `apply-conditions` to choose a branch.
-* Use `require-conditions` to block a transaction.
-* Use `give-item: false` for command shops.
-* Use `take: false` when something should be required but not consumed.
-* Keep prices and rewards small and explicit before adding dynamic formulas.
-* If you use dynamic values, add `min-amount` and `max-amount` to avoid extreme results.
-
-### 13. A Simple Rule of Thumb
-
-If you are unsure which option to use:
-
-* "Should this branch be ignored?" -> use `apply-conditions`
-* "Should the transaction fail?" -> use `require-conditions`
-* "Should the plugin give/take a real item?" -> use `give-item` or `take`
-* "Should a command run when this single thing is used?" -> use `give-actions` / `take-actions`
-
-That mental model is enough to build most shops correctly.
+### Pattern B: Command shop
 
 ## Example: Command Shop
 
@@ -641,98 +637,44 @@ In the above two examples, the final execution effect is identical. But can you 
         placeholder: '{amount}⛂'
 ```
 
-## Alternative Options
+Why this works:
 
-* `products.XXX.conditions` can be replaced by `products-conditions` section.
-* `buy(sell)-prices.XXX.conditions` can be replaced by `buy(sell)-prices-conditions` section.
+* the product exists so the plugin has something to process
+* `give-item: false` stops the fake item from being given
+* `give-actions` gives the real reward by command
 
-For example,
+### When Should I Put Logic on the Item, and When on the Single Thing?
 
-```yaml
-    products:
-      1:
-        material: REDSTONE
-        amount: 1
-    products-conditions:
-      1: 
-        type: placeholder
-        placeholder: '{random_daily-1}'
-        rule: '=='
-        value: 'A'
-```
+Use single thing logic when the rule belongs to one specific price or reward.
 
-is same as:
+Good examples:
 
-```yaml
-    products:
-      1:
-        material: REDSTONE
-        amount: 1
-        conditions:
-          1:
-            type: placeholder
-            placeholder: '{random_daily-1}'
-            rule: '=='
-            value: 'A'
-```
+* one VIP reward among several rewards
+* one seasonal price among several prices
+* one command reward that should only run in one branch
 
-Start from 3.4.3, you can customize the **keys** for conditions of **single things**. If you confirm that your products, buy prices, and sell prices are using same conditions at a time, you can set their keys to the same value, so that you don't have to configure their conditions separately for each single thing. You can find the settings at `config.yml` file like below:
+Use item-level logic like `buy-actions`, `sell-actions`, `buy-conditions`, `sell-conditions` when the rule should apply to the whole product no matter which single thing was selected.
 
-```yaml
-conditions:
-  products-key: 'conditions'
-  buy-prices-key: 'conditions'
-  sell-prices-key: 'conditions'
-  display-item-key: 'conditions'
-```
+### Best Practices
 
-This example make all `conditions` key be same, so the shop config should be also like:
+* Start with `CLASSIC_ALL` unless you really need advanced behavior.
+* Use `apply-conditions` to choose a branch.
+* Use `require-conditions` to block a transaction.
+* Use `give-item: false` for command shops.
+* Use `take: false` when something should be required but not consumed.
+* Keep prices and rewards small and explicit before adding dynamic formulas.
+* If you use dynamic values, add `min-amount` and `max-amount` to avoid extreme results.
 
-```yaml
-items:
-  A:
-    price-mode: CLASSIC_ANY
-    product-mode: CLASSIC_ANY
-    products:
-      one:
-        material: REDSTONE
-        amount: 1
-        give-actions:
-          1:
-            type: message
-            message: 'Hello!'
-      two:
-        material: IRON_INGOT
-        amount: 1
-    sell-prices:
-      one:
-        economy-plugin: Vault
-        amount: 1
-        placeholder: '&6{amount} Coins'
-        start-apply: 0
-      two:
-        economy-plugin: Vault
-        amount: 3
-        placeholder: '&6{amount} Coins'
-        start-apply: 0
-    conditions:
-      one: # Condition ID
-        1: # Means first condition
-          type: placeholder
-          placeholder: '{random_daily}'
-          rule: '=='
-          value: 'A'
-      two:
-        1:
-          type: placeholder
-          placeholder: '{random_daily}'
-          rule: '=='
-          value: 'B'
-```
+### A Simple Rule of Thumb
 
-In this example, if condition **one** is meet, we will also use the product with ID **one** and sell price wth ID **one**.
+If you are unsure which option to use:
 
-For actions, it is recommended you use give-actions in each single thing instead of buy-actions or sell-actions, because their conditions are separate and cannot be synchronized with the conditions of a single thing, configuring them will be more complicated.
+* "Should this branch be ignored?" -> use `apply-conditions`
+* "Should the transaction fail?" -> use `require-conditions`
+* "Should the plugin give/take a real item?" -> use `give-item` or `take`
+* "Should a command run when this single thing is used?" -> use `give-actions` / `take-actions`
+
+That mental model is enough to build most shops correctly.
 
 ## Auto Display Price at Item Lore
 
