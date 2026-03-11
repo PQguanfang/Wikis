@@ -92,7 +92,7 @@ Click [here](shops.md) to see the detalied example of those general options.
 *   hide-message: Whether we hide the messages that will send after player buy or sell this product. **Optional, default to false. (Added in 4.2.11)**
 
     <div data-gb-custom-block data-tag="hint" data-style="warning" class="hint hint-warning"><p>By default, only hide success buy or sell message, for fail message like limit reached or not enough money, you have 2 methods to hide them:</p><ul><li>Try <strong>also</strong> set <code>placeholder.click.enabled</code> option value to <code>true</code> in your <code>config.yml</code> file to hide them. This will display fail status at display item lore and will cost extra performance.</li><li>Try <strong>also</strong> set <code>force-display-fail-message</code> option value to <code>true</code> in your <code>config.yml</code> file. This way is recommended. (4.2.11+)</li></ul></div>
-* buy-prices/sell-prices/products: Please view [this page](products-config-single-thing.md).
+* buy-prices/sell-prices/products: Please view [this page](products-config-single-thing/).
 * price-mode: Support `ANY, ALL, CLASSIC_ANY, CLASSIC_ALL`. **Required.**
 * product-mode: Same as above. **Required if you have products section.**
 
@@ -137,7 +137,7 @@ This section of the configuration includes the following options:
 * sell-prices
 * products
 
-The introduction of these options is on a separate page, please [click here](products-config-single-thing.md) to view.
+The introduction of these options is on a separate page, please [click here](products-config-single-thing/) to view.
 
 ## Buy/Sell Times Reset Options
 

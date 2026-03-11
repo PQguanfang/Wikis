@@ -143,7 +143,7 @@ Under buy-prices:
 
 * “`1`” means the first defined price set.
 
-You can set unlimited sub price and product. All of those options available at [Single Things](../shops/products-config-single-thing.md) page.
+You can set unlimited sub price and product. All of those options available at [Single Things](../shops/products-config-single-thing/) page.
 
 5️⃣ Level 5 Under `products` → `1`:
 

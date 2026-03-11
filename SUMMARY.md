@@ -40,7 +40,8 @@
 
 * [📂Shops](shops/shops.md)
 * [🛒Products](shops/products.md)
-* [💰Products Config: Single Thing](shops/products-config-single-thing.md)
+* [💰Products Config: Single Thing](shops/products-config-single-thing/README.md)
+  * [Another version of 💰Products Config: Single Thing page](shops/products-config-single-thing/another-version-of-products-config-single-thing-page.md)
 * [♻️Product Config: Buy/Sell Times Reset](shops/product-config-buy-sell-times-reset.md)
 * [⚡Example: Common Usage](shops/example-common-usage.md)
 * [🌱Example: Stock (like in life)](shops/example-stock-like-in-life.md)
