@@ -548,8 +548,6 @@ This is the simplest setup:
 
 ### Pattern B: Command shop
 
-## Example: Command Shop
-
 ```yaml
   A:
     price-mode: CLASSIC_ALL
