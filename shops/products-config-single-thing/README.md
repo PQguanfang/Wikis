@@ -196,8 +196,8 @@ The base amount of the single thing.
 This can be:
 
 * a fixed number
-* a PlaceholderAPI value
-* a math expression
+* a PlaceholderAPI value. For available built-in placeholders, please view [this page](https://ultimateshop.superiormc.cn/shops/products#dynamic-value).&#x20;
+* a math expression. For math calculate format, please view [this page](https://ultimateshop.superiormc.cn/format/math-calculate-format).
 * a dynamic formula
 
 Example:
