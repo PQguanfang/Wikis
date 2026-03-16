@@ -1,3 +1,7 @@
+---
+hidden: true
+---
+
 # Another version of 💰Products Config: Single Thing page
 
 Each single product or price in one product we called **single thing**. So, each product have those thing type:
