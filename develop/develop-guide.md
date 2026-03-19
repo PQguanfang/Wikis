@@ -529,7 +529,7 @@ You can use this quick mapping:
 
 Some common examples:
 
-* This is a `Vault` economy entry:
+This is a `Vault` economy entry:
 
 ```yaml
 buy-prices:
@@ -539,47 +539,16 @@ buy-prices:
     placeholder: '{amount}$'
 ```
 
-Because it has `economy-plugin: Vault`, it is `HOOK_ECONOMY`, not `VANILLA_ECONOMY`.
+so to know whether this is a Vault price, you can do this:
 
-* This is a vanilla experience economy entry:
-
-```yaml
-buy-prices:
-  1:
-    economy-type: exp
-    amount: 30
-    placeholder: '{amount} Exp'
+```java
+Map<AbstractSingleThing, BigDecimal> resultMap = takeResult.getResultMap();
+for (AbstractSingleThing singleThing : resultMap.keySet()) {
+   if (singleThing.getSingleSection().getString("economy-plugin", "").equals("Vault") {
+       return "This price includes Vault";
+   }
+}
 ```
-
-This has `economy-type` but no `economy-plugin`, so it is `VANILLA_ECONOMY`.
-
-* This is an ItemsAdder item:
-
-```yaml
-products:
-  1:
-    hook-plugin: ItemsAdder
-    hook-item: namespace:item_id
-    amount: 1
-```
-
-Because `hook-plugin` and `hook-item` are both present, it is `HOOK_ITEM`.
-
-* This is a normal vanilla item:
-
-```yaml
-products:
-  1:
-    material: DIAMOND
-    amount: 16
-```
-
-This will be detected as `VANILLA_ITEM`.
-
-Two important reminders for users:
-
-* Detection is based on field combinations, not section names. `products`, `buy-prices`, and `sell-prices` all use the same type detection rules.
-* Priority matters. For example, if an entry contains both `hook-plugin` and `material`, it will still be treated as `HOOK_ITEM`, because that rule matches earlier.
 
 #### 14.2 What `AbstractSingleThing` Does During Transactions
 
