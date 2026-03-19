@@ -1,3 +1,7 @@
+---
+hidden: true
+---
+
 # Hook into UltimateShop
 
 ## Economy Plugins

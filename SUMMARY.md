@@ -81,5 +81,6 @@
 ## 💻Develop
 
 * [Develop Guide](develop/develop-guide.md)
+* [Copy of Develop Guide](develop/copy-of-develop-guide.md)
 * [Events](develop/events.md)
 * [Hook into UltimateShop](develop/hook-into-ultimateshop.md)

@@ -1,3 +1,7 @@
+---
+hidden: true
+---
+
 # Events
 
 Start from 3.6.0, UltimateShop bring 2 custom Bukkit events. They are:
