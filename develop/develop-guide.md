@@ -171,23 +171,23 @@ Notes:
 * `-1` means unlimited
 * `ShopHelper` will create the use-times cache automatically if it does not exist yet
 
-### 6. Preview Buy Cost or Sell Reward
+### 6. Preview Buy Cost
 
 If you only want to display something like "how much this batch of items is worth" in your own GUI or message flow, use the preview methods in `ShopHelper`.
 
-#### Preview the Buy Cost
-
 ```java
-String buyPriceDisplay = ShopHelper.getBuyPricesDisplay(player.getInventory(), player, 3);
+ItemStack[] items = new ItemStack[]{player.getInventory().getItemInMainHand()};
+String buyPriceDisplay = ShopHelper.getBuyPricesDisplay(items, player, 3);
 if (buyPriceDisplay != null) {
     player.sendMessage("Buying 3 times costs: " + buyPriceDisplay);
 }
 ```
 
-#### Preview the Sell Reward
+### 7. Preview Sell Reward
 
 ```java
-String sellPriceDisplay = ShopHelper.getSellPricesDisplay(player.getInventory(), player, 1);
+ItemStack[] items = new ItemStack[]{player.getInventory().getItemInMainHand()};
+String sellPriceDisplay = ShopHelper.getSellPricesDisplay(items, player, 1);
 if (sellPriceDisplay != null) {
     player.sendMessage("Selling gives: " + sellPriceDisplay);
 }
@@ -196,28 +196,12 @@ if (sellPriceDisplay != null) {
 If you need the raw result objects instead of formatted strings:
 
 ```java
-TakeResult buyCost = ShopHelper.getBuyPrices(player.getInventory(), player, 3);
-GiveResult sellReward = ShopHelper.getSellPrices(player.getInventory(), player, 1);
+ItemStack[] items = new ItemStack[]{player.getInventory().getItemInMainHand()};
+TakeResult buyCost = ShopHelper.getBuyPrices(items, player, 3);
+GiveResult sellReward = ShopHelper.getSellPrices(items, player, 1);
 ```
 
 These result objects are useful for display, logging, or secondary checks.
-
-### 7. Important Limitation: Reverse-Matching by Item Is Not a Stable Mapping
-
-Methods such as `ShopHelper.getTargetItem(...)`, `getBuyPrices(...)`, and `getSellPrices(...)` can work by scanning all shops and returning the first matching product they find from a given item container.
-
-That means:
-
-* If multiple shops contain the same or compatible product definitions
-* The returned result may not be the product you intended
-* You should not treat this as a strong deterministic business key
-
-If your integration must target one exact product, always prefer storing and using:
-
-* shop ID
-* product ID
-
-In other words, prefer `ShopHelper.getItemFromID(shopId, productId)` instead of relying on a global reverse scan.
 
 ### 8. Listen to Transaction Events
 
