@@ -85,6 +85,7 @@ Supported fail type:
 * REQUIRE\_CONDITION\_NOT\_MEET
 * NOT\_ENOUGH
 * INVENTORY\_FULL
+* API\_CANCEL
 
 ```yml
     fail-actions:
