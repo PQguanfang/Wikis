@@ -161,3 +161,9 @@ Update GUI title for specifed player. Only gui title will be updated, buttons wi
 Require server enable title update feature, for more info, please view [this page](../menus/general-menus.md#title-update-premium).
 
 Require `ultimateshop.updateguititle` permission.
+
+## /shop editor <mark style="color:red;">**(Premium version only)**</mark>
+
+Open in-game editor.
+
+Require `ultimateshop.editor` permission.

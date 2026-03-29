@@ -75,6 +75,7 @@ Support create hologram to display sell chest info.
 
 * CMI
 * DecentHolograms
+* FancyHolograms
 
 ## **Indirect compatibility**
 

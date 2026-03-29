@@ -76,7 +76,7 @@
 * [🔍Custom Item Match Method](features/custom-item-match-method.md)
 * [🔑Give Item Method](features/give-item-method.md)
 * [💳Log Transaction - Premium](features/log-transaction-premium.md)
-* [🌈Dynamic Title - Premium](features/dynamic-title-premium.md)
+* [🌈Earn Limit](features/earn-limit.md)
 
 ## 💻Develop
 
