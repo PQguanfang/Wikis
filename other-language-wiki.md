@@ -6,4 +6,4 @@ Wiki translations in other languages come from the community and do not represen
 
 **Translator:** SnowCutieOwO
 
-**Site:** [Click here (点击这里)](https://continue-project.netlify.app/UltimateShop/welcome)
+**Site:** [Click here (点击这里)](https://continue-project.netlify.app/wiki/UltimateShop/)
