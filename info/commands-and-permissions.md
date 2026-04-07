@@ -167,3 +167,9 @@ Require `ultimateshop.updateguititle` permission.
 Open in-game editor.
 
 Require `ultimateshop.editor` permission.
+
+## /shop searchgui <mark style="color:red;">**(Premium version only)**</mark>
+
+Open search GUI.
+
+Require `ultimateshop.searchgui` permission.
