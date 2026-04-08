@@ -1,9 +1,5 @@
 # 🌍Localized Item Name - Premium
 
-{% hint style="info" %}
-If you are using Paper 1.17.1+ server: plugin will auto translate item vanilla name based on player client language which is more flexible than this feature, so you don't need **enable** this feature if you are using newer and modern server version. (3.8.0+)
-{% endhint %}
-
 ## Requirements
 
 * Server version 1.16+.
@@ -164,6 +160,7 @@ Do you have problems? Try:
 * Delete the json file generated at `plugins/UltimateShop` folder then regenerate this file.
 * Are you using premium version? Only premium version support this for now.
 * Did plugin print error message when generate the locate file? If yes, try restart the server and plugin will auto regenerate.
+* If the server gets stuck in the "downloading" phase during startup, you can manually drag the language JSON file into the `plugins/UltimateShop` folder.
 
 ## Note
 
