@@ -142,11 +142,22 @@ Print the message that helps you know the hold item target product in shop.
 
 Require `ultimateshop.search` permission.
 
+## /shop sellhand
+
+Sell the entire stack in your main hand only.
+
+Require `ultimateshop.sellhand` permission.
+
 ## /shop sellallhand
 
 Sell all hand item.
 
 Require `ultimateshop.sellallhand` permission.
+
+{% hint style="info" %}
+sellhand = sell only the held stack.\
+sellallhand = use the held item as selector, then sell matching items from inventory.
+{% endhint %}
 
 ## /shop updategui \[player]
 
@@ -168,7 +179,7 @@ Open in-game editor.
 
 Require `ultimateshop.editor` permission.
 
-## /shop searchgui <mark style="color:red;">**(Premium version only)**</mark>
+## /shop searchgui \[searchMenuID] <mark style="color:red;">**(Premium version only)**</mark>
 
 Open search GUI.
 
