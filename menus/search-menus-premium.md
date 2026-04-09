@@ -38,67 +38,36 @@ no-result-item:
     name: '&cNo Result'
 ```
 
-**`layout`**
+* input-item: Defines the marker used for input slot, these slots allow players to place items for matching. Must be a single char, use this char in `layout` option to set where it will display in menu.
+* result-item: Defines the marker used for result slots. Matched products are displayed into these slots in order. Must be a single char, use this char in `layout` option to set where it will display in menu.
+* action-items: Defines special Search GUI buttons.Current supported `action-type` values:
+  * `input-name` : open a chat prompt to search by text
+  * `clear-search`: return input items and clear the current text filt
+* state-items: Displays the current search status. Each state button supports:
+  * `empty-input`
+  * `has-input`
+  * Useful placeholders:
+    * `{result-amount}` total matched products
+    * `{showing-amount}` currently displayed amount
+    * `{input-amount}` total amount of input items
+    * `{name-keyword}` current text filter
+* no-result-item: Displayed when the current search has no matches. This is a fixed slot item defined by `slot`.
+* result-lore: Extra lore added to each result item.
+  * Useful placeholders:
+    * `{shop}`
+    * `{product}`
 
-Defines the whole GUI layout.\
-`input-item`, `result-item`, `action-items`, and `state-items` all map their IDs through this layout.
+## Set Search Menu
 
-**`input-item` / `input-items`**
+You should put seach menu ID in `menu.search-gui.menu` option in `config.yml` file.
 
-Defines input slot markers.
-
-* `input-item`: one marker
-* `input-items`: a list of markers
-
-These slots allow players to place items for matching.
-
-**`result-item`**
-
-Defines the marker used for result slots.\
-Matched products are displayed into these slots in order.
-
-**`action-items`**
-
-Defines special Search GUI buttons.\
-Current supported `action-type` values:
-
-* `input-name`
-* `clear-search`
-
-Meaning:
-
-* `input-name` / `search-name`: open a chat prompt to search by text
-* `clear-search`: return input items and clear the current text filter
-
-**`state-items`**
-
-Displays the current search status.\
-Each state button supports:
-
-* `empty-input`
-* `has-input`
-
-Useful placeholders:
-
-* `{result-amount}` total matched products
-* `{showing-amount}` currently displayed amount
-* `{input-amount}` total amount of input items
-* `{name-keyword}` current text filter
-
-**`no-result-item`**
-
-Displayed when the current search has no matches.\
-This is a fixed slot item defined by `slot`.
-
-**`result-lore`**
-
-Extra lore added to each result item.\
-Useful placeholders:
-
-* `{shop}`
-* `{product}`
-
-## How To Open It
+```yaml
+menu:
+  search-gui:
+    menu:
+      - 'search'
+      - 'food-search' # Put more search menu ID here.
+```
 
 The default search menu file is `menus/search.yml`, and you can duplicate it to create more search menus.
 
