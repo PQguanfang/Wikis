@@ -40,7 +40,7 @@ no-result-item:
 
 * input-item: Defines the marker used for input slot, these slots allow players to place items for matching. Must be a single char, use this char in `layout` option to set where it will display in menu.
 * result-item: Defines the marker used for result slots. Matched products are displayed into these slots in order. Must be a single char, use this char in `layout` option to set where it will display in menu.
-* action-items: Defines special Search GUI buttons.Current supported `action-type` values:
+* action-items: Defines special Search GUI buttons. Current supported `action-type` values:
   * `input-name` : open a chat prompt to search by text
   * `clear-search`: return input items and clear the current text filt
 * state-items: Displays the current search status. Each state button supports:
