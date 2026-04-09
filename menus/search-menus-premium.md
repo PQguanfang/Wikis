@@ -66,7 +66,7 @@ menu:
   search-gui:
     menu:
       - 'search'
-      - 'food-search' # Put more search menu ID here.
+      - 'search2' # Put more search menu ID here.
 ```
 
 The default search menu file is `menus/search.yml`, and you can duplicate it to create more search menus.
@@ -82,7 +82,7 @@ Examples:
 
 ```yaml
 /shop searchgui search
-/shop searchgui food-search
+/shop searchgui search2
 ```
 
 ## Search Behavior
