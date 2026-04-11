@@ -1,5 +1,10 @@
 # 🔗Shared Product Data - Premium
 
+{% hint style="warning" %}
+The **shared product data** feature is not currently introduced as a core function of UltimateShop and is still in the early testing phase. It may be officially released in future versions or potentially removed if it contains irreparable critical issues. \
+Shared product data is now available at **4.4.2 or later** version.
+{% endhint %}
+
 ## Overview
 
 `shared-use-times` now does two things:

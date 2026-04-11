@@ -8,6 +8,7 @@ items:
     price-mode: CLASSIC_ALL
     product-mode: CLASSIC_ALL
     sell-all: true
+    shared-use-times: daily_bundle
     products:
       1:
         material: STRING
@@ -89,6 +90,7 @@ Click [here](shops.md) to see the detalied example of those general options.
 ```
 
 * sell-all: Set whether this product can use sell all feature. **Optional, default to true. (Added in 3.9.3)**
+* shared-use-times: Please view [this page](shared-product-data-premium.md).
 *   hide-message: Whether we hide the messages that will send after player buy or sell this product. **Optional, default to false. (Added in 4.2.11)**
 
     <div data-gb-custom-block data-tag="hint" data-style="warning" class="hint hint-warning"><p>By default, only hide success buy or sell message, for fail message like limit reached or not enough money, you have 2 methods to hide them:</p><ul><li>Try <strong>also</strong> set <code>placeholder.click.enabled</code> option value to <code>true</code> in your <code>config.yml</code> file to hide them. This will display fail status at display item lore and will cost extra performance.</li><li>Try <strong>also</strong> set <code>force-display-fail-message</code> option value to <code>true</code> in your <code>config.yml</code> file. This way is recommended. (4.2.11+)</li></ul></div>
