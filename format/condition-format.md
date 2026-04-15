@@ -175,6 +175,36 @@ Rule can be set to:
       value: 5
 ```
 
+## Menu
+
+Player is opening the specified menu.
+
+```yaml
+  conditions:
+    1:
+      type: menu
+      menu: 'example-shop-menu'
+```
+
+## Menu Type
+
+Player is opening the specified type of menu.
+
+Supported menu type:
+
+* COMMON
+* SHOP
+* MORE
+* SEARCH
+* FAVOURITE
+
+```yaml
+  conditions:
+    1:
+      type: menu_type
+      menu-type: 'favourite'
+```
+
 ## Any <mark style="color:red;">- Premium</mark>
 
 ```yaml

@@ -481,3 +481,62 @@ Require server enable title update feature, for more info, please view [this pag
       1:
         type: update_title
 ```
+
+## Add Favourite <mark style="color:red;">- Premium</mark>
+
+Add the product to favourite list.
+
+<pre class="language-yaml"><code class="lang-yaml"><strong>    actions:
+</strong>      1:
+        type: add_favourite
+        menu: favourite # The favourite menu.
+        shop: '{shop}'
+        item: '{item}'
+</code></pre>
+
+## Remove Favourite <mark style="color:red;">- Premium</mark>
+
+Remove this product from favourite list.
+
+```yaml
+   actions:
+      1:
+        type: remove_favourite
+        menu: favourite # The favourite menu.
+        shop: '{shop}'
+        item: '{item}'
+```
+
+## Toggle Favourite <mark style="color:red;">- Premium</mark>
+
+Toggle the product favourite status, if it is exist, we will remove, if not exist, we will add.
+
+```yaml
+   actions:
+      1:
+        type: toggle_favourite
+        menu: favourite # The favourite menu.
+        shop: '{shop}'
+        item: '{item}'
+```
+
+## Prompt <mark style="color:red;">- Premium</mark>
+
+Asks the player to type something in chat before continuing with follow-up actions.
+
+```yml
+    actions:
+      1:
+        type: prompt
+        description: '&eEnter a note'
+        reopen-on-submit: true
+        reopen-on-cancel: true
+        actions:
+          1:
+            type: message
+            message: '&aSaved note: &f{arg}'
+        cancel-actions:
+          1:
+            type: message
+            message: '&cYou cancelled the prompt'
+```

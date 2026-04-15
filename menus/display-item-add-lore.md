@@ -84,9 +84,13 @@ Each line start with `@+lower case` will be consider as conditional line. We wil
 
 @k - This product has enabled buy more feature.
 
+@l - This product can use favourite feature.
+
 @m - This product can use sell all feature.
 
 @n - Buy/sell price (corresponding to the Click type) is valid. For example, buy click type require buy price is valid.
+
+@o - Player is opening favourite menu.
 
 @p - Player is opening buy more menu.
 
