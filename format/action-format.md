@@ -540,3 +540,37 @@ Asks the player to type something in chat before continuing with follow-up actio
             type: message
             message: '&cYou cancelled the prompt'
 ```
+
+**`{arg}`**
+
+The full raw input string.
+
+If the player enters:
+
+```
+diamond sword 64
+```
+
+then:
+
+```
+{arg} -> diamond sword 64
+```
+
+**`{arg_1}`, `{arg_2}`, `{arg_3}` ...**
+
+Whitespace-split arguments.
+
+If the player enters:
+
+```
+diamond sword 64
+```
+
+then:
+
+```
+{arg_1} -> diamond
+{arg_2} -> sword
+{arg_3} -> 64
+```
