@@ -1,15 +1,5 @@
 # 🎉Welcome
 
-{% hint style="warning" %}
-Are you looking for an amazing entity loot reward plugin? Check out our new plugin: **MythicRewards**!
-
-Check it here: [https://www.spigotmc.org/resources/mythicrewards-boss-kill-reward-drop-plugin-with-custom-rule-support-1-14-1-12-10.129453/](https://www.spigotmc.org/resources/mythicrewards-boss-kill-reward-drop-plugin-with-custom-rule-support-1-14-1-12-10.129453/)
-
-And... If you have purcahsed <mark style="color:red;">**PREMIUM**</mark> version of UltimateShop, you can unlock it's <mark style="color:red;">**PREMIUM**</mark> version without pay extra money! (The free version link includes premium version codes, those codes will auto unlock if your server installed pemium version of UltimateShop).
-
-Why not try it now?
-{% endhint %}
-
 ## Links
 
 ### Get the plugin
