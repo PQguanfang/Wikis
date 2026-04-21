@@ -1,5 +1,22 @@
 # 🔢Number Format
 
+## Built-in number format
+
+You can use plugin built-in number format and set them in `config.yml` file.
+
+```yaml
+number-display:
+  format:
+    enabled: true
+    decimal: "#,##0.00##########"
+    integer: "#,##0"
+  strip-trailing-zeros:
+    enabled: true
+```
+
+## Use other PAPI extension
+
+* Set `number-format.format`.enabled option to `false`.
 * Download and install **PlaceholderAPI** plugin in your server.
 * Install **Formatter** expansion with this command `/papi ecloud download Formatter`. Click [here](https://github.com/PlaceholderAPI/PlaceholderAPI/wiki/Placeholders#formatter) to know more.
 * Edit `placeholder` option in price configs to this: `%formatter_number_format_{amount}%`.
