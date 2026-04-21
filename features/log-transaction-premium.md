@@ -23,6 +23,7 @@ log-transaction:
 * {buy-or-sell}
 * {price}
 * {time} - Display the log time
+* {multiplier} - The result value of [Sell Multiplier](../shops/sell-multiplier-premium.md).
 
 ## Showcase
 
