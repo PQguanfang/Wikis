@@ -47,6 +47,7 @@
   * [Another version of 💰Products Config: Single Thing page](shops/products-config-single-thing/another-version-of-products-config-single-thing-page.md)
 * [♻️Product Config: Buy/Sell Times Reset](shops/product-config-buy-sell-times-reset.md)
 * [🔗Shared Product Data - Premium](shops/shared-product-data-premium.md)
+* [💰Sell Multiplier - Premium](shops/sell-multiplier-premium.md)
 * [⚡Example: Common Usage](shops/example-common-usage.md)
 * [🌱Example: Stock (like in life)](shops/example-stock-like-in-life.md)
 * [📅Example: Daily Shop/Rotating Shop](shops/example-daily-shop-rotating-shop.md)

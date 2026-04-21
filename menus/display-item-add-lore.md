@@ -104,6 +104,10 @@ Each line start with `@+lower case` will be consider as conditional line. We wil
 
 @v - This button can sell product.&#x20;
 
+@z\[vip] - Only show when [multiplier](../shops/sell-multiplier-premium.md) id `vip` is active.
+
+(@z\[vip]) - Only show when [multiplier](../shops/sell-multiplier-premium.md) id `vip` is not active.
+
 ## Negation
 
 You can reverse the conditional symbol by adding English parentheses before and after it. For example: `(@a)` represents the reversal of `@a`. (means this product does not has buy price)
