@@ -58,6 +58,21 @@ items:
       - '&eDrop to buy, right to sell'
 ```
 
+## Hide
+
+You can use `display-item.modify-lore` option to hide the display item add lore.
+
+```yaml
+A:
+  display-item:
+    material: APPLE
+    modify-lore: false # This line
+  buy-prices:
+    # The section of buy price
+  sell-prices:
+    # The section of sell price
+```
+
 ## Prefix - Conditional Symbol
 
 Each line start with `@+lower case` will be consider as conditional line. We will only display this line when this condition is meet. Starting from version **4.0.0**, multiple conditional symbols can be set for each line.
