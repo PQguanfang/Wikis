@@ -22,6 +22,7 @@
 * [🛒Info of ItemFormat™](format/info-of-itemformat-tm.md)
 * [📝ItemFormat™](format/itemformat-tm/README.md)
   * [Component Format](format/itemformat-tm/component-format.md)
+* [🌉ItemBridge](format/itembridge.md)
 * [💹EconomyFormat™](format/economyformat-tm.md)
 * [🖼️Display Item Format](format/display-item-format.md)
 * [🎬Action Format](format/action-format.md)

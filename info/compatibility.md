@@ -20,6 +20,8 @@ Direct compatibility refers to the use of item plugins or the economy of economi
 * Nexo
 * CraftEngine
 
+You can use ItemBridge as custom item provider which supports more custom item plugins, click [here](../format/itembridge.md) to know more.
+
 ### <mark style="color:red;">Directly</mark> supported economy plugins list
 
 * PlayerPoints

@@ -10,6 +10,8 @@ Hold a item then use command `/shop generateitemformat` to parse the ItemFormat 
 
 ## Hook Item
 
+This section tells you about the built-in custom item provider, you can use ItemBridge as custom item provider instead which supports more custom item plugins, click [here](../itembridge.md) to know more.
+
 ### Hook Plugin
 
 Possible Value: `EcoItems, EcoArmor, MMOItems, ItemsAdder, Oraxen, MythicMobs, eco, NeigeItems, ExecutableItems, Nexo, CraftEngine`.&#x20;
