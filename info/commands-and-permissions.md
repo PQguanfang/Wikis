@@ -120,7 +120,7 @@ Require `ultimateshop.getplaceholdervalue` permission.
 
 Reset random placeholder value.
 
-The per player's random placeholder must enter the player name in the command parameters, while the per player's random placeholder cannot enter the player name in the command parameters, otherwise the plugin will prompt an error.
+The per player's random placeholder must enter the player name in the command parameters, while the none-per player's random placeholder cannot enter the player name in the command parameters, otherwise the plugin will prompt an error.
 
 Require `ultimateshop.resetrandomplaceholder` permission.
 
