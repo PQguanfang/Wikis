@@ -1,4 +1,4 @@
-# 🔀Random Placeholder - Premium
+# 🎲Random Placeholder - Premium
 
 We added `{random}` built-in placeholder in premium version. You can use random placeholder at the options that support the use of placeholders to randomly select the value. For example, random price amount, random reset time, random stock, etc.
 
@@ -87,7 +87,7 @@ Use `{random_times_<ID>}` placeholder to display the reset time of the placehold
 
 ## Reset Placeholder
 
-You can reset placeholder by setting `reset-mode` and `reset-time` option.&#x20;
+You can reset placeholder by setting `reset-mode` and `reset-time` option or use `/shop resetrandomplaceholder` command.&#x20;
 
 ### Reset Mode
 
