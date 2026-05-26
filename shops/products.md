@@ -106,7 +106,7 @@ Click [here](shops.md) to see the detalied example of those general options.
 
 * buy-actions: The action will run after buy this product, use [Action Forma](../format/action-format.md)[t](../format/action-format.md) here. **Optional.**&#x20;
 * sell-actions: The action will run after sell this product,  use [Action Format](../format/action-format.md) here. **Optional.**
-* fail-actions: The action will run if we fail to buy or sell this product,  use [Action Format](../format/action-format.md) here. **Optional. In example above we put this on general-configs and set it as a fail sound.**
+* fail-actions: The action will run if we fail to buy or sell this product,  use [Action Format](../format/action-format.md) here. **Optional.**&#x20;
 * buy-conditions: The condition player need to meet to buy this product, use [Condition Format](../format/condition-format.md) here. **Optional**.
 * sell-conditions: The condition player need to meet to sell this product, use [Condition Format](../format/condition-format.md) here. **Optional**.
 * buy-limits: Set the maximum times of buy/sell times. **Optional. If not set, product can be purchased with unlimited times.**
