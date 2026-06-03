@@ -11,6 +11,8 @@ If a withdrawal would exceed the current earning limit, it will be denied.
 
 Get it [here](https://www.spigotmc.org/resources/economylimit-limit-your-player-earnings-by-anyway-daily-weekly-monthly-1-20-1-21-11.133458/).
 
+<figure><img src="../.gitbook/assets/image (16).png" alt=""><figcaption></figcaption></figure>
+
 ## Install
 
 1. Install `Vault`
