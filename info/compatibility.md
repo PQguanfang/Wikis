@@ -70,6 +70,7 @@ If players do not have permission to open container within these protection plug
 * Residence
 * Towny
 * WorldGuard
+* SuperiorSkyblock2
 
 ### <mark style="color:red;">Directly</mark> supported hologram plugins list  <a href="#directly-supported-protection-plugins-list-premium" id="directly-supported-protection-plugins-list-premium"></a>
 
