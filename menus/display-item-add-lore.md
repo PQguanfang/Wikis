@@ -119,6 +119,8 @@ Each line start with `@+lower case` will be consider as conditional line. We wil
 
 @v - This button can sell product.&#x20;
 
+@w - This button exist in buy more menu and already set `click-type` option.
+
 @z\[vip] - Only show when [multiplier](../shops/sell-multiplier-premium.md) id `vip` is active.
 
 (@z\[vip]) - Only show when [multiplier](../shops/sell-multiplier-premium.md) id `vip` is not active.
