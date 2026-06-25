@@ -3,13 +3,20 @@
 Open `config.yml` and find below contents:
 
 ```yaml
+# Premium version only.
 log-transaction:
-  enabled: true
-  # If set to empty value, we will just print the log into console.
-  file: ''
-  format: '{player} | {shop} | {buy-or-sell} | {item-name}x{amount} | {price}'
+  # It will cost extra performance cost.
+  enabled: false
+  # file | database — database requires database.enabled: true
+  storage: file
+  # Used when storage is file. If set to empty value, we will just print the log into console.
+  file: 'log.txt'
+  format: '{time} | {player} | {shop} | {buy-or-sell} | {item-name} x{amount} | {price} | Price Multiplier: x{multiplier}'
+  time-format: "yyyy-MM-dd HH:mm:ss"
 ```
 
+* storage: Supports `file` and `database`. `database` requires `database.enabled: true` in `config.yml` file.
+  * Database structured columns: `created_at`, `player_uuid`, `player_name`, `shop_id`, `shop_name`, `item_id`, `item_name`, `action`, `amount`, `multiplier`
 * If you set `file` option to empty, we will just print the log into console. Otherwise, we will log into the file you put here. The file must be a txt file.
 
 ## Format available placeholders:
