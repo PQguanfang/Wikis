@@ -423,6 +423,13 @@ placeholder: '{amount}$'
 
 For prices, this should usually always be set.
 
+Supported placeholders:
+
+* {amount}
+* {status} - Display the dynamic price status.
+* {display} - If the price is vanilla item or hook item, this placeholder can display it's name. Will cost extra server performance.
+* All PlaceholderAPI placeholders.
+
 #### `start-apply`, `end-apply`, `apply`
 
 These control when a price applies.
