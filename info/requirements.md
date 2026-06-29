@@ -7,8 +7,12 @@
 
 ## Server Software
 
-* **Paper** and its downstream forks are <mark style="color:red;">recommended</mark>. When the plugin detects that your server software is Paper, it will enable some features that are only available in Paper, some of which can provide subtle performance improvements.
-* **Folia** server also supported. Please note: Folia's support is in the <mark style="color:red;">early testing stage</mark> and may be released in official versions or removed in the future. This support is not a guarantee.
+| Server          | Can work in your server                                                                                                   | Can get offical support                                                                                                                                                                          |
+| --------------- | ------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| Spigot          | <p>✅<br>Some features does not provide in Spigot servers</p>                                                              | ✅                                                                                                                                                                                                |
+| Paper/Purpur    | <p>✅<br>Can provide subtle performance improvements.</p>                                                                  | ✅                                                                                                                                                                                                |
+| Folia           | <p>❓<br>Any problems only occurs in Folia servers may not be solved. Plugin is not designed for multi thread support.</p> | <p>❓</p><p>Folia's support is in the <mark style="color:red;">early testing stage</mark> and may be released in official versions or removed in the future. This support is not a guarantee.</p> |
+| Other softwares | ❌                                                                                                                         | ❌                                                                                                                                                                                                |
 
 ## Server Version
 
