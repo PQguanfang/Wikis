@@ -3,6 +3,7 @@
 * [🎉Welcome](README.md)
 * [🌏Other Language Wiki](other-language-wiki.md)
 * [💬Config Pack](config-pack.md)
+* [Business License](business-license.md)
 
 ## 📦Info
 
