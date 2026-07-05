@@ -1,5 +1,9 @@
 # 🛏️Bedrock Menus - Premium
 
+{% hint style="info" %}
+## Bedrock Menu share same menu files with dialog menus and classic inventory menus. We can auto translate the menu into 3 different types, you do not need any manually change.
+{% endhint %}
+
 ## Requirements
 
 * Both Geyser and Floodgate are **required in your Spigot server**. If you are using BungeeCord proxy, you need install them both in backward server and proxy server.
@@ -85,6 +89,10 @@ For now, we support those options for bedrock buttons
 
 * icon: The icon of this button, format is `path;;<image path> or url;;<image url>`. The image path is bedrock texture path, not your plugin path, for example: `path;;textures/blocks/stone_granite.png`.
 
+{% hint style="info" %}
+For auto add icon feature, please view below.
+{% endhint %}
+
 For example:
 
 <figure><img src="../.gitbook/assets/image (7).png" alt=""><figcaption></figcaption></figure>
@@ -131,3 +139,40 @@ You can enable price extra line feature in `config.yml` file, after enable, all 
 ```
 
 <figure><img src="../.gitbook/assets/4053fcba88fc7bcf382832d8f7958067.png" alt=""><figcaption></figcaption></figure>
+
+## Auto Add Icon - 4.7.0+
+
+If you think manually adding icons to each button is too troublesome, the plugin supports the function of automatically setting icons, and configuration options can be found in `config.yml`.
+
+```yaml
+menu:
+  bedrock:
+    auto-add-icon:
+      enabled: true # Set this to true.
+      format: "https://raw.githubusercontent.com/InventivetalentDev/minecraft-assets/refs/heads/{version}/assets/minecraft/textures/{path}.png"
+    
+```
+
+Before you use this feature, you have to download the material -> vanilla text path mapping, find the content in config.yml file:
+
+```yaml
+  # Premium version only. Generates a Material -> vanilla texture path mapping from the Minecraft client assets.
+  minecraft-item-material-file:
+    enabled: false
+    generate-new-one: false
+    file: 'item-materials.json'
+```
+
+* Set both `enabled` and `generate-new-one` option to `true`.
+* Stop your server and restart it.
+* Plugin will auto download the file.
+* After successfully download, you need set `generate-new-one` to `false`. **If your server upgraded game version, you need delete old mapping file and regenerate new one.**
+
+By default, we use Minecraft vanilla assets provided by this [GitHub repository](https://github.com/InventivetalentDev/minecraft-assets), which you see in the `format` option. In `format` option, we supports those placeholders:
+
+* {version} - The server version, like `26.1`.
+* {path} - The path of the material in vanilla assets, like `block/sunflower_front`.
+
+You can also use these placeholders with URLs from other places. We only support matching various icons through materials. If your item has custom textures or models, we recommend manually setting the bedrock icon, as mentioned earlier.
+
+<figure><img src="../.gitbook/assets/image (17).png" alt=""><figcaption></figcaption></figure>

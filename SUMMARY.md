@@ -39,6 +39,7 @@
 * [🛒Sell All Menu](menus/sell-all-menu.md)
 * [🔀Conditional Display - Premium](menus/conditional-display-premium.md)
 * [🛏️Bedrock Menus - Premium](menus/bedrock-menus-premium.md)
+* [💬Dialog Menus - Premium](menus/dialog-menus-premium.md)
 * [🥉Display Item Add Lore](menus/display-item-add-lore.md)
 
 ## 🛍️Shops
