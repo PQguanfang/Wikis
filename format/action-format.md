@@ -574,3 +574,21 @@ then:
 {arg_2} -> sword
 {arg_3} -> 64
 ```
+
+## Back&#x20;
+
+Back to the previous menu, if previous menu does not exist, will open the menu exist in menu option.
+
+```yaml
+    actions:
+      1:
+        type: back
+        menu: main
+```
+
+```yaml
+    actions:
+      1:
+        type: back
+        shop: 'flowers'
+```
