@@ -28,6 +28,8 @@ dialog:
   columns: 2
 ```
 
+After enable, dialog menus will override the classic inventory menu, some menu types does not support dialog menu.
+
 ## Extra options for dialog menus
 
 You can add those extra options for menu configs. For example:
