@@ -8,6 +8,8 @@
 
 Dialog menus use Minecraft's native Dialog UI and require Paper 1.21.9 or newer and plugin version 4.7.0 or newer.
 
+Because plugin has a feature called close action, but client close the dialog UI will not send any packet to server, so dialog menus in this plugin do not support closed by ESC, <mark style="color:red;">**you have to provide at least one button to let player close the UI with**</mark> [<mark style="color:red;">**close**</mark>](../format/action-format.md#close) <mark style="color:red;">**action.**</mark>
+
 ## Enabling Dialog Menus
 
 Enable the global feature in `config.yml`:
