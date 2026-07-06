@@ -27,8 +27,9 @@ The `layout` option and `size` option must correspond. If your layout is based o
 * conditions: Only players who meet the conditions can open this menu, use [Condition Format](../format/condition-format.md) here.
 * open-actions: Do action when open this menu, use [Action Format](../format/action-format.md) here.
 * close-actions: Do action when close this menu, use [Action Format](../format/action-format.md) here. <mark style="color:red;">**Please carefully note that when you have already opened a menu, if you open other menus through actions or other means, it will also trigger close actions of the opened menu**</mark>**.**&#x20;
-* bedrock: Please view [Bedrock M](bedrock-menus-premium.md)[enu](bedrock-menus-premium.md) page to know about it.
-* custom-command: Custom Command settings for common menu, if you want to set custom command for shop menu, please add them at [Shops](../shops/shops.md) config.  <mark style="color:red;">**(PREMIUM)**</mark>
+* bedrock: Please view [Bedrock Menus](bedrock-menus-premium.md) page to know about it. <mark style="color:red;">**(PREMIUM)**</mark>
+* dialog: Please view [Dialog Menus](dialog-menus-premium.md) page to know about it. <mark style="color:red;">**(PREMIUM)**</mark>
+* custom-command: Custom Command settings for common menu, if you want to set custom command for shop menu, please add them at [Shops](../shops/shops.md) config. <mark style="color:red;">**(PREMIUM)**</mark>
 
 Example:
 
@@ -40,6 +41,12 @@ size: 54
 bedrock:
   enabled: true
   content: '&fWelcome to shop.'
+  
+dialog:
+  enabled: true
+  content: '<gray>Select a category.'
+  button-width: 180
+  columns: 2
   
 custom-command:
   name: 'mineral'
