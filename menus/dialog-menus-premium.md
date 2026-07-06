@@ -54,39 +54,6 @@ A display item with an empty name does not create a Dialog button.
 * button-width: Default to 150. Width of each action button.
 * columns: Default to 2. Number of button columns.
 
-## Product Information and Amount Selection
-
-Selecting a product opens its information Dialog. Depending on the product configuration, it automatically includes:
-
-* Product lore and dynamic price information
-* Buy button
-* Sell button
-* Sell-all button
-* Amount selection button
-* Back button
-* Eligible custom actions from `menu.click-event-actions`
-
-The labels are configured under `menu.dialog.info` in `config.yml`.
-
-When `buy-more` is enabled for a product, the amount button opens a number input Dialog:
-
-```yml
-menu:
-  dialog:
-    buy-more:
-      display-item: true
-      title: '{lang:menu.dialog.buy-more.title}'
-      input: '{lang:menu.dialog.buy-more.input}'
-      buttons:
-        confirm: '{lang:menu.dialog.buy-more.buttons.confirm}'
-```
-
-## Search and Favourite Menus
-
-A menu with `menu-type: search` provides a keyword input and search button in Dialog, followed by matching products.
-
-A menu with `menu-type: favourite` displays favourite products and supports edit mode, moving entries forward or backward, and removing entries. Both menu types use their own `dialog.content`, `button-width`, and `columns` values.
-
 ## Sprite Icons
 
 ### Automatic Sprites
