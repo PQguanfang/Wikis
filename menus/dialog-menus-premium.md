@@ -104,7 +104,7 @@ We only support matching various icons through materials. If your item has custo
 
 ### Sprite in Product Message
 
-You can even use sprite in product message, set `display-item.auto-use-sprite-item-name` option to true then the product name in message will become a icon! Only supports vanilla items.
+You can even use sprite in product message, set `display-item.auto-use-sprite-item-name` option to `true` in `config.yml` file then the product name in message will become a icon! Only supports vanilla items.
 
 <figure><img src="../.gitbook/assets/image (19).png" alt=""><figcaption></figcaption></figure>
 
